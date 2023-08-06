@@ -1,14 +1,14 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
   <channel>
     <title>All Posts - Josh</title>
-    <link>http://example.org/posts/</link>
+    <link>https://hihihiman.github.io/posts/</link>
     <description>All Posts | Josh</description>
-    <generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sun, 06 Aug 2023 10:51:31 &#43;0800</lastBuildDate><atom:link href="http://example.org/posts/" rel="self" type="application/rss+xml" /><item>
+    <generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sun, 06 Aug 2023 10:51:31 &#43;0800</lastBuildDate><atom:link href="https://hihihiman.github.io/posts/" rel="self" type="application/rss+xml" /><item>
   <title>My First Blog</title>
-  <link>http://example.org/posts/test/</link>
+  <link>https://hihihiman.github.io/posts/test/</link>
   <pubDate>Sun, 06 Aug 2023 10:51:31 &#43;0800</pubDate>
   <author>Author</author>
-  <guid>http://example.org/posts/test/</guid>
+  <guid>https://hihihiman.github.io/posts/test/</guid>
   <description><![CDATA[hugo new blog/my-first-blog.md hugo new blog/my-first-blog.md
 hugo new blog/my-first-blog.md
 hugo new blog/my-first-blog.md
