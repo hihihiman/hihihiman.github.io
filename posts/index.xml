@@ -1,0 +1,19 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+  <channel>
+    <title>All Posts - My New Hugo Site</title>
+    <link>http://hihihiman.github.io/posts/</link>
+    <description>All Posts | My New Hugo Site</description>
+    <generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Sun, 06 Aug 2023 10:51:31 &#43;0800</lastBuildDate><atom:link href="http://hihihiman.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+  <title>My First Blog</title>
+  <link>http://hihihiman.github.io/posts/test/</link>
+  <pubDate>Sun, 06 Aug 2023 10:51:31 &#43;0800</pubDate>
+  <author>Author</author>
+  <guid>http://hihihiman.github.io/posts/test/</guid>
+  <description><![CDATA[hugo new blog/my-first-blog.md hugo new blog/my-first-blog.md
+hugo new blog/my-first-blog.md
+hugo new blog/my-first-blog.md
+hugo new blog/my-first-blog.md
+hugo new blog/my-first-blog.md]]></description>
+</item>
+</channel>
+</rss>
