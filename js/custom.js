@@ -8,71 +8,50 @@ if (window.console) {
     }
 }
 
-/* 返回随机颜色 */
+/* 鼠标点击文字特效 */
 function randomColor() {
-    return "rgb(" + ~~(255 * Math.random()) + "," + ~~(255 * Math.random()) + "," + ~~(255 * Math.random()) + ")";
+    return `rgb(${~~(255 * Math.random())},${~~(255 * Math.random())},${~~(255 * Math.random())})`;
 }
 
+const a = new Array("💖","富强","💜","民主","💙","文明","💚","和谐","💛","自由","🤎","平等","💗","公正","💜","法治","💖","爱国","💚","敬业","💚","诚信","💖","友善");
+let a_idx = 0;
+let a_click = 1;
 
-
-/* 鼠标点击文字特效 */
-var a_idx = 0;
-var a_click = 1;
-var a = new Array("富强", "民主", "文明", "和谐", "自由", "平等", "公正", "法治", "爱国", "敬业", "诚信", "友善",
-    "老哥稳", "带我飞", "厉害了word哥", "扎心了老铁", "蓝瘦香菇", "还有这种操作?", "就是有这种操作",
-    "皮皮虾我们走", "笑到猪叫", "石乐志", "不存在的", "黑车!", "我要下车!", "他还只是个孩子", "请不要放过他",
-    "惊不惊喜?", "意不意外?", "我有一个大胆的想法", "你的良心不会痛吗", "你心里就没点b数吗", "没有,我很膨胀",
-    "秀", "天秀", "陈独秀", "蒂花之秀", "造化钟神秀", "我去买几个橘子", "你就站在此地", "不要走动",
-    "我可能读了假书", "贫穷限制了我的想象力", "打call", "当然是选择原谅她啊", "你有freestyle吗",
-    "北大还行撒贝宁", "不知妻美刘强东", "悔创阿里杰克马", "一无所有王健林", "普通家庭马化腾",
-    "别点了", "求求你别点了", "你还点", "你再点!", "有本事继续点!", "你厉害", "我投翔",
-    "w(·Д·)w", "(#`O′)", "（/TДT)/", "┭┮﹏┭┮", "_(:3」∠)_");
-jQuery(document).ready(function ($) {
-    $("body").click(function (e) {
-        /* 点击频率，点击几次就换文字 */
-        var frequency = 2;
+$(document).ready(function() {
+    $("body").click(function(e) {
+        const frequency = 1;
         if (a_click % frequency === 0) {
-
-            var $i = $("<span/>").text(a[a_idx]);
-            a_idx = (a_idx + 1) % a.length;
-            var x = e.pageX,
-                y = e.pageY;
-            $i.css({
-                "z-index": 9999,
-                "top": y - 20,
-                "left": x,
-                "position": "absolute",
-                "font-weight": "bold",
-                "color": randomColor(),
-                "-webkit-user-select": "none",
-                "-moz-user-select": "none",
-                "-ms-user-select": "none",
-                "user-select": "none"
+            const $i = $("<span/>", {
+                text: a[a_idx],
+                css: {
+                    "z-index": 9999,
+                    top: e.pageY - 20,
+                    left: e.pageX,
+                    position: "absolute",
+                    "font-weight": "bold",
+                    color: randomColor(),
+                    "-webkit-user-select": "none",
+                    "-moz-user-select": "none",
+                    "-ms-user-select": "none",
+                    "user-select": "none"
+                }
             });
+            a_idx = (a_idx + 1) % a.length;
             $("body").append($i);
-            $i.animate({
-                    "top": y - 180,
-                    "opacity": 0
+            $i.animate(
+                {
+                    top: e.pageY - 180,
+                    opacity: 0
                 },
                 1500,
-                function () {
+                function() {
                     $i.remove();
-                });
-
+                }
+            );
         }
         a_click++;
-
     });
 });
-
-/* 轮播背景图片 */
-// $(function () {
-//     $.backstretch([
-//         $cdnPrefix + "/images/background/saber1.jpg",
-//         $cdnPrefix + "/images/background/saber2.jpg",
-//         $cdnPrefix + "/images/background/wlop.jpg"
-//     ], {duration: 60000, fade: 1500});
-// });
 
 /* 拉姆蕾姆回到顶部或底部按钮 */
 $(function () {
@@ -89,7 +68,7 @@ $(function () {
 /* 后置加载页面组件的背景图片 */
 $(function () {
     /* 首页头像div加载GitHub Chart作为背景图片 */
-    $("div.home-avatar").attr('style', "background: url(https://ghchart.rshah.org/FFA500/lewky);background-repeat: no-repeat;background-position: center;background-size: auto 7.5rem;");
+    $("div.home-avatar").attr('style', "background: url(https://cdn.jsdelivr.net/gh/hihihiman/hihihiman@output/github-contribution-grid-snake.svg);background-repeat: no-repeat;background-position: center;background-size: auto 10rem;");
 
     /* 评论框加载背景图片 */
     $(".v[data-class=v] .veditor").attr('style', "background-image: url(" + $cdnPrefix + "/images/common/valinebg.webp) !important;");
@@ -122,28 +101,6 @@ window.onload = function () {
             }, 2000);
         }
     });
-}
-
-/* 站点运行时间 */
-function runtime() {
-    window.setTimeout("runtime()", 1000);
-    /* 请修改这里的起始时间 */
-    let startTime = new Date('08/07/2023 09:00:00');
-    let endTime = new Date();
-    let usedTime = endTime - startTime;
-    let days = Math.floor(usedTime / (24 * 3600 * 1000));
-    let leavel = usedTime % (24 * 3600 * 1000);
-    let hours = Math.floor(leavel / (3600 * 1000));
-    let leavel2 = leavel % (3600 * 1000);
-    let minutes = Math.floor(leavel2 / (60 * 1000));
-    let leavel3 = leavel2 % (60 * 1000);
-    let seconds = Math.floor(leavel3 / (1000));
-    let runbox = document.getElementById('run-time');
-    runbox.innerHTML = '本站已运行<i class="far fa-clock fa-fw"></i> '
-        + ((days < 10) ? '0' : '') + days + ' 天 '
-        + ((hours < 10) ? '0' : '') + hours + ' 时 '
-        + ((minutes < 10) ? '0' : '') + minutes + ' 分 '
-        + ((seconds < 10) ? '0' : '') + seconds + ' 秒 ';
 }
 
 runtime();
