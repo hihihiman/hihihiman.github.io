@@ -1,0 +1,15 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+  <channel>
+    <title>All Posts - 都将会的博客</title>
+    <link>https://hihihiman.github.io/posts/</link>
+    <description>All Posts | 都将会的博客</description>
+    <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sun, 06 Aug 2023 23:31:00 &#43;0800</lastBuildDate><atom:link href="https://hihihiman.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+  <title>Blog_init</title>
+  <link>https://hihihiman.github.io/posts/blog_init/</link>
+  <pubDate>Sun, 06 Aug 2023 23:31:00 &#43;0800</pubDate>
+  <author>都将会</author>
+  <guid>https://hihihiman.github.io/posts/blog_init/</guid>
+  <description><![CDATA[]]></description>
+</item>
+</channel>
+</rss>
