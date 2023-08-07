@@ -1,15 +1,1 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-  <channel>
-    <title>Categories - Category - 都将会的博客</title>
-    <link>https://hihihiman.github.io/categories/</link>
-    <description>Categories - Category - 都将会的博客</description>
-    <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sun, 06 Aug 2023 23:31:00 &#43;0800</lastBuildDate><atom:link href="https://hihihiman.github.io/categories/" rel="self" type="application/rss+xml" /><item>
-  <title>技术</title>
-  <link>https://hihihiman.github.io/categories/%E6%8A%80%E6%9C%AF/</link>
-  <pubDate>Sun, 06 Aug 2023 23:31:00 &#43;0800</pubDate>
-  <author>都将会</author>
-  <guid>https://hihihiman.github.io/categories/%E6%8A%80%E6%9C%AF/</guid>
-  <description><![CDATA[]]></description>
-</item>
-</channel>
-</rss>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Categories - Category - 都将会的博客</title><link>https://hihihiman.github.io/categories/</link><description>Categories - Category - 都将会的博客</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sun, 06 Aug 2023 23:31:00 +0800</lastBuildDate><atom:link href="https://hihihiman.github.io/categories/" rel="self" type="application/rss+xml"/><item><title>技术</title><link>https://hihihiman.github.io/categories/%E6%8A%80%E6%9C%AF/</link><pubDate>Sun, 06 Aug 2023 23:31:00 +0800</pubDate><author>都将会</author><guid>https://hihihiman.github.io/categories/%E6%8A%80%E6%9C%AF/</guid><description></description></item></channel></rss>
