@@ -1,0 +1,11 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>OS - Tag -</title><link>https://hihihiman.github.io/tags/os/</link><description>OS - Tag -</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Tue, 08 Aug 2023 16:21:51 +0800</lastBuildDate><atom:link href="https://hihihiman.github.io/tags/os/" rel="self" type="application/rss+xml"/><item><title>🚩OS - 操作系统</title><link>https://hihihiman.github.io/posts/os/</link><pubDate>Tue, 08 Aug 2023 16:21:51 +0800</pubDate><author>都将会</author><guid>https://hihihiman.github.io/posts/os/</guid><description><![CDATA[<h3 id="进程间通信的方式有哪几种">进程间通信的方式有哪几种？</h3>
+<ol>
+<li>无名管道( pipe )：父子进程通信</li>
+<li>高级管道(popen)：将另一个程序当做一个新的进程在当前程序进程中启动，则它算是当前程序的子进程</li>
+<li>有名管道 (named pipe)：它允许无亲缘关系进程间的通信</li>
+<li>消息队列( message queue )：克服了信号传递信息少、管道只能承载无格式字节流以及缓冲区大小受限等缺点。</li>
+<li>信号量( semophore )：作为一种锁机制</li>
+<li>信号 ( sinal )：用于通知接收进程某个事件已经发生</li>
+<li>共享内存( shared memory )：映射一段能被其他进程所访问的内存，这段共享内存由一个进程创建，但多个进程都可以访问</li>
+<li>套接字( socket )：可用于不同机器间的进程通信</li>
+</ol>]]></description></item></channel></rss>

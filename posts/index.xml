@@ -1,1 +1,45 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>All Posts -</title><link>https://hihihiman.github.io/posts/</link><description>All Posts |</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Mon, 07 Aug 2023 16:52:51 +0800</lastBuildDate><atom:link href="https://hihihiman.github.io/posts/" rel="self" type="application/rss+xml"/><item><title>k8s 杂记</title><link>https://hihihiman.github.io/posts/k8s_note/</link><pubDate>Mon, 07 Aug 2023 16:52:51 +0800</pubDate><author>都将会</author><guid>https://hihihiman.github.io/posts/k8s_note/</guid><description></description></item><item><title>Netty 杂记</title><link>https://hihihiman.github.io/posts/netty_note/</link><pubDate>Mon, 07 Aug 2023 16:52:44 +0800</pubDate><author>都将会</author><guid>https://hihihiman.github.io/posts/netty_note/</guid><description></description></item><item><title>ChatGPT 说 Java 源码应该这样读</title><link>https://hihihiman.github.io/posts/java_code_gpt/</link><pubDate>Mon, 07 Aug 2023 16:40:39 +0800</pubDate><author>都将会</author><guid>https://hihihiman.github.io/posts/java_code_gpt/</guid><description></description></item><item><title>FixIt主题美化</title><link>https://hihihiman.github.io/posts/blog_beautify/</link><pubDate>Mon, 07 Aug 2023 15:25:41 +0800</pubDate><author>都将会</author><guid>https://hihihiman.github.io/posts/blog_beautify/</guid><description></description></item><item><title>初始化 Hogo 博客</title><link>https://hihihiman.github.io/posts/blog_init/</link><pubDate>Sun, 06 Aug 2023 23:31:00 +0800</pubDate><author>都将会</author><guid>https://hihihiman.github.io/posts/blog_init/</guid><description></description></item></channel></rss>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>All Posts -</title><link>https://hihihiman.github.io/posts/</link><description>All Posts |</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Tue, 08 Aug 2023 16:22:51 +0800</lastBuildDate><atom:link href="https://hihihiman.github.io/posts/" rel="self" type="application/rss+xml"/><item><title>🚩NetWork - 计算机网络</title><link>https://hihihiman.github.io/posts/network/</link><pubDate>Tue, 08 Aug 2023 16:22:51 +0800</pubDate><author>都将会</author><guid>https://hihihiman.github.io/posts/network/</guid><description><![CDATA[<h3 id="osi-七层模型">OSI 七层模型？</h3>
+<ol>
+<li>应用层：为计算机用户提供服务 HTTP
+<ol>
+<li>七层负载均衡：【Nginx 的 server/udp】读取报文数据部分，根据数据内容做出负载均衡决策，更灵活</li>
+</ol>
+</li>
+<li>表示层：数据加密解密</li>
+<li>会话层：管理应用程序之间的会话</li>
+<li>传输层：通用的数据传输服务 TCP/UDP
+<ol>
+<li>四层负载均衡：【Nginx 的 upstream】通过 ip+port，转发到真实服务器，性能好</li>
+</ol>
+</li>
+<li>网络层：路由和寻址</li>
+<li>数据链路层：帧编码和差错校验
+<ol>
+<li>VLAN：逻辑划分数据，将一个物理局域网划分为多个虚拟局域网，每个 VLAN 都是一个独立的广播域。</li>
+</ol>
+</li>
+<li>物理层：透明传输比特流</li>
+</ol>]]></description></item><item><title>🚩OS - 操作系统</title><link>https://hihihiman.github.io/posts/os/</link><pubDate>Tue, 08 Aug 2023 16:21:51 +0800</pubDate><author>都将会</author><guid>https://hihihiman.github.io/posts/os/</guid><description><![CDATA[<h3 id="进程间通信的方式有哪几种">进程间通信的方式有哪几种？</h3>
+<ol>
+<li>无名管道( pipe )：父子进程通信</li>
+<li>高级管道(popen)：将另一个程序当做一个新的进程在当前程序进程中启动，则它算是当前程序的子进程</li>
+<li>有名管道 (named pipe)：它允许无亲缘关系进程间的通信</li>
+<li>消息队列( message queue )：克服了信号传递信息少、管道只能承载无格式字节流以及缓冲区大小受限等缺点。</li>
+<li>信号量( semophore )：作为一种锁机制</li>
+<li>信号 ( sinal )：用于通知接收进程某个事件已经发生</li>
+<li>共享内存( shared memory )：映射一段能被其他进程所访问的内存，这段共享内存由一个进程创建，但多个进程都可以访问</li>
+<li>套接字( socket )：可用于不同机器间的进程通信</li>
+</ol>]]></description></item><item><title>Docker 杂记</title><link>https://hihihiman.github.io/posts/docker_draft/</link><pubDate>Tue, 08 Aug 2023 16:20:34 +0800</pubDate><author>都将会</author><guid>https://hihihiman.github.io/posts/docker_draft/</guid><description>容器的本质是进程。</description></item><item><title>往期周赛与笔试题解</title><link>https://hihihiman.github.io/posts/%E5%BE%80%E6%9C%9F%E5%91%A8%E8%B5%9B%E9%A2%98%E8%A7%A3/</link><pubDate>Tue, 08 Aug 2023 16:11:13 +0800</pubDate><author>都将会</author><guid>https://hihihiman.github.io/posts/%E5%BE%80%E6%9C%9F%E5%91%A8%E8%B5%9B%E9%A2%98%E8%A7%A3/</guid><description>一步一个脚印</description></item><item><title>🚩经典股票问题 - 动态规划思路</title><link>https://hihihiman.github.io/posts/%E7%BB%8F%E5%85%B8%E8%82%A1%E7%A5%A8%E9%97%AE%E9%A2%98-%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E6%80%9D%E8%B7%AF/</link><pubDate>Tue, 08 Aug 2023 16:06:32 +0800</pubDate><author>都将会</author><guid>https://hihihiman.github.io/posts/%E7%BB%8F%E5%85%B8%E8%82%A1%E7%A5%A8%E9%97%AE%E9%A2%98-%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E6%80%9D%E8%B7%AF/</guid><description>&lt;p>给定一个数组 prices ，它的第 i 个元素 prices[i] 表示一支给定股票第 i 天的价格。设计一个算法来计算你所能获取的最大利润。返回你可以从这笔交易中获取的最大利润。如果你不能获取任何利润，返回 0 。&lt;/p>
+&lt;h4 id="lv1-你只能选择-某一天-买入这只股票并选择在-未来的某一个不同的日子-卖出该股票">lv1. 你只能选择 某一天 买入这只股票，并选择在 未来的某一个不同的日子 卖出该股票。&lt;/h4></description></item><item><title>🚩LeetCode 典中典</title><link>https://hihihiman.github.io/posts/leetcode-%E5%85%B8%E4%B8%AD%E5%85%B8/</link><pubDate>Tue, 08 Aug 2023 15:57:32 +0800</pubDate><author>都将会</author><guid>https://hihihiman.github.io/posts/leetcode-%E5%85%B8%E4%B8%AD%E5%85%B8/</guid><description>这么经典，岂不默写？</description></item><item><title>LFU</title><link>https://hihihiman.github.io/posts/lfu/</link><pubDate>Tue, 08 Aug 2023 15:56:32 +0800</pubDate><author>都将会</author><guid>https://hihihiman.github.io/posts/lfu/</guid><description>跟着 debug 调试一下</description></item><item><title>LeetCode 大全</title><link>https://hihihiman.github.io/posts/leetcode/</link><pubDate>Tue, 08 Aug 2023 15:51:32 +0800</pubDate><author>都将会</author><guid>https://hihihiman.github.io/posts/leetcode/</guid><description>常回来看看</description></item><item><title>Kaggle</title><link>https://hihihiman.github.io/posts/kaggle/</link><pubDate>Tue, 08 Aug 2023 15:47:51 +0800</pubDate><author>都将会</author><guid>https://hihihiman.github.io/posts/kaggle/</guid><description>咱就是说最后没报名</description></item><item><title>🚩ElasticSearch</title><link>https://hihihiman.github.io/posts/elasticsearch/</link><pubDate>Tue, 08 Aug 2023 15:39:51 +0800</pubDate><author>都将会</author><guid>https://hihihiman.github.io/posts/elasticsearch/</guid><description><![CDATA[<h3 id="技术选型">技术选型</h3>
+<p>mongodb：增删改查
+es：大数据搜索
+lucene：分布式搜索</p>
+<h3 id="倒排索引">倒排索引</h3>
+<p>根据分词找到文档id，根据文档id找到文档。
+索引：帮助快速搜索，以数据结构为载体，以文件的形式落地。</p>
+<ol>
+<li>切词：word segmentation</li>
+<li>规范化：normalization</li>
+<li>去重：distinct</li>
+<li>字典序：sorted</li>
+</ol>]]></description></item></channel></rss>

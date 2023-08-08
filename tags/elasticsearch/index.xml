@@ -1,0 +1,13 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>ElasticSearch - Tag -</title><link>https://hihihiman.github.io/tags/elasticsearch/</link><description>ElasticSearch - Tag -</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Tue, 08 Aug 2023 15:39:51 +0800</lastBuildDate><atom:link href="https://hihihiman.github.io/tags/elasticsearch/" rel="self" type="application/rss+xml"/><item><title>🚩ElasticSearch</title><link>https://hihihiman.github.io/posts/elasticsearch/</link><pubDate>Tue, 08 Aug 2023 15:39:51 +0800</pubDate><author>都将会</author><guid>https://hihihiman.github.io/posts/elasticsearch/</guid><description><![CDATA[<h3 id="技术选型">技术选型</h3>
+<p>mongodb：增删改查
+es：大数据搜索
+lucene：分布式搜索</p>
+<h3 id="倒排索引">倒排索引</h3>
+<p>根据分词找到文档id，根据文档id找到文档。
+索引：帮助快速搜索，以数据结构为载体，以文件的形式落地。</p>
+<ol>
+<li>切词：word segmentation</li>
+<li>规范化：normalization</li>
+<li>去重：distinct</li>
+<li>字典序：sorted</li>
+</ol>]]></description></item></channel></rss>

@@ -1,0 +1,9 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>MQ - Tag -</title><link>https://hihihiman.github.io/tags/mq/</link><description>MQ - Tag -</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Tue, 08 Aug 2023 14:29:32 +0800</lastBuildDate><atom:link href="https://hihihiman.github.io/tags/mq/" rel="self" type="application/rss+xml"/><item><title>MQ 杂记</title><link>https://hihihiman.github.io/posts/mq_draft/</link><pubDate>Tue, 08 Aug 2023 14:29:32 +0800</pubDate><author>都将会</author><guid>https://hihihiman.github.io/posts/mq_draft/</guid><description>草稿太多，有空再整理吧。。</description></item><item><title>🚩MQ - 消息队列</title><link>https://hihihiman.github.io/posts/mq/</link><pubDate>Tue, 08 Aug 2023 14:21:51 +0800</pubDate><author>都将会</author><guid>https://hihihiman.github.io/posts/mq/</guid><description>&lt;h3 id="rabbitmq如何保证消息不丢失">🌟RabbitMQ如何保证消息不丢失？&lt;/h3></description></item><item><title>《Kafka核心技术与实战》笔记</title><link>https://hihihiman.github.io/posts/kafka%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF%E4%B8%8E%E5%AE%9E%E6%88%98%E7%AC%94%E8%AE%B0/</link><pubDate>Tue, 08 Aug 2023 14:15:42 +0800</pubDate><author>都将会</author><guid>https://hihihiman.github.io/posts/kafka%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF%E4%B8%8E%E5%AE%9E%E6%88%98%E7%AC%94%E8%AE%B0/</guid><description><![CDATA[<h2 id="消息引擎系统">消息引擎系统</h2>
+<h3 id="定义">定义</h3>
+<ol>
+<li>持久化能力：TB级别数据保持O(1)的时间复杂度</li>
+<li>高吞吐率：100kps</li>
+<li>分布式消费：每个partition内消息顺序传输</li>
+<li>支持离线和实时处理</li>
+<li>支持在线水平扩展</li>
+</ol>]]></description></item></channel></rss>

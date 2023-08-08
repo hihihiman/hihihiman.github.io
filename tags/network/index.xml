@@ -1,0 +1,22 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Network - Tag -</title><link>https://hihihiman.github.io/tags/network/</link><description>Network - Tag -</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Tue, 08 Aug 2023 16:22:51 +0800</lastBuildDate><atom:link href="https://hihihiman.github.io/tags/network/" rel="self" type="application/rss+xml"/><item><title>🚩NetWork - 计算机网络</title><link>https://hihihiman.github.io/posts/network/</link><pubDate>Tue, 08 Aug 2023 16:22:51 +0800</pubDate><author>都将会</author><guid>https://hihihiman.github.io/posts/network/</guid><description><![CDATA[<h3 id="osi-七层模型">OSI 七层模型？</h3>
+<ol>
+<li>应用层：为计算机用户提供服务 HTTP
+<ol>
+<li>七层负载均衡：【Nginx 的 server/udp】读取报文数据部分，根据数据内容做出负载均衡决策，更灵活</li>
+</ol>
+</li>
+<li>表示层：数据加密解密</li>
+<li>会话层：管理应用程序之间的会话</li>
+<li>传输层：通用的数据传输服务 TCP/UDP
+<ol>
+<li>四层负载均衡：【Nginx 的 upstream】通过 ip+port，转发到真实服务器，性能好</li>
+</ol>
+</li>
+<li>网络层：路由和寻址</li>
+<li>数据链路层：帧编码和差错校验
+<ol>
+<li>VLAN：逻辑划分数据，将一个物理局域网划分为多个虚拟局域网，每个 VLAN 都是一个独立的广播域。</li>
+</ol>
+</li>
+<li>物理层：透明传输比特流</li>
+</ol>]]></description></item><item><title>RPC 杂记</title><link>https://hihihiman.github.io/posts/rpc_draft/</link><pubDate>Tue, 08 Aug 2023 15:33:34 +0800</pubDate><author>都将会</author><guid>https://hihihiman.github.io/posts/rpc_draft/</guid><description>草稿太多，有空再整理吧。。</description></item><item><title>Netty 杂记</title><link>https://hihihiman.github.io/posts/netty_note/</link><pubDate>Mon, 07 Aug 2023 16:52:44 +0800</pubDate><author>都将会</author><guid>https://hihihiman.github.io/posts/netty_note/</guid><description>草稿太多，有空再整理吧。。</description></item></channel></rss>

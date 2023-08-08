@@ -1,0 +1,25 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>读书笔记 - Category -</title><link>https://hihihiman.github.io/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</link><description>读书笔记 - Category -</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Tue, 08 Aug 2023 15:20:42 +0800</lastBuildDate><atom:link href="https://hihihiman.github.io/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/" rel="self" type="application/rss+xml"/><item><title>《Java8实战》笔记</title><link>https://hihihiman.github.io/posts/java8%E5%AE%9E%E6%88%98%E7%AC%94%E8%AE%B0/</link><pubDate>Tue, 08 Aug 2023 15:20:42 +0800</pubDate><author>都将会</author><guid>https://hihihiman.github.io/posts/java8%E5%AE%9E%E6%88%98%E7%AC%94%E8%AE%B0/</guid><description><![CDATA[<h2 id="一基础知识">一、基础知识</h2>
+<h3 id="1-函数式编程">1. 函数式编程</h3>
+<ul>
+<li><strong>函数式编程</strong>中的<strong>函数</strong>的主要意思是“把函数作为一等值”，不过它也常常隐含着第二层意思，即“执行时在元素之间无互动”。</li>
+<li>引用透明性——“没有可感知的副作用”
+<ul>
+<li>不改变对调用者可见的变量。返回的结果基于参数却没有修改任何一个传入的参数</li>
+<li>不进行I/O</li>
+<li>不抛出异常</li>
+<li>选择使用引用透明的函数</li>
+</ul>
+</li>
+<li>也允许函数内部执行一些非函数式的操作，只要这些操作的结果不会暴露给系统中的其他部分。作为函数式的程序，你的函数或方法调用的库函数如果有副作用，你必须设法隐藏它们的非函数式行为，否则就不能调用这些方法。</li>
+<li>被称为“函数式”的函数或方法都只能修改本地变量。除此之外，它引用的对象都应该是不可修改的对象。</li>
+<li>要被称为函数式，函数或者方法不应该抛出任何异常。旦抛出异常，就意味着结果被终止了；不再像我们之前讨论的黑盒模式那样，由return返回一个恰当的结果值。 —— 请使用Optional类型</li>
+<li>Optional类：它是一个容器对象，可以包含，也可以不包含一个值。Optional中有方法来明确处理值不存在的情况，这样就可以避免NullPointer异常了。</li>
+</ul>]]></description></item><item><title>《Kafka核心技术与实战》笔记</title><link>https://hihihiman.github.io/posts/kafka%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF%E4%B8%8E%E5%AE%9E%E6%88%98%E7%AC%94%E8%AE%B0/</link><pubDate>Tue, 08 Aug 2023 14:15:42 +0800</pubDate><author>都将会</author><guid>https://hihihiman.github.io/posts/kafka%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF%E4%B8%8E%E5%AE%9E%E6%88%98%E7%AC%94%E8%AE%B0/</guid><description><![CDATA[<h2 id="消息引擎系统">消息引擎系统</h2>
+<h3 id="定义">定义</h3>
+<ol>
+<li>持久化能力：TB级别数据保持O(1)的时间复杂度</li>
+<li>高吞吐率：100kps</li>
+<li>分布式消费：每个partition内消息顺序传输</li>
+<li>支持离线和实时处理</li>
+<li>支持在线水平扩展</li>
+</ol>]]></description></item></channel></rss>
