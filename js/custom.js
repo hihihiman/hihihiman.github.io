@@ -3,7 +3,7 @@ if (window.console) {
     var cons = console;
     if (cons) {
         cons.group("O(∩_∩)O哈喽！");
-        cons.log("%c这里是都将会的博客", "background-image: linear-gradient(#063053, #395873, #5c7c99);font-size: 2rem;");
+        cons.log("%c这里是都将会的博客，联系方式：dujianghui_work@163.com", "background-image: linear-gradient(#063053, #395873, #5c7c99);font-size: 2rem;");
         cons.groupEnd();
     }
 }

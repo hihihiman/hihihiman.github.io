@@ -1,0 +1,1202 @@
+<!doctype html><html itemscope itemtype=http://schema.org/WebPage lang=zh-CN><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=2"><meta name=robots content="noodp"><title>SpringBoot 杂记 -</title><meta name=author content="都将会"><meta name=author-link content><meta name=description content="草稿太多，有空再整理吧。。"><meta name=keywords content="SpringBoot,interview,面试"><meta itemprop=name content="SpringBoot 杂记"><meta itemprop=description content="草稿太多，有空再整理吧。。"><meta itemprop=datePublished content="2023-08-08T08:57:32+08:00"><meta itemprop=dateModified content="2023-08-08T08:57:32+08:00"><meta itemprop=wordCount content="3004"><meta itemprop=image content="https://leni.fun/images/avatar.jpg"><meta itemprop=keywords content="SpringBoot,"><meta property="og:title" content="SpringBoot 杂记"><meta property="og:description" content="草稿太多，有空再整理吧。。"><meta property="og:type" content="article"><meta property="og:url" content="https://leni.fun/posts/springboot_draft.html"><meta property="og:image" content="https://leni.fun/images/avatar.jpg"><meta property="article:section" content="posts"><meta property="article:published_time" content="2023-08-08T08:57:32+08:00"><meta property="article:modified_time" content="2023-08-08T08:57:32+08:00"><meta name=twitter:card content="summary_large_image"><meta name=twitter:image content="https://leni.fun/images/avatar.jpg"><meta name=twitter:title content="SpringBoot 杂记"><meta name=twitter:description content="草稿太多，有空再整理吧。。"><meta name=application-name content="都将会的 APP"><meta name=apple-mobile-web-app-title content="都将会的 APP"><meta name=theme-color data-light=#f8f8f8 data-dark=#252627 content="#f8f8f8"><meta name=msapplication-TileColor content="#da532c"><link rel="shortcut icon" type=image/x-icon href=/favicon.ico><link rel=icon type=image/png sizes=32x32 href=/favicon-32x32.png><link rel=icon type=image/png sizes=16x16 href=/favicon-16x16.png><link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png><link rel=mask-icon href=/safari-pinned-tab.svg color=#5bbad5><link rel=manifest href=/site.webmanifest><link rel=canonical href=https://leni.fun/posts/springboot_draft.html><link rel=prev href=https://leni.fun/posts/spring.html><link rel=next href=https://leni.fun/posts/spring_draft.html><link rel=stylesheet href=/css/style.min.css><link rel=stylesheet href=/lib/fontawesome-free/all.min.css><link rel=stylesheet href=/lib/animate/animate.min.css><script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","headline":"SpringBoot 杂记","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/leni.fun\/posts\/springboot_draft.html"},"genre":"posts","keywords":"SpringBoot","wordcount":3004,"url":"https:\/\/leni.fun\/posts\/springboot_draft.html","datePublished":"2023-08-08T08:57:32+08:00","dateModified":"2023-08-08T08:57:32+08:00","publisher":{"@type":"Organization","name":""},"author":{"@type":"Person","name":"都将会"},"description":"草稿太多，有空再整理吧。。"}</script></head><body data-header-desktop=sticky data-header-mobile=auto><script>(window.localStorage?.getItem("theme")?localStorage.getItem("theme")==="dark":"dark"==="auto"?window.matchMedia("(prefers-color-scheme: dark)").matches:"dark"==="dark")&&document.body.setAttribute("data-theme","dark")</script><div class=wrapper data-page-style=normal><header class="desktop animate__faster" id=header-desktop><div class=header-wrapper data-github-corner=left><div class=header-title><a href=/ title><img loading=lazy src=/images/avatar.jpg srcset="/images/avatar.jpg, /images/avatar.jpg 1.5x, /images/avatar.jpg 2x" sizes=auto data-title=/images/avatar.jpg data-alt=/images/avatar.jpg class=logo style="background:url(/svg/loading.min.svg)no-repeat 50%" onload='this.title=this.dataset.title,this.alt=this.dataset.alt;for(const e of["style","data-title","data-alt","onerror","onload"])this.removeAttribute(e);this.dataset.lazyloaded=""' onerror='this.title=this.dataset.title,this.alt=this.dataset.alt;for(const e of["style","data-title","data-alt","onerror","onload"])this.removeAttribute(e)'><span class=header-title-text>都将会</span></a><span id=typeit-header-subtitle-desktop class="typeit header-subtitle"></span></div><nav><ul class=menu><li class=menu-item><a class=menu-link href=/posts/><i class="fa-solid fa-archive fa-fw fa-sm" aria-hidden=true></i> Posts</a></li><li class=menu-item><a class=menu-link href=/categories/><i class="fa-solid fa-th fa-fw fa-sm" aria-hidden=true></i> Categories</a></li><li class=menu-item><a class=menu-link href=/tags/><i class="fa-solid fa-tags fa-fw fa-sm" aria-hidden=true></i> Tags</a></li><li class="menu-item delimiter"></li><li class="menu-item search" id=search-desktop><input type=text placeholder=输入关键词搜索 id=search-input-desktop>
+<a href=javascript:void(0); class="search-button search-toggle" id=search-toggle-desktop title=搜索><i class="fa-solid fa-search fa-fw" aria-hidden=true></i></a>
+<a href=javascript:void(0); class="search-button search-clear" id=search-clear-desktop title=清空><i class="fa-solid fa-times-circle fa-fw" aria-hidden=true></i></a>
+<span class="search-button search-loading" id=search-loading-desktop><i class="fa-solid fa-spinner fa-fw fa-spin" aria-hidden=true></i></span></li><li class="menu-item theme-switch" title=切换主题><i class="fa-solid fa-adjust fa-fw" aria-hidden=true></i></li></ul></nav></div></header><header class="mobile animate__faster" id=header-mobile><div class=header-container><div class=header-wrapper><div class=header-title><a href=/ title><img loading=lazy src=/images/avatar.jpg srcset="/images/avatar.jpg, /images/avatar.jpg 1.5x, /images/avatar.jpg 2x" sizes=auto data-title=/images/avatar.jpg data-alt=/images/avatar.jpg class=logo style="background:url(/svg/loading.min.svg)no-repeat 50%" onload='this.title=this.dataset.title,this.alt=this.dataset.alt;for(const e of["style","data-title","data-alt","onerror","onload"])this.removeAttribute(e);this.dataset.lazyloaded=""' onerror='this.title=this.dataset.title,this.alt=this.dataset.alt;for(const e of["style","data-title","data-alt","onerror","onload"])this.removeAttribute(e)'><span class=header-title-text>都将会</span></a><span id=typeit-header-subtitle-mobile class="typeit header-subtitle"></span></div><div class=menu-toggle id=menu-toggle-mobile><span></span><span></span><span></span></div></div><nav><ul class=menu id=menu-mobile><li class=search-wrapper><div class="search mobile" id=search-mobile><input type=text placeholder=输入关键词搜索 id=search-input-mobile>
+<a href=javascript:void(0); class="search-button search-toggle" id=search-toggle-mobile title=搜索><i class="fa-solid fa-search fa-fw" aria-hidden=true></i></a>
+<a href=javascript:void(0); class="search-button search-clear" id=search-clear-mobile title=清空><i class="fa-solid fa-times-circle fa-fw" aria-hidden=true></i></a>
+<span class="search-button search-loading" id=search-loading-mobile><i class="fa-solid fa-spinner fa-fw fa-spin" aria-hidden=true></i></span></div><a href=javascript:void(0); class=search-cancel id=search-cancel-mobile>取消</a></li><li class=menu-item><a class=menu-link href=/posts/><i class="fa-solid fa-archive fa-fw fa-sm" aria-hidden=true></i> Posts</a></li><li class=menu-item><a class=menu-link href=/categories/><i class="fa-solid fa-th fa-fw fa-sm" aria-hidden=true></i> Categories</a></li><li class=menu-item><a class=menu-link href=/tags/><i class="fa-solid fa-tags fa-fw fa-sm" aria-hidden=true></i> Tags</a></li><li class="menu-item menu-system"><span class="menu-system-item theme-switch" title=切换主题><i class="fa-solid fa-adjust fa-fw" aria-hidden=true></i></span></li></ul></nav></div></header><div class="search-dropdown desktop"><div id=search-dropdown-desktop></div></div><div class="search-dropdown mobile"><div id=search-dropdown-mobile></div></div><nav aria-label=breadcrumb class="breadcrumb-container sticky"><ol class=breadcrumb><li class=breadcrumb-item><a href=/ title>主页</a></li><li class=breadcrumb-item><a href=/posts.html title=Posts>Posts</a></li><li class="breadcrumb-item active" aria-current=page>SpringBoot 杂记</li></ol></nav><main class=container><aside class=toc id=toc-auto><h2 class=toc-title>目录&nbsp;<i class="toc-icon fa-solid fa-angle-down fa-fw" aria-hidden=true></i></h2><div class=toc-content id=toc-content-auto></div></aside><aside class=aside-custom></aside><article class="page single"><div class=header><h1 class="single-title animate__animated animate__flipInX"><span>SpringBoot 杂记</span></h1></div><div class=post-meta><div class=post-meta-line><span class=post-author><span class=author><img loading=lazy src=/images/avatar.jpg srcset="/images/avatar.jpg, /images/avatar.jpg 1.5x, /images/avatar.jpg 2x" sizes=auto data-title=都将会 data-alt=都将会 class=avatar style="background:url(/svg/loading.min.svg)no-repeat 50%" onload='this.title=this.dataset.title,this.alt=this.dataset.alt;for(const e of["style","data-title","data-alt","onerror","onload"])this.removeAttribute(e);this.dataset.lazyloaded=""' onerror='this.title=this.dataset.title,this.alt=this.dataset.alt;for(const e of["style","data-title","data-alt","onerror","onload"])this.removeAttribute(e)'>&nbsp;都将会</span></span>
+<span class=post-category>收录于 <a href=/categories/draft.html><i class="fa-regular fa-folder fa-fw" aria-hidden=true></i> draft</a></span></div><div class=post-meta-line><span title="发布于 2023-08-08 08:57:32"><i class="fa-regular fa-calendar-alt fa-fw me-1" aria-hidden=true></i><time datetime=2023-08-08>2023-08-08</time></span>&nbsp;<span title="更新于 2023-08-08 08:57:32"><i class="fa-regular fa-edit fa-fw me-1" aria-hidden=true></i><time datetime=2023-08-08>2023-08-08</time></span>&nbsp;<span><i class="fa-solid fa-pencil-alt fa-fw me-1" aria-hidden=true></i>约 3004 字</span>&nbsp;<span><i class="fa-regular fa-clock fa-fw me-1" aria-hidden=true></i>预计阅读 15 分钟</span>&nbsp;</div></div><div class="details toc" id=toc-static data-kept=false><div class="details-summary toc-title"><span>目录</span>
+<span><i class="details-icon fa-solid fa-angle-right" aria-hidden=true></i></span></div><div class="details-content toc-content" id=toc-content-static><nav id=TableOfContents><ul><li><a href=#配置>配置</a><ul><li><a href=#包扫描>包扫描</a></li><li><a href=#yaml-ˈjæməl>YAML  /ˈjæməl/</a></li><li><a href=#listmap类型>List、Map类型</a></li><li><a href=#随机数>随机数</a></li><li><a href=#命令行参数>命令行参数</a></li><li><a href=#多环境配置>多环境配置</a></li><li><a href=#绑定-api>绑定 API</a></li></ul></li><li><a href=#关系型数据库>关系型数据库</a><ul><li><a href=#jpa--java-persistence-api>JPA = Java Persistence API</a></li><li><a href=#jta--java-transaction-api>JTA = Java Transaction API</a></li><li><a href=#单元测试>单元测试</a></li><li><a href=#事务隔离级别>事务隔离级别</a></li><li><a href=#传播行为>传播行为</a></li><li><a href=#flyway>Flyway</a></li><li><a href=#mybatis>Mybatis</a></li><li><a href=#lombok>Lombok</a></li><li><a href=#postgresql>PostgreSQL</a></li></ul></li><li><a href=#缓存-nosql>缓存 NoSQL</a><ul><li><a href=#引入缓存>引入缓存</a></li><li><a href=#redis>Redis</a></li><li><a href=#mongodb>MongoDB</a></li><li><a href=#ldap--lightweight-directory-access-protocol>LDAP = Lightweight Directory Access Protocol</a></li><li><a href=#时序数据库influxdb>时序数据库InfluxDB</a></li></ul></li><li><a href=#web-开发>Web 开发</a><ul><li><a href=#thymeleaf>Thymeleaf</a></li><li><a href=#单元测试-1>单元测试</a></li><li><a href=#定时任务>定时任务</a></li><li><a href=#异步任务>异步任务</a></li></ul></li><li><a href=#spring>Spring</a></li><li><a href=#自动装配原理>自动装配原理</a><ul><li><a href=#主启动器>主启动器</a></li><li><a href=#实体类映射-yaml>实体类映射 yaml</a></li><li><a href=#静态资源>静态资源</a></li><li><a href=#thymeleaf-1>Thymeleaf</a></li><li><a href=#其他>其他</a></li></ul></li><li><a href=#springsecurity>SpringSecurity</a></li><li><a href=#shiro>Shiro</a></li><li><a href=#swagger2>Swagger2</a></li><li><a href=#邮件发送>邮件发送</a></li><li><a href=#任务调度>任务调度</a></li><li><a href=#redis-1>Redis</a></li><li><a href=#分布式开发dubborpczookeeper>分布式开发：Dubbo（RPC）+zookeeper</a><ul><li><a href=#spring-cloud-netflix2018年停止维护>Spring Cloud Netflix（2018年停止维护）</a></li><li><a href=#apache-dubbo--zookeeper>Apache Dubbo + zookeeper</a></li><li><a href=#springcloud-alibaba>Springcloud Alibaba</a></li><li><a href=#server-meshistio>Server Mesh+istio</a></li></ul></li></ul></nav></div></div><div class=content id=content><h2 id=配置>配置</h2><h3 id=包扫描>包扫描</h3><pre tabindex=0><code>com
+  +- example
+    +- myproject
+      +- Application.java
+      |
+      +- domain
+      |  +- Customer.java
+      |  +- CustomerRepository.java
+      |
+      +- service
+      |  +- CustomerService.java
+      |
+    +- web
+    |  +- CustomerController.java
+    |</code></pre><ol><li><a href=/ComponentScan>@ComponentScan</a></li></ol><div class=highlight id=id-2><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=display:flex><span><span style=color:#a6e22e>@SpringBootApplication</span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>@ComponentScan</span><span style=color:#f92672>(</span>basePackages<span style=color:#f92672>=</span><span style=color:#e6db74>&#34;com.example&#34;</span><span style=color:#f92672>)</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>public</span> <span style=color:#66d9ef>class</span> <span style=color:#a6e22e>Bootstrap</span> <span style=color:#f92672>{</span>    
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>static</span> <span style=color:#66d9ef>void</span> <span style=color:#a6e22e>main</span><span style=color:#f92672>(</span>String<span style=color:#f92672>[]</span> args<span style=color:#f92672>)</span> <span style=color:#f92672>{</span>
+</span></span><span style=display:flex><span>    SpringApplication<span style=color:#f92672>.</span><span style=color:#a6e22e>run</span><span style=color:#f92672>(</span>Bootstrap<span style=color:#f92672>.</span><span style=color:#a6e22e>class</span><span style=color:#f92672>,</span> args<span style=color:#f92672>);</span>   
+</span></span><span style=display:flex><span>  <span style=color:#f92672>}</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>}</span></span></span></code></pre></div><ol start=2><li><a href=/Bean>@Bean</a></li></ol><div class=highlight id=id-3><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=display:flex><span><span style=color:#a6e22e>@SpringBootApplication</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>public</span> <span style=color:#66d9ef>class</span> <span style=color:#a6e22e>Bootstrap</span> <span style=color:#f92672>{</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>static</span> <span style=color:#66d9ef>void</span> <span style=color:#a6e22e>main</span><span style=color:#f92672>(</span>String<span style=color:#f92672>[]</span> args<span style=color:#f92672>)</span> <span style=color:#f92672>{</span>
+</span></span><span style=display:flex><span>        SpringApplication<span style=color:#f92672>.</span><span style=color:#a6e22e>run</span><span style=color:#f92672>(</span>Bootstrap<span style=color:#f92672>.</span><span style=color:#a6e22e>class</span><span style=color:#f92672>,</span> args<span style=color:#f92672>);</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>}</span>
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>@Bean</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>public</span> CustomerController <span style=color:#a6e22e>customerController</span><span style=color:#f92672>()</span> <span style=color:#f92672>{</span>
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>return</span> <span style=color:#66d9ef>new</span> CustomerController<span style=color:#f92672>();</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>}</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>}</span></span></span></code></pre></div><h3 id=yaml-ˈjæməl>YAML  /ˈjæməl/</h3><div class=highlight id=id-4><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=display:flex><span><span style=color:#f92672>spring</span>:  
+</span></span><span style=display:flex><span>  <span style=color:#f92672>jpa</span>:    
+</span></span><span style=display:flex><span>    <span style=color:#f92672>databaseplatform</span>: <span style=color:#ae81ff>mysql    </span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>database-platform</span>: <span style=color:#ae81ff>mysql    </span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>databasePlatform</span>: <span style=color:#ae81ff>mysql    </span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>database_platform</span>: <span style=color:#ae81ff>mysql</span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e># 以上等价</span></span></span></code></pre></div><p><strong>推荐使用全小写配合</strong><code>**-**</code><strong>分隔符的方式来配置</strong>，比如：<code>spring.jpa.database-platform=mysql</code></p><h3 id=listmap类型>List、Map类型</h3><div class=highlight id=id-5><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-yaml data-lang=yaml><span style=display:flex><span><span style=color:#f92672>spring</span>:
+</span></span><span style=display:flex><span>  <span style=color:#f92672>my-example1</span>:
+</span></span><span style=display:flex><span>  	<span style=color:#f92672>key</span>: <span style=color:#ae81ff>value</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>url</span>:      
+</span></span><span style=display:flex><span>      - <span style=color:#ae81ff>http://example.com      </span>
+</span></span><span style=display:flex><span>      - <span style=color:#ae81ff>http://spring.io</span>
+</span></span><span style=display:flex><span>      
+</span></span><span style=display:flex><span>  <span style=color:#f92672>my-example2</span>:
+</span></span><span style=display:flex><span>    <span style=color:#f92672>url</span>: <span style=color:#ae81ff>http://example.com, http://spring.io</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>&#39;[key.me]&#39;</span>: <span style=color:#ae81ff>value</span></span></span></code></pre></div><p><strong>如果Map类型的key包含非字母数字和</strong><code>**-**</code><strong>的字符，需要用</strong><code>**[]**</code><strong>括起来</strong></p><h3 id=随机数>随机数</h3><div class=highlight id=id-6><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-properties data-lang=properties><span style=display:flex><span><span style=color:#75715e># 随机字符串</span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>com.didispace.blog.value</span><span style=color:#f92672>=</span><span style=color:#e6db74>${random.value}</span>
+</span></span><span style=display:flex><span><span style=color:#75715e># 随机int</span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>com.didispace.blog.number</span><span style=color:#f92672>=</span><span style=color:#e6db74>${random.int}</span>
+</span></span><span style=display:flex><span><span style=color:#75715e># 随机long</span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>com.didispace.blog.bignumber</span><span style=color:#f92672>=</span><span style=color:#e6db74>${random.long}</span>
+</span></span><span style=display:flex><span><span style=color:#75715e># 10以内的随机数</span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>com.didispace.blog.test1</span><span style=color:#f92672>=</span><span style=color:#e6db74>${random.int(10)}</span>
+</span></span><span style=display:flex><span><span style=color:#75715e># 10-20的随机数</span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>com.didispace.blog.test2</span><span style=color:#f92672>=</span><span style=color:#e6db74>${random.int[10,20]}</span></span></span></code></pre></div><h3 id=命令行参数>命令行参数</h3><p><code>java -jar xxx.jar --server.port=8888</code></p><p>等价于我们在<code>application.properties</code>中添加属性<code>server.port=8888</code></p><h3 id=多环境配置>多环境配置</h3><ul><li><code>application-dev.properties</code>：开发环境</li><li><code>application-test.properties</code>：测试环境</li><li><code>application-prod.properties</code>：生产环境</li></ul><p>通过<code>spring.profiles.active</code>属性来配置（如：<code>spring.profiles.active=test</code>）</p><h3 id=绑定-api>绑定 API</h3><p>假设在propertes配置中有这样一个配置：<code>com.didispace.foo=bar</code></p><p>我们为它创建对应的配置类：</p><div class=highlight id=id-7><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=display:flex><span><span style=color:#a6e22e>@Data</span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>@ConfigurationProperties</span><span style=color:#f92672>(</span>prefix <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;com.didispace&#34;</span><span style=color:#f92672>)</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>public</span> <span style=color:#66d9ef>class</span> <span style=color:#a6e22e>FooProperties</span> <span style=color:#f92672>{</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>private</span> String foo<span style=color:#f92672>;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#f92672>}</span></span></span></code></pre></div><p>接下来，通过最新的<code>Binder</code>就可以这样来拿配置信息了：</p><div class=highlight id=id-8><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=display:flex><span><span style=color:#a6e22e>@SpringBootApplication</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>public</span> <span style=color:#66d9ef>class</span> <span style=color:#a6e22e>Application</span> <span style=color:#f92672>{</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>static</span> <span style=color:#66d9ef>void</span> <span style=color:#a6e22e>main</span><span style=color:#f92672>(</span>String<span style=color:#f92672>[]</span> args<span style=color:#f92672>)</span> <span style=color:#f92672>{</span>
+</span></span><span style=display:flex><span>        ApplicationContext context <span style=color:#f92672>=</span> SpringApplication<span style=color:#f92672>.</span><span style=color:#a6e22e>run</span><span style=color:#f92672>(</span>Application<span style=color:#f92672>.</span><span style=color:#a6e22e>class</span><span style=color:#f92672>,</span> args<span style=color:#f92672>);</span>
+</span></span><span style=display:flex><span>        Binder binder <span style=color:#f92672>=</span> Binder<span style=color:#f92672>.</span><span style=color:#a6e22e>get</span><span style=color:#f92672>(</span>context<span style=color:#f92672>.</span><span style=color:#a6e22e>getEnvironment</span><span style=color:#f92672>());</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#75715e>// 绑定简单配置
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>        FooProperties foo <span style=color:#f92672>=</span> binder<span style=color:#f92672>.</span><span style=color:#a6e22e>bind</span><span style=color:#f92672>(</span><span style=color:#e6db74>&#34;com.didispace&#34;</span><span style=color:#f92672>,</span> Bindable<span style=color:#f92672>.</span><span style=color:#a6e22e>of</span><span style=color:#f92672>(</span>FooProperties<span style=color:#f92672>.</span><span style=color:#a6e22e>class</span><span style=color:#f92672>)).</span><span style=color:#a6e22e>get</span><span style=color:#f92672>();</span>
+</span></span><span style=display:flex><span>        System<span style=color:#f92672>.</span><span style=color:#a6e22e>out</span><span style=color:#f92672>.</span><span style=color:#a6e22e>println</span><span style=color:#f92672>(</span>foo<span style=color:#f92672>.</span><span style=color:#a6e22e>getFoo</span><span style=color:#f92672>());</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>}</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>}</span></span></span></code></pre></div><h2 id=关系型数据库>关系型数据库</h2><p>Spring Boot提供自动配置的嵌入式数据库有H2、HSQL、Derby，你不需要提供任何连接配置就能使用。</p><h3 id=jpa--java-persistence-api>JPA = Java Persistence API</h3><p><strong>通过解析方法名创建查询</strong></p><h3 id=jta--java-transaction-api>JTA = Java Transaction API</h3><p>JTA事务比JDBC事务更强大。一个JTA事务可以有多个参与者，而一个JDBC事务则被限定在一个单一的数据库连接。所以，当我们在同时操作多个数据库的时候，使用JTA事务就可以弥补JDBC事务的不足。</p><h3 id=单元测试>单元测试</h3><ul><li>插入一条name=AAA，age=20的记录，然后根据name=AAA查询，并判断age是否为20</li><li>测试结束回滚数据，保证测试单元每次运行的数据环境独立</li></ul><div class=highlight id=id-9><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=display:flex><span><span style=color:#a6e22e>@Slf4j</span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>@RunWith</span><span style=color:#f92672>(</span>SpringRunner<span style=color:#f92672>.</span><span style=color:#a6e22e>class</span><span style=color:#f92672>)</span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>@SpringBootTest</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>public</span> <span style=color:#66d9ef>class</span> <span style=color:#a6e22e>Chapter35ApplicationTests</span> <span style=color:#f92672>{</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>@Autowired</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>private</span> UserMapper userMapper<span style=color:#f92672>;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>@Test</span>
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>@Rollback</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>void</span> <span style=color:#a6e22e>test</span><span style=color:#f92672>()</span> <span style=color:#66d9ef>throws</span> Exception <span style=color:#f92672>{</span>
+</span></span><span style=display:flex><span>        userMapper<span style=color:#f92672>.</span><span style=color:#a6e22e>insert</span><span style=color:#f92672>(</span><span style=color:#e6db74>&#34;AAA&#34;</span><span style=color:#f92672>,</span> 20<span style=color:#f92672>);</span>
+</span></span><span style=display:flex><span>        User u <span style=color:#f92672>=</span> userMapper<span style=color:#f92672>.</span><span style=color:#a6e22e>findByName</span><span style=color:#f92672>(</span><span style=color:#e6db74>&#34;AAA&#34;</span><span style=color:#f92672>);</span>
+</span></span><span style=display:flex><span>        Assert<span style=color:#f92672>.</span><span style=color:#a6e22e>assertEquals</span><span style=color:#f92672>(</span>20<span style=color:#f92672>,</span> u<span style=color:#f92672>.</span><span style=color:#a6e22e>getAge</span><span style=color:#f92672>().</span><span style=color:#a6e22e>intValue</span><span style=color:#f92672>());</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>}</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#f92672>}</span></span></span></code></pre></div><p>通常我们单元测试为了保证每个测试之间的数据独立，会使用<code>@Rollback</code>注解让每个单元测试都能在结束时回滚。而真正在开发业务逻辑时，我们通常在service层接口中使用<code>@Transactional</code>来对各个业务逻辑进行事务管理的配置。</p><h4 id=transactional注解不生效>@Transactional注解不生效？</h4><ol><li>注解修饰的函数中<code>catch</code>了异常，并没有往方法外抛。</li><li><code>@Transactional</code>注解修饰的函数不是<code>public</code>类型</li><li>对应数据库使用的存储引擎不支持事务，比如：MyISAM。</li><li>数据源没有配置事务管理器</li></ol><h3 id=事务隔离级别>事务隔离级别</h3><p>隔离级别是指若干个并发的事务之间的隔离程度，与我们开发时候主要相关的场景包括：脏读取、重复读、幻读。</p><p>我们可以看<code>org.springframework.transaction.annotation.Isolation</code>枚举类中定义了五个表示隔离级别的值：</p><div class=highlight id=id-10><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=display:flex><span><span style=color:#66d9ef>public</span> <span style=color:#66d9ef>enum</span> Isolation <span style=color:#f92672>{</span>
+</span></span><span style=display:flex><span>    DEFAULT<span style=color:#f92672>(-</span>1<span style=color:#f92672>),</span>
+</span></span><span style=display:flex><span>    READ_UNCOMMITTED<span style=color:#f92672>(</span>1<span style=color:#f92672>),</span>
+</span></span><span style=display:flex><span>    READ_COMMITTED<span style=color:#f92672>(</span>2<span style=color:#f92672>),</span>
+</span></span><span style=display:flex><span>    REPEATABLE_READ<span style=color:#f92672>(</span>4<span style=color:#f92672>),</span>
+</span></span><span style=display:flex><span>    SERIALIZABLE<span style=color:#f92672>(</span>8<span style=color:#f92672>);</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>}</span></span></span></code></pre></div><ul><li><code>DEFAULT</code>：这是默认值，表示使用底层数据库的默认隔离级别。对大部分数据库而言，通常这值就是：<code>READ_COMMITTED</code>。</li><li><code>READ_UNCOMMITTED</code>：该隔离级别表示一个事务可以读取另一个事务修改但还没有提交的数据。该级别不能防止脏读和不可重复读，因此很少使用该隔离级别。</li><li><code>READ_COMMITTED</code>：该隔离级别表示一个事务只能读取另一个事务已经提交的数据。该级别可以防止脏读，这也是大多数情况下的推荐值。</li><li><code>REPEATABLE_READ</code>：该隔离级别表示一个事务在整个过程中可以多次重复执行某个查询，并且每次返回的记录都相同。即使在多次查询之间有新增的数据满足该查询，这些新增的记录也会被忽略。该级别可以防止脏读和不可重复读。</li><li><code>SERIALIZABLE</code>：所有的事务依次逐个执行，这样事务之间就完全不可能产生干扰，也就是说，该级别可以防止脏读、不可重复读以及幻读。但是这将严重影响程序的性能。通常情况下也不会用到该级别。</li></ul><p>指定方法：通过使用<code>isolation</code>属性设置，例如：</p><div class=highlight id=id-11><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=display:flex><span><span style=color:#a6e22e>@Transactional</span><span style=color:#f92672>(</span>isolation <span style=color:#f92672>=</span> Isolation<span style=color:#f92672>.</span><span style=color:#a6e22e>DEFAULT</span><span style=color:#f92672>)</span></span></span></code></pre></div><h3 id=传播行为>传播行为</h3><p>所谓事务的传播行为是指，如果在开始当前事务之前，一个事务上下文已经存在，此时有若干选项可以指定一个事务性方法的执行行为。</p><p>我们可以看<code>org.springframework.transaction.annotation.Propagation</code>枚举类中定义了6个表示传播行为的枚举值：</p><div class=highlight id=id-12><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=display:flex><span><span style=color:#66d9ef>public</span> <span style=color:#66d9ef>enum</span> Propagation <span style=color:#f92672>{</span>
+</span></span><span style=display:flex><span>    REQUIRED<span style=color:#f92672>(</span>0<span style=color:#f92672>),</span>
+</span></span><span style=display:flex><span>    SUPPORTS<span style=color:#f92672>(</span>1<span style=color:#f92672>),</span>
+</span></span><span style=display:flex><span>    MANDATORY<span style=color:#f92672>(</span>2<span style=color:#f92672>),</span>
+</span></span><span style=display:flex><span>    REQUIRES_NEW<span style=color:#f92672>(</span>3<span style=color:#f92672>),</span>
+</span></span><span style=display:flex><span>    NOT_SUPPORTED<span style=color:#f92672>(</span>4<span style=color:#f92672>),</span>
+</span></span><span style=display:flex><span>    NEVER<span style=color:#f92672>(</span>5<span style=color:#f92672>),</span>
+</span></span><span style=display:flex><span>    NESTED<span style=color:#f92672>(</span>6<span style=color:#f92672>);</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>}</span></span></span></code></pre></div><ul><li><code>REQUIRED</code>：如果当前存在事务，则加入该事务；如果当前没有事务，则创建一个新的事务。</li><li><code>SUPPORTS</code>：如果当前存在事务，则加入该事务；如果当前没有事务，则以非事务的方式继续运行。</li><li><code>MANDATORY</code>：如果当前存在事务，则加入该事务；如果当前没有事务，则抛出异常。</li><li><code>REQUIRES_NEW</code>：创建一个新的事务，如果当前存在事务，则把当前事务挂起。</li><li><code>NOT_SUPPORTED</code>：以非事务方式运行，如果当前存在事务，则把当前事务挂起。</li><li><code>NEVER</code>：以非事务方式运行，如果当前存在事务，则抛出异常。</li><li><code>NESTED</code>：如果当前存在事务，则创建一个事务作为当前事务的嵌套事务来运行；如果当前没有事务，则该取值等价于<code>REQUIRED</code>。</li></ul><p>指定方法：通过使用<code>propagation</code>属性设置，例如：</p><div class=highlight id=id-13><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=display:flex><span><span style=color:#a6e22e>@Transactional</span><span style=color:#f92672>(</span>propagation <span style=color:#f92672>=</span> Propagation<span style=color:#f92672>.</span><span style=color:#a6e22e>REQUIRED</span><span style=color:#f92672>)</span></span></span></code></pre></div><h3 id=flyway>Flyway</h3><p>Flyway是一个简单开源数据库版本控制器（约定大于配置），主要提供migrate、clean、info、validate、baseline、repair等命令。它支持SQL（PL/SQL、T-SQL）方式和Java方式，支持命令行客户端等，还提供一系列的插件支持（Maven、Gradle、SBT、ANT等）。</p><p>官方网站：<a href=https://flywaydb.org/ target=_blank rel="external nofollow noopener noreferrer">https://flywaydb.org/</a></p><h3 id=mybatis>Mybatis</h3><h4 id=使用param-param->使用<a href=/Param>@Param</a></h4><p>在之前的整合示例中我们已经使用了这种最简单的传参方式，如下：</p><div class=highlight id=id-14><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=display:flex><span><span style=color:#a6e22e>@Insert</span><span style=color:#f92672>(</span><span style=color:#e6db74>&#34;INSERT INTO USER(NAME, AGE) VALUES(#{name}, #{age})&#34;</span><span style=color:#f92672>)</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>int</span> <span style=color:#a6e22e>insert</span><span style=color:#f92672>(</span><span style=color:#a6e22e>@Param</span><span style=color:#f92672>(</span><span style=color:#e6db74>&#34;name&#34;</span><span style=color:#f92672>)</span> String name<span style=color:#f92672>,</span> <span style=color:#a6e22e>@Param</span><span style=color:#f92672>(</span><span style=color:#e6db74>&#34;age&#34;</span><span style=color:#f92672>)</span> Integer age<span style=color:#f92672>);</span></span></span></code></pre></div><p>这种方式很好理解，<code>@Param</code>中定义的<code>name</code>对应了SQL中的<code>#{name}</code>，<code>age</code>对应了SQL中的<code>#{age}</code>。</p><h4 id=使用map>使用Map</h4><p>如下代码，通过<code>Map&lt;String, Object></code>对象来作为传递参数的容器：</p><pre tabindex=0><code>@Insert(&#34;INSERT INTO USER(NAME, AGE) VALUES(#{name,jdbcType=VARCHAR}, #{age,jdbcType=INTEGER})&#34;)
+int insertByMap(Map&lt;String, Object&gt; map);</code></pre><p>对于Insert语句中需要的参数，我们只需要在map中填入同名的内容即可，具体如下面代码所示：</p><div class=highlight id=id-16><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=display:flex><span>Map<span style=color:#f92672>&lt;</span>String<span style=color:#f92672>,</span> Object<span style=color:#f92672>&gt;</span> map <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> HashMap<span style=color:#f92672>&lt;&gt;();</span>
+</span></span><span style=display:flex><span>map<span style=color:#f92672>.</span><span style=color:#a6e22e>put</span><span style=color:#f92672>(</span><span style=color:#e6db74>&#34;name&#34;</span><span style=color:#f92672>,</span> <span style=color:#e6db74>&#34;CCC&#34;</span><span style=color:#f92672>);</span>
+</span></span><span style=display:flex><span>map<span style=color:#f92672>.</span><span style=color:#a6e22e>put</span><span style=color:#f92672>(</span><span style=color:#e6db74>&#34;age&#34;</span><span style=color:#f92672>,</span> 40<span style=color:#f92672>);</span>
+</span></span><span style=display:flex><span>userMapper<span style=color:#f92672>.</span><span style=color:#a6e22e>insertByMap</span><span style=color:#f92672>(</span>map<span style=color:#f92672>);</span></span></span></code></pre></div><h4 id=包扫描-1>包扫描</h4><div class=highlight id=id-17><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=display:flex><span><span style=color:#a6e22e>@MapperScan</span><span style=color:#f92672>(</span><span style=color:#e6db74>&#34;com.didispace.chapter36.mapper&#34;</span><span style=color:#f92672>)</span></span></span></code></pre></div><h3 id=lombok>Lombok</h3><ol><li><code>Val</code>可以将变量申明是final类型。</li></ol><div class=highlight id=id-18><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=display:flex><span><span style=color:#66d9ef>public</span>   <span style=color:#66d9ef>static</span> <span style=color:#66d9ef>void</span> <span style=color:#a6e22e>main</span><span style=color:#f92672>(</span>String<span style=color:#f92672>[]</span> args<span style=color:#f92672>)</span> <span style=color:#f92672>{</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    val setVar <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> HashSet<span style=color:#f92672>&lt;</span>String<span style=color:#f92672>&gt;();</span>
+</span></span><span style=display:flex><span>    val listsVar <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span>   ArrayList<span style=color:#f92672>&lt;</span>String<span style=color:#f92672>&gt;();</span>
+</span></span><span style=display:flex><span>    val mapVar <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> HashMap<span style=color:#f92672>&lt;</span>String<span style=color:#f92672>,</span>   String<span style=color:#f92672>&gt;();</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e>//=&gt;上面代码相当于如下：
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>    <span style=color:#66d9ef>final</span> Set<span style=color:#f92672>&lt;</span>String<span style=color:#f92672>&gt;</span> setVar2 <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span>   HashSet<span style=color:#f92672>&lt;&gt;();</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>final</span> List<span style=color:#f92672>&lt;</span>String<span style=color:#f92672>&gt;</span> listsVar2 <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span>   ArrayList<span style=color:#f92672>&lt;&gt;();</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>final</span> Map<span style=color:#f92672>&lt;</span>String<span style=color:#f92672>,</span> String<span style=color:#f92672>&gt;</span> maps2 <span style=color:#f92672>=</span>   <span style=color:#66d9ef>new</span> HashMap<span style=color:#f92672>&lt;&gt;();</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#f92672>}</span></span></span></code></pre></div><ol start=2><li><code>@NonNull</code>注解能够为方法或构造函数的参数提供非空检查。</li></ol><div class=highlight id=id-19><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=display:flex><span><span style=color:#66d9ef>public</span> <span style=color:#66d9ef>void</span> <span style=color:#a6e22e>notNullExample</span><span style=color:#f92672>(</span><span style=color:#a6e22e>@NonNull</span> String string<span style=color:#f92672>)</span> <span style=color:#f92672>{</span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e>//方法内的代码
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span><span style=color:#f92672>}</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e>//=&gt;上面代码相当于如下：
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>public</span> <span style=color:#66d9ef>void</span> <span style=color:#a6e22e>notNullExample</span><span style=color:#f92672>(</span>String string<span style=color:#f92672>)</span> <span style=color:#f92672>{</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span> <span style=color:#f92672>(</span>string <span style=color:#f92672>!=</span> <span style=color:#66d9ef>null</span><span style=color:#f92672>)</span> <span style=color:#f92672>{</span>
+</span></span><span style=display:flex><span>        <span style=color:#75715e>//方法内的代码相当于如下：
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>    <span style=color:#f92672>}</span> <span style=color:#66d9ef>else</span> <span style=color:#f92672>{</span>
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>throw</span> <span style=color:#66d9ef>new</span> NullPointerException<span style=color:#f92672>(</span><span style=color:#e6db74>&#34;null&#34;</span><span style=color:#f92672>);</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>}</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>}</span></span></span></code></pre></div><ol start=3><li><code>@Cleanup</code>注解能够自动释放资源。</li></ol><pre tabindex=0><code>public   void jedisExample(String[] args) {
+    try {
+        @Cleanup Jedis jedis =   redisService.getJedis();
+    } catch (Exception ex) {
+        logger.error(“Jedis异常:”,ex)
+    }
+
+    //=&gt;上面代码相当于如下：
+    Jedis jedis= null;
+    try {
+        jedis = redisService.getJedis();
+    } catch (Exception e) {
+        logger.error(“Jedis异常:”,ex)
+    } finally {
+        if (jedis != null) {
+            try {
+                jedis.close();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+    }
+}</code></pre><ol start=4><li><code>@Synchronized</code>注解类似Java中的Synchronized 关键字，但是可以隐藏同步锁。</li></ol><div class=highlight id=id-21><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=display:flex><span><span style=color:#66d9ef>public</span> <span style=color:#66d9ef>class</span> <span style=color:#a6e22e>SynchronizedExample</span> <span style=color:#f92672>{</span> 
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span> <span style=color:#66d9ef>private</span> <span style=color:#66d9ef>final</span> Object readLock <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span>   Object<span style=color:#f92672>();</span> 
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span> <span style=color:#a6e22e>@Synchronized</span> 
+</span></span><span style=display:flex><span> <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>static</span> <span style=color:#66d9ef>void</span> <span style=color:#a6e22e>hello</span><span style=color:#f92672>()</span> <span style=color:#f92672>{</span> 
+</span></span><span style=display:flex><span>     System<span style=color:#f92672>.</span><span style=color:#a6e22e>out</span><span style=color:#f92672>.</span><span style=color:#a6e22e>println</span><span style=color:#f92672>(</span><span style=color:#e6db74>&#34;world&#34;</span><span style=color:#f92672>);</span>   
+</span></span><span style=display:flex><span> <span style=color:#f92672>}</span> 
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span> <span style=color:#a6e22e>@Synchronized</span><span style=color:#f92672>(</span><span style=color:#e6db74>&#34;readLock&#34;</span><span style=color:#f92672>)</span> 
+</span></span><span style=display:flex><span> <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>void</span> <span style=color:#a6e22e>foo</span><span style=color:#f92672>()</span> <span style=color:#f92672>{</span> 
+</span></span><span style=display:flex><span>   System<span style=color:#f92672>.</span><span style=color:#a6e22e>out</span><span style=color:#f92672>.</span><span style=color:#a6e22e>println</span><span style=color:#f92672>(</span><span style=color:#e6db74>&#34;bar&#34;</span><span style=color:#f92672>);</span> 
+</span></span><span style=display:flex><span> <span style=color:#f92672>}</span> 
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e>//上面代码相当于如下：
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>
+</span></span><span style=display:flex><span> <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>class</span> <span style=color:#a6e22e>SynchronizedExample</span> <span style=color:#f92672>{</span> 
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>private</span> <span style=color:#66d9ef>static</span> <span style=color:#66d9ef>final</span> Object $LOCK <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span>   Object<span style=color:#f92672>[</span>0<span style=color:#f92672>];</span> 
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>private</span> <span style=color:#66d9ef>final</span> Object readLock <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span>   Object<span style=color:#f92672>();</span> 
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>static</span> <span style=color:#66d9ef>void</span> <span style=color:#a6e22e>hello</span><span style=color:#f92672>()</span> <span style=color:#f92672>{</span> 
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>synchronized</span><span style=color:#f92672>(</span>$LOCK<span style=color:#f92672>)</span> <span style=color:#f92672>{</span> 
+</span></span><span style=display:flex><span>      System<span style=color:#f92672>.</span><span style=color:#a6e22e>out</span><span style=color:#f92672>.</span><span style=color:#a6e22e>println</span><span style=color:#f92672>(</span><span style=color:#e6db74>&#34;world&#34;</span><span style=color:#f92672>);</span> 
+</span></span><span style=display:flex><span>    <span style=color:#f92672>}</span> 
+</span></span><span style=display:flex><span>  <span style=color:#f92672>}</span>   
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>void</span> <span style=color:#a6e22e>foo</span><span style=color:#f92672>()</span> <span style=color:#f92672>{</span> 
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>synchronized</span><span style=color:#f92672>(</span>readLock<span style=color:#f92672>)</span> <span style=color:#f92672>{</span> 
+</span></span><span style=display:flex><span>        System<span style=color:#f92672>.</span><span style=color:#a6e22e>out</span><span style=color:#f92672>.</span><span style=color:#a6e22e>println</span><span style=color:#f92672>(</span><span style=color:#e6db74>&#34;bar&#34;</span><span style=color:#f92672>);</span>   
+</span></span><span style=display:flex><span>    <span style=color:#f92672>}</span> 
+</span></span><span style=display:flex><span>  <span style=color:#f92672>}</span> 
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#f92672>}</span></span></span></code></pre></div><h3 id=postgresql>PostgreSQL</h3><p>PostgreSQL是一种特性非常齐全的自由软件的对象-关系型数据库管理系统（ORDBMS），是以加州大学计算机系开发的POSTGRES，4.2版本为基础的对象关系型数据库管理系统。</p><ul><li>支持存储一些特殊的数据类型，比如：array、json、jsonb</li><li>对地理信息的存储与处理有更好的支持，所以它可以成为一个空间数据库，更好的管理数据测量和几何拓扑分析</li><li>可以快速构建REST API，通过PostgREST可以方便的为任何PostgreSQL数据库提供RESTful API的服务</li><li>支持树状结构，可以更方便的处理具备此类特性的数据存储</li><li>外部数据源支持，可以把MySQL、Oracle、CSV、Hadoop等当成自己数据库中的表来进行查询</li><li>对索引的支持更强，PostgreSQL支持 B-树、哈希、R-树和 Gist 索引。而MySQL取决于存储引擎。MyISAM：BTREE，InnoDB：BTREE。</li><li>事务隔离更好，MySQL 的事务隔离级别repeatable read并不能阻止常见的并发更新，得加锁才可以，但悲观锁会影响性能，手动实现乐观锁又复杂。而 PostgreSQL 的列里有隐藏的乐观锁 version 字段，默认的 repeatable read 级别就能保证并发更新的正确性，并且又有乐观锁的性能。</li><li>时间精度更高，可以精确到秒以下</li><li>字符支持更好，MySQL里需要utf8mb4才能显示emoji，PostgreSQL没这个坑</li><li>存储方式支持更大的数据量，PostgreSQL主表采用堆表存放，MySQL采用索引组织表，能够支持比MySQL更大的数据量。</li><li>序列支持更好，MySQL不支持多个表从同一个序列中取id，而PostgreSQL可以</li><li>增加列更简单，MySQL表增加列，基本上是重建表和索引，会花很长时间。PostgreSQL表增加列，只是在数据字典中增加表定义，不会重建表。</li></ul><h2 id=缓存-nosql>缓存 NoSQL</h2><h3 id=引入缓存>引入缓存</h3><p>第一步：在<code>pom.xml</code>中引入cache依赖，添加如下内容：</p><div class=highlight id=id-22><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=display:flex><span><span style=color:#f92672>&lt;</span>dependency<span style=color:#f92672>&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>&lt;</span>groupId<span style=color:#f92672>&gt;</span>org<span style=color:#f92672>.</span><span style=color:#a6e22e>springframework</span><span style=color:#f92672>.</span><span style=color:#a6e22e>boot</span><span style=color:#f92672>&lt;/</span>groupId<span style=color:#f92672>&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>&lt;</span>artifactId<span style=color:#f92672>&gt;</span>spring<span style=color:#f92672>-</span>boot<span style=color:#f92672>-</span>starter<span style=color:#f92672>-</span>cache<span style=color:#f92672>&lt;/</span>artifactId<span style=color:#f92672>&gt;</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>&lt;/</span>dependency<span style=color:#f92672>&gt;</span></span></span></code></pre></div><p>第二步：在Spring Boot主类中增加<code>@EnableCaching</code>注解开启缓存功能，如下：</p><div class=highlight id=id-23><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=display:flex><span><span style=color:#a6e22e>@EnableCaching</span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>@SpringBootApplication</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>public</span> <span style=color:#66d9ef>class</span> <span style=color:#a6e22e>Chapter51Application</span> <span style=color:#f92672>{</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>	<span style=color:#66d9ef>public</span> <span style=color:#66d9ef>static</span> <span style=color:#66d9ef>void</span> <span style=color:#a6e22e>main</span><span style=color:#f92672>(</span>String<span style=color:#f92672>[]</span> args<span style=color:#f92672>)</span> <span style=color:#f92672>{</span>
+</span></span><span style=display:flex><span>		SpringApplication<span style=color:#f92672>.</span><span style=color:#a6e22e>run</span><span style=color:#f92672>(</span>Chapter51Application<span style=color:#f92672>.</span><span style=color:#a6e22e>class</span><span style=color:#f92672>,</span> args<span style=color:#f92672>);</span>
+</span></span><span style=display:flex><span>	<span style=color:#f92672>}</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#f92672>}</span></span></span></code></pre></div><p>第三步：在数据访问接口中，增加缓存配置注解，如：</p><div class=highlight id=id-24><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=display:flex><span><span style=color:#a6e22e>@CacheConfig</span><span style=color:#f92672>(</span>cacheNames <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;users&#34;</span><span style=color:#f92672>)</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>public</span> <span style=color:#66d9ef>interface</span> <span style=color:#a6e22e>UserRepository</span> <span style=color:#66d9ef>extends</span> JpaRepository<span style=color:#f92672>&lt;</span>User<span style=color:#f92672>,</span> Long<span style=color:#f92672>&gt;</span> <span style=color:#f92672>{</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>@Cacheable</span>
+</span></span><span style=display:flex><span>    User <span style=color:#a6e22e>findByName</span><span style=color:#f92672>(</span>String name<span style=color:#f92672>);</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#f92672>}</span></span></span></code></pre></div><h3 id=redis>Redis</h3><p>发布订阅模式比观察者模式多了一个中间层。</p><h3 id=mongodb>MongoDB</h3><p>MongoDB是一个基于分布式文件存储的数据库，它是一个介于关系数据库和非关系数据库之间的产品，其主要目标是在键/值存储方式（提供了高性能和高度伸缩性）和传统的RDBMS系统（具有丰富的功能）之间架起一座桥梁，它集两者的优势于一身。</p><p>MongoDB支持的数据结构非常松散，是类似json的bson格式，因此可以存储比较复杂的数据类型，也因为他的存储格式也使得它所存储的数据在Nodejs程序应用中使用非常流畅。</p><p>较常见的，我们可以直接用MongoDB来存储键值对类型的数据，如：验证码、Session等；由于MongoDB的横向扩展能力，也可以用来存储数据规模会在未来变的非常巨大的数据，如：日志、评论等；由于MongoDB存储数据的弱类型，也可以用来存储一些多变json数据，如：与外系统交互时经常变化的JSON报文。而对于一些对数据有复杂的高事务性要求的操作，如：账户交易等就不适合使用MongoDB来存储。</p><h3 id=ldap--lightweight-directory-access-protocol>LDAP = Lightweight Directory Access Protocol</h3><p>轻量级目录访问协议是实现提供被称为目录服务的信息服务。目录服务是一种特殊的数据库系统，其专门针对读取，浏览和搜索操作进行了特定的优化。目录一般用来包含描述性的，基于属性的信息并支持精细复杂的过滤能力。目录一般不支持通用数据库针对大量更新操作操作需要的复杂的事务管理或回卷策略。而目录服务的更新则一般都非常简单。这种目录可以存储包括个人信息、web链结、jpeg图像等各种信息。为了访问存储在目录中的信息，就需要使用运行在TCP/IP 之上的访问协议—LDAP。</p><ul><li>o：organization（组织-公司）</li><li>ou：organization unit（组织单元-部门）</li><li>c：countryName（国家）</li><li>dc：domainComponent（域名）</li><li>sn：surname（姓氏）</li><li>cn：common name（常用名称）</li></ul><h3 id=时序数据库influxdb>时序数据库InfluxDB</h3><p>时间序列数据库主要用于指处理带时间标签（按照时间的顺序变化，即时间序列化）的数据，带时间标签的数据也称为时间序列数据。
+时间序列数据主要由电力行业、化工行业等各类型实时监测、检查与分析设备所采集、产生的数据，这些工业数据的典型特点是：产生频率快（每一个监测点一秒钟内可产生多条数据）、严重依赖于采集时间（每一条数据均要求对应唯一的时间）、测点多信息量大（常规的实时监测系统均有成千上万的监测点，监测点每秒钟都产生数据，每天产生几十GB的数据量）</p><p>几个重要名词：</p><ul><li>database：数据库</li><li>measurement：类似于关系数据库中的table（表）</li><li>points：类似于关系数据库中的row（一行数据）<ul><li>time：时间戳</li><li>fields：记录的值</li><li>tags：索引的属性</li></ul></li></ul><h2 id=web-开发>Web 开发</h2><h3 id=thymeleaf>Thymeleaf</h3><p>它是一个XML/XHTML/HTML5模板引擎，可用于Web与非Web环境中的应用开发。它是一个开源的Java库，基于Apache License 2.0许可，由Daniel Fernández创建，该作者还是Java加密库Jasypt的作者。</p><p>Thymeleaf提供了一个用于整合Spring MVC的可选模块，在应用开发中，你可以使用Thymeleaf来完全代替JSP或其他模板引擎，如Velocity、FreeMarker等。Thymeleaf的主要目标在于提供一种可被浏览器正确显示的、格式良好的模板创建方式，因此也可以用作静态建模。你可以使用它创建经过验证的XML与HTML模板。相对于编写逻辑或代码，开发者只需将标签属性添加到模板中即可。接下来，这些标签属性就会在DOM（文档对象模型）上执行预先制定好的逻辑。</p><h3 id=单元测试-1>单元测试</h3><p>入门例子</p><div class=highlight id=id-25><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=display:flex><span><span style=color:#a6e22e>@SpringBootTest</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>public</span> <span style=color:#66d9ef>class</span> <span style=color:#a6e22e>Chapter11ApplicationTests</span> <span style=color:#f92672>{</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>private</span> MockMvc mvc<span style=color:#f92672>;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>@Before</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>void</span> <span style=color:#a6e22e>setUp</span><span style=color:#f92672>()</span> <span style=color:#f92672>{</span>
+</span></span><span style=display:flex><span>        mvc <span style=color:#f92672>=</span> MockMvcBuilders<span style=color:#f92672>.</span><span style=color:#a6e22e>standaloneSetup</span><span style=color:#f92672>(</span><span style=color:#66d9ef>new</span> HelloController<span style=color:#f92672>()).</span><span style=color:#a6e22e>build</span><span style=color:#f92672>();</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>}</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>@Test</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>void</span> <span style=color:#a6e22e>getHello</span><span style=color:#f92672>()</span> <span style=color:#66d9ef>throws</span> Exception <span style=color:#f92672>{</span>
+</span></span><span style=display:flex><span>        mvc<span style=color:#f92672>.</span><span style=color:#a6e22e>perform</span><span style=color:#f92672>(</span>MockMvcRequestBuilders<span style=color:#f92672>.</span><span style=color:#a6e22e>get</span><span style=color:#f92672>(</span><span style=color:#e6db74>&#34;/hello&#34;</span><span style=color:#f92672>).</span><span style=color:#a6e22e>accept</span><span style=color:#f92672>(</span>MediaType<span style=color:#f92672>.</span><span style=color:#a6e22e>APPLICATION_JSON</span><span style=color:#f92672>))</span>
+</span></span><span style=display:flex><span>                <span style=color:#f92672>.</span><span style=color:#a6e22e>andExpect</span><span style=color:#f92672>(</span>status<span style=color:#f92672>().</span><span style=color:#a6e22e>isOk</span><span style=color:#f92672>())</span>
+</span></span><span style=display:flex><span>                <span style=color:#f92672>.</span><span style=color:#a6e22e>andExpect</span><span style=color:#f92672>(</span>content<span style=color:#f92672>().</span><span style=color:#a6e22e>string</span><span style=color:#f92672>(</span>equalTo<span style=color:#f92672>(</span><span style=color:#e6db74>&#34;Hello World&#34;</span><span style=color:#f92672>)));</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>}</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#f92672>}</span></span></span></code></pre></div><p>对于文件上传接口，本质上还是http请求的处理，所以MockMvc依然逃不掉，就是上传内容发生了改变，我们只需要去找一下文件上传的模拟对象是哪个，就可以轻松完成这个任务。具体写法如下：</p><div class=highlight id=id-26><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=display:flex><span><span style=color:#a6e22e>@SpringBootTest</span><span style=color:#f92672>(</span>classes <span style=color:#f92672>=</span> Chapter43Application<span style=color:#f92672>.</span><span style=color:#a6e22e>class</span><span style=color:#f92672>)</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>public</span> <span style=color:#66d9ef>class</span> <span style=color:#a6e22e>FileTest</span> <span style=color:#f92672>{</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>@Autowired</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>protected</span> WebApplicationContext context<span style=color:#f92672>;</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>protected</span> MockMvc mvc<span style=color:#f92672>;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>@BeforeEach</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>void</span> <span style=color:#a6e22e>setUp</span><span style=color:#f92672>()</span> <span style=color:#f92672>{</span>
+</span></span><span style=display:flex><span>        mvc <span style=color:#f92672>=</span> MockMvcBuilders<span style=color:#f92672>.</span><span style=color:#a6e22e>webAppContextSetup</span><span style=color:#f92672>(</span>context<span style=color:#f92672>).</span><span style=color:#a6e22e>build</span><span style=color:#f92672>();</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>}</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>@Test</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>void</span> <span style=color:#a6e22e>uploadFile</span><span style=color:#f92672>()</span> <span style=color:#66d9ef>throws</span> Exception <span style=color:#f92672>{</span>
+</span></span><span style=display:flex><span>        MockMultipartFile file <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> MockMultipartFile<span style=color:#f92672>(</span>
+</span></span><span style=display:flex><span>                <span style=color:#e6db74>&#34;file&#34;</span><span style=color:#f92672>,</span>
+</span></span><span style=display:flex><span>                <span style=color:#e6db74>&#34;hello.txt&#34;</span><span style=color:#f92672>,</span>
+</span></span><span style=display:flex><span>                MediaType<span style=color:#f92672>.</span><span style=color:#a6e22e>TEXT_PLAIN_VALUE</span><span style=color:#f92672>,</span>
+</span></span><span style=display:flex><span>                <span style=color:#e6db74>&#34;Hello, World!&#34;</span><span style=color:#f92672>.</span><span style=color:#a6e22e>getBytes</span><span style=color:#f92672>()</span>
+</span></span><span style=display:flex><span>        <span style=color:#f92672>);</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>final</span> MvcResult result <span style=color:#f92672>=</span> mvc<span style=color:#f92672>.</span><span style=color:#a6e22e>perform</span><span style=color:#f92672>(</span>
+</span></span><span style=display:flex><span>                MockMvcRequestBuilders
+</span></span><span style=display:flex><span>                        <span style=color:#f92672>.</span><span style=color:#a6e22e>multipart</span><span style=color:#f92672>(</span><span style=color:#e6db74>&#34;/upload&#34;</span><span style=color:#f92672>)</span>
+</span></span><span style=display:flex><span>                        <span style=color:#f92672>.</span><span style=color:#a6e22e>file</span><span style=color:#f92672>(</span>file<span style=color:#f92672>))</span>
+</span></span><span style=display:flex><span>                <span style=color:#f92672>.</span><span style=color:#a6e22e>andDo</span><span style=color:#f92672>(</span>print<span style=color:#f92672>())</span>
+</span></span><span style=display:flex><span>                <span style=color:#f92672>.</span><span style=color:#a6e22e>andExpect</span><span style=color:#f92672>(</span>status<span style=color:#f92672>().</span><span style=color:#a6e22e>isOk</span><span style=color:#f92672>())</span>
+</span></span><span style=display:flex><span>                <span style=color:#f92672>.</span><span style=color:#a6e22e>andReturn</span><span style=color:#f92672>();</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>}</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#f92672>}</span></span></span></code></pre></div><p>可以看到MockMvc的测试主体是不变的，无非就是请求类型和请求内容发生了改变。</p><h3 id=定时任务>定时任务</h3><h4 id=springboot自带的scheduled-scheduled->Springboot自带的<a href=/Scheduled>@Scheduled</a></h4><ul><li>在Spring Boot的主类中加入<code>@EnableScheduling</code>注解，启用定时任务的配置</li></ul><div class=highlight id=id-27><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=display:flex><span><span style=color:#a6e22e>@SpringBootApplication</span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>@EnableScheduling</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>public</span> <span style=color:#66d9ef>class</span> <span style=color:#a6e22e>Application</span> <span style=color:#f92672>{</span>
+</span></span><span style=display:flex><span>	<span style=color:#66d9ef>public</span> <span style=color:#66d9ef>static</span> <span style=color:#66d9ef>void</span> <span style=color:#a6e22e>main</span><span style=color:#f92672>(</span>String<span style=color:#f92672>[]</span> args<span style=color:#f92672>)</span> <span style=color:#f92672>{</span>
+</span></span><span style=display:flex><span>		SpringApplication<span style=color:#f92672>.</span><span style=color:#a6e22e>run</span><span style=color:#f92672>(</span>Application<span style=color:#f92672>.</span><span style=color:#a6e22e>class</span><span style=color:#f92672>,</span> args<span style=color:#f92672>);</span>
+</span></span><span style=display:flex><span>	<span style=color:#f92672>}</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>}</span></span></span></code></pre></div><ul><li>创建定时任务实现类</li></ul><div class=highlight id=id-28><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=display:flex><span><span style=color:#a6e22e>@Component</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>public</span> <span style=color:#66d9ef>class</span> <span style=color:#a6e22e>ScheduledTasks</span> <span style=color:#f92672>{</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>private</span> <span style=color:#66d9ef>static</span> <span style=color:#66d9ef>final</span> SimpleDateFormat dateFormat <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> SimpleDateFormat<span style=color:#f92672>(</span><span style=color:#e6db74>&#34;HH:mm:ss&#34;</span><span style=color:#f92672>);</span>
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>@Scheduled</span><span style=color:#f92672>(</span>fixedRate <span style=color:#f92672>=</span> 5000<span style=color:#f92672>)</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>void</span> <span style=color:#a6e22e>reportCurrentTime</span><span style=color:#f92672>()</span> <span style=color:#f92672>{</span>
+</span></span><span style=display:flex><span>        log<span style=color:#f92672>.</span><span style=color:#a6e22e>info</span><span style=color:#f92672>(</span><span style=color:#e6db74>&#34;现在时间：&#34;</span> <span style=color:#f92672>+</span> dateFormat<span style=color:#f92672>.</span><span style=color:#a6e22e>format</span><span style=color:#f92672>(</span><span style=color:#66d9ef>new</span> Date<span style=color:#f92672>()));</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>}</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>}</span></span></span></code></pre></div><p>这种模式实现的定时任务缺少在集群环境下的协调机制。解决这样问题的方式很多种，比较通用的就是采用<strong>分布式锁</strong>的方式，让同类任务之前的时候以分布式锁的方式来控制执行顺序，比如：使用Redis、Zookeeper等具备分布式锁功能的中间件配合就能很好的帮助我们来协调这类任务在集群模式下的执行规则。</p><h4 id=heading></h4><h4 id=elastic-job>Elastic Job</h4><p>Elastic Job的前生是当当开源的一款分布式任务调度框架，而目前已经加入到了Apache基金会。</p><ol><li><code>pom.xml</code>中添加elasticjob-lite的starter</li></ol><div class=highlight id=id-29><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-xml data-lang=xml><span style=display:flex><span><span style=color:#f92672>&lt;dependencies&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>&lt;dependency&gt;</span>
+</span></span><span style=display:flex><span>        <span style=color:#f92672>&lt;groupId&gt;</span>org.apache.shardingsphere.elasticjob<span style=color:#f92672>&lt;/groupId&gt;</span>
+</span></span><span style=display:flex><span>        <span style=color:#f92672>&lt;artifactId&gt;</span>elasticjob-lite-spring-boot-starter<span style=color:#f92672>&lt;/artifactId&gt;</span>
+</span></span><span style=display:flex><span>        <span style=color:#f92672>&lt;version&gt;</span>3.0.0<span style=color:#f92672>&lt;/version&gt;</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>&lt;/dependency&gt;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    // ...
+</span></span><span style=display:flex><span><span style=color:#f92672>&lt;/dependencies&gt;</span></span></span></code></pre></div><ol start=2><li>创建一个简单任务</li></ol><div class=highlight id=id-30><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=display:flex><span><span style=color:#a6e22e>@Slf4j</span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>@Service</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>public</span> <span style=color:#66d9ef>class</span> <span style=color:#a6e22e>MySimpleJob</span> <span style=color:#66d9ef>implements</span> SimpleJob <span style=color:#f92672>{</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>@Override</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>void</span> <span style=color:#a6e22e>execute</span><span style=color:#f92672>(</span>ShardingContext context<span style=color:#f92672>)</span> <span style=color:#f92672>{</span>
+</span></span><span style=display:flex><span>        log<span style=color:#f92672>.</span><span style=color:#a6e22e>info</span><span style=color:#f92672>(</span><span style=color:#e6db74>&#34;MySimpleJob start : didispace.com {}&#34;</span><span style=color:#f92672>,</span> System<span style=color:#f92672>.</span><span style=color:#a6e22e>currentTimeMillis</span><span style=color:#f92672>());</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>}</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#f92672>}</span></span></span></code></pre></div><ol start=3><li>编辑配置文件 (properties)</li></ol><div class=highlight id=id-31><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-properties data-lang=properties><span style=display:flex><span><span style=color:#a6e22e>elasticjob.reg-center.server-lists</span><span style=color:#f92672>=</span><span style=color:#e6db74>localhost:2181</span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>elasticjob.reg-center.namespace</span><span style=color:#f92672>=</span><span style=color:#e6db74>${spring.application.name}</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>elasticjob.jobs.my-simple-job.elastic-job-class</span><span style=color:#f92672>=</span><span style=color:#e6db74>com.didispace.chapter72.MySimpleJob</span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>elasticjob.jobs.my-simple-job.cron</span><span style=color:#f92672>=</span><span style=color:#e6db74>0/5 * * * * ?</span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>elasticjob.jobs.my-simple-job.sharding-total-count</span><span style=color:#f92672>=</span><span style=color:#e6db74>1</span></span></span></code></pre></div><p>这里主要有两个部分：</p><p>第一部分：<code>elasticjob.reg-center</code>开头的，主要配置elastic job的注册中心和namespace</p><p>第二部分：任务配置，以<code>elasticjob.jobs</code>开头，这里的<code>my-simple-job</code>是任务的名称，根据你的喜好命名即可，但不要重复。任务的下的配置<code>elastic-job-class</code>是任务的实现类，<code>cron</code>是执行规则表达式，<code>sharding-total-count</code>是任务分片的总数。我们可以通过这个参数来把任务切分，实现并行处理。由于我们设置了分片总数为1，所以这个任务启动之后，只会有一个实例接管执行。这样就避免了多个进行同时重复的执行相同逻辑而产生问题的情况。同时，这样也支持了任务执行的高可用。</p><p>在整个实现过程中，我们并没有自己手工的去编写任何的分布式锁等代码去实现任务调度逻辑，只需要关注任务逻辑本身，然后通过配置分片的方式来控制任务的分割，就可以轻松的实现分布式集群环境下的定时任务管理了。</p><h3 id=异步任务>异步任务</h3><p>为了让@Async注解能够生效，需要在Spring Boot的主程序中配置<a href=/EnableAsync>@EnableAsync</a></p><p><a href=/Async>@Async</a> 所修饰的函数不要定义为static类型，这样异步调用不会生效</p><h4 id=异步回调>异步回调</h4><div class=highlight id=id-32><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=display:flex><span><span style=color:#a6e22e>@Test</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>public</span> <span style=color:#66d9ef>void</span> <span style=color:#a6e22e>test</span><span style=color:#f92672>()</span> <span style=color:#66d9ef>throws</span> Exception <span style=color:#f92672>{</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>long</span> start <span style=color:#f92672>=</span> System<span style=color:#f92672>.</span><span style=color:#a6e22e>currentTimeMillis</span><span style=color:#f92672>();</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    CompletableFuture<span style=color:#f92672>&lt;</span>String<span style=color:#f92672>&gt;</span> task1 <span style=color:#f92672>=</span> asyncTasks<span style=color:#f92672>.</span><span style=color:#a6e22e>doTaskOne</span><span style=color:#f92672>();</span>
+</span></span><span style=display:flex><span>    CompletableFuture<span style=color:#f92672>&lt;</span>String<span style=color:#f92672>&gt;</span> task2 <span style=color:#f92672>=</span> asyncTasks<span style=color:#f92672>.</span><span style=color:#a6e22e>doTaskTwo</span><span style=color:#f92672>();</span>
+</span></span><span style=display:flex><span>    CompletableFuture<span style=color:#f92672>&lt;</span>String<span style=color:#f92672>&gt;</span> task3 <span style=color:#f92672>=</span> asyncTasks<span style=color:#f92672>.</span><span style=color:#a6e22e>doTaskThree</span><span style=color:#f92672>();</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    CompletableFuture<span style=color:#f92672>.</span><span style=color:#a6e22e>allOf</span><span style=color:#f92672>(</span>task1<span style=color:#f92672>,</span> task2<span style=color:#f92672>,</span> task3<span style=color:#f92672>).</span><span style=color:#a6e22e>join</span><span style=color:#f92672>();</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>long</span> end <span style=color:#f92672>=</span> System<span style=color:#f92672>.</span><span style=color:#a6e22e>currentTimeMillis</span><span style=color:#f92672>();</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    log<span style=color:#f92672>.</span><span style=color:#a6e22e>info</span><span style=color:#f92672>(</span><span style=color:#e6db74>&#34;任务全部完成，总耗时：&#34;</span> <span style=color:#f92672>+</span> <span style=color:#f92672>(</span>end <span style=color:#f92672>-</span> start<span style=color:#f92672>)</span> <span style=color:#f92672>+</span> <span style=color:#e6db74>&#34;毫秒&#34;</span><span style=color:#f92672>);</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>}</span></span></span></code></pre></div><h4 id=默认线程池参数>默认线程池参数</h4><ul><li><code>spring.task.execution.pool.core-size</code>：线程池创建时的初始化线程数，默认为8</li><li><code>spring.task.execution.pool.max-size</code>：线程池的最大线程数，默认为int最大值</li><li><code>spring.task.execution.pool.queue-capacity</code>：用来缓冲执行任务的队列，默认为int最大值</li><li><code>spring.task.execution.pool.keep-alive</code>：线程终止前允许保持空闲的时间</li><li><code>spring.task.execution.pool.allow-core-thread-timeout</code>：是否允许核心线程超时</li><li><code>spring.task.execution.shutdown.await-termination</code>：是否等待剩余任务完成后才关闭应用</li><li><code>spring.task.execution.shutdown.await-termination-period</code>：等待剩余任务完成的最大时间</li><li><code>spring.task.execution.thread-name-prefix</code>：线程名的前缀，设置好了之后可以方便我们在日志中查看处理任务所在的线程池</li></ul><h4 id=线程池隔离>线程池隔离</h4><p><strong>第一步</strong>：初始化多个线程池，比如下面这样：</p><div class=highlight id=id-33><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=display:flex><span><span style=color:#a6e22e>@EnableAsync</span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>@Configuration</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>public</span> <span style=color:#66d9ef>class</span> <span style=color:#a6e22e>TaskPoolConfig</span> <span style=color:#f92672>{</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>@Bean</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>public</span> Executor <span style=color:#a6e22e>taskExecutor1</span><span style=color:#f92672>()</span> <span style=color:#f92672>{</span>
+</span></span><span style=display:flex><span>        ThreadPoolTaskExecutor executor <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> ThreadPoolTaskExecutor<span style=color:#f92672>();</span>
+</span></span><span style=display:flex><span>        executor<span style=color:#f92672>.</span><span style=color:#a6e22e>setCorePoolSize</span><span style=color:#f92672>(</span>2<span style=color:#f92672>);</span>
+</span></span><span style=display:flex><span>        executor<span style=color:#f92672>.</span><span style=color:#a6e22e>setMaxPoolSize</span><span style=color:#f92672>(</span>2<span style=color:#f92672>);</span>
+</span></span><span style=display:flex><span>        executor<span style=color:#f92672>.</span><span style=color:#a6e22e>setQueueCapacity</span><span style=color:#f92672>(</span>10<span style=color:#f92672>);</span>
+</span></span><span style=display:flex><span>        executor<span style=color:#f92672>.</span><span style=color:#a6e22e>setKeepAliveSeconds</span><span style=color:#f92672>(</span>60<span style=color:#f92672>);</span>
+</span></span><span style=display:flex><span>        executor<span style=color:#f92672>.</span><span style=color:#a6e22e>setThreadNamePrefix</span><span style=color:#f92672>(</span><span style=color:#e6db74>&#34;executor-1-&#34;</span><span style=color:#f92672>);</span>
+</span></span><span style=display:flex><span>        executor<span style=color:#f92672>.</span><span style=color:#a6e22e>setRejectedExecutionHandler</span><span style=color:#f92672>(</span><span style=color:#66d9ef>new</span> ThreadPoolExecutor<span style=color:#f92672>.</span><span style=color:#a6e22e>CallerRunsPolicy</span><span style=color:#f92672>());</span>
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>return</span> executor<span style=color:#f92672>;</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>}</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>@Bean</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>public</span> Executor <span style=color:#a6e22e>taskExecutor2</span><span style=color:#f92672>()</span> <span style=color:#f92672>{</span>
+</span></span><span style=display:flex><span>        ThreadPoolTaskExecutor executor <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> ThreadPoolTaskExecutor<span style=color:#f92672>();</span>
+</span></span><span style=display:flex><span>        executor<span style=color:#f92672>.</span><span style=color:#a6e22e>setCorePoolSize</span><span style=color:#f92672>(</span>2<span style=color:#f92672>);</span>
+</span></span><span style=display:flex><span>        executor<span style=color:#f92672>.</span><span style=color:#a6e22e>setMaxPoolSize</span><span style=color:#f92672>(</span>2<span style=color:#f92672>);</span>
+</span></span><span style=display:flex><span>        executor<span style=color:#f92672>.</span><span style=color:#a6e22e>setQueueCapacity</span><span style=color:#f92672>(</span>10<span style=color:#f92672>);</span>
+</span></span><span style=display:flex><span>        executor<span style=color:#f92672>.</span><span style=color:#a6e22e>setKeepAliveSeconds</span><span style=color:#f92672>(</span>60<span style=color:#f92672>);</span>
+</span></span><span style=display:flex><span>        executor<span style=color:#f92672>.</span><span style=color:#a6e22e>setThreadNamePrefix</span><span style=color:#f92672>(</span><span style=color:#e6db74>&#34;executor-2-&#34;</span><span style=color:#f92672>);</span>
+</span></span><span style=display:flex><span>        executor<span style=color:#f92672>.</span><span style=color:#a6e22e>setRejectedExecutionHandler</span><span style=color:#f92672>(</span><span style=color:#66d9ef>new</span> ThreadPoolExecutor<span style=color:#f92672>.</span><span style=color:#a6e22e>CallerRunsPolicy</span><span style=color:#f92672>());</span>
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>return</span> executor<span style=color:#f92672>;</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>}</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>}</span></span></span></code></pre></div><p>注意：这里特地用<code>executor.setThreadNamePrefix</code>设置了线程名的前缀，这样可以方便观察后面具体执行的顺序。</p><p><strong>第二步</strong>：创建异步任务，并指定要使用的线程池名称</p><div class=highlight id=id-34><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=display:flex><span><span style=color:#a6e22e>@Slf4j</span>
+</span></span><span style=display:flex><span><span style=color:#a6e22e>@Component</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>public</span> <span style=color:#66d9ef>class</span> <span style=color:#a6e22e>AsyncTasks</span> <span style=color:#f92672>{</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>static</span> Random random <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> Random<span style=color:#f92672>();</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>@Async</span><span style=color:#f92672>(</span><span style=color:#e6db74>&#34;taskExecutor1&#34;</span><span style=color:#f92672>)</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>public</span> CompletableFuture<span style=color:#f92672>&lt;</span>String<span style=color:#f92672>&gt;</span> <span style=color:#a6e22e>doTaskOne</span><span style=color:#f92672>(</span>String taskNo<span style=color:#f92672>)</span> <span style=color:#66d9ef>throws</span> Exception <span style=color:#f92672>{</span>
+</span></span><span style=display:flex><span>        log<span style=color:#f92672>.</span><span style=color:#a6e22e>info</span><span style=color:#f92672>(</span><span style=color:#e6db74>&#34;开始任务：{}&#34;</span><span style=color:#f92672>,</span> taskNo<span style=color:#f92672>);</span>
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>long</span> start <span style=color:#f92672>=</span> System<span style=color:#f92672>.</span><span style=color:#a6e22e>currentTimeMillis</span><span style=color:#f92672>();</span>
+</span></span><span style=display:flex><span>        Thread<span style=color:#f92672>.</span><span style=color:#a6e22e>sleep</span><span style=color:#f92672>(</span>random<span style=color:#f92672>.</span><span style=color:#a6e22e>nextInt</span><span style=color:#f92672>(</span>10000<span style=color:#f92672>));</span>
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>long</span> end <span style=color:#f92672>=</span> System<span style=color:#f92672>.</span><span style=color:#a6e22e>currentTimeMillis</span><span style=color:#f92672>();</span>
+</span></span><span style=display:flex><span>        log<span style=color:#f92672>.</span><span style=color:#a6e22e>info</span><span style=color:#f92672>(</span><span style=color:#e6db74>&#34;完成任务：{}，耗时：{} 毫秒&#34;</span><span style=color:#f92672>,</span> taskNo<span style=color:#f92672>,</span> end <span style=color:#f92672>-</span> start<span style=color:#f92672>);</span>
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>return</span> CompletableFuture<span style=color:#f92672>.</span><span style=color:#a6e22e>completedFuture</span><span style=color:#f92672>(</span><span style=color:#e6db74>&#34;任务完成&#34;</span><span style=color:#f92672>);</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>}</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>@Async</span><span style=color:#f92672>(</span><span style=color:#e6db74>&#34;taskExecutor2&#34;</span><span style=color:#f92672>)</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>public</span> CompletableFuture<span style=color:#f92672>&lt;</span>String<span style=color:#f92672>&gt;</span> <span style=color:#a6e22e>doTaskTwo</span><span style=color:#f92672>(</span>String taskNo<span style=color:#f92672>)</span> <span style=color:#66d9ef>throws</span> Exception <span style=color:#f92672>{</span>
+</span></span><span style=display:flex><span>        log<span style=color:#f92672>.</span><span style=color:#a6e22e>info</span><span style=color:#f92672>(</span><span style=color:#e6db74>&#34;开始任务：{}&#34;</span><span style=color:#f92672>,</span> taskNo<span style=color:#f92672>);</span>
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>long</span> start <span style=color:#f92672>=</span> System<span style=color:#f92672>.</span><span style=color:#a6e22e>currentTimeMillis</span><span style=color:#f92672>();</span>
+</span></span><span style=display:flex><span>        Thread<span style=color:#f92672>.</span><span style=color:#a6e22e>sleep</span><span style=color:#f92672>(</span>random<span style=color:#f92672>.</span><span style=color:#a6e22e>nextInt</span><span style=color:#f92672>(</span>10000<span style=color:#f92672>));</span>
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>long</span> end <span style=color:#f92672>=</span> System<span style=color:#f92672>.</span><span style=color:#a6e22e>currentTimeMillis</span><span style=color:#f92672>();</span>
+</span></span><span style=display:flex><span>        log<span style=color:#f92672>.</span><span style=color:#a6e22e>info</span><span style=color:#f92672>(</span><span style=color:#e6db74>&#34;完成任务：{}，耗时：{} 毫秒&#34;</span><span style=color:#f92672>,</span> taskNo<span style=color:#f92672>,</span> end <span style=color:#f92672>-</span> start<span style=color:#f92672>);</span>
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>return</span> CompletableFuture<span style=color:#f92672>.</span><span style=color:#a6e22e>completedFuture</span><span style=color:#f92672>(</span><span style=color:#e6db74>&#34;任务完成&#34;</span><span style=color:#f92672>);</span>
+</span></span><span style=display:flex><span>    <span style=color:#f92672>}</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#f92672>}</span></span></span></code></pre></div><p>这里<code>@Async</code>注解中定义的<code>taskExecutor1</code>和<code>taskExecutor2</code>就是线程池的名字。由于在第一步中，我们没有具体写两个线程池Bean的名称，所以默认会使用方法名，也就是<code>taskExecutor1</code>和<code>taskExecutor2</code>。</p><h4 id=线程池的拒绝策略>线程池的拒绝策略</h4><ul><li>AbortPolicy策略：默认策略，如果线程池队列满了丢掉这个任务并且抛出RejectedExecutionException异常。</li><li>DiscardPolicy策略：如果线程池队列满了，会直接丢掉这个任务并且不会有任何异常。</li><li>DiscardOldestPolicy策略：如果队列满了，会将最早进入队列的任务删掉腾出空间，再尝试加入队列。</li><li>CallerRunsPolicy策略：如果添加到线程池失败，那么主线程会自己去执行该任务，不会等待线程池中的线程去执行。</li></ul><p>而如果你要自定义一个拒绝策略，那么可以这样写：</p><div class=highlight id=id-35><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=display:flex><span>executor<span style=color:#f92672>.</span><span style=color:#a6e22e>setRejectedExecutionHandler</span><span style=color:#f92672>(</span><span style=color:#66d9ef>new</span> RejectedExecutionHandler<span style=color:#f92672>()</span> <span style=color:#f92672>{</span>
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>@Override</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>void</span> <span style=color:#a6e22e>rejectedExecution</span><span style=color:#f92672>(</span>Runnable r<span style=color:#f92672>,</span> ThreadPoolExecutor executor<span style=color:#f92672>)</span> <span style=color:#f92672>{</span>
+</span></span><span style=display:flex><span>        <span style=color:#75715e>// 拒绝策略的逻辑
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>    <span style=color:#f92672>}</span>
+</span></span><span style=display:flex><span><span style=color:#f92672>});</span></span></span></code></pre></div><p>当然如果你喜欢用Lamba表达式，也可以这样写：</p><div class=highlight id=id-36><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-java data-lang=java><span style=display:flex><span>executor<span style=color:#f92672>.</span><span style=color:#a6e22e>setRejectedExecutionHandler</span><span style=color:#f92672>((</span>r<span style=color:#f92672>,</span> executor1<span style=color:#f92672>)</span> <span style=color:#f92672>-&gt;</span> <span style=color:#f92672>{</span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e>// 拒绝策略的逻辑
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span><span style=color:#f92672>});</span></span></span></code></pre></div><h2 id=spring>Spring</h2><ul><li>简化数据访问的Spring Data</li><li>提供批处理能力的Spring Batch</li><li>用于保护应用安全的Spring Security</li></ul><hr><h2 id=自动装配原理>自动装配原理</h2><h3 id=主启动器>主启动器</h3><p>@SpringBootApplication</p><ul><li>@SpringBootConfiguration<ul><li>@Configuration<ul><li>@Component</li></ul></li></ul></li><li>@EnableAutoConfiguration 自动导入包🌟<ul><li>@AutoConfigurationPackage<ul><li>@Import(AutoConfigurationPackages.Registrar.class)</li></ul></li><li>@Import(AutoConfigurationImportSelector.class) 自动注册包<ul><li>getAutoConfigurationEntry(&mldr;) 获取自动配置的实体</li><li>org.springframework.boot:springboot-auto-configure/META-INF/spring.factories所有的自动配置类都在这里🌟<ul><li>XXXAutoConfiguration：向容器中自动配置组件</li><li>xxxProperties：自动配置类，装配配置文件中自定义的一些内容</li></ul></li><li>@ConditionalOnXXX 选择性生效</li></ul></li></ul></li><li>@ComponentScan 扫描当前主启动类同级的包</li></ul><p>结论：SpringBoot所有的自动配置都在启动的时候扫描并加载，只有导入对应的 start ，通过启动器自动装配才会生效。xxxConfiguration 是用于扩展的。</p><h3 id=实体类映射-yaml>实体类映射 yaml</h3><pre tabindex=0><code>@Component
+@ConfigurationProperties(prefix = &#34;spring.datasource&#34;)</code></pre><p>松散绑定：last-name可以映射为 lastName
+在yml中能配置的文件，都存在xxxProperties文件，在对应的xxxAutoConfiguration存在默认值</p><h3 id=静态资源>静态资源</h3><ul><li>localhost:8080/webjars/xxx</li><li>localhost:8080/xxx resources>static(默认)>public</li></ul><h3 id=thymeleaf-1>Thymeleaf</h3><p>简单的表达：</p><ul><li>变量表达式： ${&mldr;}</li><li>选择变量表达式： *{&mldr;}</li></ul><pre tabindex=0><code>&lt;div th:object=&#34;${session.user}&#34;&gt;
+    &lt;p&gt;Name: &lt;span th:text=&#34;*{firstName}&#34;&gt;Sebastian&lt;/span&gt;.&lt;/p&gt;
+    &lt;p&gt;Surname: &lt;span th:text=&#34;*{lastName}&#34;&gt;Pepper&lt;/span&gt;.&lt;/p&gt;
+    &lt;p&gt;Nationality: &lt;span th:text=&#34;*{nationality}&#34;&gt;Saturn&lt;/span&gt;.&lt;/p&gt;
+  &lt;/div&gt;</code></pre><ul><li>消息表达： #{&mldr;}<ul><li>[[#{login.btn}]]</li><li>i18n配置页面国际化<ul><li>i18n = internationalization</li><li>k8s = kubernetes</li></ul></li></ul></li><li>链接 URL 表达式： @{&mldr;}<ul><li>所有页面的静态资源都需要使用 thymeleaf 接管</li></ul></li><li>片段表达式： ~{&mldr;}</li></ul><pre tabindex=0><code>&lt;div th:replace=&#34;~{dashboard::topbar}&#34;&gt;&lt;/div&gt;
+&lt;div th:insert=&#34;~{dashboard::sidebar(active=&#39;list.html&#39;)}&#34;&gt;&lt;/div&gt;</code></pre><p>其他示例：</p><pre tabindex=0><code>&lt;p th:if=&#34;${not #strings.isEmpty(msg)}&#34;&gt;123&lt;/p&gt;
+&lt;tr th:each=&#34;emp:${emps}&#34;&gt;
+  &lt;td th:text=&#34;${emp.getId()}&#34;/&gt;
+  &lt;td&gt;[[${emp.getLastName()}]]&lt;/td&gt;
+  &lt;td th:text=&#34;${emp.getGender()==0?&#39;女&#39;:&#39;男&#39;}&#34;/&gt;
+  &lt;td th:text=&#34;${#dates.format(emp.getBirth(),&#39;yyyy-MM-dd&#39;)}&#34;/&gt;
+  &lt;td&gt;
+    &lt;button class=&#34;btn btn-sm btn-primary&#34;&gt;编辑&lt;/button&gt;
+    &lt;button class=&#34;btn btn-sm btn-danger&#34;&gt;删除&lt;/button&gt;
+  &lt;/td&gt;
+&lt;/tr&gt;</code></pre><h3 id=其他>其他</h3><p>软件开发：</p><ol><li>前端</li><li>设计数据库</li><li>接口对接：json、对象</li><li>前后端联调</li></ol><p>开发要求：</p><ol><li>有一套自己熟悉的后台模板（推荐x-admin）</li><li>前端界面：至少自己通过前端框架，组合出来一个网站页面<ol><li>index</li><li>about</li><li>blog</li><li>post</li><li>user</li></ol></li><li>让这个网站能独立运行</li></ol><h2 id=springsecurity>SpringSecurity</h2><p>SecurityConfig.java</p><pre tabindex=0><code>@EnableWebSecurity
+public class SecurityConfig extends WebSecurityConfigurerAdapter {
+    /**
+     * 认证
+     * 在 Spring Security 5.0+ 新增了加密方法，必须使用，否则报错： There is no PasswordEncoder mapped for the id &#34;null&#34;
+     */
+    @Override
+    protected void configure(AuthenticationManagerBuilder auth) throws Exception {
+        auth.inMemoryAuthentication().passwordEncoder(new BCryptPasswordEncoder())
+                .withUser(&#34;josh&#34;).password(new BCryptPasswordEncoder().encode(&#34;josh&#34;)).roles(&#34;vip2&#34;, &#34;vip3&#34;)
+                .and()
+                .withUser(&#34;root&#34;).password(new BCryptPasswordEncoder().encode(&#34;123456&#34;)).roles(&#34;vip1&#34;, &#34;vip2&#34;, &#34;vip3&#34;)
+                .and()
+                .withUser(&#34;guest&#34;).password(new BCryptPasswordEncoder().encode(&#34;123456&#34;)).roles(&#34;vip1&#34;);
+    }
+
+    /**
+     * 授权
+     */
+    @Override
+    protected void configure(HttpSecurity http) throws Exception {
+        http.authorizeRequests()
+                // 首页所有人可以访问
+                .antMatchers(&#34;/&#34;).permitAll()
+                // 功能页有权限的人才能访问
+                .antMatchers(&#34;/level1/**&#34;).hasRole(&#34;vip1&#34;)
+                .antMatchers(&#34;/level2/**&#34;).hasRole(&#34;vip2&#34;)
+                .antMatchers(&#34;/level3/**&#34;).hasRole(&#34;vip3&#34;)
+                .and()
+                // 没有权限跳转登录页面
+                .formLogin().loginPage(&#34;/toLogin&#34;).loginProcessingUrl(&#34;/login&#34;)
+                .usernameParameter(&#34;user&#34;).passwordParameter(&#34;pwd&#34;)
+                .and()
+                // 开启注销功能
+                .logout().logoutSuccessUrl(&#34;/&#34;)
+                .and()
+                // 开启记住我功能 cookie 默认保存两周
+                .rememberMe().rememberMeParameter(&#34;remember&#34;)
+                .and()
+                //关闭 csrf 跨站请求脚本攻击
+                .csrf().disable();
+    }
+}</code></pre><h2 id=shiro>Shiro</h2><p>Tutorial.java</p><pre tabindex=0><code>public class Tutorial {
+
+    private static final transient Logger log = LoggerFactory.getLogger(Tutorial.class);
+
+    public static void main(String[] args) {
+        log.info(&#34;My First Apache Shiro Application&#34;);
+
+        Factory&lt;SecurityManager&gt; factory = new IniSecurityManagerFactory(&#34;classpath:shiro.ini&#34;);
+        SecurityManager securityManager = factory.getInstance();
+        SecurityUtils.setSecurityManager(securityManager);
+
+        /**
+         * 1、获取当前用户对象
+         */
+        Subject currentUser = SecurityUtils.getSubject();
+
+        /**
+         * 2、 通过当前用户拿到 session 并对其操作
+         */
+        Session session = currentUser.getSession();
+        session.setAttribute(&#34;someKey&#34;, &#34;aValue&#34;);
+        String value = (String) session.getAttribute(&#34;someKey&#34;);
+
+        /**
+         * 3、 判断当前的用户是否被认证
+         */
+        final boolean authenticated = currentUser.isAuthenticated();
+        
+        /**
+         * 4、 用户信息
+         */
+        final Object principal = currentUser.getPrincipal();
+   
+        /**
+         * 5、 测试角色
+         */
+        final boolean schwartz = currentUser.hasRole(&#34;schwartz&#34;);
+      
+        /**
+         * 6-1、 测试权限 - 粗力度
+         */
+        final boolean permitted = currentUser.isPermitted(&#34;lightsaber:wield&#34;);
+
+        /**
+         * 6-2、 测试权限 - 细力度
+         */
+        final boolean permitted2 = currentUser.isPermitted(&#34;winnebago:drive:eagle5&#34;);
+       
+        /**
+         * 7、 注销
+         */
+        currentUser.logout();
+        System.exit(0);
+    }
+}</code></pre><p>Shiro 三大对象：</p><ul><li>Subject：用户</li><li>SecurityManager：管理所有用户</li><li>Realm：连接数据</li></ul><p>ShiroConfig.java</p><pre tabindex=0><code>@Configuration
+public class ShiroConfig {
+    // 1、创建 realm 对象，需要自定义
+    @Bean(name = &#34;userRealm&#34;)
+    public UserRealm userRealm() {
+        return new UserRealm();
+    }
+
+
+    //2、 DefaultWebSecurityManager
+    @Bean(name = &#34;defaultWebSecurityManager&#34;)
+    public DefaultWebSecurityManager getDefaultWebSecurityManager(@Qualifier(&#34;userRealm&#34;) UserRealm userRealm) {
+        DefaultWebSecurityManager defaultWebSecurityManager = new DefaultWebSecurityManager();
+        // 关联 userRealm
+        defaultWebSecurityManager.setRealm(userRealm);
+        return defaultWebSecurityManager;
+    }
+
+    //3、 ShiroFilterFactoryBean
+    @Bean
+    public ShiroFilterFactoryBean getShiroFilterFactoryBean(@Qualifier(&#34;defaultWebSecurityManager&#34;) DefaultWebSecurityManager defaultWebSecurityManager) {
+        ShiroFilterFactoryBean bean = new ShiroFilterFactoryBean();
+        //   设置安全管理器
+        bean.setSecurityManager(defaultWebSecurityManager);
+
+        // 添加 Shiro 的内置过滤器
+        /**
+         * anon：无需认证就可以访问
+         * authc：必须认证才能访问
+         * user：必须拥有&#34;记住我&#34;功能才能访问
+         * perms：必须拥有对某个资源对权限才能访问
+         * role：必须拥有某个角色权限才能访问
+         */
+
+        Map&lt;String ,String &gt; filterChainDefinitionMap = new HashMap&lt;&gt;();
+        filterChainDefinitionMap.put(&#34;/userList&#34;,&#34;authc&#34;);
+        filterChainDefinitionMap.put(&#34;/user/add&#34;,&#34;perms[user:add&#34;);
+        bean.setFilterChainDefinitionMap(filterChainDefinitionMap);
+
+        // 登录对请求
+        bean.setLoginUrl(&#34;/toLogin&#34;);
+        // 未授权页面
+        bean.setUnauthorizedUrl(&#34;/noauth&#34;);
+
+        return bean;
+    }
+
+    // 4. 整合 shiro 和 thymeleaf
+    @Bean
+    public ShiroDialect getShiroDialect(){
+        return new ShiroDialect();
+    }
+}</code></pre><p>UserRealm</p><pre tabindex=0><code>public class UserRealm extends AuthorizingRealm {
+
+    @Override
+    protected AuthorizationInfo doGetAuthorizationInfo(PrincipalCollection principals) {
+        System.out.println(&#34;执行了授权=======》doGetAuthorizationInfo&#34;);
+        final SimpleAuthorizationInfo info = new SimpleAuthorizationInfo();
+        info.addStringPermission(&#34;user:add&#34;);
+
+        final String permission = (String) SecurityUtils.getSubject().getPrincipal();
+        info.addStringPermission(permission);
+        return info ;
+    }
+
+    @Override
+    protected AuthenticationInfo doGetAuthenticationInfo(AuthenticationToken token) throws AuthenticationException {
+        System.out.println(&#34;执行了认证=======》Override&#34;);
+
+        String name = &#34;root&#34;;
+        String permission = &#34;user:add&#34;;
+        String password = &#34;123456&#34;;
+
+        Subject subject = SecurityUtils.getSubject();
+        Session session = subject.getSession();
+        session.setAttribute(&#34;name&#34;,name);
+
+        UsernamePasswordToken usernamePasswordToken = (UsernamePasswordToken)token;
+        if (!usernamePasswordToken.getUsername().equals(name)){
+            // 自动抛出异常
+            return null;
+        }
+        // 密码认证 shiro 自动做
+        return new SimpleAuthenticationInfo(permission,password,&#34;&#34;);
+    }
+}</code></pre><h2 id=swagger2>Swagger2</h2><p>SwaggerConfig.java</p><pre tabindex=0><code>@Configuration
+@EnableSwagger2
+public class SwaggerConfig {
+
+
+    @Bean
+    public Docket docket(Environment environment) {
+        // 设置要显示的 Swagger 环境 
+        Profiles profiles = Profiles.of(&#34;dev&#34;, &#34;test&#34;);
+        // 获取项目的环境
+        final boolean flag = environment.acceptsProfiles(profiles);
+        1
+        return new Docket(DocumentationType.SWAGGER_2)
+                .apiInfo(apiInfo())
+                .groupName(&#34;A&#34;)
+                .enable(flag)
+                .select()
+                // basePackage：指定要扫描的包
+                .apis(RequestHandlerSelectors.basePackage(&#34;edu.zjut.demospringboot.controller&#34;))
+                // withMethodAnnotation：只扫描限定方法注解
+                .apis(RequestHandlerSelectors.withMethodAnnotation(RestController.class))
+                // ant：只扫描指定路由路径
+                .paths(PathSelectors.ant(&#34;/hello/**&#34;))
+                .build();
+    }
+
+    @Bean
+    public Docket docket2(Environment environment) {
+        return new Docket(DocumentationType.SWAGGER_2)
+                .apiInfo(apiInfo())
+                .groupName(&#34;B&#34;);
+    }
+
+    @Bean
+    public Docket docket3(Environment environment) {
+        return new Docket(DocumentationType.SWAGGER_2)
+                .apiInfo(apiInfo())
+                .groupName(&#34;C&#34;);
+    }
+
+    private ApiInfo apiInfo() {
+        return new ApiInfo(
+                &#34;xxxxAPI文档&#34;,
+                &#34;文档描述&#34;,
+                &#34;v1.0&#34;,
+                &#34;zjut&#34;,
+                new Contact(&#34;josh&#34;, &#34;&#34;, &#34;dujianghui537885@163.com&#34;),
+                &#34;Apach 2.0&#34;,
+                &#34;http://www.apache.org/licenses/LICENSE-2.0&#34;,
+                new ArrayList&lt;&gt;());
+    }
+}</code></pre><p>注意：在正式发布的时候，关闭Swagger！</p><h2 id=邮件发送>邮件发送</h2><pre tabindex=0><code>&lt;dependency&gt;
+    &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+    &lt;artifactId&gt;spring-boot-starter-mail&lt;/artifactId&gt;
+&lt;/dependency&gt;</code></pre><pre tabindex=0><code>@Autowired
+private JavaMailSenderImpl mailSender;
+
+/**
+ * 简单邮件发送
+ */
+@Test
+void simpleMailMessage() {
+
+    SimpleMailMessage simpleMailMessage = new SimpleMailMessage();
+    simpleMailMessage.setSubject(&#34;你好呀～&#34;);
+    simpleMailMessage.setText(&#34;测试一下邮箱&#34;);
+    simpleMailMessage.setTo(&#34;2869314652@qq.com&#34;);
+    simpleMailMessage.setFrom(&#34;2869314652@qq.com&#34;);
+    mailSender.send(simpleMailMessage);
+}
+
+/**
+ * 复杂邮件发送
+ * @throws MessagingException
+ */
+@Test
+void mimeMessage() throws MessagingException {
+    final MimeMessage mimeMessage = mailSender.createMimeMessage();
+    final MimeMessageHelper helper = new MimeMessageHelper(mimeMessage,true);
+    helper.setSubject(&#34;你好呀～plus&#34;);
+    helper.setText(&#34;&lt;p style=&#39;color:red&#39;&gt;测试一下邮箱&lt;/p&gt;&#34;,true);
+    helper.setTo(&#34;2869314652@qq.com&#34;);
+    helper.setFrom(&#34;2869314652@qq.com&#34;);
+    mailSender.send(mimeMessage);
+}</code></pre><h2 id=任务调度>任务调度</h2><ul><li>TaskScheduler：任务调度者</li><li>TaskExecutor：任务执行者</li><li>EnableScheduling：开启定时功能的注解</li><li>Scheduled：什么时候执行</li><li>Cron 表达式</li></ul><pre tabindex=0><code>@Service
+public class ScheduledService {
+    // 秒 分 时 日 月 周 年
+    @Scheduled(cron = &#34;0/3 * * * * ?&#34;)
+    public void hello(){
+        System.out.println(&#34;Scheduled.......&#34;);
+    }
+}</code></pre><h2 id=redis-1>Redis</h2><p>底层从 jedis 变为 lettuce
+jedis：采用的直连，不安全，除非使用 jedis pool 线程池，类似 BIO
+lettuce：采用 netty，实例可以在多个线程中共享，安全，可以减少线程数据，类似 NIO
+pom.xml</p><pre tabindex=0><code>&lt;dependency&gt;
+    &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+    &lt;artifactId&gt;spring-boot-starter-data-redis&lt;/artifactId&gt;
+&lt;/dependency&gt;</code></pre><p>application.yml</p><pre tabindex=0><code>spring:
+  redis:
+    host: 127.0.0.1
+    port: 6379</code></pre><p>所有 pojo 都要序列化 implements Serializable，否则就得通过以下方法序列化</p><pre tabindex=0><code>// 序列化
+final String jsonUser = new ObjectMapper().writeValueAsString(user);</code></pre><p>配置RedisTemplate</p><pre tabindex=0><code>@Configuration
+public class RedisConfig {
+    @Bean
+    @SuppressWarnings(&#34;all&#34;)
+    public RedisTemplate&lt;String, Object&gt; redisTemplate(RedisConnectionFactory redisConnectionFactory) {
+        RedisTemplate&lt;String, Object&gt; template = new RedisTemplate();
+        template.setConnectionFactory(redisConnectionFactory);
+
+        // key、hash 的 key 都采用 String 的序列化方式
+        StringRedisSerializer stringRedisSerializer = new StringRedisSerializer();
+        template.setKeySerializer(stringRedisSerializer);
+        template.setHashKeySerializer(stringRedisSerializer);
+
+        // value、hash 的 value 都采用 json 的序列化方式
+        Jackson2JsonRedisSerializer&lt;Object&gt; jackson2JsonRedisSerializer = new Jackson2JsonRedisSerializer&lt;&gt;(Object.class);
+        ObjectMapper objectMapper = new ObjectMapper();
+        objectMapper.setVisibility(PropertyAccessor.ALL, JsonAutoDetect.Visibility.ANY);
+        objectMapper.enableDefaultTyping(ObjectMapper.DefaultTyping.NON_FINAL);
+        jackson2JsonRedisSerializer.setObjectMapper(objectMapper);
+        template.setValueSerializer(jackson2JsonRedisSerializer);
+        template.setHashValueSerializer(jackson2JsonRedisSerializer);
+
+        template.afterPropertiesSet();
+
+        return template;
+    }
+}</code></pre><p>RedisUtil.java</p><pre tabindex=0><code>package edu.zjut.demospingboot.utils;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.stereotype.Component;
+
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+import java.util.concurrent.TimeUnit;
+
+/**
+ * 操作 Redis 的工具类
+ * @author dujianghui-zjut
+ * @date 2021/12/6 09:01
+ * @email dujianghui537885@163.com
+ */
+@Component
+public class RedisUtil {
+    @Autowired
+    private RedisTemplate&lt;String,Object&gt; redisTemplate;
+
+    /**
+     * 指定缓存失效时间
+     * @param key 键
+     * @param time 时间
+     * @return
+     */
+    public boolean expire(String key,long time){
+        try{
+            if (time&gt;0){
+                redisTemplate.expire(key,time, TimeUnit.SECONDS);
+            }
+            return true;
+        }catch (Exception e){
+            e.printStackTrace();
+            return false;
+        }
+    }
+
+    /**
+     * 根据 key 获取过期时间
+     * @param key 不能为null
+     * @return 时间（秒），返回 0 表示永久有效
+     */
+    public long getExpire(String key){
+        return redisTemplate.getExpire(key,TimeUnit.SECONDS);
+    }
+
+    /**
+     * 判断 key 是否存在
+     * @param key 键
+     * @return true 存在 false 不存在
+     */
+    public boolean hasKey(String key){
+        try{
+            return redisTemplate.hasKey(key);
+        } catch (Exception e){
+            e.printStackTrace();
+            return false;
+        }
+    }
+
+    /**
+     * 普通缓存获取
+     * @param key 键
+     * @return 值
+     */
+    public Object get(String key){
+        return key==null?null:redisTemplate.opsForValue().get(key);
+    }
+
+    /**
+     * 普通缓存放入
+     * @param key 键
+     * @param value 值
+     * @return true 成功 false失败
+     */
+    public boolean set(String key,Object value){
+        try{
+            redisTemplate.opsForValue().set(key,value);
+            return true;
+        }catch (Exception e){
+            e.printStackTrace();
+            return false;
+        }
+    }
+    /**
+     * 普通缓存放入并设置时间
+     * @param key 键
+     * @param value 值
+     * @param time 时间（秒） time要大于0 否则讲设置无限期
+     * @return true 成功 false失败
+     */
+    public boolean set(String key,Object value,long time){
+        try{
+            if (time&gt;0){
+                redisTemplate.opsForValue().set(key,value,time,TimeUnit.SECONDS);
+            }else {
+                set(key,value);
+            }
+            return true;
+        }catch (Exception e){
+            e.printStackTrace();
+            return false;
+        }
+    }
+
+    /**
+     * 递增
+     * @param key 键
+     * @param delta 要增加几（大于0）
+     * @return
+     */
+    public long incr(String key,long delta){
+        if (delta&lt;0){
+            throw new RuntimeException(&#34;递增因子必须大于0&#34;);
+        }
+        return redisTemplate.opsForValue().increment(key,delta);
+    }
+
+    /**
+     * 递增
+     * @param key 键
+     * @param delta 要减少几（小于0）
+     * @return
+     */
+    public long desr(String key,long delta){
+        if (delta&gt;0){
+            throw new RuntimeException(&#34;递减因子必须小于0&#34;);
+        }
+        return redisTemplate.opsForValue().increment(key,-delta);
+    }
+
+    /**
+     * HashGet
+     * @param key 键 notnull
+     * @param item 项 notnull
+     * @return
+     */
+    public Object hget(String key,String item){
+        return redisTemplate.opsForHash().get(key,item);
+    }
+
+    /**
+     * 获取 hashKey 对应的所有键值
+     * @param key 键
+     * @return 对应的多个键值
+     */
+    public Map&lt;Object,Object&gt; hmget(String key){
+        return redisTemplate.opsForHash().entries(key);
+    }
+
+    /**
+     * HashSet
+     * @param key 键
+     * @param map 对应多个键值
+     * @return
+     */
+    public boolean hmset(String key,Map&lt;String,Object&gt; map){
+        try{
+            redisTemplate.opsForHash().putAll(key,map);
+            return true;
+        }catch (Exception e){
+            e.printStackTrace();
+            return false;
+        }
+    }
+
+    /**
+     * HashSet 并设置时间
+     * @param key 键
+     * @param map 对应多个键值
+     * @param time 时间（秒）
+     * @return true 成功  false 失败
+     */
+    public boolean hmset(String key,Map&lt;String,Object&gt; map,long time){
+        try{
+            redisTemplate.opsForHash().putAll(key,map);
+            if (time&gt;0){
+                expire(key,time);
+            }
+            return true;
+        }catch (Exception e){
+            e.printStackTrace();
+            return false;
+        }
+    }
+
+    /**
+     * 向一张 hash 表中放入数据，如果不存在将创建
+     * @param key 键
+     * @param item 项
+     * @param value 值
+     * @return true 成功  false 失败
+     */
+    public boolean hset(String key,String item,Object value){
+        try{
+            redisTemplate.opsForHash().put(key,item,value);
+            return true;
+        }catch (Exception e){
+            e.printStackTrace();
+            return false;
+        }
+    }
+
+    /**
+     * 向一张 hash 表中放入数据，如果不存在将创建，并设置时间
+     * @param key 键
+     * @param item 项
+     * @param value 值
+     * @param time 时间（秒），如果已存在的 hash 表有时间，这里将会替换原有时间
+     * @return
+     */
+    public boolean hset(String key,String item,Object value,long time){
+        try{
+            redisTemplate.opsForHash().put(key,item,value);
+            if (time&gt;0){
+                expire(key,time);
+            }
+            return true;
+        }catch (Exception e){
+            e.printStackTrace();
+            return false;
+        }
+    }
+
+    /**
+     * 删除 hash 表中的值
+     * @param key 键 notnull
+     * @param item 项 notnull
+     */
+    public void hdel(String key,Object... item){
+        redisTemplate.opsForHash().delete(key,item);
+    }
+
+
+    /**
+     * 判断 hash 表中是否有该项的值
+     * @param key 键 notnull
+     * @param item 项 notnull
+     * @return true 存在  false 不存在
+     */
+    public boolean hHasKey(String key,String item){
+        return redisTemplate.opsForHash().hasKey(key,item);
+    }
+
+    /**
+     * hash 递增，如果不存在就会创建一个，并把新增后的值返回
+     * @param key 键
+     * @param item 项
+     * @param by 要增加几（大于0）
+     * @return
+     */
+    public double hincr(String key,String item,double by){
+        return redisTemplate.opsForHash().increment(key,item,by);
+    }
+
+    /**
+     * hash 递减，如果不存在就会创建一个，并把新增后的值返回
+     * @param key 键
+     * @param item 项
+     * @param by 要增加几（大于0）
+     * @return
+     */
+    public double hdecr(String key,String item,double by){
+        return redisTemplate.opsForHash().increment(key,item,-by);
+    }
+
+    /**
+     * 根据 key 获取 Set 中的所有值
+     * @param key 键
+     * @return
+     */
+    public Set&lt;Object&gt; sGet(String key){
+        try{
+            return redisTemplate.opsForSet().members(key);
+        }catch (Exception e){
+            e.printStackTrace();
+            return null;
+        }
+    }
+
+    /**
+     * 根据 value，从一个 set 中查询，是否存在
+     * @param key 键
+     * @param value 值
+     * @return true 存在  false 不存在
+     */
+    public boolean sHasKey(String key,Object value){
+        try{
+            return redisTemplate.opsForSet().isMember(key,value);
+        }catch (Exception e){
+            e.printStackTrace();
+            return false;
+        }
+    }
+
+    /**
+     * 将数据放入 set 缓存
+     * @param key 键
+     * @param values 值 可以是多个
+     * @return 成功个数
+     */
+    public long sSet(String key,Object... values){
+        try{
+            return redisTemplate.opsForSet().add(key,values);
+        } catch (Exception e){
+            e.printStackTrace();
+            return 0;
+        }
+    }
+    /**
+     * 将数据放入 set 缓存，并设置时间
+     * @param key 键
+     * @param time 时间（秒）
+     * @param values 值 可以是多个
+     * @return 成功个数
+     */
+    public long sSetAndTime(String key,long time,Object... values){
+        try{
+            final Long count = redisTemplate.opsForSet().add(key, values);
+            if (time&gt;0){
+                expire(key,time);
+            }
+            return count;
+        } catch (Exception e){
+            e.printStackTrace();
+            return 0;
+        }
+    }
+
+    /**
+     * 获取 set 缓存的长度
+     * @param key 键
+     * @return
+     */
+    public long sGetSetSize(String key){
+        try{
+            return redisTemplate.opsForSet().size(key);
+        }catch (Exception e){
+            e.printStackTrace();
+            return 0;
+        }
+    }
+
+    /**
+     * 移除值为 value 的
+     * @param key 键
+     * @param values 值，可以是多个
+     * @return 移除的个数
+     */
+    public long setRemove(String key,Object... values){
+        try {
+            return redisTemplate.opsForSet().remove(key, values);
+        }catch (Exception e){
+            e.printStackTrace();
+            return 0;
+        }
+    }
+
+    /**
+     * 获取 list 缓存的内容
+     * @param key 键
+     * @param start 开始
+     * @param end 结束，0 到 -1 表示所有值
+     * @return
+     */
+    public List&lt;Object&gt; lGet(String key,long start,long end){
+        try{
+            return redisTemplate.opsForList().range(key,start,end);
+        }catch (Exception e){
+            e.printStackTrace();
+            return null;
+        }
+    }
+
+    /**
+     * 获取 list 缓存的长度
+     * @param key 键
+     * @return
+     */
+    public long lGetlistSize(String key){
+        try {
+            return redisTemplate.opsForList().size(key);
+        }catch (Exception e){
+            e.printStackTrace();
+            return 0;
+        }
+    }
+
+    /**
+     * 通过索引获取 list 中的值
+     * @param key 键
+     * @param index 索引，index&gt;=0时，0 表头，1 第二个元素；index&lt;0时，-1 表尾，-2 倒数第二个元素。
+     * @return
+     */
+    public Object lGetIndex(String key,long index){
+        try{
+            return redisTemplate.opsForList().index(key,index);
+        }catch (Exception e){
+            e.printStackTrace();
+            return null;
+        }
+    }
+
+    /**
+     * 将 list 放入缓存
+     * @param key 键
+     * @param value 值
+     * @return
+     */
+    public boolean lSet(String key,Object value){
+        try{
+            redisTemplate.opsForList().rightPush(key,value);
+            return true;
+        }catch (Exception e){
+            e.printStackTrace();
+            return false;
+        }
+    }
+
+    /**
+     * 将 list 放入缓存
+     * @param key 键
+     * @param value 值
+     * @return
+     */
+    public boolean lSet(String key,List&lt;Object&gt; value){
+        try{
+            redisTemplate.opsForList().rightPushAll(key,value);
+            return true;
+        }catch (Exception e){
+            e.printStackTrace();
+            return false;
+        }
+    }
+
+    /**
+     * 将 list 放入缓存，并设置时间
+     * @param key 键
+     * @param value 值
+     * @param time 时间（秒）
+     * @return
+     */
+    public boolean lSet(String key,Object value,long time){
+        try{
+            redisTemplate.opsForList().rightPush(key,value);
+            if (time&gt;0){
+                expire(key,time);
+            }
+            return true;
+        }catch (Exception e){
+            e.printStackTrace();
+            return false;
+        }
+    }
+    /**
+     * 将 list 放入缓存，并设置时间
+     * @param key 键
+     * @param value 值
+     * @param time 时间（秒）
+     * @return
+     */
+    public boolean lSet(String key,List&lt;Object&gt; value,long time){
+        try{
+            redisTemplate.opsForList().rightPushAll(key,value);
+            if (time&gt;0){
+                expire(key,time);
+            }
+            return true;
+        }catch (Exception e){
+            e.printStackTrace();
+            return false;
+        }
+    }
+
+    /**
+     * 根据索引修改 list 中的某条数据
+     * @param key 键
+     * @param index 索引
+     * @param value 值
+     * @return
+     */
+    public boolean lUpdateIndex(String key,long index,Object value){
+        try{
+            redisTemplate.opsForList().set(key,index,value);
+            return true;
+        }catch (Exception e){
+            e.printStackTrace();
+            return false;
+        }
+    }
+
+    /**
+     * 移除 N 个值为 value
+     * @param key 键
+     * @param count 移除多少个
+     * @param value 值
+     * @return 移除的个数
+     */
+    public long lRemove(String key,long count,Object value){
+        try{
+            return redisTemplate.opsForList().remove(key,count,value);
+        }catch (Exception e){
+            e.printStackTrace();
+            return 0;
+        }
+    }
+}</code></pre><h2 id=分布式开发dubborpczookeeper>分布式开发：Dubbo（RPC）+zookeeper</h2><p><img loading=lazy src="https://cdn.nlark.com/yuque/0/2023/png/12535165/1678177961750-8f51ad05-9dec-4b15-9340-255f20fff21e.png#averageHue=%23fdfdfc&amp;clientId=u39b15dc3-969b-4&amp;from=paste&amp;id=u0f559581&amp;originHeight=1854&amp;originWidth=2602&amp;originalType=url&amp;ratio=2&amp;rotation=0&amp;showTitle=false&amp;status=done&amp;style=none&amp;taskId=u03086bd9-be00-4f39-a991-547df99f064&amp;title=" srcset="https://cdn.nlark.com/yuque/0/2023/png/12535165/1678177961750-8f51ad05-9dec-4b15-9340-255f20fff21e.png#averageHue=%23fdfdfc&amp;clientId=u39b15dc3-969b-4&amp;from=paste&amp;id=u0f559581&amp;originHeight=1854&amp;originWidth=2602&amp;originalType=url&amp;ratio=2&amp;rotation=0&amp;showTitle=false&amp;status=done&amp;style=none&amp;taskId=u03086bd9-be00-4f39-a991-547df99f064&amp;title=, https://cdn.nlark.com/yuque/0/2023/png/12535165/1678177961750-8f51ad05-9dec-4b15-9340-255f20fff21e.png#averageHue=%23fdfdfc&amp;clientId=u39b15dc3-969b-4&amp;from=paste&amp;id=u0f559581&amp;originHeight=1854&amp;originWidth=2602&amp;originalType=url&amp;ratio=2&amp;rotation=0&amp;showTitle=false&amp;status=done&amp;style=none&amp;taskId=u03086bd9-be00-4f39-a991-547df99f064&amp;title= 1.5x, https://cdn.nlark.com/yuque/0/2023/png/12535165/1678177961750-8f51ad05-9dec-4b15-9340-255f20fff21e.png#averageHue=%23fdfdfc&amp;clientId=u39b15dc3-969b-4&amp;from=paste&amp;id=u0f559581&amp;originHeight=1854&amp;originWidth=2602&amp;originalType=url&amp;ratio=2&amp;rotation=0&amp;showTitle=false&amp;status=done&amp;style=none&amp;taskId=u03086bd9-be00-4f39-a991-547df99f064&amp;title= 2x" sizes=auto data-title="https://cdn.nlark.com/yuque/0/2023/png/12535165/1678177961750-8f51ad05-9dec-4b15-9340-255f20fff21e.png#averageHue=%23fdfdfc&amp;clientId=u39b15dc3-969b-4&amp;from=paste&amp;id=u0f559581&amp;originHeight=1854&amp;originWidth=2602&amp;originalType=url&amp;ratio=2&amp;rotation=0&amp;showTitle=false&amp;status=done&amp;style=none&amp;taskId=u03086bd9-be00-4f39-a991-547df99f064&amp;title=" data-alt="https://cdn.nlark.com/yuque/0/2023/png/12535165/1678177961750-8f51ad05-9dec-4b15-9340-255f20fff21e.png#averageHue=%23fdfdfc&amp;clientId=u39b15dc3-969b-4&amp;from=paste&amp;id=u0f559581&amp;originHeight=1854&amp;originWidth=2602&amp;originalType=url&amp;ratio=2&amp;rotation=0&amp;showTitle=false&amp;status=done&amp;style=none&amp;taskId=u03086bd9-be00-4f39-a991-547df99f064&amp;title=" style="background:url(/svg/loading.min.svg)no-repeat 50%" onload='this.title=this.dataset.title,this.alt=this.dataset.alt;for(const e of["style","data-title","data-alt","onerror","onload"])this.removeAttribute(e);this.dataset.lazyloaded=""' onerror='this.title=this.dataset.title,this.alt=this.dataset.alt;for(const e of["style","data-title","data-alt","onerror","onload"])this.removeAttribute(e)'></p><ul><li>Registry 注册中心</li><li>Monitor 监控中心：Dubbo</li></ul><p>四个问题：</p><ol><li>API 网关，服务路由</li><li>HTTP、RPC 框架，异步调用</li><li>服务注册与发现，高可用</li><li>熔断机制，服务降级</li></ol><h3 id=spring-cloud-netflix2018年停止维护>Spring Cloud Netflix（2018年停止维护）</h3><ul><li>Eureka：服务注册与发现</li><li>Hystrix：熔断机制</li></ul><h3 id=apache-dubbo--zookeeper>Apache Dubbo + zookeeper</h3><ul><li>Dubbo：高性能的基于 Java 实现的 RPC 通信框架</li><li>Zookeeper：管理 Hadoop、Hive</li></ul><h3 id=springcloud-alibaba>Springcloud Alibaba</h3><p>一站式解决方案</p><h3 id=server-meshistio>Server Mesh+istio</h3><p>服务网格</p></div><div class=post-footer id=post-footer><div class=post-info><div class=post-info-line><div class=post-info-mod><span title="更新于 2023-08-08 08:57:32">更新于 2023-08-08&nbsp;</span></div></div><div class=post-info-line><div class=post-info-md></div><div class=post-info-share><span><a href=javascript:void(0); title="分享到 微博" data-sharer=weibo data-url=https://leni.fun/posts/springboot_draft.html data-title="SpringBoot 杂记"><i class="fa-brands fa-weibo fa-fw" aria-hidden=true></i></a></span></div></div></div><div class=post-info-more><section class=post-tags><i class="fa-solid fa-tags fa-fw me-1" aria-hidden=true></i><a href=/tags/springboot.html class=post-tag>SpringBoot</a></section><section><span><a href=javascript:void(0); onclick=window.history.back()>返回</a></span>&nbsp;|&nbsp;<span><a href=/>主页</a></span></section></div><div class=post-nav><a href=/posts/spring.html class=post-nav-item rel=prev title=🚩Spring><i class="fa-solid fa-angle-left fa-fw" aria-hidden=true></i>🚩Spring</a>
+<a href=/posts/spring_draft.html class=post-nav-item rel=next title="Spring 杂记">Spring 杂记<i class="fa-solid fa-angle-right fa-fw" aria-hidden=true></i></a></div></div></article></main><footer class=footer><div class=footer-container><div class="footer-line copyright" itemscope itemtype=http://schema.org/CreativeWork><i class="fa-regular fa-copyright fa-fw" aria-hidden=true></i>
+<span itemprop=copyrightYear>2023</span><span class=author itemprop=copyrightHolder>
+<a href=/>都将会</a></span><span class="license footer-divider">Back-End Engineer</span></div><div class="footer-line statistics"><span class=site-time title=网站运行中……><i class="fa-solid fa-heartbeat fa-fw animate-icon" aria-hidden=true></i><span class="run-times ms-1">网站运行中……</span></span></div><div class="footer-line visitor"><span id=busuanzi_container_site_uv title=总访客数><i class="fa-regular fa-user fa-fw" aria-hidden=true></i>&nbsp;<span id=busuanzi_value_site_uv><i class="fa-solid fa-spinner fa-spin fa-fw" aria-hidden=true></i></span></span><span id=busuanzi_container_site_pv class=footer-divider title=总访问量><i class="fa-regular fa-eye fa-fw" aria-hidden=true></i>&nbsp;<span id=busuanzi_value_site_pv><i class="fa-solid fa-spinner fa-spin fa-fw" aria-hidden=true></i></span></span></div></div></footer></div><div class=widgets><div class="fixed-buttons animate__faster d-none"><div class="fixed-button back-to-top" role=button aria-label=回到顶部><i class="fa-solid fa-arrow-up fa-fw" aria-hidden=true></i><span class=variant-numeric>0%</span></div></div><a href=https://github.com/hihihiman/blog title=博客源码 target=_blank rel="external nofollow" class="github-corner left d-none-mobile"><svg viewBox="0 0 250 250" aria-hidden="true"><path d="M0 0 115 115h15l12 27L250 250V0z"/><path d="M128.3 109C113.8 99.7 119 89.6 119 89.6 122 82.7 120.5 78.6 120.5 78.6 119.2 72 123.4 76.3 123.4 76.3 127.3 80.9 125.5 87.3 125.5 87.3 122.9 97.6 130.6 101.9 134.4 103.2" fill="currentcolor" style="transform-origin:130px 106px" class="octo-arm"/><path d="M115 115C114.9 115.1 118.7 116.5 119.8 115.4l13.9-13.8C136.9 99.2 139.9 98.4 142.2 98.6 133.8 88 127.5 74.4 143.8 58 148.5 53.4 154 51.2 159.7 51 160.3 49.4 163.2 43.6 171.4 40.1 171.4 40.1 176.1 42.5 178.8 56.2 183.1 58.6 187.2 61.8 190.9 65.4 194.5 69 197.7 73.2 200.1 77.6 213.8 80.2 216.3 84.9 216.3 84.9 212.7 93.1 206.9 96 205.4 96.6 205.1 102.4 203 107.8 198.3 112.5 181.9 128.9 168.3 122.5 157.7 114.1 157.9 116.9 156.7 120.9 152.7 124.9L141 136.5C139.8 137.7 141.6 141.9 141.8 141.8z" fill="currentcolor" class="octo-body"/></svg></a><div id=mask></div><div class=reading-progress-bar style=left:0;bottom:0;--bg-progress:#000;--bg-progress-dark:#fff></div><noscript><div class=noscript-warning>FixIt 主题在启用 JavaScript 的情况下效果最佳。</div></noscript></div><link rel=stylesheet href=/lib/cookieconsent/cookieconsent.min.css><link rel=stylesheet href=/lib/pace/themes/pink/pace-theme-center-atom.css><script src=/lib/autocomplete/autocomplete.min.js defer></script><script src=/lib/fuse/fuse.min.js defer></script><script src=/lib/instant-page/instantpage.min.js async defer type=module></script><script src=/lib/sharer/sharer.min.js async defer></script><script src=/lib/typeit/index.umd.js defer></script><script src=/lib/cookieconsent/cookieconsent.min.js defer></script><script src=/lib/pangu/pangu.min.js defer></script><script src=//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js async defer></script><script src=/lib/pace/pace.min.js async defer></script><script>window.config={autoBookmark:!0,code:{copyTitle:"复制到剪贴板",editLockTitle:"锁定可编辑代码块",editUnLockTitle:"解锁可编辑代码块",editable:!0,maxShownLines:64},comment:{enable:!1},cookieconsent:{content:{dismiss:"同意",link:"了解更多",message:"本网站使用 Cookies 来改善您的浏览体验。"},enable:!0,palette:{button:{background:"#f0f0f0"},popup:{background:"#1aa3ff"}},theme:"edgeless"},data:{"typeit-header-subtitle-desktop":"的博客","typeit-header-subtitle-mobile":"的博客"},enablePWA:!0,pangu:{enable:!0,selector:"article"},search:{distance:100,findAllMatches:!1,highlightTag:"em",ignoreFieldNorm:!0,ignoreLocation:!0,isCaseSensitive:!1,location:0,maxResultLength:10,minMatchCharLength:2,noResultsFound:"没有找到结果",snippetLength:50,threshold:.3,useExtendedSearch:!0},siteTime:"2023-08-06T23:31:00+08:00",typeit:{cursorChar:"_",cursorSpeed:1e3,data:{"typeit-header-subtitle-desktop":["typeit-header-subtitle-desktop"],"typeit-header-subtitle-mobile":["typeit-header-subtitle-mobile"]},duration:-1,loop:!0,speed:100}}</script><script src=/js/theme.min.js defer></script><script type=text/javascript src=https://cdn.jsdelivr.net/npm/jquery@2.1.3/dist/jquery.min.js></script><script type=text/javascript src=/js/custom.js></script></body></html>
