@@ -1,1 +1,9 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>hugo - Tag -</title><link>https://leni.fun/tags/hugo/</link><description>hugo - Tag -</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Mon, 07 Aug 2023 15:25:41 +0800</lastBuildDate><atom:link href="https://leni.fun/tags/hugo/" rel="self" type="application/rss+xml"/><item><title>FixIt主题美化</title><link>https://leni.fun/posts/blog_beautify/</link><pubDate>Mon, 07 Aug 2023 15:25:41 +0800</pubDate><author>都将会</author><guid>https://leni.fun/posts/blog_beautify/</guid><description>&lt;h3 id="分享几个链接吧">分享几个链接吧&lt;/h3></description></item><item><title>初始化 Hogo 博客</title><link>https://leni.fun/posts/blog_init/</link><pubDate>Sun, 06 Aug 2023 23:31:00 +0800</pubDate><author>都将会</author><guid>https://leni.fun/posts/blog_init/</guid><description>前前后后花了整整一周</description></item></channel></rss>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>hugo - Tag -</title><link>https://leni.fun/tags/hugo/</link><description>hugo - Tag -</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Mon, 07 Aug 2023 15:25:41 +0800</lastBuildDate><atom:link href="https://leni.fun/tags/hugo/" rel="self" type="application/rss+xml"/><item><title>FixIt主题美化</title><link>https://leni.fun/posts/blog_beautify/</link><pubDate>Mon, 07 Aug 2023 15:25:41 +0800</pubDate><author>都将会</author><guid>https://leni.fun/posts/blog_beautify/</guid><description><![CDATA[<h3 id="方案">方案</h3>
+<ul>
+<li>主题：Hugo + FixIt</li>
+<li>部署：Git + GitHub Workflows</li>
+<li>图床：Picgo + Aliyun OSS</li>
+<li>域名：GitHub Pages + Netlify + Aliyun</li>
+<li>评论：Giscus</li>
+</ul>
+<h3 id="分享几个链接吧">分享几个链接吧</h3>]]></description></item><item><title>初始化 Hogo 博客</title><link>https://leni.fun/posts/blog_init/</link><pubDate>Sun, 06 Aug 2023 23:31:00 +0800</pubDate><author>都将会</author><guid>https://leni.fun/posts/blog_init/</guid><description>前前后后花了整整一周</description></item></channel></rss>

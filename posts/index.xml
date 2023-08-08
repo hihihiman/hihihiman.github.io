@@ -1,4 +1,12 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>All Posts -</title><link>https://leni.fun/posts/</link><description>All Posts |</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Tue, 08 Aug 2023 16:22:51 +0800</lastBuildDate><atom:link href="https://leni.fun/posts/" rel="self" type="application/rss+xml"/><item><title>FixIt主题美化</title><link>https://leni.fun/posts/blog_beautify/</link><pubDate>Mon, 07 Aug 2023 15:25:41 +0800</pubDate><author>都将会</author><guid>https://leni.fun/posts/blog_beautify/</guid><description>&lt;h3 id="分享几个链接吧">分享几个链接吧&lt;/h3></description></item><item><title>🚩NetWork - 计算机网络</title><link>https://leni.fun/posts/network/</link><pubDate>Tue, 08 Aug 2023 16:22:51 +0800</pubDate><author>都将会</author><guid>https://leni.fun/posts/network/</guid><description><![CDATA[<h3 id="osi-七层模型">OSI 七层模型？</h3>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>All Posts -</title><link>https://leni.fun/posts/</link><description>All Posts |</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Tue, 08 Aug 2023 16:22:51 +0800</lastBuildDate><atom:link href="https://leni.fun/posts/" rel="self" type="application/rss+xml"/><item><title>FixIt主题美化</title><link>https://leni.fun/posts/blog_beautify/</link><pubDate>Mon, 07 Aug 2023 15:25:41 +0800</pubDate><author>都将会</author><guid>https://leni.fun/posts/blog_beautify/</guid><description><![CDATA[<h3 id="方案">方案</h3>
+<ul>
+<li>主题：Hugo + FixIt</li>
+<li>部署：Git + GitHub Workflows</li>
+<li>图床：Picgo + Aliyun OSS</li>
+<li>域名：GitHub Pages + Netlify + Aliyun</li>
+<li>评论：Giscus</li>
+</ul>
+<h3 id="分享几个链接吧">分享几个链接吧</h3>]]></description></item><item><title>🚩NetWork - 计算机网络</title><link>https://leni.fun/posts/network/</link><pubDate>Tue, 08 Aug 2023 16:22:51 +0800</pubDate><author>都将会</author><guid>https://leni.fun/posts/network/</guid><description><![CDATA[<h3 id="osi-七层模型">OSI 七层模型？</h3>
 <ol>
 <li>应用层：为计算机用户提供服务 HTTP
 <ol>
