@@ -1,1 +1,17 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>建站记录 - 分类 -</title><link>https://leni.fun/categories/%E5%BB%BA%E7%AB%99%E8%AE%B0%E5%BD%95/</link><description>建站记录 - 分类 -</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>dujianghui_work@163.com (都将会)</managingEditor><webMaster>dujianghui_work@163.com (都将会)</webMaster><lastBuildDate>Sun, 06 Aug 2023 23:31:00 +0800</lastBuildDate><atom:link href="https://leni.fun/categories/%E5%BB%BA%E7%AB%99%E8%AE%B0%E5%BD%95/" rel="self" type="application/rss+xml"/><item><title>初始化 Hogo 博客</title><link>https://leni.fun/blog_init/</link><pubDate>Sun, 06 Aug 2023 23:31:00 +0800</pubDate><author>都将会</author><guid>https://leni.fun/blog_init/</guid><description>前前后后花了整整一周</description></item></channel></rss>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>建站记录 - 分类 -</title><link>https://leni.fun/categories/%E5%BB%BA%E7%AB%99%E8%AE%B0%E5%BD%95/</link><description>建站记录 - 分类 -</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>dujianghui_work@163.com (都将会)</managingEditor><webMaster>dujianghui_work@163.com (都将会)</webMaster><lastBuildDate>Wed, 09 Aug 2023 15:25:41 +0800</lastBuildDate><atom:link href="https://leni.fun/categories/%E5%BB%BA%E7%AB%99%E8%AE%B0%E5%BD%95/" rel="self" type="application/rss+xml"/><item><title>FixIt主题美化</title><link>https://leni.fun/blog_beautify/</link><pubDate>Wed, 09 Aug 2023 15:25:41 +0800</pubDate><author>都将会</author><guid>https://leni.fun/blog_beautify/</guid><description><![CDATA[<h3 id="方案">方案</h3>
+<h4 id="省流版">省流版</h4>
+<ul>
+<li>主题：Hugo + FixIt</li>
+<li>部署：Git + GitHub Workflows</li>
+<li>图床：Picgo + Aliyun OSS</li>
+<li>域名：GitHub Pages + Netlify + Aliyun</li>
+<li>评论：Giscus</li>
+</ul>
+<h4 id="完整版">完整版</h4>
+<ol>
+<li>使用 Git 进行版本控制，并结合 GitHub Workflows 实现了自动化部署和贪食蛇效果。</li>
+<li>使用了 Picgo 作为图床工具，并将图片上传至阿里云 OSS（对象存储服务）。</li>
+<li>起初使用 GitHub Pages 作为博客的托管平台，并将自定义域名绑定到 GitHub Pages；后来使用 Netlify 作为 CDN，博客页面的平均加载时间缩短了约 50%，提高了用户的访问速度。</li>
+<li>集成了 Giscus 评论系统，基于GitHub Issues，提供了一个简洁且易于使用的评论功能。</li>
+</ol>
+<h3 id="分享几个链接吧">分享几个链接吧</h3>]]></description></item><item><title>初始化 Hogo 博客</title><link>https://leni.fun/blog_init/</link><pubDate>Sun, 06 Aug 2023 23:31:00 +0800</pubDate><author>都将会</author><guid>https://leni.fun/blog_init/</guid><description>前前后后花了整整一周</description></item></channel></rss>

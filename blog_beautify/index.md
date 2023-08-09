@@ -3,11 +3,20 @@
 
 ### 方案
 
+#### 省流版
+
 - 主题：Hugo + FixIt
 - 部署：Git + GitHub Workflows
 - 图床：Picgo + Aliyun OSS
 - 域名：GitHub Pages + Netlify + Aliyun
 - 评论：Giscus
+
+#### 完整版
+
+1. 使用 Git 进行版本控制，并结合 GitHub Workflows 实现了自动化部署和贪食蛇效果。
+2. 使用了 Picgo 作为图床工具，并将图片上传至阿里云 OSS（对象存储服务）。
+3. 起初使用 GitHub Pages 作为博客的托管平台，并将自定义域名绑定到 GitHub Pages；后来使用 Netlify 作为 CDN，博客页面的平均加载时间缩短了约 50%，提高了用户的访问速度。
+4. 集成了 Giscus 评论系统，基于GitHub Issues，提供了一个简洁且易于使用的评论功能。
 
 ### 分享几个链接吧
 

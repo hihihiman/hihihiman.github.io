@@ -1,4 +1,4 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>interview - 分类 -</title><link>https://leni.fun/categories/interview/</link><description>interview - 分类 -</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>dujianghui_work@163.com (都将会)</managingEditor><webMaster>dujianghui_work@163.com (都将会)</webMaster><lastBuildDate>Tue, 08 Aug 2023 16:22:51 +0800</lastBuildDate><atom:link href="https://leni.fun/categories/interview/" rel="self" type="application/rss+xml"/><item><title>🚩NetWork - 计算机网络</title><link>https://leni.fun/network/</link><pubDate>Tue, 08 Aug 2023 16:22:51 +0800</pubDate><author>都将会</author><guid>https://leni.fun/network/</guid><description><![CDATA[<h3 id="osi-七层模型">OSI 七层模型？</h3>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>interview - 分类 -</title><link>https://leni.fun/categories/interview/</link><description>interview - 分类 -</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>dujianghui_work@163.com (都将会)</managingEditor><webMaster>dujianghui_work@163.com (都将会)</webMaster><lastBuildDate>Wed, 09 Aug 2023 16:22:51 +0800</lastBuildDate><atom:link href="https://leni.fun/categories/interview/" rel="self" type="application/rss+xml"/><item><title>🚩NetWork - 计算机网络</title><link>https://leni.fun/network/</link><pubDate>Wed, 09 Aug 2023 16:22:51 +0800</pubDate><author>都将会</author><guid>https://leni.fun/network/</guid><description><![CDATA[<h3 id="osi-七层模型">OSI 七层模型？</h3>
 <ol>
 <li>应用层：为计算机用户提供服务 HTTP
 <ol>
@@ -19,7 +19,7 @@
 </ol>
 </li>
 <li>物理层：透明传输比特流</li>
-</ol>]]></description></item><item><title>🚩OS - 操作系统</title><link>https://leni.fun/os/</link><pubDate>Tue, 08 Aug 2023 16:21:51 +0800</pubDate><author>都将会</author><guid>https://leni.fun/os/</guid><description><![CDATA[<h3 id="进程间通信的方式有哪几种">进程间通信的方式有哪几种？</h3>
+</ol>]]></description></item><item><title>🚩OS - 操作系统</title><link>https://leni.fun/os/</link><pubDate>Wed, 09 Aug 2023 16:21:51 +0800</pubDate><author>都将会</author><guid>https://leni.fun/os/</guid><description><![CDATA[<h3 id="进程间通信的方式有哪几种">进程间通信的方式有哪几种？</h3>
 <ol>
 <li>无名管道( pipe )：父子进程通信</li>
 <li>高级管道(popen)：将另一个程序当做一个新的进程在当前程序进程中启动，则它算是当前程序的子进程</li>
