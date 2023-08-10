@@ -38,8 +38,10 @@
 
   - 最终还是取消了，为什么评论系统都需要科学上网？！
   
-  ![](https://publicpictures.oss-cn-hangzhou.aliyuncs.com/img/github-contribution-grid-snake.svg)
-  
+
+
+
+{{< figure src="https://publicpictures.oss-cn-hangzhou.aliyuncs.com/img/github-contribution-grid-snake.svg" title="贪食蛇效果" >}}
 
 我肯定不是没怎么写代码，而是被贪食蛇吃掉了!
 
