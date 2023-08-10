@@ -4,4 +4,8 @@
 <p>主题采用 FixIt，将配置文件放在域名根目录下，例如我的文件路径就是 <code>leni.fun/hugo.yml</code>，我这里使用 yml 替换 toml 文件，可以通过以下网站进行文件转换，也可以直接复制我的配置文件进行更改</p>
 <blockquote>
 <p><a href="https://transform.tools/toml-to-yaml"target="_blank" rel="external nofollow noopener noreferrer">https://transform.tools/toml-to-yaml</a></p>
-</blockquote>]]></description></item><item><title>FixIt 主题美化</title><link>https://leni.fun/blog_beautify/</link><pubDate>Wed, 09 Aug 2023 08:08:08 +0800</pubDate><author>都将会</author><guid>https://leni.fun/blog_beautify/</guid><description>分享几个帮助很大的链接</description></item><item><title>初始化 Hogo 博客</title><link>https://leni.fun/blog_init/</link><pubDate>Mon, 07 Aug 2023 08:08:08 +0800</pubDate><author>都将会</author><guid>https://leni.fun/blog_init/</guid><description>前端小白出马了</description></item></channel></rss>
+</blockquote>]]></description></item><item><title>FixIt 主题美化</title><link>https://leni.fun/blog_beautify/</link><pubDate>Wed, 09 Aug 2023 08:08:08 +0800</pubDate><author>都将会</author><guid>https://leni.fun/blog_beautify/</guid><description>&lt;div class="featured-image">
+&lt;img src="/images/pic2.jpg" referrerpolicy="no-referrer">
+&lt;/div>分享几个帮助很大的链接</description></item><item><title>初始化 Hogo 博客</title><link>https://leni.fun/blog_init/</link><pubDate>Mon, 07 Aug 2023 08:08:08 +0800</pubDate><author>都将会</author><guid>https://leni.fun/blog_init/</guid><description>&lt;div class="featured-image">
+&lt;img src="/images/pic4.jpg" referrerpolicy="no-referrer">
+&lt;/div>前端小白出马了</description></item></channel></rss>
