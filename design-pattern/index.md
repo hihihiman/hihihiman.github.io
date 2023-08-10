@@ -1,7 +1,7 @@
 # 🚩Design Pattern - 设计模式
 
 
-
+<!--more-->
 
 ### Principle 原则 x 6
 
@@ -11,8 +11,6 @@
 4. Interface Segregation 接口隔离： 多个隔离的接口优于单个接口，以解耦合
 5. Demeter 迪米特：最少知道原则，实体间减少相互作用，模块独立
 6. Composite Reuse 合成复用：用聚合，而非继承。
-
-<!--more-->
 
 ### Create 创建型 x 5
 | **Singleton** | 6种 |
