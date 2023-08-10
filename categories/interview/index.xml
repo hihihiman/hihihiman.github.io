@@ -7,28 +7,7 @@
 <li>每个红色节点必有黑色子节点。</li>
 <li><strong>任意一结点到每个叶子结点的路径都包含数量相同的黑结点。</strong></li>
 </ol>
-<p>通过左旋、右旋和变色来实现自平衡：</p>]]></description></item><item><title>🚩NetWork - 计算机网络</title><link>https://leni.fun/network/</link><pubDate>Wed, 09 Aug 2023 16:22:51 +0800</pubDate><author>都将会</author><guid>https://leni.fun/network/</guid><description><![CDATA[<h3 id="osi-七层模型">OSI 七层模型？</h3>
-<ol>
-<li>应用层：为计算机用户提供服务 HTTP
-<ol>
-<li>七层负载均衡：【Nginx 的 server/udp】读取报文数据部分，根据数据内容做出负载均衡决策，更灵活</li>
-</ol>
-</li>
-<li>表示层：数据加密解密</li>
-<li>会话层：管理应用程序之间的会话</li>
-<li>传输层：通用的数据传输服务 TCP/UDP
-<ol>
-<li>四层负载均衡：【Nginx 的 upstream】通过 ip+port，转发到真实服务器，性能好</li>
-</ol>
-</li>
-<li>网络层：路由和寻址</li>
-<li>数据链路层：帧编码和差错校验
-<ol>
-<li>VLAN：逻辑划分数据，将一个物理局域网划分为多个虚拟局域网，每个 VLAN 都是一个独立的广播域。</li>
-</ol>
-</li>
-<li>物理层：透明传输比特流</li>
-</ol>]]></description></item><item><title>🚩OS - 操作系统</title><link>https://leni.fun/os/</link><pubDate>Wed, 09 Aug 2023 16:21:51 +0800</pubDate><author>都将会</author><guid>https://leni.fun/os/</guid><description><![CDATA[<h3 id="进程间通信的方式有哪几种">进程间通信的方式有哪几种？</h3>
+<p>通过左旋、右旋和变色来实现自平衡：</p>]]></description></item><item><title>🚩NetWork - 计算机网络</title><link>https://leni.fun/network/</link><pubDate>Wed, 09 Aug 2023 16:22:51 +0800</pubDate><author>都将会</author><guid>https://leni.fun/network/</guid><description>计算机网络核心知识点</description></item><item><title>🚩OS - 操作系统</title><link>https://leni.fun/os/</link><pubDate>Wed, 09 Aug 2023 16:21:51 +0800</pubDate><author>都将会</author><guid>https://leni.fun/os/</guid><description><![CDATA[<h3 id="进程间通信的方式有哪几种">进程间通信的方式有哪几种？</h3>
 <ol>
 <li>无名管道( pipe )：父子进程通信</li>
 <li>高级管道(popen)：将另一个程序当做一个新的进程在当前程序进程中启动，则它算是当前程序的子进程</li>

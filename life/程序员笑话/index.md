@@ -26,5 +26,5 @@
 ---
 
 > 作者: xw  
-> URL: https://leni.fun/joke/  
+> URL: https://leni.fun/life/%E7%A8%8B%E5%BA%8F%E5%91%98%E7%AC%91%E8%AF%9D/  
 

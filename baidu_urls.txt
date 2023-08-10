@@ -1,4 +1,7 @@
 https://leni.fun/blog_beautify/
+https://leni.fun/blog_config/
+https://leni.fun/about/
+https://leni.fun/life/%E7%A8%8B%E5%BA%8F%E5%91%98%E7%AC%91%E8%AF%9D/
 https://leni.fun/friends/
 https://leni.fun/ds/
 https://leni.fun/network/
@@ -32,7 +35,6 @@ https://leni.fun/zookeeper_draft/
 https://leni.fun/raft/
 https://leni.fun/distributed/
 https://leni.fun/microservice/
-https://leni.fun/joke/
 https://leni.fun/spring_draft/
 https://leni.fun/springboot_draft/
 https://leni.fun/spring/

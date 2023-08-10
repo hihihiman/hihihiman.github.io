@@ -1,5 +1,7 @@
-# FixIt主题美化
+# FixIt 主题美化
 
+
+<!--more-->
 
 ### 方案
 
@@ -20,8 +22,6 @@
 
 ### 分享几个链接吧
 
-<!--more-->
-
 - 针对 LoveIt 主题（FixIt 的前身）：https://lewky.cn/posts/hugo-3.html/
 
 - 基于 Hexos Fluid 的很好看的博客：https://nyimac.gitee.io/
@@ -41,7 +41,7 @@
 
 
 
-{{< figure src="https://publicpictures.oss-cn-hangzhou.aliyuncs.com/img/github-contribution-grid-snake.svg" title="贪食蛇效果" >}}
+{{< figure src="https://cdn.jsdelivr.net/gh/hihihiman/hihihiman@output/github-contribution-grid-snake.svg" title="贪食蛇效果" >}}
 
 我肯定不是没怎么写代码，而是被贪食蛇吃掉了!
 

@@ -1,22 +1,10 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title/><link>https://leni.fun/</link><description>思绪来去如风，但愿有所停留。</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>dujianghui_work@163.com (都将会)</managingEditor><webMaster>dujianghui_work@163.com (都将会)</webMaster><lastBuildDate>Wed, 09 Aug 2023 19:21:51 +0800</lastBuildDate><atom:link href="https://leni.fun/index.xml" rel="self" type="application/rss+xml"/><item><title>FixIt主题美化</title><link>https://leni.fun/blog_beautify/</link><pubDate>Wed, 09 Aug 2023 15:25:41 +0800</pubDate><author>都将会</author><guid>https://leni.fun/blog_beautify/</guid><description><![CDATA[<div class="featured-image">
-        <img src="/images/pic1.jpeg" referrerpolicy="no-referrer">
-      </div><h3 id="方案">方案</h3>
-<h4 id="省流版">省流版</h4>
-<ul>
-<li>主题：Hugo + FixIt</li>
-<li>部署：Git + GitHub Workflows</li>
-<li>图床：Picgo + Aliyun OSS</li>
-<li>域名：GitHub Pages + Netlify + Aliyun</li>
-<li>评论：Giscus</li>
-</ul>
-<h4 id="完整版">完整版</h4>
-<ol>
-<li>使用 Git 进行版本控制，并结合 GitHub Workflows 实现了自动化部署和贪食蛇效果。</li>
-<li>使用了 Picgo 作为图床工具，并将图片上传至阿里云 OSS（对象存储服务）。</li>
-<li>起初使用 GitHub Pages 作为博客的托管平台，并将自定义域名绑定到 GitHub Pages；后来使用 Netlify 作为 CDN，博客页面的平均加载时间缩短了约 50%，提高了用户的访问速度。</li>
-<li>集成了 Giscus 评论系统，基于GitHub Issues，提供了一个简洁且易于使用的评论功能。</li>
-</ol>
-<h3 id="分享几个链接吧">分享几个链接吧</h3>]]></description></item><item><title>🚩DS - 数据结构</title><link>https://leni.fun/ds/</link><pubDate>Wed, 09 Aug 2023 19:21:51 +0800</pubDate><author>都将会</author><guid>https://leni.fun/ds/</guid><description><![CDATA[<h3 id="红黑树">红黑树</h3>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title/><link>https://leni.fun/</link><description>思绪来去如风，但愿有所停留。</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>dujianghui_work@163.com (都将会)</managingEditor><webMaster>dujianghui_work@163.com (都将会)</webMaster><lastBuildDate>Thu, 10 Aug 2023 16:53:52 +0800</lastBuildDate><atom:link href="https://leni.fun/index.xml" rel="self" type="application/rss+xml"/><item><title>FixIt 主题美化</title><link>https://leni.fun/blog_beautify/</link><pubDate>Wed, 09 Aug 2023 15:25:41 +0800</pubDate><author>都将会</author><guid>https://leni.fun/blog_beautify/</guid><description>&lt;div class="featured-image">
+&lt;img src="/images/pic1.jpeg" referrerpolicy="no-referrer">
+&lt;/div>分享几个帮助很大的链接</description></item><item><title>Hugo+FixIt 主题配置文件分享</title><link>https://leni.fun/blog_config/</link><pubDate>Thu, 10 Aug 2023 16:53:52 +0800</pubDate><author>都将会</author><guid>https://leni.fun/blog_config/</guid><description><![CDATA[<h3 id="分享我自己的核心配置类">分享我自己的核心配置类</h3>
+<p>主题采用 FixIt，将配置文件放在域名根目录下，例如我的文件路径就是 <code>leni.fun/hugo.yml</code>，我这里使用 yml 替换 toml 文件，可以通过以下网站进行文件转换，也可以直接复制我的配置文件进行更改</p>
+<blockquote>
+<p><a href="https://transform.tools/toml-to-yaml"target="_blank" rel="external nofollow noopener noreferrer">https://transform.tools/toml-to-yaml</a></p>
+</blockquote>]]></description></item><item><title>🚩DS - 数据结构</title><link>https://leni.fun/ds/</link><pubDate>Wed, 09 Aug 2023 19:21:51 +0800</pubDate><author>都将会</author><guid>https://leni.fun/ds/</guid><description><![CDATA[<h3 id="红黑树">红黑树</h3>
 <h4 id="什么是红黑树">什么是红黑树？</h4>
 <p>自平衡的二叉查找树，在进行插入和删除等可能会破坏树的平衡的操作时，需要重新自处理达到平衡状态。</p>
 <ol>
@@ -25,28 +13,7 @@
 <li>每个红色节点必有黑色子节点。</li>
 <li><strong>任意一结点到每个叶子结点的路径都包含数量相同的黑结点。</strong></li>
 </ol>
-<p>通过左旋、右旋和变色来实现自平衡：</p>]]></description></item><item><title>🚩NetWork - 计算机网络</title><link>https://leni.fun/network/</link><pubDate>Wed, 09 Aug 2023 16:22:51 +0800</pubDate><author>都将会</author><guid>https://leni.fun/network/</guid><description><![CDATA[<h3 id="osi-七层模型">OSI 七层模型？</h3>
-<ol>
-<li>应用层：为计算机用户提供服务 HTTP
-<ol>
-<li>七层负载均衡：【Nginx 的 server/udp】读取报文数据部分，根据数据内容做出负载均衡决策，更灵活</li>
-</ol>
-</li>
-<li>表示层：数据加密解密</li>
-<li>会话层：管理应用程序之间的会话</li>
-<li>传输层：通用的数据传输服务 TCP/UDP
-<ol>
-<li>四层负载均衡：【Nginx 的 upstream】通过 ip+port，转发到真实服务器，性能好</li>
-</ol>
-</li>
-<li>网络层：路由和寻址</li>
-<li>数据链路层：帧编码和差错校验
-<ol>
-<li>VLAN：逻辑划分数据，将一个物理局域网划分为多个虚拟局域网，每个 VLAN 都是一个独立的广播域。</li>
-</ol>
-</li>
-<li>物理层：透明传输比特流</li>
-</ol>]]></description></item><item><title>🚩OS - 操作系统</title><link>https://leni.fun/os/</link><pubDate>Wed, 09 Aug 2023 16:21:51 +0800</pubDate><author>都将会</author><guid>https://leni.fun/os/</guid><description><![CDATA[<h3 id="进程间通信的方式有哪几种">进程间通信的方式有哪几种？</h3>
+<p>通过左旋、右旋和变色来实现自平衡：</p>]]></description></item><item><title>🚩NetWork - 计算机网络</title><link>https://leni.fun/network/</link><pubDate>Wed, 09 Aug 2023 16:22:51 +0800</pubDate><author>都将会</author><guid>https://leni.fun/network/</guid><description>计算机网络核心知识点</description></item><item><title>🚩OS - 操作系统</title><link>https://leni.fun/os/</link><pubDate>Wed, 09 Aug 2023 16:21:51 +0800</pubDate><author>都将会</author><guid>https://leni.fun/os/</guid><description><![CDATA[<h3 id="进程间通信的方式有哪几种">进程间通信的方式有哪几种？</h3>
 <ol>
 <li>无名管道( pipe )：父子进程通信</li>
 <li>高级管道(popen)：将另一个程序当做一个新的进程在当前程序进程中启动，则它算是当前程序的子进程</li>
@@ -57,4 +24,4 @@
 <li>共享内存( shared memory )：映射一段能被其他进程所访问的内存，这段共享内存由一个进程创建，但多个进程都可以访问</li>
 <li>套接字( socket )：可用于不同机器间的进程通信</li>
 </ol>]]></description></item><item><title>Docker 杂记</title><link>https://leni.fun/docker_draft/</link><pubDate>Tue, 08 Aug 2023 16:20:34 +0800</pubDate><author>都将会</author><guid>https://leni.fun/docker_draft/</guid><description>容器的本质是进程。</description></item><item><title>往期周赛与笔试题解</title><link>https://leni.fun/%E5%BE%80%E6%9C%9F%E5%91%A8%E8%B5%9B%E9%A2%98%E8%A7%A3/</link><pubDate>Tue, 08 Aug 2023 16:11:13 +0800</pubDate><author>都将会</author><guid>https://leni.fun/%E5%BE%80%E6%9C%9F%E5%91%A8%E8%B5%9B%E9%A2%98%E8%A7%A3/</guid><description>一步一个脚印</description></item><item><title>🚩经典股票问题 - 动态规划思路</title><link>https://leni.fun/%E7%BB%8F%E5%85%B8%E8%82%A1%E7%A5%A8%E9%97%AE%E9%A2%98-%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E6%80%9D%E8%B7%AF/</link><pubDate>Tue, 08 Aug 2023 16:06:32 +0800</pubDate><author>都将会</author><guid>https://leni.fun/%E7%BB%8F%E5%85%B8%E8%82%A1%E7%A5%A8%E9%97%AE%E9%A2%98-%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E6%80%9D%E8%B7%AF/</guid><description>&lt;p>给定一个数组 prices ，它的第 i 个元素 prices[i] 表示一支给定股票第 i 天的价格。设计一个算法来计算你所能获取的最大利润。返回你可以从这笔交易中获取的最大利润。如果你不能获取任何利润，返回 0 。&lt;/p>
-&lt;h4 id="lv1-你只能选择-某一天-买入这只股票并选择在-未来的某一个不同的日子-卖出该股票">lv1. 你只能选择 某一天 买入这只股票，并选择在 未来的某一个不同的日子 卖出该股票。&lt;/h4></description></item><item><title>🚩LeetCode 典中典</title><link>https://leni.fun/leetcode-%E5%85%B8%E4%B8%AD%E5%85%B8/</link><pubDate>Tue, 08 Aug 2023 15:57:32 +0800</pubDate><author>都将会</author><guid>https://leni.fun/leetcode-%E5%85%B8%E4%B8%AD%E5%85%B8/</guid><description>这么经典，岂不默写？</description></item><item><title>LFU</title><link>https://leni.fun/lfu/</link><pubDate>Tue, 08 Aug 2023 15:56:32 +0800</pubDate><author>都将会</author><guid>https://leni.fun/lfu/</guid><description>跟着 debug 调试一下</description></item><item><title>LeetCode 大全</title><link>https://leni.fun/leetcode/</link><pubDate>Tue, 08 Aug 2023 15:51:32 +0800</pubDate><author>都将会</author><guid>https://leni.fun/leetcode/</guid><description>常回来看看</description></item></channel></rss>
+&lt;h4 id="lv1-你只能选择-某一天-买入这只股票并选择在-未来的某一个不同的日子-卖出该股票">lv1. 你只能选择 某一天 买入这只股票，并选择在 未来的某一个不同的日子 卖出该股票。&lt;/h4></description></item><item><title>🚩LeetCode 典中典</title><link>https://leni.fun/leetcode-%E5%85%B8%E4%B8%AD%E5%85%B8/</link><pubDate>Tue, 08 Aug 2023 15:57:32 +0800</pubDate><author>都将会</author><guid>https://leni.fun/leetcode-%E5%85%B8%E4%B8%AD%E5%85%B8/</guid><description>这么经典，岂不默写？</description></item><item><title>LFU</title><link>https://leni.fun/lfu/</link><pubDate>Tue, 08 Aug 2023 15:56:32 +0800</pubDate><author>都将会</author><guid>https://leni.fun/lfu/</guid><description>跟着 debug 调试一下</description></item></channel></rss>

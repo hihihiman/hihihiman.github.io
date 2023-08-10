@@ -1,0 +1,775 @@
+<!doctype html><html itemscope itemtype=http://schema.org/WebPage lang=zh-CN><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=2"><meta name=robots content="noodp"><title>Hugo+FixIt 主题配置文件分享 -</title><meta name=author content="都将会"><meta name=author-link content><meta name=description content="分享我自己的核心配置类
+主题采用 FixIt，将配置文件放在域名根目录下，例如我的文件路径就是 leni.fun/hugo.yml，我这里使用 yml 替换 toml 文件，可以通过以下网站进行文件转换，也可以直接复制我的配置文件进行更改
+
+https://transform.tools/toml-to-yaml
+"><meta name=keywords content="draft"><meta itemprop=name content="Hugo+FixIt 主题配置文件分享"><meta itemprop=description content="分享我自己的核心配置类
+主题采用 FixIt，将配置文件放在域名根目录下，例如我的文件路径就是 leni.fun/hugo.yml，我这里使用 yml 替换 toml 文件，可以通过以下网站进行文件转换，也可以直接复制我的配置文件进行更改
+
+https://transform.tools/toml-to-yaml
+"><meta itemprop=datePublished content="2023-08-10T16:53:52+08:00"><meta itemprop=dateModified content="2023-08-10T16:53:52+08:00"><meta itemprop=wordCount content="1573"><meta itemprop=image content="https://leni.fun/images/avatar.jpg"><meta itemprop=keywords content="draft,"><meta property="og:title" content="Hugo+FixIt 主题配置文件分享"><meta property="og:description" content="分享我自己的核心配置类
+主题采用 FixIt，将配置文件放在域名根目录下，例如我的文件路径就是 leni.fun/hugo.yml，我这里使用 yml 替换 toml 文件，可以通过以下网站进行文件转换，也可以直接复制我的配置文件进行更改
+
+https://transform.tools/toml-to-yaml
+"><meta property="og:type" content="article"><meta property="og:url" content="https://leni.fun/blog_config/"><meta property="og:image" content="https://leni.fun/images/avatar.jpg"><meta property="article:section" content="posts"><meta property="article:published_time" content="2023-08-10T16:53:52+08:00"><meta property="article:modified_time" content="2023-08-10T16:53:52+08:00"><meta name=twitter:card content="summary_large_image"><meta name=twitter:image content="https://leni.fun/images/avatar.jpg"><meta name=twitter:title content="Hugo+FixIt 主题配置文件分享"><meta name=twitter:description content="分享我自己的核心配置类
+主题采用 FixIt，将配置文件放在域名根目录下，例如我的文件路径就是 leni.fun/hugo.yml，我这里使用 yml 替换 toml 文件，可以通过以下网站进行文件转换，也可以直接复制我的配置文件进行更改
+
+https://transform.tools/toml-to-yaml
+"><meta name=application-name content="都将会的 APP"><meta name=apple-mobile-web-app-title content="都将会的 APP"><meta name=theme-color data-light=#f8f8f8 data-dark=#252627 content="#f8f8f8"><meta name=msapplication-TileColor content="#da532c"><link rel="shortcut icon" type=image/x-icon href=/favicon.ico><link rel=icon type=image/png sizes=32x32 href=/favicon-32x32.png><link rel=icon type=image/png sizes=16x16 href=/favicon-16x16.png><link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png><link rel=mask-icon href=/safari-pinned-tab.svg color=#5bbad5><link rel=manifest href=/site.webmanifest><link rel=canonical href=https://leni.fun/blog_config/><link rel=prev href=https://leni.fun/ds/><link rel=next href=https://leni.fun/blog_beautify/><link rel=stylesheet href=/css/style.min.css><link rel=stylesheet href=/lib/fontawesome-free/all.min.css><link rel=stylesheet href=/lib/animate/animate.min.css><script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","headline":"Hugo+FixIt 主题配置文件分享","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/leni.fun\/blog_config\/"},"genre":"posts","keywords":"draft","wordcount":1573,"url":"https:\/\/leni.fun\/blog_config\/","datePublished":"2023-08-10T16:53:52+08:00","dateModified":"2023-08-10T16:53:52+08:00","publisher":{"@type":"Organization","name":""},"author":{"@type":"Person","name":"都将会"},"description":""}</script></head><body data-header-desktop=sticky data-header-mobile=auto><script>(window.localStorage?.getItem("theme")?localStorage.getItem("theme")==="dark":"dark"==="auto"?window.matchMedia("(prefers-color-scheme: dark)").matches:"dark"==="dark")&&document.body.setAttribute("data-theme","dark")</script><div class=wrapper data-page-style=normal><header class="desktop animate__faster" id=header-desktop><div class=header-wrapper data-github-corner=left><div class=header-title><a href=/ title><img loading=lazy src=/images/icon.png srcset="/images/icon.png, /images/icon.png 1.5x, /images/icon.png 2x" sizes=auto data-title=/images/icon.png data-alt=/images/icon.png class=logo style="background:url(/svg/loading.min.svg)no-repeat 50%" onload='this.title=this.dataset.title,this.alt=this.dataset.alt;for(const e of["style","data-title","data-alt","onerror","onload"])this.removeAttribute(e);this.dataset.lazyloaded=""' onerror='this.title=this.dataset.title,this.alt=this.dataset.alt;for(const e of["style","data-title","data-alt","onerror","onload"])this.removeAttribute(e)'><span class=header-title-text>都将会</span></a><span id=typeit-header-subtitle-desktop class="typeit header-subtitle"></span></div><nav><ul class=menu><li class="menu-item has-children"><a class=menu-link href=/posts/><i class="fa-solid fa-archive fa-fw fa-sm" aria-hidden=true></i> 技术</a><i class="dropdown-icon fa-solid fa-chevron-down" aria-hidden=true></i><ul class=sub-menu><li class=menu-item><a class=menu-link href=/categories/><i class="fa-solid fa-th fa-fw fa-sm" aria-hidden=true></i> 分类</a></li><li class=menu-item><a class=menu-link href=/tags/><i class="fa-solid fa-tags fa-fw fa-sm" aria-hidden=true></i> 标签</a></li></ul></li><li class=menu-item><a class=menu-link href=/life/><i class="fa-solid fa-camera-alt fa-fw fa-sm" aria-hidden=true></i> 生活</a></li><li class=menu-item><a class=menu-link href=/friends/><i class="fa-solid fa-users fa-fw fa-sm" aria-hidden=true></i> 友链</a></li><li class=menu-item><a class=menu-link href=/about/><i class="fa-solid fa-info-circle fa-fw fa-sm" aria-hidden=true></i> 关于</a></li><li class="menu-item delimiter"></li><li class="menu-item search" id=search-desktop><input type=text placeholder=关键词搜索 id=search-input-desktop>
+<a href=javascript:void(0); class="search-button search-toggle" id=search-toggle-desktop title=搜索><i class="fa-solid fa-search fa-fw" aria-hidden=true></i></a>
+<a href=javascript:void(0); class="search-button search-clear" id=search-clear-desktop title=清空><i class="fa-solid fa-times-circle fa-fw" aria-hidden=true></i></a>
+<span class="search-button search-loading" id=search-loading-desktop><i class="fa-solid fa-spinner fa-fw fa-spin" aria-hidden=true></i></span></li><li class="menu-item theme-switch" title=切换主题><i class="fa-solid fa-adjust fa-fw" aria-hidden=true></i></li></ul></nav></div></header><header class="mobile animate__faster" id=header-mobile><div class=header-container><div class=header-wrapper><div class=header-title><a href=/ title><img loading=lazy src=/images/icon.png srcset="/images/icon.png, /images/icon.png 1.5x, /images/icon.png 2x" sizes=auto data-title=/images/icon.png data-alt=/images/icon.png class=logo style="background:url(/svg/loading.min.svg)no-repeat 50%" onload='this.title=this.dataset.title,this.alt=this.dataset.alt;for(const e of["style","data-title","data-alt","onerror","onload"])this.removeAttribute(e);this.dataset.lazyloaded=""' onerror='this.title=this.dataset.title,this.alt=this.dataset.alt;for(const e of["style","data-title","data-alt","onerror","onload"])this.removeAttribute(e)'><span class=header-title-text>都将会</span></a><span id=typeit-header-subtitle-mobile class="typeit header-subtitle"></span></div><div class=menu-toggle id=menu-toggle-mobile><span></span><span></span><span></span></div></div><nav><ul class=menu id=menu-mobile><li class=search-wrapper><div class="search mobile" id=search-mobile><input type=text placeholder=关键词搜索 id=search-input-mobile>
+<a href=javascript:void(0); class="search-button search-toggle" id=search-toggle-mobile title=搜索><i class="fa-solid fa-search fa-fw" aria-hidden=true></i></a>
+<a href=javascript:void(0); class="search-button search-clear" id=search-clear-mobile title=清空><i class="fa-solid fa-times-circle fa-fw" aria-hidden=true></i></a>
+<span class="search-button search-loading" id=search-loading-mobile><i class="fa-solid fa-spinner fa-fw fa-spin" aria-hidden=true></i></span></div><a href=javascript:void(0); class=search-cancel id=search-cancel-mobile>取消</a></li><li class=menu-item><span class=nested-item><a class=menu-link href=/posts/><i class="fa-solid fa-archive fa-fw fa-sm" aria-hidden=true></i> 技术</a>
+<i class="dropdown-icon fa-solid fa-chevron-right" aria-hidden=true></i></span><ul class=sub-menu><li class=menu-item><a class=menu-link href=/categories/><i class="fa-solid fa-th fa-fw fa-sm" aria-hidden=true></i> 分类</a></li><li class=menu-item><a class=menu-link href=/tags/><i class="fa-solid fa-tags fa-fw fa-sm" aria-hidden=true></i> 标签</a></li></ul></li><li class=menu-item><a class=menu-link href=/life/><i class="fa-solid fa-camera-alt fa-fw fa-sm" aria-hidden=true></i> 生活</a></li><li class=menu-item><a class=menu-link href=/friends/><i class="fa-solid fa-users fa-fw fa-sm" aria-hidden=true></i> 友链</a></li><li class=menu-item><a class=menu-link href=/about/><i class="fa-solid fa-info-circle fa-fw fa-sm" aria-hidden=true></i> 关于</a></li><li class="menu-item menu-system"><span class="menu-system-item theme-switch" title=切换主题><i class="fa-solid fa-adjust fa-fw" aria-hidden=true></i></span></li></ul></nav></div></header><div class="search-dropdown desktop"><div id=search-dropdown-desktop></div></div><div class="search-dropdown mobile"><div id=search-dropdown-mobile></div></div><nav aria-label=breadcrumb class="breadcrumb-container sticky"><ol class=breadcrumb><li class=breadcrumb-item><a href=/ title>主页</a></li><li class=breadcrumb-item><a href=/posts/ title=Posts>Posts</a></li><li class="breadcrumb-item active" aria-current=page>Hugo+FixIt 主题配置文件分享</li></ol></nav><main class=container><aside class=toc id=toc-auto><h2 class=toc-title>目录&nbsp;<i class="toc-icon fa-solid fa-angle-down fa-fw" aria-hidden=true></i></h2><div class=toc-content id=toc-content-auto></div></aside><aside class=aside-custom></aside><article class="page single"><div class=header><h1 class="single-title animate__animated animate__flipInX"><span title=转载 class=icon-repost><i class="fa-solid fa-share fa-fw" aria-hidden=true></i></span><span>Hugo+FixIt 主题配置文件分享</span></h1></div><div class=post-meta><div class=post-meta-line><span class=post-author><span class=author><img loading=lazy src=/images/avatar.jpg srcset="/images/avatar.jpg, /images/avatar.jpg 1.5x, /images/avatar.jpg 2x" sizes=auto data-title=都将会 data-alt=都将会 class=avatar style="background:url(/svg/loading.min.svg)no-repeat 50%" onload='this.title=this.dataset.title,this.alt=this.dataset.alt;for(const e of["style","data-title","data-alt","onerror","onload"])this.removeAttribute(e);this.dataset.lazyloaded=""' onerror='this.title=this.dataset.title,this.alt=this.dataset.alt;for(const e of["style","data-title","data-alt","onerror","onload"])this.removeAttribute(e)'>&nbsp;都将会</span></span>
+<span class=post-category>收录于 <a href=/categories/draft/><i class="fa-regular fa-folder fa-fw" aria-hidden=true></i> draft</a></span></div><div class=post-meta-line><span title="发布于 2023-08-10 16:53:52"><i class="fa-regular fa-calendar-alt fa-fw me-1" aria-hidden=true></i><time datetime=2023-08-10>2023-08-10</time></span>&nbsp;<span title="更新于 2023-08-10 16:53:52"><i class="fa-regular fa-edit fa-fw me-1" aria-hidden=true></i><time datetime=2023-08-10>2023-08-10</time></span>&nbsp;<span><i class="fa-solid fa-pencil-alt fa-fw me-1" aria-hidden=true></i>约 1573 字</span>&nbsp;<span><i class="fa-regular fa-clock fa-fw me-1" aria-hidden=true></i>预计阅读 4 分钟</span>&nbsp;<span id=busuanzi_container_page_pv class="busuanzi_visitors comment-visitors" data-flag-title="Hugo+FixIt 主题配置文件分享">
+<i class="fa-regular fa-eye fa-fw me-1" aria-hidden=true></i><span id=busuanzi_value_page_pv>-</span>&nbsp;次阅读
+</span>&nbsp;</div></div><div class="details toc" id=toc-static data-kept=false><div class="details-summary toc-title"><span>目录</span>
+<span><i class="details-icon fa-solid fa-angle-right" aria-hidden=true></i></span></div><div class="details-content toc-content" id=toc-content-static><nav id=TableOfContents><ul><li><ul><li><a href=#分享我自己的核心配置类>分享我自己的核心配置类</a></li></ul></li></ul></nav></div></div><div class=content id=content><h3 id=分享我自己的核心配置类>分享我自己的核心配置类</h3><p>主题采用 FixIt，将配置文件放在域名根目录下，例如我的文件路径就是 <code>leni.fun/hugo.yml</code>，我这里使用 yml 替换 toml 文件，可以通过以下网站进行文件转换，也可以直接复制我的配置文件进行更改</p><blockquote><p><a href=https://transform.tools/toml-to-yaml target=_blank rel="external nofollow noopener noreferrer">https://transform.tools/toml-to-yaml</a></p></blockquote><div class=highlight id=id-1><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>  1
+</span><span class=lnt>  2
+</span><span class=lnt>  3
+</span><span class=lnt>  4
+</span><span class=lnt>  5
+</span><span class=lnt>  6
+</span><span class=lnt>  7
+</span><span class=lnt>  8
+</span><span class=lnt>  9
+</span><span class=lnt> 10
+</span><span class=lnt> 11
+</span><span class=lnt> 12
+</span><span class=lnt> 13
+</span><span class=lnt> 14
+</span><span class=lnt> 15
+</span><span class=lnt> 16
+</span><span class=lnt> 17
+</span><span class=lnt> 18
+</span><span class=lnt> 19
+</span><span class=lnt> 20
+</span><span class=lnt> 21
+</span><span class=lnt> 22
+</span><span class=lnt> 23
+</span><span class=lnt> 24
+</span><span class=lnt> 25
+</span><span class=lnt> 26
+</span><span class=lnt> 27
+</span><span class=lnt> 28
+</span><span class=lnt> 29
+</span><span class=lnt> 30
+</span><span class=lnt> 31
+</span><span class=lnt> 32
+</span><span class=lnt> 33
+</span><span class=lnt> 34
+</span><span class=lnt> 35
+</span><span class=lnt> 36
+</span><span class=lnt> 37
+</span><span class=lnt> 38
+</span><span class=lnt> 39
+</span><span class=lnt> 40
+</span><span class=lnt> 41
+</span><span class=lnt> 42
+</span><span class=lnt> 43
+</span><span class=lnt> 44
+</span><span class=lnt> 45
+</span><span class=lnt> 46
+</span><span class=lnt> 47
+</span><span class=lnt> 48
+</span><span class=lnt> 49
+</span><span class=lnt> 50
+</span><span class=lnt> 51
+</span><span class=lnt> 52
+</span><span class=lnt> 53
+</span><span class=lnt> 54
+</span><span class=lnt> 55
+</span><span class=lnt> 56
+</span><span class=lnt> 57
+</span><span class=lnt> 58
+</span><span class=lnt> 59
+</span><span class=lnt> 60
+</span><span class=lnt> 61
+</span><span class=lnt> 62
+</span><span class=lnt> 63
+</span><span class=lnt> 64
+</span><span class=lnt> 65
+</span><span class=lnt> 66
+</span><span class=lnt> 67
+</span><span class=lnt> 68
+</span><span class=lnt> 69
+</span><span class=lnt> 70
+</span><span class=lnt> 71
+</span><span class=lnt> 72
+</span><span class=lnt> 73
+</span><span class=lnt> 74
+</span><span class=lnt> 75
+</span><span class=lnt> 76
+</span><span class=lnt> 77
+</span><span class=lnt> 78
+</span><span class=lnt> 79
+</span><span class=lnt> 80
+</span><span class=lnt> 81
+</span><span class=lnt> 82
+</span><span class=lnt> 83
+</span><span class=lnt> 84
+</span><span class=lnt> 85
+</span><span class=lnt> 86
+</span><span class=lnt> 87
+</span><span class=lnt> 88
+</span><span class=lnt> 89
+</span><span class=lnt> 90
+</span><span class=lnt> 91
+</span><span class=lnt> 92
+</span><span class=lnt> 93
+</span><span class=lnt> 94
+</span><span class=lnt> 95
+</span><span class=lnt> 96
+</span><span class=lnt> 97
+</span><span class=lnt> 98
+</span><span class=lnt> 99
+</span><span class=lnt>100
+</span><span class=lnt>101
+</span><span class=lnt>102
+</span><span class=lnt>103
+</span><span class=lnt>104
+</span><span class=lnt>105
+</span><span class=lnt>106
+</span><span class=lnt>107
+</span><span class=lnt>108
+</span><span class=lnt>109
+</span><span class=lnt>110
+</span><span class=lnt>111
+</span><span class=lnt>112
+</span><span class=lnt>113
+</span><span class=lnt>114
+</span><span class=lnt>115
+</span><span class=lnt>116
+</span><span class=lnt>117
+</span><span class=lnt>118
+</span><span class=lnt>119
+</span><span class=lnt>120
+</span><span class=lnt>121
+</span><span class=lnt>122
+</span><span class=lnt>123
+</span><span class=lnt>124
+</span><span class=lnt>125
+</span><span class=lnt>126
+</span><span class=lnt>127
+</span><span class=lnt>128
+</span><span class=lnt>129
+</span><span class=lnt>130
+</span><span class=lnt>131
+</span><span class=lnt>132
+</span><span class=lnt>133
+</span><span class=lnt>134
+</span><span class=lnt>135
+</span><span class=lnt>136
+</span><span class=lnt>137
+</span><span class=lnt>138
+</span><span class=lnt>139
+</span><span class=lnt>140
+</span><span class=lnt>141
+</span><span class=lnt>142
+</span><span class=lnt>143
+</span><span class=lnt>144
+</span><span class=lnt>145
+</span><span class=lnt>146
+</span><span class=lnt>147
+</span><span class=lnt>148
+</span><span class=lnt>149
+</span><span class=lnt>150
+</span><span class=lnt>151
+</span><span class=lnt>152
+</span><span class=lnt>153
+</span><span class=lnt>154
+</span><span class=lnt>155
+</span><span class=lnt>156
+</span><span class=lnt>157
+</span><span class=lnt>158
+</span><span class=lnt>159
+</span><span class=lnt>160
+</span><span class=lnt>161
+</span><span class=lnt>162
+</span><span class=lnt>163
+</span><span class=lnt>164
+</span><span class=lnt>165
+</span><span class=lnt>166
+</span><span class=lnt>167
+</span><span class=lnt>168
+</span><span class=lnt>169
+</span><span class=lnt>170
+</span><span class=lnt>171
+</span><span class=lnt>172
+</span><span class=lnt>173
+</span><span class=lnt>174
+</span><span class=lnt>175
+</span><span class=lnt>176
+</span><span class=lnt>177
+</span><span class=lnt>178
+</span><span class=lnt>179
+</span><span class=lnt>180
+</span><span class=lnt>181
+</span><span class=lnt>182
+</span><span class=lnt>183
+</span><span class=lnt>184
+</span><span class=lnt>185
+</span><span class=lnt>186
+</span><span class=lnt>187
+</span><span class=lnt>188
+</span><span class=lnt>189
+</span><span class=lnt>190
+</span><span class=lnt>191
+</span><span class=lnt>192
+</span><span class=lnt>193
+</span><span class=lnt>194
+</span><span class=lnt>195
+</span><span class=lnt>196
+</span><span class=lnt>197
+</span><span class=lnt>198
+</span><span class=lnt>199
+</span><span class=lnt>200
+</span><span class=lnt>201
+</span><span class=lnt>202
+</span><span class=lnt>203
+</span><span class=lnt>204
+</span><span class=lnt>205
+</span><span class=lnt>206
+</span><span class=lnt>207
+</span><span class=lnt>208
+</span><span class=lnt>209
+</span><span class=lnt>210
+</span><span class=lnt>211
+</span><span class=lnt>212
+</span><span class=lnt>213
+</span><span class=lnt>214
+</span><span class=lnt>215
+</span><span class=lnt>216
+</span><span class=lnt>217
+</span><span class=lnt>218
+</span><span class=lnt>219
+</span><span class=lnt>220
+</span><span class=lnt>221
+</span><span class=lnt>222
+</span><span class=lnt>223
+</span><span class=lnt>224
+</span><span class=lnt>225
+</span><span class=lnt>226
+</span><span class=lnt>227
+</span><span class=lnt>228
+</span><span class=lnt>229
+</span><span class=lnt>230
+</span><span class=lnt>231
+</span><span class=lnt>232
+</span><span class=lnt>233
+</span><span class=lnt>234
+</span><span class=lnt>235
+</span><span class=lnt>236
+</span><span class=lnt>237
+</span><span class=lnt>238
+</span><span class=lnt>239
+</span><span class=lnt>240
+</span><span class=lnt>241
+</span><span class=lnt>242
+</span><span class=lnt>243
+</span><span class=lnt>244
+</span><span class=lnt>245
+</span><span class=lnt>246
+</span><span class=lnt>247
+</span><span class=lnt>248
+</span><span class=lnt>249
+</span><span class=lnt>250
+</span><span class=lnt>251
+</span><span class=lnt>252
+</span><span class=lnt>253
+</span><span class=lnt>254
+</span><span class=lnt>255
+</span><span class=lnt>256
+</span><span class=lnt>257
+</span><span class=lnt>258
+</span><span class=lnt>259
+</span><span class=lnt>260
+</span><span class=lnt>261
+</span><span class=lnt>262
+</span><span class=lnt>263
+</span><span class=lnt>264
+</span><span class=lnt>265
+</span><span class=lnt>266
+</span><span class=lnt>267
+</span><span class=lnt>268
+</span><span class=lnt>269
+</span><span class=lnt>270
+</span><span class=lnt>271
+</span><span class=lnt>272
+</span><span class=lnt>273
+</span><span class=lnt>274
+</span><span class=lnt>275
+</span><span class=lnt>276
+</span><span class=lnt>277
+</span><span class=lnt>278
+</span><span class=lnt>279
+</span><span class=lnt>280
+</span><span class=lnt>281
+</span><span class=lnt>282
+</span><span class=lnt>283
+</span><span class=lnt>284
+</span><span class=lnt>285
+</span><span class=lnt>286
+</span><span class=lnt>287
+</span><span class=lnt>288
+</span><span class=lnt>289
+</span><span class=lnt>290
+</span><span class=lnt>291
+</span><span class=lnt>292
+</span><span class=lnt>293
+</span><span class=lnt>294
+</span><span class=lnt>295
+</span><span class=lnt>296
+</span><span class=lnt>297
+</span><span class=lnt>298
+</span><span class=lnt>299
+</span><span class=lnt>300
+</span><span class=lnt>301
+</span><span class=lnt>302
+</span><span class=lnt>303
+</span><span class=lnt>304
+</span><span class=lnt>305
+</span><span class=lnt>306
+</span><span class=lnt>307
+</span><span class=lnt>308
+</span><span class=lnt>309
+</span><span class=lnt>310
+</span><span class=lnt>311
+</span><span class=lnt>312
+</span><span class=lnt>313
+</span><span class=lnt>314
+</span><span class=lnt>315
+</span><span class=lnt>316
+</span><span class=lnt>317
+</span><span class=lnt>318
+</span><span class=lnt>319
+</span><span class=lnt>320
+</span><span class=lnt>321
+</span><span class=lnt>322
+</span><span class=lnt>323
+</span><span class=lnt>324
+</span><span class=lnt>325
+</span><span class=lnt>326
+</span><span class=lnt>327
+</span><span class=lnt>328
+</span><span class=lnt>329
+</span><span class=lnt>330
+</span><span class=lnt>331
+</span><span class=lnt>332
+</span><span class=lnt>333
+</span><span class=lnt>334
+</span><span class=lnt>335
+</span><span class=lnt>336
+</span><span class=lnt>337
+</span><span class=lnt>338
+</span><span class=lnt>339
+</span><span class=lnt>340
+</span><span class=lnt>341
+</span><span class=lnt>342
+</span><span class=lnt>343
+</span><span class=lnt>344
+</span><span class=lnt>345
+</span><span class=lnt>346
+</span><span class=lnt>347
+</span><span class=lnt>348
+</span><span class=lnt>349
+</span><span class=lnt>350
+</span><span class=lnt>351
+</span><span class=lnt>352
+</span><span class=lnt>353
+</span><span class=lnt>354
+</span><span class=lnt>355
+</span><span class=lnt>356
+</span><span class=lnt>357
+</span><span class=lnt>358
+</span><span class=lnt>359
+</span><span class=lnt>360
+</span><span class=lnt>361
+</span><span class=lnt>362
+</span><span class=lnt>363
+</span><span class=lnt>364
+</span><span class=lnt>365
+</span><span class=lnt>366
+</span><span class=lnt>367
+</span><span class=lnt>368
+</span><span class=lnt>369
+</span><span class=lnt>370
+</span><span class=lnt>371
+</span><span class=lnt>372
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-yaml data-lang=yaml><span class=line><span class=cl><span class=c># 此处 yml 优先级更高</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w></span><span class=c># 网址</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w></span><span class=nt>baseURL</span><span class=p>:</span><span class=w> </span><span class=l>https://leni.fun</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w></span><span class=c># 中文支持</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w></span><span class=nt>languageCode</span><span class=p>:</span><span class=w> </span><span class=l>zh-CN</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w></span><span class=nt>defaultContentLanguage</span><span class=p>:</span><span class=w> </span><span class=l>zh-cn</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w></span><span class=c># 是否包括中日韩文字</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w></span><span class=nt>hasCJKLanguage</span><span class=p>:</span><span class=w> </span><span class=kc>true</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w></span><span class=c># 主题</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w></span><span class=nt>theme</span><span class=p>:</span><span class=w> </span><span class=l>FixIt</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w></span><span class=nt>menu</span><span class=p>:</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>  </span><span class=nt>main</span><span class=p>:</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span>- <span class=nt>identifier</span><span class=p>:</span><span class=w> </span><span class=l>posts</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>      </span><span class=nt>pre</span><span class=p>:</span><span class=w> </span><span class=s2>&#34;&#34;</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>      </span><span class=nt>post</span><span class=p>:</span><span class=w> </span><span class=s2>&#34;&#34;</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>      </span><span class=nt>name</span><span class=p>:</span><span class=w> </span><span class=l>技术</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>      </span><span class=nt>url</span><span class=p>:</span><span class=w> </span><span class=l>/posts/</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>      </span><span class=nt>title</span><span class=p>:</span><span class=w> </span><span class=s2>&#34;&#34;</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>      </span><span class=nt>weight</span><span class=p>:</span><span class=w> </span><span class=m>1</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>      </span><span class=nt>params</span><span class=p>:</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=nt>class</span><span class=p>:</span><span class=w> </span><span class=s2>&#34;&#34;</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=nt>draft</span><span class=p>:</span><span class=w> </span><span class=kc>false</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=nt>icon</span><span class=p>:</span><span class=w> </span><span class=l>fa-solid fa-archive</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=nt>type</span><span class=p>:</span><span class=w> </span><span class=s2>&#34;&#34;</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span>- <span class=nt>identifier</span><span class=p>:</span><span class=w> </span><span class=l>categories</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>      </span><span class=nt>parent</span><span class=p>:</span><span class=w> </span><span class=l>posts</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>      </span><span class=nt>pre</span><span class=p>:</span><span class=w> </span><span class=s2>&#34;&#34;</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>      </span><span class=nt>post</span><span class=p>:</span><span class=w> </span><span class=s2>&#34;&#34;</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>      </span><span class=nt>name</span><span class=p>:</span><span class=w> </span><span class=l>分类</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>      </span><span class=nt>url</span><span class=p>:</span><span class=w> </span><span class=l>/categories/</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>      </span><span class=nt>title</span><span class=p>:</span><span class=w> </span><span class=s2>&#34;&#34;</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>      </span><span class=nt>weight</span><span class=p>:</span><span class=w> </span><span class=m>11</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>      </span><span class=nt>params</span><span class=p>:</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=nt>icon</span><span class=p>:</span><span class=w> </span><span class=l>fa-solid fa-th</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span>- <span class=nt>identifier</span><span class=p>:</span><span class=w> </span><span class=l>tags</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>      </span><span class=nt>parent</span><span class=p>:</span><span class=w> </span><span class=l>posts</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>      </span><span class=nt>pre</span><span class=p>:</span><span class=w> </span><span class=s2>&#34;&#34;</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>      </span><span class=nt>post</span><span class=p>:</span><span class=w> </span><span class=s2>&#34;&#34;</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>      </span><span class=nt>name</span><span class=p>:</span><span class=w> </span><span class=l>标签</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>      </span><span class=nt>url</span><span class=p>:</span><span class=w> </span><span class=l>/tags/</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>      </span><span class=nt>title</span><span class=p>:</span><span class=w> </span><span class=s2>&#34;&#34;</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>      </span><span class=nt>weight</span><span class=p>:</span><span class=w> </span><span class=m>12</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>      </span><span class=nt>params</span><span class=p>:</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=nt>icon</span><span class=p>:</span><span class=w> </span><span class=l>fa-solid fa-tags</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span>- <span class=nt>identifier</span><span class=p>:</span><span class=w> </span><span class=l>life</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>      </span><span class=nt>name</span><span class=p>:</span><span class=w> </span><span class=l>生活</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>      </span><span class=nt>url</span><span class=p>:</span><span class=w> </span><span class=l>/life/</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>      </span><span class=nt>weight</span><span class=p>:</span><span class=w> </span><span class=m>2</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>      </span><span class=nt>params</span><span class=p>:</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=nt>class</span><span class=p>:</span><span class=w> </span><span class=s2>&#34;&#34;</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=nt>draft</span><span class=p>:</span><span class=w> </span><span class=kc>false</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=nt>icon</span><span class=p>:</span><span class=w> </span><span class=l>fa-solid fa-camera-alt</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=c># 这样就不用创建 layouts/life/single.html，使用和 post 相同的样式</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=nt>type</span><span class=p>:</span><span class=w> </span><span class=l>post</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span>- <span class=nt>identifier</span><span class=p>:</span><span class=w> </span><span class=l>friends</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>      </span><span class=nt>name</span><span class=p>:</span><span class=w> </span><span class=l>友链</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>      </span><span class=nt>url</span><span class=p>:</span><span class=w> </span><span class=l>/friends/</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>      </span><span class=nt>weight</span><span class=p>:</span><span class=w> </span><span class=m>8</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>      </span><span class=nt>params</span><span class=p>:</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=nt>icon</span><span class=p>:</span><span class=w> </span><span class=l>fa-solid fa-users</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span>- <span class=nt>identifier</span><span class=p>:</span><span class=w> </span><span class=l>about</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>      </span><span class=nt>name</span><span class=p>:</span><span class=w> </span><span class=l>关于</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>      </span><span class=nt>url</span><span class=p>:</span><span class=w> </span><span class=l>/about/</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>      </span><span class=nt>weight</span><span class=p>:</span><span class=w> </span><span class=m>9</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>      </span><span class=nt>params</span><span class=p>:</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=nt>icon</span><span class=p>:</span><span class=w> </span><span class=l>fa-solid fa-info-circle</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w></span><span class=nt>params</span><span class=p>:</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>  </span><span class=nt>description</span><span class=p>:</span><span class=w> </span><span class=l>思绪来去如风，但愿有所停留。</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>  </span><span class=c># 用于 SEO</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>  </span><span class=nt>keywords</span><span class=p>:</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span>- <span class=l>Hugo</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span>- <span class=l>FixIt</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span>- <span class=l>都将会</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span>- <span class=l>博客</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span>- <span class=l>Github</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span>- <span class=l>技术沉淀</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span>- <span class=l>后端</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span>- <span class=l>Java</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span>- <span class=l>MySQL</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span>- <span class=l>微服务</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span>- <span class=l>杭州</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>  </span><span class=nt>defaultTheme</span><span class=p>:</span><span class=w> </span><span class=l>dark</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>  </span><span class=nt>dateFormat</span><span class=p>:</span><span class=w> </span><span class=ld>2006-01-02</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>  </span><span class=nt>images</span><span class=p>:</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span>- <span class=l>/images/avatar.jpg</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>  </span><span class=nt>app</span><span class=p>:</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nt>title</span><span class=p>:</span><span class=w> </span><span class=l>都将会的 APP</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>  </span><span class=nt>search</span><span class=p>:</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nt>enable</span><span class=p>:</span><span class=w> </span><span class=kc>true</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nt>type</span><span class=p>:</span><span class=w> </span><span class=l>fuse</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nt>contentLength</span><span class=p>:</span><span class=w> </span><span class=m>9999000</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nt>placeholder</span><span class=p>:</span><span class=w> </span><span class=s2>&#34;关键词搜索&#34;</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nt>maxResultLength</span><span class=p>:</span><span class=w> </span><span class=m>10</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nt>snippetLength</span><span class=p>:</span><span class=w> </span><span class=m>50</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nt>fuse</span><span class=p>:</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>      </span><span class=nt>ignoreLocation</span><span class=p>:</span><span class=w> </span><span class=kc>true</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>      </span><span class=nt>useExtendedSearch</span><span class=p>:</span><span class=w> </span><span class=kc>true</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>      </span><span class=nt>ignoreFieldNorm</span><span class=p>:</span><span class=w> </span><span class=kc>true</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>  </span><span class=nt>header</span><span class=p>:</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nt>title</span><span class=p>:</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>      </span><span class=nt>logo</span><span class=p>:</span><span class=w> </span><span class=l>/images/icon.png</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>      </span><span class=nt>name</span><span class=p>:</span><span class=w> </span><span class=l>都将会</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>      </span><span class=nt>typeit</span><span class=p>:</span><span class=w> </span><span class=kc>false</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nt>subtitle</span><span class=p>:</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>      </span><span class=nt>name</span><span class=p>:</span><span class=w> </span><span class=l>的博客</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>      </span><span class=nt>typeit</span><span class=p>:</span><span class=w> </span><span class=kc>true</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>  </span><span class=c># 面包屑导航</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>  </span><span class=nt>breadcrumb</span><span class=p>:</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nt>enable</span><span class=p>:</span><span class=w> </span><span class=kc>true</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nt>sticky</span><span class=p>:</span><span class=w> </span><span class=kc>true</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nt>showHome</span><span class=p>:</span><span class=w> </span><span class=kc>true</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>  </span><span class=nt>footer</span><span class=p>:</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nt>hugo</span><span class=p>:</span><span class=w> </span><span class=kc>false</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nt>since</span><span class=p>:</span><span class=w> </span><span class=m>2023</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nt>wordCount</span><span class=p>:</span><span class=w> </span><span class=kc>true</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nt>license</span><span class=p>:</span><span class=w> </span><span class=l>后端开发工程师</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=c># 网站创立时间</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nt>siteTime</span><span class=p>:</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>      </span><span class=nt>enable</span><span class=p>:</span><span class=w> </span><span class=kc>true</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>      </span><span class=nt>icon</span><span class=p>:</span><span class=w> </span><span class=l>fa-solid fa-heartbeat</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>      </span><span class=nt>value</span><span class=p>:</span><span class=w> </span><span class=ld>2023-08-06T23:31:00</span><span class=m>+08</span><span class=p>:</span><span class=m>00</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=c># 排序</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nt>order</span><span class=p>:</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>      </span><span class=nt>powered</span><span class=p>:</span><span class=w> </span><span class=m>0</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>      </span><span class=nt>copyright</span><span class=p>:</span><span class=w> </span><span class=m>5</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>      </span><span class=nt>statistics</span><span class=p>:</span><span class=w> </span><span class=m>0</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>      </span><span class=nt>visitor</span><span class=p>:</span><span class=w> </span><span class=m>4</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>      </span><span class=nt>beian</span><span class=p>:</span><span class=w> </span><span class=m>0</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>  </span><span class=nt>section</span><span class=p>:</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nt>paginate</span><span class=p>:</span><span class=w> </span><span class=m>20</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nt>dateFormat</span><span class=p>:</span><span class=w> </span><span class=m>01-02</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nt>rss</span><span class=p>:</span><span class=w> </span><span class=m>10</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=c># 最近更新</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nt>recentlyUpdated</span><span class=p>:</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>      </span><span class=nt>enable</span><span class=p>:</span><span class=w> </span><span class=kc>false</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>      </span><span class=nt>rss</span><span class=p>:</span><span class=w> </span><span class=kc>false</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>      </span><span class=nt>days</span><span class=p>:</span><span class=w> </span><span class=m>30</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>      </span><span class=nt>maxCount</span><span class=p>:</span><span class=w> </span><span class=m>10</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>  </span><span class=c># 词云</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>  </span><span class=nt>tagcloud</span><span class=p>:</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nt>enable</span><span class=p>:</span><span class=w> </span><span class=kc>true</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nt>min</span><span class=p>:</span><span class=w> </span><span class=m>18</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nt>max</span><span class=p>:</span><span class=w> </span><span class=m>32</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nt>peakCount</span><span class=p>:</span><span class=w> </span><span class=m>5</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nt>orderby</span><span class=p>:</span><span class=w> </span><span class=l>name</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>  </span><span class=nt>home</span><span class=p>:</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nt>rss</span><span class=p>:</span><span class=w> </span><span class=m>10</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nt>profile</span><span class=p>:</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>      </span><span class=nt>enable</span><span class=p>:</span><span class=w> </span><span class=kc>true</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>      </span><span class=nt>gravatarEmail</span><span class=p>:</span><span class=w> </span><span class=s2>&#34;&#34;</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>      </span><span class=nt>avatarURL</span><span class=p>:</span><span class=w> </span><span class=l>images/avatar.jpg</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>      </span><span class=nt>avatarMenu</span><span class=p>:</span><span class=w> </span><span class=s2>&#34;&#34;</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>      </span><span class=nt>title</span><span class=p>:</span><span class=w> </span><span class=l>Thoughts come and go like the breeze, seeking a haven to dwell.</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>      </span><span class=nt>subtitle</span><span class=p>:</span><span class=w> </span><span class=l>思绪来去如风，但愿有所停留。</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>      </span><span class=nt>typeit</span><span class=p>:</span><span class=w> </span><span class=kc>true</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>      </span><span class=nt>social</span><span class=p>:</span><span class=w> </span><span class=kc>true</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>      </span><span class=nt>disclaimer</span><span class=p>:</span><span class=w> </span><span class=l>博客仅用于技能备忘和知识沉淀，侵删:)</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nt>posts</span><span class=p>:</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>      </span><span class=nt>enable</span><span class=p>:</span><span class=w> </span><span class=kc>true</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>      </span><span class=nt>paginate</span><span class=p>:</span><span class=w> </span><span class=m>12</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>  </span><span class=nt>social</span><span class=p>:</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nt>GitHub</span><span class=p>:</span><span class=w> </span><span class=l>hihihiman</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nt>QQ</span><span class=p>:</span><span class=w> </span><span class=m>2869314652</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nt>QQGroup</span><span class=p>:</span><span class=w> </span><span class=s2>&#34;&#34;</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nt>Phone</span><span class=p>:</span><span class=w> </span><span class=s2>&#34;&#34;</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nt>Email</span><span class=p>:</span><span class=w> </span><span class=l>dujianghui_work@163.com</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nt>RSS</span><span class=p>:</span><span class=w> </span><span class=kc>false</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>  </span><span class=nt>page</span><span class=p>:</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=c># 画廊</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nt>lightgallery</span><span class=p>:</span><span class=w> </span><span class=l>force</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=c># 阅读原文</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nt>linkToMarkdown</span><span class=p>:</span><span class=w> </span><span class=kc>false</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=c># 保存阅读进度</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nt>autoBookmark</span><span class=p>:</span><span class=w> </span><span class=kc>true</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nt>wordCount</span><span class=p>:</span><span class=w> </span><span class=kc>true</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nt>readingTime</span><span class=p>:</span><span class=w> </span><span class=kc>true</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nt>endFlag</span><span class=p>:</span><span class=w> </span><span class=s2>&#34;&#34;</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=c># 开启即时页面</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nt>instantPage</span><span class=p>:</span><span class=w> </span><span class=kc>true</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nt>repost</span><span class=p>:</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>      </span><span class=nt>enable</span><span class=p>:</span><span class=w> </span><span class=kc>false</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>      </span><span class=nt>url</span><span class=p>:</span><span class=w> </span><span class=s2>&#34;&#34;</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nt>toc</span><span class=p>:</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>      </span><span class=nt>keepStatic</span><span class=p>:</span><span class=w> </span><span class=kc>true</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>      </span><span class=nt>position</span><span class=p>:</span><span class=w> </span><span class=l>right</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nt>expirationReminder</span><span class=p>:</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>      </span><span class=nt>enable</span><span class=p>:</span><span class=w> </span><span class=kc>true</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>      </span><span class=nt>reminder</span><span class=p>:</span><span class=w> </span><span class=m>365</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>      </span><span class=nt>warning</span><span class=p>:</span><span class=w> </span><span class=m>730</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>      </span><span class=nt>closeComment</span><span class=p>:</span><span class=w> </span><span class=kc>true</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nt>code</span><span class=p>:</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>      </span><span class=nt>copy</span><span class=p>:</span><span class=w> </span><span class=kc>true</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>      </span><span class=nt>edit</span><span class=p>:</span><span class=w> </span><span class=kc>true</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>      </span><span class=nt>maxShownLines</span><span class=p>:</span><span class=w> </span><span class=m>1024</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nt>reward</span><span class=p>:</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>      </span><span class=nt>enable</span><span class=p>:</span><span class=w> </span><span class=kc>true</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>      </span><span class=nt>animation</span><span class=p>:</span><span class=w> </span><span class=kc>true</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>      </span><span class=nt>position</span><span class=p>:</span><span class=w> </span><span class=l>after</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>      </span><span class=nt>mode</span><span class=p>:</span><span class=w> </span><span class=l>static</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>      </span><span class=nt>ways</span><span class=p>:</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=nt>wechatpay</span><span class=p>:</span><span class=w> </span><span class=l>/images/wechatpay.jpg</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=nt>alipay</span><span class=p>:</span><span class=w> </span><span class=l>/images/alipay.png</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>      </span><span class=c># paypal = &#34;/images/paypal.png&#34;</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>      </span><span class=c># bitcoin = &#34;/images/bitcoin.png&#34;</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nt>share</span><span class=p>:</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>      </span><span class=nt>enable</span><span class=p>:</span><span class=w> </span><span class=kc>true</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>      </span><span class=nt>Twitter</span><span class=p>:</span><span class=w> </span><span class=kc>false</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>      </span><span class=nt>Facebook</span><span class=p>:</span><span class=w> </span><span class=kc>false</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>      </span><span class=nt>Weibo</span><span class=p>:</span><span class=w> </span><span class=kc>true</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nt>comment</span><span class=p>:</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>      </span><span class=c># 国内暂时没找到能用的，都需要科学上网！</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>      </span><span class=nt>enable</span><span class=p>:</span><span class=w> </span><span class=kc>false</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>      </span><span class=nt>giscus</span><span class=p>:</span><span class=w> </span><span class=c># 配置教程链接放在该系列的上篇文章了</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=nt>enable</span><span class=p>:</span><span class=w> </span><span class=kc>true</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=nt>repo</span><span class=p>:</span><span class=w> </span><span class=l>hihihiman/hihihiman.github.io</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=nt>repoId</span><span class=p>:</span><span class=w> </span><span class=cp>*****</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=nt>category</span><span class=p>:</span><span class=w> </span><span class=l>Announcements</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=nt>categoryId</span><span class=p>:</span><span class=w> </span><span class=cp>*****</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=nt>mapping</span><span class=p>:</span><span class=w> </span><span class=l>pathname</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=c># todo seo优化</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nt>seo</span><span class=p>:</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>      </span><span class=nt>images</span><span class=p>:</span><span class=w> </span><span class=p>[]</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>      </span><span class=nt>publisher</span><span class=p>:</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=nt>name</span><span class=p>:</span><span class=w> </span><span class=s2>&#34;&#34;</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>        </span><span class=nt>logoUrl</span><span class=p>:</span><span class=w> </span><span class=s2>&#34;&#34;</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>  </span><span class=nt>typeit</span><span class=p>:</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nt>speed</span><span class=p>:</span><span class=w> </span><span class=m>100</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nt>cursorSpeed</span><span class=p>:</span><span class=w> </span><span class=m>1000</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nt>cursorChar</span><span class=p>:</span><span class=w> </span><span class=s2>&#34;_&#34;</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nt>duration</span><span class=p>:</span><span class=w> </span>-<span class=m>1</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nt>loop</span><span class=p>:</span><span class=w> </span><span class=kc>true</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nt>loopDelay</span><span class=p>:</span><span class=w> </span><span class=m>6000</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>  </span><span class=nt>mermaid</span><span class=p>:</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nt>themes</span><span class=p>:</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>      </span>- <span class=l>default</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>      </span>- <span class=l>dark</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>  </span><span class=nt>pangu</span><span class=p>:</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nt>enable</span><span class=p>:</span><span class=w> </span><span class=kc>true</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nt>selector</span><span class=p>:</span><span class=w> </span><span class=l>article</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>  </span><span class=nt>watermark</span><span class=p>:</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nt>enable</span><span class=p>:</span><span class=w> </span><span class=kc>false</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nt>content</span><span class=p>:</span><span class=w> </span><span class=s2>&#34;都将会&#34;</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nt>opacity</span><span class=p>:</span><span class=w> </span><span class=m>0.1</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nt>appendTo</span><span class=p>:</span><span class=w> </span><span class=l>.wrapper&gt;main</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nt>width</span><span class=p>:</span><span class=w> </span><span class=m>300</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nt>height</span><span class=p>:</span><span class=w> </span><span class=m>50</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nt>rowSpacing</span><span class=p>:</span><span class=w> </span><span class=m>300</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nt>colSpacing</span><span class=p>:</span><span class=w> </span><span class=m>100</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nt>rotate</span><span class=p>:</span><span class=w> </span>-<span class=m>30</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nt>fontSize</span><span class=p>:</span><span class=w> </span><span class=m>2</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nt>fontFamily</span><span class=p>:</span><span class=w> </span><span class=l>inherit</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>  </span><span class=nt>ibruce</span><span class=p>:</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nt>enable</span><span class=p>:</span><span class=w> </span><span class=kc>true</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nt>enablePost</span><span class=p>:</span><span class=w> </span><span class=kc>true</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>  </span><span class=nt>githubCorner</span><span class=p>:</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nt>enable</span><span class=p>:</span><span class=w> </span><span class=kc>true</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nt>permalink</span><span class=p>:</span><span class=w> </span><span class=l>https://github.com/hihihiman/hihihiman.github.io</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nt>title</span><span class=p>:</span><span class=w> </span><span class=l>博客源码</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nt>position</span><span class=p>:</span><span class=w> </span><span class=l>left</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>  </span><span class=c># FixIt 取决于作者邮箱，作者邮箱未设置则使用本地头像</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>  </span><span class=nt>gravatar</span><span class=p>:</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nt>enable</span><span class=p>:</span><span class=w> </span><span class=kc>false</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nt>host</span><span class=p>:</span><span class=w> </span><span class=l>www.gravatar.com</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>  </span><span class=nt>backToTop</span><span class=p>:</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nt>enable</span><span class=p>:</span><span class=w> </span><span class=kc>true</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nt>scrollpercent</span><span class=p>:</span><span class=w> </span><span class=kc>true</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>  </span><span class=c># 阅读进度条</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>  </span><span class=nt>readingProgress</span><span class=p>:</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nt>enable</span><span class=p>:</span><span class=w> </span><span class=kc>true</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nt>start</span><span class=p>:</span><span class=w> </span><span class=l>left</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nt>position</span><span class=p>:</span><span class=w> </span><span class=l>bottom</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nt>reversed</span><span class=p>:</span><span class=w> </span><span class=kc>false</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nt>height</span><span class=p>:</span><span class=w> </span><span class=l>2px</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>  </span><span class=c># 加载时动画</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>  </span><span class=nt>pace</span><span class=p>:</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nt>enable</span><span class=p>:</span><span class=w> </span><span class=kc>true</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=c># 所有可用颜色：</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=c># [&#34;black&#34;, &#34;blue&#34;, &#34;green&#34;, &#34;orange&#34;, &#34;pink&#34;, &#34;purple&#34;, &#34;red&#34;, &#34;silver&#34;, &#34;white&#34;, &#34;yellow&#34;]</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nt>color</span><span class=p>:</span><span class=w> </span><span class=l>pink</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=c># 还不错的主题：</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=c># [&#34;barber-shop&#34;, &#34;bounce&#34;, &#34;center-atom&#34;, &#34;loading-bar&#34;, &#34;mac-osx&#34;, &#34;material&#34;, &#34;minimal&#34;]</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nt>theme</span><span class=p>:</span><span class=w> </span><span class=l>center-atom</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>  </span><span class=c># 自定义路径</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>  </span><span class=nt>customFilePath</span><span class=p>:</span><span class=w> </span>{}<span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>  </span><span class=c># aside = &#34;custom/aside.html&#34;</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>  </span><span class=c># profile = &#34;custom/profile.html&#34;</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>  </span><span class=c># footer = &#34;custom/footer.html&#34;</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>  </span><span class=nt>dev</span><span class=p>:</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nt>enable</span><span class=p>:</span><span class=w> </span><span class=kc>false</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nt>c4u</span><span class=p>:</span><span class=w> </span><span class=kc>false</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nt>githubToken</span><span class=p>:</span><span class=w> </span><span class=s2>&#34;&#34;</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nt>mDevtools</span><span class=p>:</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>      </span><span class=nt>enable</span><span class=p>:</span><span class=w> </span><span class=kc>false</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>      </span><span class=nt>type</span><span class=p>:</span><span class=w> </span><span class=l>vConsole</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w></span><span class=nt>markup</span><span class=p>:</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>  </span><span class=nt>highlight</span><span class=p>:</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nt>codeFences</span><span class=p>:</span><span class=w> </span><span class=kc>true</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nt>lineNos</span><span class=p>:</span><span class=w> </span><span class=kc>true</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nt>lineNumbersInTable</span><span class=p>:</span><span class=w> </span><span class=kc>true</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nt>noClasses</span><span class=p>:</span><span class=w> </span><span class=kc>false</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nt>guessSyntax</span><span class=p>:</span><span class=w> </span><span class=kc>true</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>  </span><span class=nt>goldmark</span><span class=p>:</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nt>extensions</span><span class=p>:</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>      </span><span class=nt>definitionList</span><span class=p>:</span><span class=w> </span><span class=kc>true</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>      </span><span class=nt>footnote</span><span class=p>:</span><span class=w> </span><span class=kc>true</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>      </span><span class=nt>linkify</span><span class=p>:</span><span class=w> </span><span class=kc>true</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>      </span><span class=nt>strikethrough</span><span class=p>:</span><span class=w> </span><span class=kc>true</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>      </span><span class=nt>table</span><span class=p>:</span><span class=w> </span><span class=kc>true</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>      </span><span class=nt>taskList</span><span class=p>:</span><span class=w> </span><span class=kc>true</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>      </span><span class=nt>typographer</span><span class=p>:</span><span class=w> </span><span class=kc>true</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nt>renderer</span><span class=p>:</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>      </span><span class=c># 是否在文档中直接使用 HTML 标签</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>      </span><span class=nt>unsafe</span><span class=p>:</span><span class=w> </span><span class=kc>true</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>  </span><span class=nt>tableOfContents</span><span class=p>:</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nt>startLevel</span><span class=p>:</span><span class=w> </span><span class=m>2</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nt>endLevel</span><span class=p>:</span><span class=w> </span><span class=m>6</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w></span><span class=nt>author</span><span class=p>:</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>  </span><span class=nt>name</span><span class=p>:</span><span class=w>  </span><span class=l>都将会</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>  </span><span class=nt>email</span><span class=p>:</span><span class=w> </span><span class=l>dujianghui_work@163.com</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>  </span><span class=nt>link</span><span class=p>:</span><span class=w> </span><span class=s2>&#34;&#34;</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>  </span><span class=nt>avatar</span><span class=p>:</span><span class=w> </span><span class=l>/images/avatar.jpg</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w></span><span class=c># 网站地图配置</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w></span><span class=nt>sitemap</span><span class=p>:</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>  </span><span class=nt>changefreq</span><span class=p>:</span><span class=w> </span><span class=l>weekly</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>  </span><span class=nt>filename</span><span class=p>:</span><span class=w> </span><span class=l>sitemap.xml</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>  </span><span class=nt>priority</span><span class=p>:</span><span class=w> </span><span class=m>0.5</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w></span><span class=nt>Permalinks</span><span class=p>:</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>  </span><span class=nt>posts</span><span class=p>:</span><span class=w> </span><span class=p>:</span><span class=l>filename</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w></span><span class=nt>privacy</span><span class=p>:</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>  </span><span class=nt>twitter</span><span class=p>:</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nt>enableDNT</span><span class=p>:</span><span class=w> </span><span class=kc>true</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>  </span><span class=nt>youtube</span><span class=p>:</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nt>privacyEnhanced</span><span class=p>:</span><span class=w> </span><span class=kc>true</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w></span><span class=nt>mediaTypes</span><span class=p>:</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>  </span><span class=nt>text/markdown</span><span class=p>:</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nt>suffixes</span><span class=p>:</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>      </span>- <span class=l>md</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>  </span><span class=nt>text/plain</span><span class=p>:</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nt>suffixes</span><span class=p>:</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>      </span>- <span class=l>txt</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w></span><span class=nt>outputFormats</span><span class=p>:</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>  </span><span class=nt>MarkDown</span><span class=p>:</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nt>mediaType</span><span class=p>:</span><span class=w> </span><span class=l>text/markdown</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nt>isPlainText</span><span class=p>:</span><span class=w> </span><span class=kc>true</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nt>isHTML</span><span class=p>:</span><span class=w> </span><span class=kc>false</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>  </span><span class=nt>BaiduUrls</span><span class=p>:</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nt>baseName</span><span class=p>:</span><span class=w> </span><span class=l>baidu_urls</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nt>mediaType</span><span class=p>:</span><span class=w> </span><span class=l>text/plain</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nt>isPlainText</span><span class=p>:</span><span class=w> </span><span class=kc>true</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nt>isHTML</span><span class=p>:</span><span class=w> </span><span class=kc>false</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w></span><span class=nt>outputs</span><span class=p>:</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>  </span><span class=nt>home</span><span class=p>:</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span>- <span class=l>HTML</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span>- <span class=l>RSS</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span>- <span class=l>JSON</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span>- <span class=l>BaiduUrls</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>  </span><span class=nt>page</span><span class=p>:</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span>- <span class=l>HTML</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span>- <span class=l>MarkDown</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>  </span><span class=nt>section</span><span class=p>:</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span>- <span class=l>HTML</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span>- <span class=l>RSS</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>  </span><span class=nt>taxonomy</span><span class=p>:</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span>- <span class=l>HTML</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span>- <span class=l>RSS</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>  </span><span class=nt>taxonomyTerm</span><span class=p>:</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span>- <span class=l>HTML</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w></span><span class=nt>module</span><span class=p>:</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>  </span><span class=nt>hugoVersion</span><span class=p>:</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nt>extended</span><span class=p>:</span><span class=w> </span><span class=kc>true</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span><span class=nt>min</span><span class=p>:</span><span class=w> </span><span class=m>0.109.0</span></span></span></code></pre></td></tr></table></div></div><p>初来乍到，其实还有几个疑问：</p><ol><li>什么是 RSS ，看起来像一个源文件的格式，开启有什么作用？</li><li>页脚的证书有什么规范吗，如果不写会不会有什么隐患？</li></ol><p>这篇文章开个评论吧，欢迎与我交流讨论。</p></div><div class=post-footer id=post-footer><div class=post-info><div class=post-info-line><div class=post-info-mod><span title="更新于 2023-08-10 16:53:52">更新于 2023-08-10&nbsp;</span></div></div><div class=post-info-line><div class=post-info-md></div><div class=post-info-share><span><a href=javascript:void(0); title="分享到 微博" data-sharer=weibo data-url=https://leni.fun/blog_config/ data-title="Hugo+FixIt 主题配置文件分享"><i class="fa-brands fa-weibo fa-fw" aria-hidden=true></i></a></span></div></div></div><div class=post-info-more><section class=post-tags><i class="fa-solid fa-tags fa-fw me-1" aria-hidden=true></i><a href=/tags/draft/ class=post-tag>draft</a></section><section><span><a href=javascript:void(0); onclick=window.history.back()>返回</a></span>&nbsp;|&nbsp;<span><a href=/>主页</a></span></section></div><div class=post-nav><a href=/ds/ class=post-nav-item rel=prev title="🚩DS - 数据结构"><i class="fa-solid fa-angle-left fa-fw" aria-hidden=true></i>🚩DS - 数据结构</a>
+<a href=/blog_beautify/ class=post-nav-item rel=next title="FixIt 主题美化">FixIt 主题美化<i class="fa-solid fa-angle-right fa-fw" aria-hidden=true></i></a></div></div><div class=post-reward><div class=comment></div><input type=checkbox class=reward-input name=reward id=fi-reward hidden>
+<label class=reward-button for=fi-reward>赞赏</label><div class=reward-ways data-mode=static><div><img loading=lazy src=/images/alipay.png srcset="/images/alipay.png, /images/alipay.png 1.5x, /images/alipay.png 2x" sizes=auto data-title="都将会 支付宝" data-alt="都将会 支付宝" style="background:url(/svg/loading.min.svg)no-repeat 50%" onload='this.title=this.dataset.title,this.alt=this.dataset.alt;for(const e of["style","data-title","data-alt","onerror","onload"])this.removeAttribute(e);this.dataset.lazyloaded=""' onerror='this.title=this.dataset.title,this.alt=this.dataset.alt;for(const e of["style","data-title","data-alt","onerror","onload"])this.removeAttribute(e)'><span data-animation>支付宝</span></div><div><img loading=lazy src=/images/wechatpay.jpg srcset="/images/wechatpay.jpg, /images/wechatpay.jpg 1.5x, /images/wechatpay.jpg 2x" sizes=auto data-title="都将会 微信" data-alt="都将会 微信" style="background:url(/svg/loading.min.svg)no-repeat 50%" onload='this.title=this.dataset.title,this.alt=this.dataset.alt;for(const e of["style","data-title","data-alt","onerror","onload"])this.removeAttribute(e);this.dataset.lazyloaded=""' onerror='this.title=this.dataset.title,this.alt=this.dataset.alt;for(const e of["style","data-title","data-alt","onerror","onload"])this.removeAttribute(e)'><span data-animation>微信</span></div></div></div><div id=comments><div id=giscus><script src=https://giscus.app/client.js data-repo=hihihiman/hihihiman.github.io data-repo-id=R_kgDOKD90KA data-category=Announcements data-category-id=DIC_kwDOKD90KM4CYcdO data-mapping=pathname data-strict=0 data-theme=preferred_color_scheme data-reactions-enabled=1 data-emit-metadata=0 data-input-position=bottom data-lang=zh-CN data-loading=lazy crossorigin=anonymous async defer></script></div><noscript>Please enable JavaScript to view the comments powered by <a href=https://giscus.app/ rel="external nofollow noopener noreferrer">giscus</a>.</noscript></div></article></main><footer class=footer><div class=footer-container><div class="footer-line copyright order-5" itemscope itemtype=http://schema.org/CreativeWork><i class="fa-regular fa-copyright fa-fw" aria-hidden=true></i>
+<span itemprop=copyrightYear>2023</span><span class=author itemprop=copyrightHolder>
+<a href=/>都将会</a></span><span class="license footer-divider">后端开发工程师</span></div><div class="footer-line statistics"><span class=site-time title=网站运行中……><i class="fa-solid fa-heartbeat fa-fw animate-icon" aria-hidden=true></i><span class="run-times ms-1">网站运行中……</span></span></div><div class="footer-line visitor order-4"><span id=busuanzi_container_site_uv title=总访客数><i class="fa-regular fa-user fa-fw" aria-hidden=true></i>&nbsp;<span id=busuanzi_value_site_uv><i class="fa-solid fa-spinner fa-spin fa-fw" aria-hidden=true></i></span></span><span id=busuanzi_container_site_pv class=footer-divider title=总访问量><i class="fa-regular fa-eye fa-fw" aria-hidden=true></i>&nbsp;<span id=busuanzi_value_site_pv><i class="fa-solid fa-spinner fa-spin fa-fw" aria-hidden=true></i></span></span></div></div></footer></div><div class=widgets><div class="fixed-buttons animate__faster d-none"><div class="fixed-button back-to-top" role=button aria-label=回到顶部><i class="fa-solid fa-arrow-up fa-fw" aria-hidden=true></i><span class=variant-numeric>0%</span></div><div class="fixed-button view-comments d-none" role=button aria-label=查看评论><i class="fa-solid fa-comment fa-fw" aria-hidden=true></i></div></div><a href=https://github.com/hihihiman/hihihiman.github.io title=博客源码 target=_blank rel="external nofollow" class="github-corner left d-none-mobile"><svg viewBox="0 0 250 250" aria-hidden="true"><path d="M0 0 115 115h15l12 27L250 250V0z"/><path d="M128.3 109C113.8 99.7 119 89.6 119 89.6 122 82.7 120.5 78.6 120.5 78.6 119.2 72 123.4 76.3 123.4 76.3 127.3 80.9 125.5 87.3 125.5 87.3 122.9 97.6 130.6 101.9 134.4 103.2" fill="currentcolor" style="transform-origin:130px 106px" class="octo-arm"/><path d="M115 115C114.9 115.1 118.7 116.5 119.8 115.4l13.9-13.8C136.9 99.2 139.9 98.4 142.2 98.6 133.8 88 127.5 74.4 143.8 58 148.5 53.4 154 51.2 159.7 51 160.3 49.4 163.2 43.6 171.4 40.1 171.4 40.1 176.1 42.5 178.8 56.2 183.1 58.6 187.2 61.8 190.9 65.4 194.5 69 197.7 73.2 200.1 77.6 213.8 80.2 216.3 84.9 216.3 84.9 212.7 93.1 206.9 96 205.4 96.6 205.1 102.4 203 107.8 198.3 112.5 181.9 128.9 168.3 122.5 157.7 114.1 157.9 116.9 156.7 120.9 152.7 124.9L141 136.5C139.8 137.7 141.6 141.9 141.8 141.8z" fill="currentcolor" class="octo-body"/></svg></a><div id=mask></div><div class=reading-progress-bar style=left:0;bottom:0></div><noscript><div class=noscript-warning>FixIt 主题在启用 JavaScript 的情况下效果最佳。</div></noscript></div><link rel=stylesheet href=/lib/cookieconsent/cookieconsent.min.css><link rel=stylesheet href=/lib/pace/themes/pink/pace-theme-center-atom.css><script src=/lib/autocomplete/autocomplete.min.js defer></script><script src=/lib/fuse/fuse.min.js defer></script><script src=/lib/instant-page/instantpage.min.js async defer type=module></script><script src=/lib/sharer/sharer.min.js async defer></script><script src=/lib/typeit/index.umd.js defer></script><script src=/lib/cookieconsent/cookieconsent.min.js defer></script><script src=/lib/pangu/pangu.min.js defer></script><script src=//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js async defer></script><script src=/lib/pace/pace.min.js async defer></script><script>window.config={autoBookmark:!0,code:{copyTitle:"复制到剪贴板",editLockTitle:"锁定可编辑代码块",editUnLockTitle:"解锁可编辑代码块",editable:!0,maxShownLines:1024},comment:{enable:!0,expired:!1,giscus:{darkTheme:"dark",lightTheme:"light"}},cookieconsent:{content:{dismiss:"同意",link:"了解更多",message:"本网站使用 Cookies 来改善您的浏览体验。"},enable:!0,palette:{button:{background:"#f0f0f0"},popup:{background:"#1aa3ff"}},theme:"edgeless"},data:{"typeit-header-subtitle-desktop":"的博客","typeit-header-subtitle-mobile":"的博客"},enablePWA:!0,pangu:{enable:!0,selector:"article"},search:{distance:100,findAllMatches:!1,fuseIndexURL:"/index.json",highlightTag:"em",ignoreFieldNorm:!0,ignoreLocation:!0,isCaseSensitive:!1,location:0,maxResultLength:10,minMatchCharLength:2,noResultsFound:"没有找到结果",snippetLength:50,threshold:.3,type:"fuse",useExtendedSearch:!0},siteTime:"2023-08-06T23:31:00+08:00",typeit:{cursorChar:"_",cursorSpeed:1e3,data:{"typeit-header-subtitle-desktop":["typeit-header-subtitle-desktop"],"typeit-header-subtitle-mobile":["typeit-header-subtitle-mobile"]},duration:-1,loop:!0,speed:100}}</script><script src=/js/theme.min.js defer></script><script type=text/javascript src=https://cdn.jsdelivr.net/npm/jquery@2.1.3/dist/jquery.min.js></script><script type=text/javascript src=/js/custom.js></script></body></html>
