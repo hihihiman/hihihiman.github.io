@@ -68,10 +68,11 @@ $(function () {
 /* 后置加载页面组件的背景图片 */
 $(function () {
     /* 首页头像div加载GitHub Chart作为背景图片 */
-    $("div.home-avatar").attr('style', "background: url(https://cdn.jsdelivr.net/gh/hihihiman/hihihiman@output/github-contribution-grid-snake.svg);background-repeat: no-repeat;background-position: center;background-size: auto 10rem;");
+    // $("div.home-avatar").attr('style', "background: url(https://cdn.jsdelivr.net/gh/hihihiman/hihihiman@output/github-contribution-grid-snake.svg);background-repeat: no-repeat;background-position: center;background-size: auto 8rem;");
+    $("div.home-avatar").attr('style', "background: url(https://cdn.jsdelivr.net/gh/hihihiman/hihihiman@output/github-contribution-grid-snake.svg);background-repeat: no-repeat;background-position: center;background-size: auto;");
 
     /* 评论框加载背景图片 */
-    $(".v[data-class=v] .veditor").attr('style', "background-image: url(" + $cdnPrefix + "/images/common/valinebg.webp) !important;");
+    // $(".v[data-class=v] .veditor").attr('style', "background-image: url(" + $cdnPrefix + "/images/common/valinebg.webp) !important;");
 });
 
 function getCurrentDateString() {
@@ -90,12 +91,12 @@ window.onload = function () {
         if (document.hidden) {
             $('[rel="icon"]').attr('href', "/failure.ico");
             $('[rel="shortcut icon"]').attr('href', "/failure.ico");
-            document.title = '喔唷，人呢！';
+            document.title = '💡秋岛麻袋！';
             clearTimeout(titleTime);
         } else {
             $('[rel="icon"]').attr('href', "/favicon-32x32.png");
             $('[rel="shortcut icon"]').attr('href', "/favicon-32x32.png");
-            document.title = '咦，欢迎回来！';
+            document.title = '🌟终于等到你！';
             titleTime = setTimeout(function () {
                 document.title = OriginTitile;
             }, 2000);
