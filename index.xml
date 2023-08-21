@@ -1,4 +1,6 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title/><link>https://leni.fun/</link><description>思绪来去如风，但愿有所停留。</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>dujianghui_work@163.com (都将会)</managingEditor><webMaster>dujianghui_work@163.com (都将会)</webMaster><lastBuildDate>Sun, 20 Aug 2023 11:20:24 +0800</lastBuildDate><atom:link href="https://leni.fun/index.xml" rel="self" type="application/rss+xml"/><item><title>🚩DP - 动态规划</title><link>https://leni.fun/dp/</link><pubDate>Sun, 20 Aug 2023 11:20:24 +0800</pubDate><author>都将会</author><guid>https://leni.fun/dp/</guid><description><![CDATA[<div class="featured-image">
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title/><link>https://leni.fun/</link><description>思绪来去如风，但愿有所停留。</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>dujianghui_work@163.com (都将会)</managingEditor><webMaster>dujianghui_work@163.com (都将会)</webMaster><lastBuildDate>Mon, 21 Aug 2023 08:08:08 +0800</lastBuildDate><atom:link href="https://leni.fun/index.xml" rel="self" type="application/rss+xml"/><item><title>LRU和LFU的实现原理</title><link>https://leni.fun/lrulfu/</link><pubDate>Mon, 21 Aug 2023 08:08:08 +0800</pubDate><author>都将会</author><guid>https://leni.fun/lrulfu/</guid><description>&lt;div class="featured-image">
+&lt;img src="/images/pic9.jpg" referrerpolicy="no-referrer">
+&lt;/div>跟着 debug 调试一下</description></item><item><title>🚩DP - 动态规划</title><link>https://leni.fun/dp/</link><pubDate>Sun, 20 Aug 2023 11:20:24 +0800</pubDate><author>都将会</author><guid>https://leni.fun/dp/</guid><description><![CDATA[<div class="featured-image">
         <img src="/images/pic8.jpg" referrerpolicy="no-referrer">
       </div><p>最近发现笔试题的区分度主要在动态规划，本文按照题型归类整理。</p>]]></description></item><item><title>NIO</title><link>https://leni.fun/nio/</link><pubDate>Tue, 15 Aug 2023 13:04:23 +0800</pubDate><author>都将会</author><guid>https://leni.fun/nio/</guid><description><![CDATA[<div class="featured-image">
         <img src="/images/pic7.jpg" referrerpolicy="no-referrer">
@@ -22,12 +24,4 @@
 &lt;img src="/images/pic4.jpg" referrerpolicy="no-referrer">
 &lt;/div>前端小白出马了</description></item><item><title>🚩Design Pattern - 设计模式</title><link>https://leni.fun/design-pattern/</link><pubDate>Wed, 02 Aug 2023 08:08:08 +0800</pubDate><author>都将会</author><guid>https://leni.fun/design-pattern/</guid><description>&lt;div class="featured-image">
 &lt;img src="/images/pic5.jpg" referrerpolicy="no-referrer">
-&lt;/div>设计模式无处不在</description></item><item><title>🚩Distributed - 分布式理论</title><link>https://leni.fun/distributed/</link><pubDate>Tue, 01 Aug 2023 08:08:08 +0800</pubDate><author>都将会</author><guid>https://leni.fun/distributed/</guid><description><![CDATA[<h3 id="分布式事务与分布式锁的区别">分布式事务与分布式锁的区别？</h3>
-<p>分布式锁解决的是分布式<strong>资源抢占</strong>的问题；分布式事务和本地事务是解决<strong>流程化提交</strong>问题。</p>
-<h3 id="如何解决分布式事务问题的seata-架构">🌟如何解决分布式事务问题的？/Seata 架构？</h3>
-<p>三种角色：</p>
-<ul>
-<li>TC 事务协调者</li>
-<li>TM 事务管理器</li>
-<li>RM 资源管理器</li>
-</ul>]]></description></item></channel></rss>
+&lt;/div>设计模式无处不在</description></item></channel></rss>
