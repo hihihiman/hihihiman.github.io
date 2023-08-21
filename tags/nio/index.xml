@@ -1,0 +1,5 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>NIO - 标签 -</title><link>https://leni.fun/tags/nio/</link><description>NIO - 标签 -</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>dujianghui_work@163.com (都将会)</managingEditor><webMaster>dujianghui_work@163.com (都将会)</webMaster><lastBuildDate>Tue, 15 Aug 2023 13:04:23 +0800</lastBuildDate><atom:link href="https://leni.fun/tags/nio/" rel="self" type="application/rss+xml"/><item><title>NIO</title><link>https://leni.fun/nio/</link><pubDate>Tue, 15 Aug 2023 13:04:23 +0800</pubDate><author>都将会</author><guid>https://leni.fun/nio/</guid><description><![CDATA[<div class="featured-image">
+        <img src="/images/pic7.jpg" referrerpolicy="no-referrer">
+      </div><blockquote>
+<p>NIO 于 jdk1.4 引入，支持面向缓冲区的、基于通道的IO操作。</p>
+</blockquote>]]></description></item></channel></rss>
