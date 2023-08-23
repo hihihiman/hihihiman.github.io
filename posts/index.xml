@@ -1,10 +1,12 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>所有技术文章 -</title><link>https://leni.fun/posts/</link><description>所有技术文章 |</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>dujianghui_work@163.com (都将会)</managingEditor><webMaster>dujianghui_work@163.com (都将会)</webMaster><lastBuildDate>Mon, 21 Aug 2023 08:08:08 +0800</lastBuildDate><atom:link href="https://leni.fun/posts/" rel="self" type="application/rss+xml"/><item><title>Hugo+FixIt 主题配置文件分享</title><link>https://leni.fun/blog_config/</link><pubDate>Thu, 10 Aug 2023 16:53:52 +0800</pubDate><author>都将会</author><guid>https://leni.fun/blog_config/</guid><description><![CDATA[<div class="featured-image">
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>所有技术文章 -</title><link>https://leni.fun/posts/</link><description>所有技术文章 |</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>dujianghui_work@163.com (都将会)</managingEditor><webMaster>dujianghui_work@163.com (都将会)</webMaster><lastBuildDate>Wed, 23 Aug 2023 08:08:08 +0800</lastBuildDate><atom:link href="https://leni.fun/posts/" rel="self" type="application/rss+xml"/><item><title>Hugo+FixIt 主题配置文件分享</title><link>https://leni.fun/blog_config/</link><pubDate>Thu, 10 Aug 2023 16:53:52 +0800</pubDate><author>都将会</author><guid>https://leni.fun/blog_config/</guid><description><![CDATA[<div class="featured-image">
         <img src="/images/pic1.jpg" referrerpolicy="no-referrer">
       </div><h3 id="分享我自己的核心配置类">分享我自己的核心配置类</h3>
 <p>主题采用 FixIt，将配置文件放在域名根目录下，例如我的文件路径就是 <code>leni.fun/hugo.yml</code>，我这里使用 yml 替换 toml 文件，可以通过以下网站进行文件转换，也可以直接复制我的配置文件进行更改</p>
 <blockquote>
 <p><a href="https://transform.tools/toml-to-yaml"target="_blank" rel="external nofollow noopener noreferrer">https://transform.tools/toml-to-yaml</a></p>
-</blockquote>]]></description></item><item><title>往期周赛与笔试题解</title><link>https://leni.fun/%E5%BE%80%E6%9C%9F%E5%91%A8%E8%B5%9B%E9%A2%98%E8%A7%A3/</link><pubDate>Sun, 09 Jul 2023 08:08:08 +0800</pubDate><author>都将会</author><guid>https://leni.fun/%E5%BE%80%E6%9C%9F%E5%91%A8%E8%B5%9B%E9%A2%98%E8%A7%A3/</guid><description>一步一个脚印</description></item><item><title>LRU和LFU的实现原理</title><link>https://leni.fun/lrulfu/</link><pubDate>Mon, 21 Aug 2023 08:08:08 +0800</pubDate><author>都将会</author><guid>https://leni.fun/lrulfu/</guid><description>&lt;div class="featured-image">
+</blockquote>]]></description></item><item><title>往期周赛与笔试题解</title><link>https://leni.fun/%E5%BE%80%E6%9C%9F%E5%91%A8%E8%B5%9B%E9%A2%98%E8%A7%A3/</link><pubDate>Sun, 09 Jul 2023 08:08:08 +0800</pubDate><author>都将会</author><guid>https://leni.fun/%E5%BE%80%E6%9C%9F%E5%91%A8%E8%B5%9B%E9%A2%98%E8%A7%A3/</guid><description>一步一个脚印</description></item><item><title>🚩Netty</title><link>https://leni.fun/netty/</link><pubDate>Wed, 23 Aug 2023 08:08:08 +0800</pubDate><author>都将会</author><guid>https://leni.fun/netty/</guid><description>&lt;div class="featured-image">
+&lt;img src="/images/pic10.jpg" referrerpolicy="no-referrer">
+&lt;/div>基于Java语言的Netty</description></item><item><title>Netty 实践记录</title><link>https://leni.fun/netty%E5%AE%9E%E8%B7%B5%E8%AE%B0%E5%BD%95/</link><pubDate>Tue, 22 Aug 2023 21:01:43 +0800</pubDate><author>都将会</author><guid>https://leni.fun/netty%E5%AE%9E%E8%B7%B5%E8%AE%B0%E5%BD%95/</guid><description>记录一些报错的解决方案</description></item><item><title>LRU和LFU的实现原理</title><link>https://leni.fun/lrulfu/</link><pubDate>Mon, 21 Aug 2023 08:08:08 +0800</pubDate><author>都将会</author><guid>https://leni.fun/lrulfu/</guid><description>&lt;div class="featured-image">
 &lt;img src="/images/pic9.jpg" referrerpolicy="no-referrer">
 &lt;/div>跟着 debug 调试一下</description></item><item><title>🚩DP - 动态规划</title><link>https://leni.fun/dp/</link><pubDate>Sun, 20 Aug 2023 11:20:24 +0800</pubDate><author>都将会</author><guid>https://leni.fun/dp/</guid><description><![CDATA[<div class="featured-image">
         <img src="/images/pic8.jpg" referrerpolicy="no-referrer">
@@ -28,14 +30,4 @@
 &lt;img src="/images/pic3.jpg" referrerpolicy="no-referrer">
 &lt;/div>容器的本质是进程。</description></item><item><title>初始化 Hogo 博客</title><link>https://leni.fun/blog_init/</link><pubDate>Mon, 07 Aug 2023 08:08:08 +0800</pubDate><author>都将会</author><guid>https://leni.fun/blog_init/</guid><description>&lt;div class="featured-image">
 &lt;img src="/images/pic4.jpg" referrerpolicy="no-referrer">
-&lt;/div>前端小白出马了</description></item><item><title>🚩Design Pattern - 设计模式</title><link>https://leni.fun/design-pattern/</link><pubDate>Wed, 02 Aug 2023 08:08:08 +0800</pubDate><author>都将会</author><guid>https://leni.fun/design-pattern/</guid><description>&lt;div class="featured-image">
-&lt;img src="/images/pic5.jpg" referrerpolicy="no-referrer">
-&lt;/div>设计模式无处不在</description></item><item><title>🚩Distributed - 分布式理论</title><link>https://leni.fun/distributed/</link><pubDate>Tue, 01 Aug 2023 08:08:08 +0800</pubDate><author>都将会</author><guid>https://leni.fun/distributed/</guid><description><![CDATA[<h3 id="分布式事务与分布式锁的区别">分布式事务与分布式锁的区别？</h3>
-<p>分布式锁解决的是分布式<strong>资源抢占</strong>的问题；分布式事务和本地事务是解决<strong>流程化提交</strong>问题。</p>
-<h3 id="如何解决分布式事务问题的seata-架构">🌟如何解决分布式事务问题的？/Seata 架构？</h3>
-<p>三种角色：</p>
-<ul>
-<li>TC 事务协调者</li>
-<li>TM 事务管理器</li>
-<li>RM 资源管理器</li>
-</ul>]]></description></item></channel></rss>
+&lt;/div>前端小白出马了</description></item></channel></rss>
