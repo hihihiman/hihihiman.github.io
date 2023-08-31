@@ -1,16 +1,1 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-  <channel>
-    <title>private - 分类 - </title>
-    <link>https://leni.fun/categories/private/</link>
-    <description>private - 分类 - </description>
-    <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>dujianghui_work@163.com (都将会)</managingEditor>
-      <webMaster>dujianghui_work@163.com (都将会)</webMaster><lastBuildDate>Sat, 31 Aug 2024 08:08:08 &#43;0800</lastBuildDate><atom:link href="https://leni.fun/categories/private/" rel="self" type="application/rss+xml" /><item>
-  <title>独家备忘录</title>
-  <link>https://leni.fun/problems/</link>
-  <pubDate>Sat, 31 Aug 2024 08:08:08 &#43;0800</pubDate>
-  <author>都将会</author>
-  <guid>https://leni.fun/problems/</guid>
-  <description><![CDATA[]]></description>
-</item>
-</channel>
-</rss>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>private - 分类 -</title><link>https://leni.fun/categories/private/</link><description>private - 分类 -</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>dujianghui_work@163.com (都将会)</managingEditor><webMaster>dujianghui_work@163.com (都将会)</webMaster><lastBuildDate>Thu, 31 Aug 2023 08:08:08 +0800</lastBuildDate><atom:link href="https://leni.fun/categories/private/" rel="self" type="application/rss+xml"/><item><title>独家备忘录</title><link>https://leni.fun/problems/</link><pubDate>Thu, 31 Aug 2023 08:08:08 +0800</pubDate><author>都将会</author><guid>https://leni.fun/problems/</guid><description></description></item></channel></rss>
