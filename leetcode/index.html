@@ -3236,80 +3236,80 @@ nums1 中数字 x 的下一个更大元素是指 x 在 nums2 中对应位置的�
 </span><span class=lnt>72
 </span><span class=lnt>73
 </span><span class=lnt>74
-</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>class Solution {
-</span></span><span class=line><span class=cl>    // 节点 x 的节点是 parent[x]
-</span></span><span class=line><span class=cl>    private int[] parent;
-</span></span><span class=line><span class=cl>    // 新增一个数组记录树的“重量”
-</span></span><span class=line><span class=cl>    private int[] size;
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-java data-lang=java><span class=line><span class=cl><span class=kd>class</span> <span class=nc>Solution</span> <span class=o>{</span>
+</span></span><span class=line><span class=cl>    <span class=c1>// 节点 x 的节点是 parent[x]
+</span></span></span><span class=line><span class=cl><span class=c1></span>    <span class=kd>private</span> <span class=kt>int</span><span class=o>[]</span> <span class=n>parent</span><span class=o>;</span>
+</span></span><span class=line><span class=cl>    <span class=c1>// 新增一个数组记录树的“重量”
+</span></span></span><span class=line><span class=cl><span class=c1></span>    <span class=kd>private</span> <span class=kt>int</span><span class=o>[]</span> <span class=n>size</span><span class=o>;</span>
 </span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>    public boolean equationsPossible(String[] equations) {
-</span></span><span class=line><span class=cl>        // 1. 将方程分成等式和不等式两类
-</span></span><span class=line><span class=cl>        List&lt;String&gt; equals = new LinkedList&lt;&gt;();
-</span></span><span class=line><span class=cl>        List&lt;String&gt; unEquals = new LinkedList&lt;&gt;();
-</span></span><span class=line><span class=cl>        for (String equation : equations) {
-</span></span><span class=line><span class=cl>            char c = equation.charAt(1);
-</span></span><span class=line><span class=cl>            if (c == &#39;=&#39;) {
-</span></span><span class=line><span class=cl>                equals.add(equation);
-</span></span><span class=line><span class=cl>            } else if (c == &#39;!&#39;) {
-</span></span><span class=line><span class=cl>                unEquals.add(equation);
-</span></span><span class=line><span class=cl>            }
-</span></span><span class=line><span class=cl>        }
-</span></span><span class=line><span class=cl>        // 2. 初始化「图」
-</span></span><span class=line><span class=cl>        parent = new int[26];
-</span></span><span class=line><span class=cl>        size = new int[26];
-</span></span><span class=line><span class=cl>        for (int i = 0; i &lt; 26; i++) {
-</span></span><span class=line><span class=cl>            // 父节点指针初始指向自己
-</span></span><span class=line><span class=cl>            parent[i] = i;
-</span></span><span class=line><span class=cl>            // 重量应该初始化 1
-</span></span><span class=line><span class=cl>            size[i] = 1;
-</span></span><span class=line><span class=cl>        }
-</span></span><span class=line><span class=cl>        // 3. 根据等式连接两两节点
-</span></span><span class=line><span class=cl>        for (String equal : equals) {
-</span></span><span class=line><span class=cl>            int a = equal.charAt(0) - &#39;a&#39;;
-</span></span><span class=line><span class=cl>            int b = equal.charAt(3) - &#39;a&#39;;
-</span></span><span class=line><span class=cl>            union(a, b);
-</span></span><span class=line><span class=cl>        }
-</span></span><span class=line><span class=cl>        // 4. 判断不等式是否成立
-</span></span><span class=line><span class=cl>        for (String unEqual : unEquals) {
-</span></span><span class=line><span class=cl>            int a = unEqual.charAt(0) - &#39;a&#39;;
-</span></span><span class=line><span class=cl>            int b = unEqual.charAt(3) - &#39;a&#39;;
-</span></span><span class=line><span class=cl>            int rootA = find(a);
-</span></span><span class=line><span class=cl>            int rootB = find(b);
-</span></span><span class=line><span class=cl>            if (rootA == rootB) {
-</span></span><span class=line><span class=cl>                return false;
-</span></span><span class=line><span class=cl>            }
-</span></span><span class=line><span class=cl>        }
-</span></span><span class=line><span class=cl>        return true;
-</span></span><span class=line><span class=cl>    }
+</span></span><span class=line><span class=cl>    <span class=kd>public</span> <span class=kt>boolean</span> <span class=nf>equationsPossible</span><span class=o>(</span><span class=n>String</span><span class=o>[]</span> <span class=n>equations</span><span class=o>)</span> <span class=o>{</span>
+</span></span><span class=line><span class=cl>        <span class=c1>// 1. 将方程分成等式和不等式两类
+</span></span></span><span class=line><span class=cl><span class=c1></span>        <span class=n>List</span><span class=o>&lt;</span><span class=n>String</span><span class=o>&gt;</span> <span class=n>equals</span> <span class=o>=</span> <span class=k>new</span> <span class=n>LinkedList</span><span class=o>&lt;&gt;();</span>
+</span></span><span class=line><span class=cl>        <span class=n>List</span><span class=o>&lt;</span><span class=n>String</span><span class=o>&gt;</span> <span class=n>unEquals</span> <span class=o>=</span> <span class=k>new</span> <span class=n>LinkedList</span><span class=o>&lt;&gt;();</span>
+</span></span><span class=line><span class=cl>        <span class=k>for</span> <span class=o>(</span><span class=n>String</span> <span class=n>equation</span> <span class=o>:</span> <span class=n>equations</span><span class=o>)</span> <span class=o>{</span>
+</span></span><span class=line><span class=cl>            <span class=kt>char</span> <span class=n>c</span> <span class=o>=</span> <span class=n>equation</span><span class=o>.</span><span class=na>charAt</span><span class=o>(</span><span class=n>1</span><span class=o>);</span>
+</span></span><span class=line><span class=cl>            <span class=k>if</span> <span class=o>(</span><span class=n>c</span> <span class=o>==</span> <span class=sc>&#39;=&#39;</span><span class=o>)</span> <span class=o>{</span>
+</span></span><span class=line><span class=cl>                <span class=n>equals</span><span class=o>.</span><span class=na>add</span><span class=o>(</span><span class=n>equation</span><span class=o>);</span>
+</span></span><span class=line><span class=cl>            <span class=o>}</span> <span class=k>else</span> <span class=k>if</span> <span class=o>(</span><span class=n>c</span> <span class=o>==</span> <span class=sc>&#39;!&#39;</span><span class=o>)</span> <span class=o>{</span>
+</span></span><span class=line><span class=cl>                <span class=n>unEquals</span><span class=o>.</span><span class=na>add</span><span class=o>(</span><span class=n>equation</span><span class=o>);</span>
+</span></span><span class=line><span class=cl>            <span class=o>}</span>
+</span></span><span class=line><span class=cl>        <span class=o>}</span>
+</span></span><span class=line><span class=cl>        <span class=c1>// 2. 初始化「图」
+</span></span></span><span class=line><span class=cl><span class=c1></span>        <span class=n>parent</span> <span class=o>=</span> <span class=k>new</span> <span class=kt>int</span><span class=o>[</span><span class=n>26</span><span class=o>];</span>
+</span></span><span class=line><span class=cl>        <span class=n>size</span> <span class=o>=</span> <span class=k>new</span> <span class=kt>int</span><span class=o>[</span><span class=n>26</span><span class=o>];</span>
+</span></span><span class=line><span class=cl>        <span class=k>for</span> <span class=o>(</span><span class=kt>int</span> <span class=n>i</span> <span class=o>=</span> <span class=n>0</span><span class=o>;</span> <span class=n>i</span> <span class=o>&lt;</span> <span class=n>26</span><span class=o>;</span> <span class=n>i</span><span class=o>++)</span> <span class=o>{</span>
+</span></span><span class=line><span class=cl>            <span class=c1>// 父节点指针初始指向自己
+</span></span></span><span class=line><span class=cl><span class=c1></span>            <span class=n>parent</span><span class=o>[</span><span class=n>i</span><span class=o>]</span> <span class=o>=</span> <span class=n>i</span><span class=o>;</span>
+</span></span><span class=line><span class=cl>            <span class=c1>// 重量应该初始化 1
+</span></span></span><span class=line><span class=cl><span class=c1></span>            <span class=n>size</span><span class=o>[</span><span class=n>i</span><span class=o>]</span> <span class=o>=</span> <span class=n>1</span><span class=o>;</span>
+</span></span><span class=line><span class=cl>        <span class=o>}</span>
+</span></span><span class=line><span class=cl>        <span class=c1>// 3. 根据等式连接两两节点
+</span></span></span><span class=line><span class=cl><span class=c1></span>        <span class=k>for</span> <span class=o>(</span><span class=n>String</span> <span class=n>equal</span> <span class=o>:</span> <span class=n>equals</span><span class=o>)</span> <span class=o>{</span>
+</span></span><span class=line><span class=cl>            <span class=kt>int</span> <span class=n>a</span> <span class=o>=</span> <span class=n>equal</span><span class=o>.</span><span class=na>charAt</span><span class=o>(</span><span class=n>0</span><span class=o>)</span> <span class=o>-</span> <span class=sc>&#39;a&#39;</span><span class=o>;</span>
+</span></span><span class=line><span class=cl>            <span class=kt>int</span> <span class=n>b</span> <span class=o>=</span> <span class=n>equal</span><span class=o>.</span><span class=na>charAt</span><span class=o>(</span><span class=n>3</span><span class=o>)</span> <span class=o>-</span> <span class=sc>&#39;a&#39;</span><span class=o>;</span>
+</span></span><span class=line><span class=cl>            <span class=n>union</span><span class=o>(</span><span class=n>a</span><span class=o>,</span> <span class=n>b</span><span class=o>);</span>
+</span></span><span class=line><span class=cl>        <span class=o>}</span>
+</span></span><span class=line><span class=cl>        <span class=c1>// 4. 判断不等式是否成立
+</span></span></span><span class=line><span class=cl><span class=c1></span>        <span class=k>for</span> <span class=o>(</span><span class=n>String</span> <span class=n>unEqual</span> <span class=o>:</span> <span class=n>unEquals</span><span class=o>)</span> <span class=o>{</span>
+</span></span><span class=line><span class=cl>            <span class=kt>int</span> <span class=n>a</span> <span class=o>=</span> <span class=n>unEqual</span><span class=o>.</span><span class=na>charAt</span><span class=o>(</span><span class=n>0</span><span class=o>)</span> <span class=o>-</span> <span class=sc>&#39;a&#39;</span><span class=o>;</span>
+</span></span><span class=line><span class=cl>            <span class=kt>int</span> <span class=n>b</span> <span class=o>=</span> <span class=n>unEqual</span><span class=o>.</span><span class=na>charAt</span><span class=o>(</span><span class=n>3</span><span class=o>)</span> <span class=o>-</span> <span class=sc>&#39;a&#39;</span><span class=o>;</span>
+</span></span><span class=line><span class=cl>            <span class=kt>int</span> <span class=n>rootA</span> <span class=o>=</span> <span class=n>find</span><span class=o>(</span><span class=n>a</span><span class=o>);</span>
+</span></span><span class=line><span class=cl>            <span class=kt>int</span> <span class=n>rootB</span> <span class=o>=</span> <span class=n>find</span><span class=o>(</span><span class=n>b</span><span class=o>);</span>
+</span></span><span class=line><span class=cl>            <span class=k>if</span> <span class=o>(</span><span class=n>rootA</span> <span class=o>==</span> <span class=n>rootB</span><span class=o>)</span> <span class=o>{</span>
+</span></span><span class=line><span class=cl>                <span class=k>return</span> <span class=kc>false</span><span class=o>;</span>
+</span></span><span class=line><span class=cl>            <span class=o>}</span>
+</span></span><span class=line><span class=cl>        <span class=o>}</span>
+</span></span><span class=line><span class=cl>        <span class=k>return</span> <span class=kc>true</span><span class=o>;</span>
+</span></span><span class=line><span class=cl>    <span class=o>}</span>
 </span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>    /* 将 p 和 q 连接 */
-</span></span><span class=line><span class=cl>    private void union(int p, int q) {
-</span></span><span class=line><span class=cl>        int rootP = find(p);
-</span></span><span class=line><span class=cl>        int rootQ = find(q);
-</span></span><span class=line><span class=cl>        if (rootP == rootQ) {
-</span></span><span class=line><span class=cl>            // 二者已连接
-</span></span><span class=line><span class=cl>            return;
-</span></span><span class=line><span class=cl>        }
-</span></span><span class=line><span class=cl>        // 将两棵树合并为一棵，小树接到大树下面
-</span></span><span class=line><span class=cl>        if (size[rootP] &gt; size[rootQ]) {
-</span></span><span class=line><span class=cl>            parent[rootQ] = rootP;
-</span></span><span class=line><span class=cl>            size[rootP] += size[rootQ];
-</span></span><span class=line><span class=cl>        } else {
-</span></span><span class=line><span class=cl>            parent[rootP] = rootQ;
-</span></span><span class=line><span class=cl>            size[rootQ] += size[rootP];
-</span></span><span class=line><span class=cl>        }
-</span></span><span class=line><span class=cl>    }
+</span></span><span class=line><span class=cl>    <span class=cm>/* 将 p 和 q 连接 */</span>
+</span></span><span class=line><span class=cl>    <span class=kd>private</span> <span class=kt>void</span> <span class=nf>union</span><span class=o>(</span><span class=kt>int</span> <span class=n>p</span><span class=o>,</span> <span class=kt>int</span> <span class=n>q</span><span class=o>)</span> <span class=o>{</span>
+</span></span><span class=line><span class=cl>        <span class=kt>int</span> <span class=n>rootP</span> <span class=o>=</span> <span class=n>find</span><span class=o>(</span><span class=n>p</span><span class=o>);</span>
+</span></span><span class=line><span class=cl>        <span class=kt>int</span> <span class=n>rootQ</span> <span class=o>=</span> <span class=n>find</span><span class=o>(</span><span class=n>q</span><span class=o>);</span>
+</span></span><span class=line><span class=cl>        <span class=k>if</span> <span class=o>(</span><span class=n>rootP</span> <span class=o>==</span> <span class=n>rootQ</span><span class=o>)</span> <span class=o>{</span>
+</span></span><span class=line><span class=cl>            <span class=c1>// 二者已连接
+</span></span></span><span class=line><span class=cl><span class=c1></span>            <span class=k>return</span><span class=o>;</span>
+</span></span><span class=line><span class=cl>        <span class=o>}</span>
+</span></span><span class=line><span class=cl>        <span class=c1>// 将两棵树合并为一棵，小树接到大树下面
+</span></span></span><span class=line><span class=cl><span class=c1></span>        <span class=k>if</span> <span class=o>(</span><span class=n>size</span><span class=o>[</span><span class=n>rootP</span><span class=o>]</span> <span class=o>&gt;</span> <span class=n>size</span><span class=o>[</span><span class=n>rootQ</span><span class=o>])</span> <span class=o>{</span>
+</span></span><span class=line><span class=cl>            <span class=n>parent</span><span class=o>[</span><span class=n>rootQ</span><span class=o>]</span> <span class=o>=</span> <span class=n>rootP</span><span class=o>;</span>
+</span></span><span class=line><span class=cl>            <span class=n>size</span><span class=o>[</span><span class=n>rootP</span><span class=o>]</span> <span class=o>+=</span> <span class=n>size</span><span class=o>[</span><span class=n>rootQ</span><span class=o>];</span>
+</span></span><span class=line><span class=cl>        <span class=o>}</span> <span class=k>else</span> <span class=o>{</span>
+</span></span><span class=line><span class=cl>            <span class=n>parent</span><span class=o>[</span><span class=n>rootP</span><span class=o>]</span> <span class=o>=</span> <span class=n>rootQ</span><span class=o>;</span>
+</span></span><span class=line><span class=cl>            <span class=n>size</span><span class=o>[</span><span class=n>rootQ</span><span class=o>]</span> <span class=o>+=</span> <span class=n>size</span><span class=o>[</span><span class=n>rootP</span><span class=o>];</span>
+</span></span><span class=line><span class=cl>        <span class=o>}</span>
+</span></span><span class=line><span class=cl>    <span class=o>}</span>
 </span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>    /* 返回某个节点 x 的根节点 */
-</span></span><span class=line><span class=cl>    private int find(int x) {
-</span></span><span class=line><span class=cl>        // 根节点的 parent[x] == x
-</span></span><span class=line><span class=cl>        while (parent[x] != x) {
-</span></span><span class=line><span class=cl>            parent[x] = parent[parent[x]];
-</span></span><span class=line><span class=cl>            x = parent[x];
-</span></span><span class=line><span class=cl>        }
-</span></span><span class=line><span class=cl>        return x;
-</span></span><span class=line><span class=cl>    }
-</span></span><span class=line><span class=cl>}</span></span></code></pre></td></tr></table></div></div><h4 id=复杂度-29>复杂度</h4><ul><li>时间复杂度：O(n)</li><li>空间复杂度：O(n)</li></ul><h3 id=050-powxn>050 Pow(x,n)</h3><h4 id=int转换为long>int转换为long</h4><p>Java 代码中 int32 变量 n \in [-2147483648, 2147483647]，因此当 n = -2147483648 时执行 n = -n会因越界而赋值出错。解决方法是先将 n 存入 long 变量 b ，后面用 b 操作即可。</p><h4 id=代码迭代>代码（迭代）</h4><div class=highlight id=id-60><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span></span><span class=line><span class=cl>    <span class=cm>/* 返回某个节点 x 的根节点 */</span>
+</span></span><span class=line><span class=cl>    <span class=kd>private</span> <span class=kt>int</span> <span class=nf>find</span><span class=o>(</span><span class=kt>int</span> <span class=n>x</span><span class=o>)</span> <span class=o>{</span>
+</span></span><span class=line><span class=cl>        <span class=c1>// 根节点的 parent[x] == x
+</span></span></span><span class=line><span class=cl><span class=c1></span>        <span class=k>while</span> <span class=o>(</span><span class=n>parent</span><span class=o>[</span><span class=n>x</span><span class=o>]</span> <span class=o>!=</span> <span class=n>x</span><span class=o>)</span> <span class=o>{</span>
+</span></span><span class=line><span class=cl>            <span class=n>parent</span><span class=o>[</span><span class=n>x</span><span class=o>]</span> <span class=o>=</span> <span class=n>parent</span><span class=o>[</span><span class=n>parent</span><span class=o>[</span><span class=n>x</span><span class=o>]];</span>
+</span></span><span class=line><span class=cl>            <span class=n>x</span> <span class=o>=</span> <span class=n>parent</span><span class=o>[</span><span class=n>x</span><span class=o>];</span>
+</span></span><span class=line><span class=cl>        <span class=o>}</span>
+</span></span><span class=line><span class=cl>        <span class=k>return</span> <span class=n>x</span><span class=o>;</span>
+</span></span><span class=line><span class=cl>    <span class=o>}</span>
+</span></span><span class=line><span class=cl><span class=o>}</span></span></span></code></pre></td></tr></table></div></div><h4 id=复杂度-29>复杂度</h4><ul><li>时间复杂度：O(n)</li><li>空间复杂度：O(n)</li></ul><h3 id=050-powxn>050 Pow(x,n)</h3><h4 id=int转换为long>int转换为long</h4><p>Java 代码中 int32 变量 n \in [-2147483648, 2147483647]，因此当 n = -2147483648 时执行 n = -n会因越界而赋值出错。解决方法是先将 n 存入 long 变量 b ，后面用 b 操作即可。</p><h4 id=代码迭代>代码（迭代）</h4><div class=highlight id=id-60><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
 </span><span class=lnt> 2
 </span><span class=lnt> 3
 </span><span class=lnt> 4

@@ -1,11 +1,12 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>所有技术文章 -</title><link>https://leni.fun/posts/</link><description>所有技术文章 |</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>dujianghui_work@163.com (都将会)</managingEditor><webMaster>dujianghui_work@163.com (都将会)</webMaster><lastBuildDate>Wed, 30 Aug 2023 08:08:08 +0800</lastBuildDate><atom:link href="https://leni.fun/posts/" rel="self" type="application/rss+xml"/><item><title>🚩DP - 动态规划</title><link>https://leni.fun/dp/</link><pubDate>Sun, 20 Aug 2023 11:20:24 +0800</pubDate><author>都将会</author><guid>https://leni.fun/dp/</guid><description><![CDATA[<div class="featured-image">
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>所有技术文章 -</title><link>https://leni.fun/posts/</link><description>所有技术文章 |</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>dujianghui_work@163.com (都将会)</managingEditor><webMaster>dujianghui_work@163.com (都将会)</webMaster><lastBuildDate>Wed, 20 Sep 2023 14:15:22 +0800</lastBuildDate><atom:link href="https://leni.fun/posts/" rel="self" type="application/rss+xml"/><item><title>🚩DP - 动态规划</title><link>https://leni.fun/dp/</link><pubDate>Sun, 20 Aug 2023 11:20:24 +0800</pubDate><author>都将会</author><guid>https://leni.fun/dp/</guid><description><![CDATA[<div class="featured-image">
         <img src="/images/pic8.jpg" referrerpolicy="no-referrer">
-      </div><p>最近发现笔试题的区分度主要在动态规划，本文按照题型归类整理。</p>]]></description></item><item><title>Hugo+FixIt 主题配置文件分享</title><link>https://leni.fun/blog_config/</link><pubDate>Thu, 10 Aug 2023 16:53:52 +0800</pubDate><author>都将会</author><guid>https://leni.fun/blog_config/</guid><description><![CDATA[<div class="featured-image">
-        <img src="/images/pic1.jpg" referrerpolicy="no-referrer">
-      </div><h3 id="分享我自己的核心配置类">分享我自己的核心配置类</h3>
-<p>主题采用 FixIt，将配置文件放在域名根目录下，例如我的文件路径就是 <code>leni.fun/hugo.yml</code>，我这里使用 yml 替换 toml 文件，可以通过以下网站进行文件转换，也可以直接复制我的配置文件进行更改</p>
-<blockquote>
-<p><a href="https://transform.tools/toml-to-yaml"target="_blank" rel="external nofollow noopener noreferrer">https://transform.tools/toml-to-yaml</a></p>
+      </div><p>最近发现笔试题的区分度主要在动态规划，本文按照题型归类整理。</p>]]></description></item><item><title>红包雨 PPT 分享</title><link>https://leni.fun/%E7%BA%A2%E5%8C%85%E9%9B%A8ppt/</link><pubDate>Wed, 20 Sep 2023 14:15:22 +0800</pubDate><author>都将会</author><guid>https://leni.fun/%E7%BA%A2%E5%8C%85%E9%9B%A8ppt/</guid><description>&lt;div class="featured-image">
+&lt;img src="/images/pic15.jpg" referrerpolicy="no-referrer">
+&lt;/div>红包雨项目到这就结束啦，分享几页重要的ppt，以便回顾。</description></item><item><title>红包雨</title><link>https://leni.fun/%E7%BA%A2%E5%8C%85%E9%9B%A8/</link><pubDate>Sun, 17 Sep 2023 10:13:57 +0800</pubDate><author>都将会</author><guid>https://leni.fun/%E7%BA%A2%E5%8C%85%E9%9B%A8/</guid><description><![CDATA[<div class="featured-image">
+        <img src="/images/pic14.jpg" referrerpolicy="no-referrer">
+      </div><blockquote>
+<p>TL 厂竞赛项目记录  20230905-20230916</p>
+<p>借此机会记录红包雨项目后端开发的全流程</p>
 </blockquote>]]></description></item><item><title>🚩Spring</title><link>https://leni.fun/spring/</link><pubDate>Wed, 30 Aug 2023 08:08:08 +0800</pubDate><author>都将会</author><guid>https://leni.fun/spring/</guid><description><![CDATA[<div class="featured-image">
         <img src="/images/pic13.jpg" referrerpolicy="no-referrer">
       </div><h3 id="ioc-控制反转--bean-的生命周期">IOC 控制反转 || Bean 的生命周期</h3>
@@ -27,12 +28,4 @@
         <img src="/images/pic6.jpg" referrerpolicy="no-referrer">
       </div><blockquote>
 <p>AOP = Aspect Oriented Programming 面相切面编程</p>
-</blockquote>]]></description></item><item><title>Hugo+FixIt 主题配置文件分享</title><link>https://leni.fun/blog_config/</link><pubDate>Thu, 10 Aug 2023 16:53:52 +0800</pubDate><author>都将会</author><guid>https://leni.fun/blog_config/</guid><description><![CDATA[<div class="featured-image">
-        <img src="/images/pic1.jpg" referrerpolicy="no-referrer">
-      </div><h3 id="分享我自己的核心配置类">分享我自己的核心配置类</h3>
-<p>主题采用 FixIt，将配置文件放在域名根目录下，例如我的文件路径就是 <code>leni.fun/hugo.yml</code>，我这里使用 yml 替换 toml 文件，可以通过以下网站进行文件转换，也可以直接复制我的配置文件进行更改</p>
-<blockquote>
-<p><a href="https://transform.tools/toml-to-yaml"target="_blank" rel="external nofollow noopener noreferrer">https://transform.tools/toml-to-yaml</a></p>
-</blockquote>]]></description></item><item><title>FixIt 主题美化</title><link>https://leni.fun/blog_beautify/</link><pubDate>Wed, 09 Aug 2023 08:08:08 +0800</pubDate><author>都将会</author><guid>https://leni.fun/blog_beautify/</guid><description>&lt;div class="featured-image">
-&lt;img src="/images/pic2.jpg" referrerpolicy="no-referrer">
-&lt;/div>分享几个帮助很大的链接</description></item></channel></rss>
+</blockquote>]]></description></item></channel></rss>
