@@ -1,4 +1,6 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title/><link>https://leni.fun/</link><description>思绪来去如风，但愿有所停留。</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>dujianghui_work@163.com (都将会)</managingEditor><webMaster>dujianghui_work@163.com (都将会)</webMaster><lastBuildDate>Wed, 20 Sep 2023 14:15:22 +0800</lastBuildDate><atom:link href="https://leni.fun/index.xml" rel="self" type="application/rss+xml"/><item><title>红包雨 PPT 分享</title><link>https://leni.fun/%E7%BA%A2%E5%8C%85%E9%9B%A8ppt/</link><pubDate>Wed, 20 Sep 2023 14:15:22 +0800</pubDate><author>都将会</author><guid>https://leni.fun/%E7%BA%A2%E5%8C%85%E9%9B%A8ppt/</guid><description>&lt;div class="featured-image">
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title/><link>https://leni.fun/</link><description>思绪来去如风，但愿有所停留。</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>dujianghui_work@163.com (都将会)</managingEditor><webMaster>dujianghui_work@163.com (都将会)</webMaster><lastBuildDate>Thu, 21 Sep 2023 20:16:31 +0800</lastBuildDate><atom:link href="https://leni.fun/index.xml" rel="self" type="application/rss+xml"/><item><title>软考系统架构师笔记</title><link>https://leni.fun/%E8%BD%AF%E8%80%83%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%E5%B8%88%E7%AC%94%E8%AE%B0/</link><pubDate>Thu, 21 Sep 2023 20:16:31 +0800</pubDate><author>都将会</author><guid>https://leni.fun/%E8%BD%AF%E8%80%83%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%E5%B8%88%E7%AC%94%E8%AE%B0/</guid><description>&lt;div class="featured-image">
+&lt;img src="/images/pic16.jpg" referrerpolicy="no-referrer">
+&lt;/div>不过不停更！</description></item><item><title>红包雨 PPT 分享</title><link>https://leni.fun/%E7%BA%A2%E5%8C%85%E9%9B%A8ppt/</link><pubDate>Wed, 20 Sep 2023 14:15:22 +0800</pubDate><author>都将会</author><guid>https://leni.fun/%E7%BA%A2%E5%8C%85%E9%9B%A8ppt/</guid><description>&lt;div class="featured-image">
 &lt;img src="/images/pic15.jpg" referrerpolicy="no-referrer">
 &lt;/div>红包雨项目到这就结束啦，分享几页重要的ppt，以便回顾。</description></item><item><title>红包雨</title><link>https://leni.fun/%E7%BA%A2%E5%8C%85%E9%9B%A8/</link><pubDate>Sun, 17 Sep 2023 10:13:57 +0800</pubDate><author>都将会</author><guid>https://leni.fun/%E7%BA%A2%E5%8C%85%E9%9B%A8/</guid><description><![CDATA[<div class="featured-image">
         <img src="/images/pic14.jpg" referrerpolicy="no-referrer">
@@ -22,8 +24,4 @@
         <img src="/images/pic7.jpg" referrerpolicy="no-referrer">
       </div><blockquote>
 <p>NIO 于 jdk1.4 引入，支持面向缓冲区的、基于通道的IO操作。</p>
-</blockquote>]]></description></item><item><title>AOP 实现方法耗时统计</title><link>https://leni.fun/aop%E5%AE%9E%E7%8E%B0%E6%96%B9%E6%B3%95%E8%80%97%E6%97%B6%E7%BB%9F%E8%AE%A1/</link><pubDate>Mon, 14 Aug 2023 20:39:45 +0800</pubDate><author>都将会</author><guid>https://leni.fun/aop%E5%AE%9E%E7%8E%B0%E6%96%B9%E6%B3%95%E8%80%97%E6%97%B6%E7%BB%9F%E8%AE%A1/</guid><description><![CDATA[<div class="featured-image">
-        <img src="/images/pic6.jpg" referrerpolicy="no-referrer">
-      </div><blockquote>
-<p>AOP = Aspect Oriented Programming 面相切面编程</p>
 </blockquote>]]></description></item></channel></rss>
