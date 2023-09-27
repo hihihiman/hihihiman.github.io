@@ -162,14 +162,14 @@
 </span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-java data-lang=java><span class=line><span class=cl><span class=nd>@Insert</span><span class=o>(</span><span class=s>&#34;INSERT INTO USER(NAME, AGE) VALUES(#{name}, #{age})&#34;</span><span class=o>)</span>
 </span></span><span class=line><span class=cl><span class=kt>int</span> <span class=nf>insert</span><span class=o>(</span><span class=nd>@Param</span><span class=o>(</span><span class=s>&#34;name&#34;</span><span class=o>)</span> <span class=n>String</span> <span class=n>name</span><span class=o>,</span> <span class=nd>@Param</span><span class=o>(</span><span class=s>&#34;age&#34;</span><span class=o>)</span> <span class=n>Integer</span> <span class=n>age</span><span class=o>);</span></span></span></code></pre></td></tr></table></div></div><p>这种方式很好理解，<code>@Param</code>中定义的<code>name</code>对应了SQL中的<code>#{name}</code>，<code>age</code>对应了SQL中的<code>#{age}</code>。</p><h4 id=使用map>使用Map</h4><p>如下代码，通过<code>Map&lt;String, Object></code>对象来作为传递参数的容器：</p><div class=highlight id=id-10><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
 </span><span class=lnt>2
-</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>@Insert(&#34;INSERT INTO USER(NAME, AGE) VALUES(#{name,jdbcType=VARCHAR}, #{age,jdbcType=INTEGER})&#34;)
-</span></span><span class=line><span class=cl>int insertByMap(Map&lt;String, Object&gt; map);</span></span></code></pre></td></tr></table></div></div><p>对于Insert语句中需要的参数，我们只需要在map中填入同名的内容即可，具体如下面代码所示：</p><div class=highlight id=id-11><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-gdscript data-lang=gdscript><span class=line><span class=cl><span class=err>@</span><span class=nf>Insert</span><span class=p>(</span><span class=s2>&#34;INSERT INTO USER(NAME, AGE) VALUES(#</span><span class=si>{name,jdbcType=VARCHAR}, #{age,jdbcType=INTEGER}</span><span class=s2>)&#34;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl><span class=kt>int</span> <span class=nf>insertByMap</span><span class=p>(</span><span class=n>Map</span><span class=o>&lt;</span><span class=nc>String</span><span class=p>,</span> <span class=nc>Object</span><span class=o>&gt;</span> <span class=n>map</span><span class=p>);</span></span></span></code></pre></td></tr></table></div></div><p>对于Insert语句中需要的参数，我们只需要在map中填入同名的内容即可，具体如下面代码所示：</p><div class=highlight id=id-11><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
 </span><span class=lnt>2
 </span><span class=lnt>3
 </span><span class=lnt>4
 </span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-java data-lang=java><span class=line><span class=cl><span class=n>Map</span><span class=o>&lt;</span><span class=n>String</span><span class=o>,</span> <span class=n>Object</span><span class=o>&gt;</span> <span class=n>map</span> <span class=o>=</span> <span class=k>new</span> <span class=n>HashMap</span><span class=o>&lt;&gt;();</span>
 </span></span><span class=line><span class=cl><span class=n>map</span><span class=o>.</span><span class=na>put</span><span class=o>(</span><span class=s>&#34;name&#34;</span><span class=o>,</span> <span class=s>&#34;CCC&#34;</span><span class=o>);</span>
-</span></span><span class=line><span class=cl><span class=n>map</span><span class=o>.</span><span class=na>put</span><span class=o>(</span><span class=s>&#34;age&#34;</span><span class=o>,</span> <span class=n>40</span><span class=o>);</span>
+</span></span><span class=line><span class=cl><span class=n>map</span><span class=o>.</span><span class=na>put</span><span class=o>(</span><span class=s>&#34;age&#34;</span><span class=o>,</span> <span class=mi>40</span><span class=o>);</span>
 </span></span><span class=line><span class=cl><span class=n>userMapper</span><span class=o>.</span><span class=na>insertByMap</span><span class=o>(</span><span class=n>map</span><span class=o>);</span></span></span></code></pre></td></tr></table></div></div><h4 id=包扫描-1>包扫描</h4><div class=highlight id=id-12><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
 </span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-java data-lang=java><span class=line><span class=cl><span class=nd>@MapperScan</span><span class=o>(</span><span class=s>&#34;com.didispace.chapter36.mapper&#34;</span><span class=o>)</span></span></span></code></pre></td></tr></table></div></div><h3 id=lombok>Lombok</h3><ol><li><code>Val</code>可以将变量申明是final类型。</li></ol><div class=highlight id=id-13><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
 </span><span class=lnt> 2
@@ -316,7 +316,7 @@
 </span></span></span><span class=line><span class=cl><span class=c1></span>
 </span></span><span class=line><span class=cl> <span class=kd>public</span> <span class=kd>class</span> <span class=nc>SynchronizedExample</span> <span class=o>{</span> 
 </span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>  <span class=kd>private</span> <span class=kd>static</span> <span class=kd>final</span> <span class=n>Object</span> <span class=n>$LOCK</span> <span class=o>=</span> <span class=k>new</span>   <span class=n>Object</span><span class=o>[</span><span class=n>0</span><span class=o>];</span> 
+</span></span><span class=line><span class=cl>  <span class=kd>private</span> <span class=kd>static</span> <span class=kd>final</span> <span class=n>Object</span> <span class=n>$LOCK</span> <span class=o>=</span> <span class=k>new</span>   <span class=n>Object</span><span class=o>[</span><span class=mi>0</span><span class=o>];</span> 
 </span></span><span class=line><span class=cl>  <span class=kd>private</span> <span class=kd>final</span> <span class=n>Object</span> <span class=n>readLock</span> <span class=o>=</span> <span class=k>new</span>   <span class=n>Object</span><span class=o>();</span> 
 </span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl>  <span class=kd>public</span> <span class=kd>static</span> <span class=kt>void</span> <span class=nf>hello</span><span class=o>()</span> <span class=o>{</span> 
@@ -489,7 +489,7 @@
 </span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-java data-lang=java><span class=line><span class=cl><span class=nd>@Component</span>
 </span></span><span class=line><span class=cl><span class=kd>public</span> <span class=kd>class</span> <span class=nc>ScheduledTasks</span> <span class=o>{</span>
 </span></span><span class=line><span class=cl>    <span class=kd>private</span> <span class=kd>static</span> <span class=kd>final</span> <span class=n>SimpleDateFormat</span> <span class=n>dateFormat</span> <span class=o>=</span> <span class=k>new</span> <span class=n>SimpleDateFormat</span><span class=o>(</span><span class=s>&#34;HH:mm:ss&#34;</span><span class=o>);</span>
-</span></span><span class=line><span class=cl>    <span class=nd>@Scheduled</span><span class=o>(</span><span class=n>fixedRate</span> <span class=o>=</span> <span class=n>5000</span><span class=o>)</span>
+</span></span><span class=line><span class=cl>    <span class=nd>@Scheduled</span><span class=o>(</span><span class=n>fixedRate</span> <span class=o>=</span> <span class=mi>5000</span><span class=o>)</span>
 </span></span><span class=line><span class=cl>    <span class=kd>public</span> <span class=kt>void</span> <span class=nf>reportCurrentTime</span><span class=o>()</span> <span class=o>{</span>
 </span></span><span class=line><span class=cl>        <span class=n>log</span><span class=o>.</span><span class=na>info</span><span class=o>(</span><span class=s>&#34;现在时间：&#34;</span> <span class=o>+</span> <span class=n>dateFormat</span><span class=o>.</span><span class=na>format</span><span class=o>(</span><span class=k>new</span> <span class=n>Date</span><span class=o>()));</span>
 </span></span><span class=line><span class=cl>    <span class=o>}</span>
@@ -602,10 +602,10 @@
 </span></span><span class=line><span class=cl>    <span class=nd>@Bean</span>
 </span></span><span class=line><span class=cl>    <span class=kd>public</span> <span class=n>Executor</span> <span class=nf>taskExecutor1</span><span class=o>()</span> <span class=o>{</span>
 </span></span><span class=line><span class=cl>        <span class=n>ThreadPoolTaskExecutor</span> <span class=n>executor</span> <span class=o>=</span> <span class=k>new</span> <span class=n>ThreadPoolTaskExecutor</span><span class=o>();</span>
-</span></span><span class=line><span class=cl>        <span class=n>executor</span><span class=o>.</span><span class=na>setCorePoolSize</span><span class=o>(</span><span class=n>2</span><span class=o>);</span>
-</span></span><span class=line><span class=cl>        <span class=n>executor</span><span class=o>.</span><span class=na>setMaxPoolSize</span><span class=o>(</span><span class=n>2</span><span class=o>);</span>
-</span></span><span class=line><span class=cl>        <span class=n>executor</span><span class=o>.</span><span class=na>setQueueCapacity</span><span class=o>(</span><span class=n>10</span><span class=o>);</span>
-</span></span><span class=line><span class=cl>        <span class=n>executor</span><span class=o>.</span><span class=na>setKeepAliveSeconds</span><span class=o>(</span><span class=n>60</span><span class=o>);</span>
+</span></span><span class=line><span class=cl>        <span class=n>executor</span><span class=o>.</span><span class=na>setCorePoolSize</span><span class=o>(</span><span class=mi>2</span><span class=o>);</span>
+</span></span><span class=line><span class=cl>        <span class=n>executor</span><span class=o>.</span><span class=na>setMaxPoolSize</span><span class=o>(</span><span class=mi>2</span><span class=o>);</span>
+</span></span><span class=line><span class=cl>        <span class=n>executor</span><span class=o>.</span><span class=na>setQueueCapacity</span><span class=o>(</span><span class=mi>10</span><span class=o>);</span>
+</span></span><span class=line><span class=cl>        <span class=n>executor</span><span class=o>.</span><span class=na>setKeepAliveSeconds</span><span class=o>(</span><span class=mi>60</span><span class=o>);</span>
 </span></span><span class=line><span class=cl>        <span class=n>executor</span><span class=o>.</span><span class=na>setThreadNamePrefix</span><span class=o>(</span><span class=s>&#34;executor-1-&#34;</span><span class=o>);</span>
 </span></span><span class=line><span class=cl>        <span class=n>executor</span><span class=o>.</span><span class=na>setRejectedExecutionHandler</span><span class=o>(</span><span class=k>new</span> <span class=n>ThreadPoolExecutor</span><span class=o>.</span><span class=na>CallerRunsPolicy</span><span class=o>());</span>
 </span></span><span class=line><span class=cl>        <span class=k>return</span> <span class=n>executor</span><span class=o>;</span>
@@ -614,10 +614,10 @@
 </span></span><span class=line><span class=cl>    <span class=nd>@Bean</span>
 </span></span><span class=line><span class=cl>    <span class=kd>public</span> <span class=n>Executor</span> <span class=nf>taskExecutor2</span><span class=o>()</span> <span class=o>{</span>
 </span></span><span class=line><span class=cl>        <span class=n>ThreadPoolTaskExecutor</span> <span class=n>executor</span> <span class=o>=</span> <span class=k>new</span> <span class=n>ThreadPoolTaskExecutor</span><span class=o>();</span>
-</span></span><span class=line><span class=cl>        <span class=n>executor</span><span class=o>.</span><span class=na>setCorePoolSize</span><span class=o>(</span><span class=n>2</span><span class=o>);</span>
-</span></span><span class=line><span class=cl>        <span class=n>executor</span><span class=o>.</span><span class=na>setMaxPoolSize</span><span class=o>(</span><span class=n>2</span><span class=o>);</span>
-</span></span><span class=line><span class=cl>        <span class=n>executor</span><span class=o>.</span><span class=na>setQueueCapacity</span><span class=o>(</span><span class=n>10</span><span class=o>);</span>
-</span></span><span class=line><span class=cl>        <span class=n>executor</span><span class=o>.</span><span class=na>setKeepAliveSeconds</span><span class=o>(</span><span class=n>60</span><span class=o>);</span>
+</span></span><span class=line><span class=cl>        <span class=n>executor</span><span class=o>.</span><span class=na>setCorePoolSize</span><span class=o>(</span><span class=mi>2</span><span class=o>);</span>
+</span></span><span class=line><span class=cl>        <span class=n>executor</span><span class=o>.</span><span class=na>setMaxPoolSize</span><span class=o>(</span><span class=mi>2</span><span class=o>);</span>
+</span></span><span class=line><span class=cl>        <span class=n>executor</span><span class=o>.</span><span class=na>setQueueCapacity</span><span class=o>(</span><span class=mi>10</span><span class=o>);</span>
+</span></span><span class=line><span class=cl>        <span class=n>executor</span><span class=o>.</span><span class=na>setKeepAliveSeconds</span><span class=o>(</span><span class=mi>60</span><span class=o>);</span>
 </span></span><span class=line><span class=cl>        <span class=n>executor</span><span class=o>.</span><span class=na>setThreadNamePrefix</span><span class=o>(</span><span class=s>&#34;executor-2-&#34;</span><span class=o>);</span>
 </span></span><span class=line><span class=cl>        <span class=n>executor</span><span class=o>.</span><span class=na>setRejectedExecutionHandler</span><span class=o>(</span><span class=k>new</span> <span class=n>ThreadPoolExecutor</span><span class=o>.</span><span class=na>CallerRunsPolicy</span><span class=o>());</span>
 </span></span><span class=line><span class=cl>        <span class=k>return</span> <span class=n>executor</span><span class=o>;</span>
@@ -659,7 +659,7 @@
 </span></span><span class=line><span class=cl>    <span class=kd>public</span> <span class=n>CompletableFuture</span><span class=o>&lt;</span><span class=n>String</span><span class=o>&gt;</span> <span class=nf>doTaskOne</span><span class=o>(</span><span class=n>String</span> <span class=n>taskNo</span><span class=o>)</span> <span class=kd>throws</span> <span class=n>Exception</span> <span class=o>{</span>
 </span></span><span class=line><span class=cl>        <span class=n>log</span><span class=o>.</span><span class=na>info</span><span class=o>(</span><span class=s>&#34;开始任务：{}&#34;</span><span class=o>,</span> <span class=n>taskNo</span><span class=o>);</span>
 </span></span><span class=line><span class=cl>        <span class=kt>long</span> <span class=n>start</span> <span class=o>=</span> <span class=n>System</span><span class=o>.</span><span class=na>currentTimeMillis</span><span class=o>();</span>
-</span></span><span class=line><span class=cl>        <span class=n>Thread</span><span class=o>.</span><span class=na>sleep</span><span class=o>(</span><span class=n>random</span><span class=o>.</span><span class=na>nextInt</span><span class=o>(</span><span class=n>10000</span><span class=o>));</span>
+</span></span><span class=line><span class=cl>        <span class=n>Thread</span><span class=o>.</span><span class=na>sleep</span><span class=o>(</span><span class=n>random</span><span class=o>.</span><span class=na>nextInt</span><span class=o>(</span><span class=mi>10000</span><span class=o>));</span>
 </span></span><span class=line><span class=cl>        <span class=kt>long</span> <span class=n>end</span> <span class=o>=</span> <span class=n>System</span><span class=o>.</span><span class=na>currentTimeMillis</span><span class=o>();</span>
 </span></span><span class=line><span class=cl>        <span class=n>log</span><span class=o>.</span><span class=na>info</span><span class=o>(</span><span class=s>&#34;完成任务：{}，耗时：{} 毫秒&#34;</span><span class=o>,</span> <span class=n>taskNo</span><span class=o>,</span> <span class=n>end</span> <span class=o>-</span> <span class=n>start</span><span class=o>);</span>
 </span></span><span class=line><span class=cl>        <span class=k>return</span> <span class=n>CompletableFuture</span><span class=o>.</span><span class=na>completedFuture</span><span class=o>(</span><span class=s>&#34;任务完成&#34;</span><span class=o>);</span>
@@ -669,7 +669,7 @@
 </span></span><span class=line><span class=cl>    <span class=kd>public</span> <span class=n>CompletableFuture</span><span class=o>&lt;</span><span class=n>String</span><span class=o>&gt;</span> <span class=nf>doTaskTwo</span><span class=o>(</span><span class=n>String</span> <span class=n>taskNo</span><span class=o>)</span> <span class=kd>throws</span> <span class=n>Exception</span> <span class=o>{</span>
 </span></span><span class=line><span class=cl>        <span class=n>log</span><span class=o>.</span><span class=na>info</span><span class=o>(</span><span class=s>&#34;开始任务：{}&#34;</span><span class=o>,</span> <span class=n>taskNo</span><span class=o>);</span>
 </span></span><span class=line><span class=cl>        <span class=kt>long</span> <span class=n>start</span> <span class=o>=</span> <span class=n>System</span><span class=o>.</span><span class=na>currentTimeMillis</span><span class=o>();</span>
-</span></span><span class=line><span class=cl>        <span class=n>Thread</span><span class=o>.</span><span class=na>sleep</span><span class=o>(</span><span class=n>random</span><span class=o>.</span><span class=na>nextInt</span><span class=o>(</span><span class=n>10000</span><span class=o>));</span>
+</span></span><span class=line><span class=cl>        <span class=n>Thread</span><span class=o>.</span><span class=na>sleep</span><span class=o>(</span><span class=n>random</span><span class=o>.</span><span class=na>nextInt</span><span class=o>(</span><span class=mi>10000</span><span class=o>));</span>
 </span></span><span class=line><span class=cl>        <span class=kt>long</span> <span class=n>end</span> <span class=o>=</span> <span class=n>System</span><span class=o>.</span><span class=na>currentTimeMillis</span><span class=o>();</span>
 </span></span><span class=line><span class=cl>        <span class=n>log</span><span class=o>.</span><span class=na>info</span><span class=o>(</span><span class=s>&#34;完成任务：{}，耗时：{} 毫秒&#34;</span><span class=o>,</span> <span class=n>taskNo</span><span class=o>,</span> <span class=n>end</span> <span class=o>-</span> <span class=n>start</span><span class=o>);</span>
 </span></span><span class=line><span class=cl>        <span class=k>return</span> <span class=n>CompletableFuture</span><span class=o>.</span><span class=na>completedFuture</span><span class=o>(</span><span class=s>&#34;任务完成&#34;</span><span class=o>);</span>
@@ -693,8 +693,8 @@
 </span></span><span class=line><span class=cl>    <span class=c1>// 拒绝策略的逻辑
 </span></span></span><span class=line><span class=cl><span class=c1></span><span class=o>});</span></span></span></code></pre></td></tr></table></div></div><h2 id=spring>Spring</h2><ul><li>简化数据访问的Spring Data</li><li>提供批处理能力的Spring Batch</li><li>用于保护应用安全的Spring Security</li></ul><hr><h2 id=自动装配原理>自动装配原理</h2><h3 id=主启动器>主启动器</h3><p>@SpringBootApplication</p><ul><li>@SpringBootConfiguration<ul><li>@Configuration<ul><li>@Component</li></ul></li></ul></li><li>@EnableAutoConfiguration 自动导入包🌟<ul><li>@AutoConfigurationPackage<ul><li>@Import(AutoConfigurationPackages.Registrar.class)</li></ul></li><li>@Import(AutoConfigurationImportSelector.class) 自动注册包<ul><li>getAutoConfigurationEntry(&mldr;) 获取自动配置的实体</li><li>org.springframework.boot:springboot-auto-configure/META-INF/spring.factories所有的自动配置类都在这里🌟<ul><li>XXXAutoConfiguration：向容器中自动配置组件</li><li>xxxProperties：自动配置类，装配配置文件中自定义的一些内容</li></ul></li><li>@ConditionalOnXXX 选择性生效</li></ul></li></ul></li><li>@ComponentScan 扫描当前主启动类同级的包</li></ul><p>结论：SpringBoot所有的自动配置都在启动的时候扫描并加载，只有导入对应的 start ，通过启动器自动装配才会生效。xxxConfiguration 是用于扩展的。</p><h3 id=实体类映射-yaml>实体类映射 yaml</h3><div class=highlight id=id-32><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
 </span><span class=lnt>2
-</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>@Component
-</span></span><span class=line><span class=cl>@ConfigurationProperties(prefix = &#34;spring.datasource&#34;)</span></span></code></pre></td></tr></table></div></div><p>松散绑定：last-name可以映射为 lastName
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-gdscript data-lang=gdscript><span class=line><span class=cl><span class=err>@</span><span class=n>Component</span>
+</span></span><span class=line><span class=cl><span class=err>@</span><span class=nf>ConfigurationProperties</span><span class=p>(</span><span class=n>prefix</span> <span class=o>=</span> <span class=s2>&#34;spring.datasource&#34;</span><span class=p>)</span></span></span></code></pre></td></tr></table></div></div><p>松散绑定：last-name可以映射为 lastName
 在yml中能配置的文件，都存在xxxProperties文件，在对应的xxxAutoConfiguration存在默认值</p><h3 id=静态资源>静态资源</h3><ul><li>localhost:8080/webjars/xxx</li><li>localhost:8080/xxx resources>static(默认)>public</li></ul><h3 id=thymeleaf-1>Thymeleaf</h3><p>简单的表达：</p><ul><li>变量表达式： ${&mldr;}</li><li>选择变量表达式： *{&mldr;}</li></ul><div class=highlight id=id-33><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
 </span><span class=lnt>2
 </span><span class=lnt>3
@@ -771,49 +771,49 @@
 </span><span class=lnt>41
 </span><span class=lnt>42
 </span><span class=lnt>43
-</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>@EnableWebSecurity
-</span></span><span class=line><span class=cl>public class SecurityConfig extends WebSecurityConfigurerAdapter {
-</span></span><span class=line><span class=cl>    /**
-</span></span><span class=line><span class=cl>     * 认证
-</span></span><span class=line><span class=cl>     * 在 Spring Security 5.0+ 新增了加密方法，必须使用，否则报错： There is no PasswordEncoder mapped for the id &#34;null&#34;
-</span></span><span class=line><span class=cl>     */
-</span></span><span class=line><span class=cl>    @Override
-</span></span><span class=line><span class=cl>    protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-</span></span><span class=line><span class=cl>        auth.inMemoryAuthentication().passwordEncoder(new BCryptPasswordEncoder())
-</span></span><span class=line><span class=cl>                .withUser(&#34;josh&#34;).password(new BCryptPasswordEncoder().encode(&#34;josh&#34;)).roles(&#34;vip2&#34;, &#34;vip3&#34;)
-</span></span><span class=line><span class=cl>                .and()
-</span></span><span class=line><span class=cl>                .withUser(&#34;root&#34;).password(new BCryptPasswordEncoder().encode(&#34;123456&#34;)).roles(&#34;vip1&#34;, &#34;vip2&#34;, &#34;vip3&#34;)
-</span></span><span class=line><span class=cl>                .and()
-</span></span><span class=line><span class=cl>                .withUser(&#34;guest&#34;).password(new BCryptPasswordEncoder().encode(&#34;123456&#34;)).roles(&#34;vip1&#34;);
-</span></span><span class=line><span class=cl>    }
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-gdscript data-lang=gdscript><span class=line><span class=cl><span class=err>@</span><span class=n>EnableWebSecurity</span>
+</span></span><span class=line><span class=cl><span class=n>public</span> <span class=kd>class</span> <span class=nc>SecurityConfig</span> <span class=kd>extends</span> <span class=nc>WebSecurityConfigurerAdapter</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=o>/**</span>
+</span></span><span class=line><span class=cl>     <span class=o>*</span> <span class=err>认证</span>
+</span></span><span class=line><span class=cl>     <span class=o>*</span> <span class=err>在</span> <span class=n>Spring</span> <span class=n>Security</span> <span class=mf>5.0</span><span class=o>+</span> <span class=err>新增了加密方法，必须使用，否则报错：</span> <span class=n>There</span> <span class=ow>is</span> <span class=n>no</span> <span class=n>PasswordEncoder</span> <span class=n>mapped</span> <span class=k>for</span> <span class=n>the</span> <span class=n>id</span> <span class=s2>&#34;null&#34;</span>
+</span></span><span class=line><span class=cl>     <span class=o>*/</span>
+</span></span><span class=line><span class=cl>    <span class=err>@</span><span class=n>Override</span>
+</span></span><span class=line><span class=cl>    <span class=n>protected</span> <span class=kt>void</span> <span class=nf>configure</span><span class=p>(</span><span class=n>AuthenticationManagerBuilder</span> <span class=n>auth</span><span class=p>)</span> <span class=n>throws</span> <span class=n>Exception</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=n>auth</span><span class=o>.</span><span class=nf>inMemoryAuthentication</span><span class=p>()</span><span class=o>.</span><span class=nf>passwordEncoder</span><span class=p>(</span><span class=n>new</span> <span class=nf>BCryptPasswordEncoder</span><span class=p>())</span>
+</span></span><span class=line><span class=cl>                <span class=o>.</span><span class=nf>withUser</span><span class=p>(</span><span class=s2>&#34;josh&#34;</span><span class=p>)</span><span class=o>.</span><span class=nf>password</span><span class=p>(</span><span class=n>new</span> <span class=nf>BCryptPasswordEncoder</span><span class=p>()</span><span class=o>.</span><span class=nf>encode</span><span class=p>(</span><span class=s2>&#34;josh&#34;</span><span class=p>))</span><span class=o>.</span><span class=nf>roles</span><span class=p>(</span><span class=s2>&#34;vip2&#34;</span><span class=p>,</span> <span class=s2>&#34;vip3&#34;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>                <span class=o>.</span><span class=ow>and</span><span class=p>()</span>
+</span></span><span class=line><span class=cl>                <span class=o>.</span><span class=nf>withUser</span><span class=p>(</span><span class=s2>&#34;root&#34;</span><span class=p>)</span><span class=o>.</span><span class=nf>password</span><span class=p>(</span><span class=n>new</span> <span class=nf>BCryptPasswordEncoder</span><span class=p>()</span><span class=o>.</span><span class=nf>encode</span><span class=p>(</span><span class=s2>&#34;123456&#34;</span><span class=p>))</span><span class=o>.</span><span class=nf>roles</span><span class=p>(</span><span class=s2>&#34;vip1&#34;</span><span class=p>,</span> <span class=s2>&#34;vip2&#34;</span><span class=p>,</span> <span class=s2>&#34;vip3&#34;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>                <span class=o>.</span><span class=ow>and</span><span class=p>()</span>
+</span></span><span class=line><span class=cl>                <span class=o>.</span><span class=nf>withUser</span><span class=p>(</span><span class=s2>&#34;guest&#34;</span><span class=p>)</span><span class=o>.</span><span class=nf>password</span><span class=p>(</span><span class=n>new</span> <span class=nf>BCryptPasswordEncoder</span><span class=p>()</span><span class=o>.</span><span class=nf>encode</span><span class=p>(</span><span class=s2>&#34;123456&#34;</span><span class=p>))</span><span class=o>.</span><span class=nf>roles</span><span class=p>(</span><span class=s2>&#34;vip1&#34;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
 </span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>    /**
-</span></span><span class=line><span class=cl>     * 授权
-</span></span><span class=line><span class=cl>     */
-</span></span><span class=line><span class=cl>    @Override
-</span></span><span class=line><span class=cl>    protected void configure(HttpSecurity http) throws Exception {
-</span></span><span class=line><span class=cl>        http.authorizeRequests()
-</span></span><span class=line><span class=cl>                // 首页所有人可以访问
-</span></span><span class=line><span class=cl>                .antMatchers(&#34;/&#34;).permitAll()
-</span></span><span class=line><span class=cl>                // 功能页有权限的人才能访问
-</span></span><span class=line><span class=cl>                .antMatchers(&#34;/level1/**&#34;).hasRole(&#34;vip1&#34;)
-</span></span><span class=line><span class=cl>                .antMatchers(&#34;/level2/**&#34;).hasRole(&#34;vip2&#34;)
-</span></span><span class=line><span class=cl>                .antMatchers(&#34;/level3/**&#34;).hasRole(&#34;vip3&#34;)
-</span></span><span class=line><span class=cl>                .and()
-</span></span><span class=line><span class=cl>                // 没有权限跳转登录页面
-</span></span><span class=line><span class=cl>                .formLogin().loginPage(&#34;/toLogin&#34;).loginProcessingUrl(&#34;/login&#34;)
-</span></span><span class=line><span class=cl>                .usernameParameter(&#34;user&#34;).passwordParameter(&#34;pwd&#34;)
-</span></span><span class=line><span class=cl>                .and()
-</span></span><span class=line><span class=cl>                // 开启注销功能
-</span></span><span class=line><span class=cl>                .logout().logoutSuccessUrl(&#34;/&#34;)
-</span></span><span class=line><span class=cl>                .and()
-</span></span><span class=line><span class=cl>                // 开启记住我功能 cookie 默认保存两周
-</span></span><span class=line><span class=cl>                .rememberMe().rememberMeParameter(&#34;remember&#34;)
-</span></span><span class=line><span class=cl>                .and()
-</span></span><span class=line><span class=cl>                //关闭 csrf 跨站请求脚本攻击
-</span></span><span class=line><span class=cl>                .csrf().disable();
-</span></span><span class=line><span class=cl>    }
-</span></span><span class=line><span class=cl>}</span></span></code></pre></td></tr></table></div></div><h2 id=shiro>Shiro</h2><p>Tutorial.java</p><div class=highlight id=id-37><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span></span><span class=line><span class=cl>    <span class=o>/**</span>
+</span></span><span class=line><span class=cl>     <span class=o>*</span> <span class=err>授权</span>
+</span></span><span class=line><span class=cl>     <span class=o>*/</span>
+</span></span><span class=line><span class=cl>    <span class=err>@</span><span class=n>Override</span>
+</span></span><span class=line><span class=cl>    <span class=n>protected</span> <span class=kt>void</span> <span class=nf>configure</span><span class=p>(</span><span class=n>HttpSecurity</span> <span class=n>http</span><span class=p>)</span> <span class=n>throws</span> <span class=n>Exception</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=n>http</span><span class=o>.</span><span class=nf>authorizeRequests</span><span class=p>()</span>
+</span></span><span class=line><span class=cl>                <span class=o>//</span> <span class=err>首页所有人可以访问</span>
+</span></span><span class=line><span class=cl>                <span class=o>.</span><span class=nf>antMatchers</span><span class=p>(</span><span class=s2>&#34;/&#34;</span><span class=p>)</span><span class=o>.</span><span class=nf>permitAll</span><span class=p>()</span>
+</span></span><span class=line><span class=cl>                <span class=o>//</span> <span class=err>功能页有权限的人才能访问</span>
+</span></span><span class=line><span class=cl>                <span class=o>.</span><span class=nf>antMatchers</span><span class=p>(</span><span class=s2>&#34;/level1/**&#34;</span><span class=p>)</span><span class=o>.</span><span class=nf>hasRole</span><span class=p>(</span><span class=s2>&#34;vip1&#34;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>                <span class=o>.</span><span class=nf>antMatchers</span><span class=p>(</span><span class=s2>&#34;/level2/**&#34;</span><span class=p>)</span><span class=o>.</span><span class=nf>hasRole</span><span class=p>(</span><span class=s2>&#34;vip2&#34;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>                <span class=o>.</span><span class=nf>antMatchers</span><span class=p>(</span><span class=s2>&#34;/level3/**&#34;</span><span class=p>)</span><span class=o>.</span><span class=nf>hasRole</span><span class=p>(</span><span class=s2>&#34;vip3&#34;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>                <span class=o>.</span><span class=ow>and</span><span class=p>()</span>
+</span></span><span class=line><span class=cl>                <span class=o>//</span> <span class=err>没有权限跳转登录页面</span>
+</span></span><span class=line><span class=cl>                <span class=o>.</span><span class=nf>formLogin</span><span class=p>()</span><span class=o>.</span><span class=nf>loginPage</span><span class=p>(</span><span class=s2>&#34;/toLogin&#34;</span><span class=p>)</span><span class=o>.</span><span class=nf>loginProcessingUrl</span><span class=p>(</span><span class=s2>&#34;/login&#34;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>                <span class=o>.</span><span class=nf>usernameParameter</span><span class=p>(</span><span class=s2>&#34;user&#34;</span><span class=p>)</span><span class=o>.</span><span class=nf>passwordParameter</span><span class=p>(</span><span class=s2>&#34;pwd&#34;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>                <span class=o>.</span><span class=ow>and</span><span class=p>()</span>
+</span></span><span class=line><span class=cl>                <span class=o>//</span> <span class=err>开启注销功能</span>
+</span></span><span class=line><span class=cl>                <span class=o>.</span><span class=nf>logout</span><span class=p>()</span><span class=o>.</span><span class=nf>logoutSuccessUrl</span><span class=p>(</span><span class=s2>&#34;/&#34;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>                <span class=o>.</span><span class=ow>and</span><span class=p>()</span>
+</span></span><span class=line><span class=cl>                <span class=o>//</span> <span class=err>开启记住我功能</span> <span class=n>cookie</span> <span class=err>默认保存两周</span>
+</span></span><span class=line><span class=cl>                <span class=o>.</span><span class=nf>rememberMe</span><span class=p>()</span><span class=o>.</span><span class=nf>rememberMeParameter</span><span class=p>(</span><span class=s2>&#34;remember&#34;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>                <span class=o>.</span><span class=ow>and</span><span class=p>()</span>
+</span></span><span class=line><span class=cl>                <span class=o>//</span><span class=err>关闭</span> <span class=n>csrf</span> <span class=err>跨站请求脚本攻击</span>
+</span></span><span class=line><span class=cl>                <span class=o>.</span><span class=nf>csrf</span><span class=p>()</span><span class=o>.</span><span class=nf>disable</span><span class=p>();</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=p>}</span></span></span></code></pre></td></tr></table></div></div><h2 id=shiro>Shiro</h2><p>Tutorial.java</p><div class=highlight id=id-37><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
 </span><span class=lnt> 2
 </span><span class=lnt> 3
 </span><span class=lnt> 4
@@ -975,59 +975,59 @@
 </span><span class=lnt>51
 </span><span class=lnt>52
 </span><span class=lnt>53
-</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>@Configuration
-</span></span><span class=line><span class=cl>public class ShiroConfig {
-</span></span><span class=line><span class=cl>    // 1、创建 realm 对象，需要自定义
-</span></span><span class=line><span class=cl>    @Bean(name = &#34;userRealm&#34;)
-</span></span><span class=line><span class=cl>    public UserRealm userRealm() {
-</span></span><span class=line><span class=cl>        return new UserRealm();
-</span></span><span class=line><span class=cl>    }
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-gdscript data-lang=gdscript><span class=line><span class=cl><span class=err>@</span><span class=n>Configuration</span>
+</span></span><span class=line><span class=cl><span class=n>public</span> <span class=kd>class</span> <span class=nc>ShiroConfig</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=o>//</span> <span class=mi>1</span><span class=err>、创建</span> <span class=n>realm</span> <span class=err>对象，需要自定义</span>
+</span></span><span class=line><span class=cl>    <span class=err>@</span><span class=nf>Bean</span><span class=p>(</span><span class=n>name</span> <span class=o>=</span> <span class=s2>&#34;userRealm&#34;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=n>public</span> <span class=n>UserRealm</span> <span class=nf>userRealm</span><span class=p>()</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=k>return</span> <span class=n>new</span> <span class=nf>UserRealm</span><span class=p>();</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
 </span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>    //2、 DefaultWebSecurityManager
-</span></span><span class=line><span class=cl>    @Bean(name = &#34;defaultWebSecurityManager&#34;)
-</span></span><span class=line><span class=cl>    public DefaultWebSecurityManager getDefaultWebSecurityManager(@Qualifier(&#34;userRealm&#34;) UserRealm userRealm) {
-</span></span><span class=line><span class=cl>        DefaultWebSecurityManager defaultWebSecurityManager = new DefaultWebSecurityManager();
-</span></span><span class=line><span class=cl>        // 关联 userRealm
-</span></span><span class=line><span class=cl>        defaultWebSecurityManager.setRealm(userRealm);
-</span></span><span class=line><span class=cl>        return defaultWebSecurityManager;
-</span></span><span class=line><span class=cl>    }
+</span></span><span class=line><span class=cl>    <span class=o>//</span><span class=mi>2</span><span class=err>、</span> <span class=n>DefaultWebSecurityManager</span>
+</span></span><span class=line><span class=cl>    <span class=err>@</span><span class=nf>Bean</span><span class=p>(</span><span class=n>name</span> <span class=o>=</span> <span class=s2>&#34;defaultWebSecurityManager&#34;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=n>public</span> <span class=n>DefaultWebSecurityManager</span> <span class=nf>getDefaultWebSecurityManager</span><span class=p>(</span><span class=err>@</span><span class=nf>Qualifier</span><span class=p>(</span><span class=s2>&#34;userRealm&#34;</span><span class=p>)</span> <span class=n>UserRealm</span> <span class=n>userRealm</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=n>DefaultWebSecurityManager</span> <span class=n>defaultWebSecurityManager</span> <span class=o>=</span> <span class=n>new</span> <span class=nf>DefaultWebSecurityManager</span><span class=p>();</span>
+</span></span><span class=line><span class=cl>        <span class=o>//</span> <span class=err>关联</span> <span class=n>userRealm</span>
+</span></span><span class=line><span class=cl>        <span class=n>defaultWebSecurityManager</span><span class=o>.</span><span class=nf>setRealm</span><span class=p>(</span><span class=n>userRealm</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>        <span class=k>return</span> <span class=n>defaultWebSecurityManager</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
 </span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>    //3、 ShiroFilterFactoryBean
-</span></span><span class=line><span class=cl>    @Bean
-</span></span><span class=line><span class=cl>    public ShiroFilterFactoryBean getShiroFilterFactoryBean(@Qualifier(&#34;defaultWebSecurityManager&#34;) DefaultWebSecurityManager defaultWebSecurityManager) {
-</span></span><span class=line><span class=cl>        ShiroFilterFactoryBean bean = new ShiroFilterFactoryBean();
-</span></span><span class=line><span class=cl>        //   设置安全管理器
-</span></span><span class=line><span class=cl>        bean.setSecurityManager(defaultWebSecurityManager);
+</span></span><span class=line><span class=cl>    <span class=o>//</span><span class=mi>3</span><span class=err>、</span> <span class=n>ShiroFilterFactoryBean</span>
+</span></span><span class=line><span class=cl>    <span class=err>@</span><span class=n>Bean</span>
+</span></span><span class=line><span class=cl>    <span class=n>public</span> <span class=n>ShiroFilterFactoryBean</span> <span class=nf>getShiroFilterFactoryBean</span><span class=p>(</span><span class=err>@</span><span class=nf>Qualifier</span><span class=p>(</span><span class=s2>&#34;defaultWebSecurityManager&#34;</span><span class=p>)</span> <span class=n>DefaultWebSecurityManager</span> <span class=n>defaultWebSecurityManager</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=n>ShiroFilterFactoryBean</span> <span class=n>bean</span> <span class=o>=</span> <span class=n>new</span> <span class=nf>ShiroFilterFactoryBean</span><span class=p>();</span>
+</span></span><span class=line><span class=cl>        <span class=o>//</span>   <span class=err>设置安全管理器</span>
+</span></span><span class=line><span class=cl>        <span class=n>bean</span><span class=o>.</span><span class=nf>setSecurityManager</span><span class=p>(</span><span class=n>defaultWebSecurityManager</span><span class=p>);</span>
 </span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>        // 添加 Shiro 的内置过滤器
-</span></span><span class=line><span class=cl>        /**
-</span></span><span class=line><span class=cl>         * anon：无需认证就可以访问
-</span></span><span class=line><span class=cl>         * authc：必须认证才能访问
-</span></span><span class=line><span class=cl>         * user：必须拥有&#34;记住我&#34;功能才能访问
-</span></span><span class=line><span class=cl>         * perms：必须拥有对某个资源对权限才能访问
-</span></span><span class=line><span class=cl>         * role：必须拥有某个角色权限才能访问
-</span></span><span class=line><span class=cl>         */
+</span></span><span class=line><span class=cl>        <span class=o>//</span> <span class=err>添加</span> <span class=n>Shiro</span> <span class=err>的内置过滤器</span>
+</span></span><span class=line><span class=cl>        <span class=o>/**</span>
+</span></span><span class=line><span class=cl>         <span class=o>*</span> <span class=n>anon</span><span class=err>：无需认证就可以访问</span>
+</span></span><span class=line><span class=cl>         <span class=o>*</span> <span class=n>authc</span><span class=err>：必须认证才能访问</span>
+</span></span><span class=line><span class=cl>         <span class=o>*</span> <span class=n>user</span><span class=err>：必须拥有</span><span class=s2>&#34;记住我&#34;</span><span class=err>功能才能访问</span>
+</span></span><span class=line><span class=cl>         <span class=o>*</span> <span class=n>perms</span><span class=err>：必须拥有对某个资源对权限才能访问</span>
+</span></span><span class=line><span class=cl>         <span class=o>*</span> <span class=n>role</span><span class=err>：必须拥有某个角色权限才能访问</span>
+</span></span><span class=line><span class=cl>         <span class=o>*/</span>
 </span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>        Map&lt;String ,String &gt; filterChainDefinitionMap = new HashMap&lt;&gt;();
-</span></span><span class=line><span class=cl>        filterChainDefinitionMap.put(&#34;/userList&#34;,&#34;authc&#34;);
-</span></span><span class=line><span class=cl>        filterChainDefinitionMap.put(&#34;/user/add&#34;,&#34;perms[user:add&#34;);
-</span></span><span class=line><span class=cl>        bean.setFilterChainDefinitionMap(filterChainDefinitionMap);
+</span></span><span class=line><span class=cl>        <span class=n>Map</span><span class=o>&lt;</span><span class=nc>String</span> <span class=p>,</span><span class=nc>String</span> <span class=o>&gt;</span> <span class=n>filterChainDefinitionMap</span> <span class=o>=</span> <span class=n>new</span> <span class=n>HashMap</span><span class=o>&lt;&gt;</span><span class=p>();</span>
+</span></span><span class=line><span class=cl>        <span class=n>filterChainDefinitionMap</span><span class=o>.</span><span class=nf>put</span><span class=p>(</span><span class=s2>&#34;/userList&#34;</span><span class=p>,</span><span class=s2>&#34;authc&#34;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>        <span class=n>filterChainDefinitionMap</span><span class=o>.</span><span class=nf>put</span><span class=p>(</span><span class=s2>&#34;/user/add&#34;</span><span class=p>,</span><span class=s2>&#34;perms[user:add&#34;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>        <span class=n>bean</span><span class=o>.</span><span class=nf>setFilterChainDefinitionMap</span><span class=p>(</span><span class=n>filterChainDefinitionMap</span><span class=p>);</span>
 </span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>        // 登录对请求
-</span></span><span class=line><span class=cl>        bean.setLoginUrl(&#34;/toLogin&#34;);
-</span></span><span class=line><span class=cl>        // 未授权页面
-</span></span><span class=line><span class=cl>        bean.setUnauthorizedUrl(&#34;/noauth&#34;);
+</span></span><span class=line><span class=cl>        <span class=o>//</span> <span class=err>登录对请求</span>
+</span></span><span class=line><span class=cl>        <span class=n>bean</span><span class=o>.</span><span class=nf>setLoginUrl</span><span class=p>(</span><span class=s2>&#34;/toLogin&#34;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>        <span class=o>//</span> <span class=err>未授权页面</span>
+</span></span><span class=line><span class=cl>        <span class=n>bean</span><span class=o>.</span><span class=nf>setUnauthorizedUrl</span><span class=p>(</span><span class=s2>&#34;/noauth&#34;</span><span class=p>);</span>
 </span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>        return bean;
-</span></span><span class=line><span class=cl>    }
+</span></span><span class=line><span class=cl>        <span class=k>return</span> <span class=n>bean</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
 </span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>    // 4. 整合 shiro 和 thymeleaf
-</span></span><span class=line><span class=cl>    @Bean
-</span></span><span class=line><span class=cl>    public ShiroDialect getShiroDialect(){
-</span></span><span class=line><span class=cl>        return new ShiroDialect();
-</span></span><span class=line><span class=cl>    }
-</span></span><span class=line><span class=cl>}</span></span></code></pre></td></tr></table></div></div><p>UserRealm</p><div class=highlight id=id-39><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
+</span></span><span class=line><span class=cl>    <span class=o>//</span> <span class=mf>4.</span> <span class=err>整合</span> <span class=n>shiro</span> <span class=err>和</span> <span class=n>thymeleaf</span>
+</span></span><span class=line><span class=cl>    <span class=err>@</span><span class=n>Bean</span>
+</span></span><span class=line><span class=cl>    <span class=n>public</span> <span class=n>ShiroDialect</span> <span class=nf>getShiroDialect</span><span class=p>(){</span>
+</span></span><span class=line><span class=cl>        <span class=k>return</span> <span class=n>new</span> <span class=nf>ShiroDialect</span><span class=p>();</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=p>}</span></span></span></code></pre></td></tr></table></div></div><p>UserRealm</p><div class=highlight id=id-39><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt> 1
 </span><span class=lnt> 2
 </span><span class=lnt> 3
 </span><span class=lnt> 4
@@ -1146,58 +1146,58 @@
 </span><span class=lnt>50
 </span><span class=lnt>51
 </span><span class=lnt>52
-</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>@Configuration
-</span></span><span class=line><span class=cl>@EnableSwagger2
-</span></span><span class=line><span class=cl>public class SwaggerConfig {
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-gdscript data-lang=gdscript><span class=line><span class=cl><span class=err>@</span><span class=n>Configuration</span>
+</span></span><span class=line><span class=cl><span class=err>@</span><span class=n>EnableSwagger2</span>
+</span></span><span class=line><span class=cl><span class=n>public</span> <span class=kd>class</span> <span class=nc>SwaggerConfig</span> <span class=p>{</span>
 </span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>    @Bean
-</span></span><span class=line><span class=cl>    public Docket docket(Environment environment) {
-</span></span><span class=line><span class=cl>        // 设置要显示的 Swagger 环境 
-</span></span><span class=line><span class=cl>        Profiles profiles = Profiles.of(&#34;dev&#34;, &#34;test&#34;);
-</span></span><span class=line><span class=cl>        // 获取项目的环境
-</span></span><span class=line><span class=cl>        final boolean flag = environment.acceptsProfiles(profiles);
-</span></span><span class=line><span class=cl>        1
-</span></span><span class=line><span class=cl>        return new Docket(DocumentationType.SWAGGER_2)
-</span></span><span class=line><span class=cl>                .apiInfo(apiInfo())
-</span></span><span class=line><span class=cl>                .groupName(&#34;A&#34;)
-</span></span><span class=line><span class=cl>                .enable(flag)
-</span></span><span class=line><span class=cl>                .select()
-</span></span><span class=line><span class=cl>                // basePackage：指定要扫描的包
-</span></span><span class=line><span class=cl>                .apis(RequestHandlerSelectors.basePackage(&#34;edu.zjut.demospringboot.controller&#34;))
-</span></span><span class=line><span class=cl>                // withMethodAnnotation：只扫描限定方法注解
-</span></span><span class=line><span class=cl>                .apis(RequestHandlerSelectors.withMethodAnnotation(RestController.class))
-</span></span><span class=line><span class=cl>                // ant：只扫描指定路由路径
-</span></span><span class=line><span class=cl>                .paths(PathSelectors.ant(&#34;/hello/**&#34;))
-</span></span><span class=line><span class=cl>                .build();
-</span></span><span class=line><span class=cl>    }
+</span></span><span class=line><span class=cl>    <span class=err>@</span><span class=n>Bean</span>
+</span></span><span class=line><span class=cl>    <span class=n>public</span> <span class=n>Docket</span> <span class=nf>docket</span><span class=p>(</span><span class=nc>Environment</span> <span class=n>environment</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=o>//</span> <span class=err>设置要显示的</span> <span class=n>Swagger</span> <span class=err>环境</span> 
+</span></span><span class=line><span class=cl>        <span class=n>Profiles</span> <span class=n>profiles</span> <span class=o>=</span> <span class=n>Profiles</span><span class=o>.</span><span class=nf>of</span><span class=p>(</span><span class=s2>&#34;dev&#34;</span><span class=p>,</span> <span class=s2>&#34;test&#34;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>        <span class=o>//</span> <span class=err>获取项目的环境</span>
+</span></span><span class=line><span class=cl>        <span class=n>final</span> <span class=n>boolean</span> <span class=n>flag</span> <span class=o>=</span> <span class=n>environment</span><span class=o>.</span><span class=nf>acceptsProfiles</span><span class=p>(</span><span class=n>profiles</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>        <span class=mi>1</span>
+</span></span><span class=line><span class=cl>        <span class=k>return</span> <span class=n>new</span> <span class=nf>Docket</span><span class=p>(</span><span class=n>DocumentationType</span><span class=o>.</span><span class=n>SWAGGER_2</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>                <span class=o>.</span><span class=nf>apiInfo</span><span class=p>(</span><span class=nf>apiInfo</span><span class=p>())</span>
+</span></span><span class=line><span class=cl>                <span class=o>.</span><span class=nf>groupName</span><span class=p>(</span><span class=s2>&#34;A&#34;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>                <span class=o>.</span><span class=nf>enable</span><span class=p>(</span><span class=n>flag</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>                <span class=o>.</span><span class=nf>select</span><span class=p>()</span>
+</span></span><span class=line><span class=cl>                <span class=o>//</span> <span class=n>basePackage</span><span class=err>：指定要扫描的包</span>
+</span></span><span class=line><span class=cl>                <span class=o>.</span><span class=nf>apis</span><span class=p>(</span><span class=n>RequestHandlerSelectors</span><span class=o>.</span><span class=nf>basePackage</span><span class=p>(</span><span class=s2>&#34;edu.zjut.demospringboot.controller&#34;</span><span class=p>))</span>
+</span></span><span class=line><span class=cl>                <span class=o>//</span> <span class=n>withMethodAnnotation</span><span class=err>：只扫描限定方法注解</span>
+</span></span><span class=line><span class=cl>                <span class=o>.</span><span class=nf>apis</span><span class=p>(</span><span class=n>RequestHandlerSelectors</span><span class=o>.</span><span class=nf>withMethodAnnotation</span><span class=p>(</span><span class=n>RestController</span><span class=o>.</span><span class=n>class</span><span class=p>))</span>
+</span></span><span class=line><span class=cl>                <span class=o>//</span> <span class=n>ant</span><span class=err>：只扫描指定路由路径</span>
+</span></span><span class=line><span class=cl>                <span class=o>.</span><span class=nf>paths</span><span class=p>(</span><span class=n>PathSelectors</span><span class=o>.</span><span class=nf>ant</span><span class=p>(</span><span class=s2>&#34;/hello/**&#34;</span><span class=p>))</span>
+</span></span><span class=line><span class=cl>                <span class=o>.</span><span class=nf>build</span><span class=p>();</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
 </span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>    @Bean
-</span></span><span class=line><span class=cl>    public Docket docket2(Environment environment) {
-</span></span><span class=line><span class=cl>        return new Docket(DocumentationType.SWAGGER_2)
-</span></span><span class=line><span class=cl>                .apiInfo(apiInfo())
-</span></span><span class=line><span class=cl>                .groupName(&#34;B&#34;);
-</span></span><span class=line><span class=cl>    }
+</span></span><span class=line><span class=cl>    <span class=err>@</span><span class=n>Bean</span>
+</span></span><span class=line><span class=cl>    <span class=n>public</span> <span class=n>Docket</span> <span class=nf>docket2</span><span class=p>(</span><span class=nc>Environment</span> <span class=n>environment</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=k>return</span> <span class=n>new</span> <span class=nf>Docket</span><span class=p>(</span><span class=n>DocumentationType</span><span class=o>.</span><span class=n>SWAGGER_2</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>                <span class=o>.</span><span class=nf>apiInfo</span><span class=p>(</span><span class=nf>apiInfo</span><span class=p>())</span>
+</span></span><span class=line><span class=cl>                <span class=o>.</span><span class=nf>groupName</span><span class=p>(</span><span class=s2>&#34;B&#34;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
 </span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>    @Bean
-</span></span><span class=line><span class=cl>    public Docket docket3(Environment environment) {
-</span></span><span class=line><span class=cl>        return new Docket(DocumentationType.SWAGGER_2)
-</span></span><span class=line><span class=cl>                .apiInfo(apiInfo())
-</span></span><span class=line><span class=cl>                .groupName(&#34;C&#34;);
-</span></span><span class=line><span class=cl>    }
+</span></span><span class=line><span class=cl>    <span class=err>@</span><span class=n>Bean</span>
+</span></span><span class=line><span class=cl>    <span class=n>public</span> <span class=n>Docket</span> <span class=nf>docket3</span><span class=p>(</span><span class=nc>Environment</span> <span class=n>environment</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=k>return</span> <span class=n>new</span> <span class=nf>Docket</span><span class=p>(</span><span class=n>DocumentationType</span><span class=o>.</span><span class=n>SWAGGER_2</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>                <span class=o>.</span><span class=nf>apiInfo</span><span class=p>(</span><span class=nf>apiInfo</span><span class=p>())</span>
+</span></span><span class=line><span class=cl>                <span class=o>.</span><span class=nf>groupName</span><span class=p>(</span><span class=s2>&#34;C&#34;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
 </span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>    private ApiInfo apiInfo() {
-</span></span><span class=line><span class=cl>        return new ApiInfo(
-</span></span><span class=line><span class=cl>                &#34;xxxxAPI文档&#34;,
-</span></span><span class=line><span class=cl>                &#34;文档描述&#34;,
-</span></span><span class=line><span class=cl>                &#34;v1.0&#34;,
-</span></span><span class=line><span class=cl>                &#34;zjut&#34;,
-</span></span><span class=line><span class=cl>                new Contact(&#34;josh&#34;, &#34;&#34;, &#34;dujianghui537885@163.com&#34;),
-</span></span><span class=line><span class=cl>                &#34;Apach 2.0&#34;,
-</span></span><span class=line><span class=cl>                &#34;http://www.apache.org/licenses/LICENSE-2.0&#34;,
-</span></span><span class=line><span class=cl>                new ArrayList&lt;&gt;());
-</span></span><span class=line><span class=cl>    }
-</span></span><span class=line><span class=cl>}</span></span></code></pre></td></tr></table></div></div><p>注意：在正式发布的时候，关闭Swagger！</p><h2 id=邮件发送>邮件发送</h2><div class=highlight id=id-41><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></span><span class=line><span class=cl>    <span class=n>private</span> <span class=n>ApiInfo</span> <span class=nf>apiInfo</span><span class=p>()</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=k>return</span> <span class=n>new</span> <span class=nf>ApiInfo</span><span class=p>(</span>
+</span></span><span class=line><span class=cl>                <span class=s2>&#34;xxxxAPI文档&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>                <span class=s2>&#34;文档描述&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>                <span class=s2>&#34;v1.0&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>                <span class=s2>&#34;zjut&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>                <span class=n>new</span> <span class=nf>Contact</span><span class=p>(</span><span class=s2>&#34;josh&#34;</span><span class=p>,</span> <span class=s2>&#34;&#34;</span><span class=p>,</span> <span class=s2>&#34;dujianghui537885@163.com&#34;</span><span class=p>),</span>
+</span></span><span class=line><span class=cl>                <span class=s2>&#34;Apach 2.0&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>                <span class=s2>&#34;http://www.apache.org/licenses/LICENSE-2.0&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>                <span class=n>new</span> <span class=n>ArrayList</span><span class=o>&lt;&gt;</span><span class=p>());</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=p>}</span></span></span></code></pre></td></tr></table></div></div><p>注意：在正式发布的时候，关闭Swagger！</p><h2 id=邮件发送>邮件发送</h2><div class=highlight id=id-41><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
 </span><span class=lnt>2
 </span><span class=lnt>3
 </span><span class=lnt>4
@@ -1235,37 +1235,37 @@
 </span><span class=lnt>29
 </span><span class=lnt>30
 </span><span class=lnt>31
-</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>@Autowired
-</span></span><span class=line><span class=cl>private JavaMailSenderImpl mailSender;
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-gdscript data-lang=gdscript><span class=line><span class=cl><span class=err>@</span><span class=n>Autowired</span>
+</span></span><span class=line><span class=cl><span class=n>private</span> <span class=n>JavaMailSenderImpl</span> <span class=n>mailSender</span><span class=p>;</span>
 </span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>/**
-</span></span><span class=line><span class=cl> * 简单邮件发送
-</span></span><span class=line><span class=cl> */
-</span></span><span class=line><span class=cl>@Test
-</span></span><span class=line><span class=cl>void simpleMailMessage() {
+</span></span><span class=line><span class=cl><span class=o>/**</span>
+</span></span><span class=line><span class=cl> <span class=o>*</span> <span class=err>简单邮件发送</span>
+</span></span><span class=line><span class=cl> <span class=o>*/</span>
+</span></span><span class=line><span class=cl><span class=err>@</span><span class=n>Test</span>
+</span></span><span class=line><span class=cl><span class=kt>void</span> <span class=nf>simpleMailMessage</span><span class=p>()</span> <span class=p>{</span>
 </span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>    SimpleMailMessage simpleMailMessage = new SimpleMailMessage();
-</span></span><span class=line><span class=cl>    simpleMailMessage.setSubject(&#34;你好呀～&#34;);
-</span></span><span class=line><span class=cl>    simpleMailMessage.setText(&#34;测试一下邮箱&#34;);
-</span></span><span class=line><span class=cl>    simpleMailMessage.setTo(&#34;2869314652@qq.com&#34;);
-</span></span><span class=line><span class=cl>    simpleMailMessage.setFrom(&#34;2869314652@qq.com&#34;);
-</span></span><span class=line><span class=cl>    mailSender.send(simpleMailMessage);
-</span></span><span class=line><span class=cl>}
+</span></span><span class=line><span class=cl>    <span class=n>SimpleMailMessage</span> <span class=n>simpleMailMessage</span> <span class=o>=</span> <span class=n>new</span> <span class=nf>SimpleMailMessage</span><span class=p>();</span>
+</span></span><span class=line><span class=cl>    <span class=n>simpleMailMessage</span><span class=o>.</span><span class=nf>setSubject</span><span class=p>(</span><span class=s2>&#34;你好呀～&#34;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>    <span class=n>simpleMailMessage</span><span class=o>.</span><span class=nf>setText</span><span class=p>(</span><span class=s2>&#34;测试一下邮箱&#34;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>    <span class=n>simpleMailMessage</span><span class=o>.</span><span class=nf>setTo</span><span class=p>(</span><span class=s2>&#34;2869314652@qq.com&#34;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>    <span class=n>simpleMailMessage</span><span class=o>.</span><span class=nf>setFrom</span><span class=p>(</span><span class=s2>&#34;2869314652@qq.com&#34;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>    <span class=n>mailSender</span><span class=o>.</span><span class=nf>send</span><span class=p>(</span><span class=n>simpleMailMessage</span><span class=p>);</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
 </span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>/**
-</span></span><span class=line><span class=cl> * 复杂邮件发送
-</span></span><span class=line><span class=cl> * @throws MessagingException
-</span></span><span class=line><span class=cl> */
-</span></span><span class=line><span class=cl>@Test
-</span></span><span class=line><span class=cl>void mimeMessage() throws MessagingException {
-</span></span><span class=line><span class=cl>    final MimeMessage mimeMessage = mailSender.createMimeMessage();
-</span></span><span class=line><span class=cl>    final MimeMessageHelper helper = new MimeMessageHelper(mimeMessage,true);
-</span></span><span class=line><span class=cl>    helper.setSubject(&#34;你好呀～plus&#34;);
-</span></span><span class=line><span class=cl>    helper.setText(&#34;&lt;p style=&#39;color:red&#39;&gt;测试一下邮箱&lt;/p&gt;&#34;,true);
-</span></span><span class=line><span class=cl>    helper.setTo(&#34;2869314652@qq.com&#34;);
-</span></span><span class=line><span class=cl>    helper.setFrom(&#34;2869314652@qq.com&#34;);
-</span></span><span class=line><span class=cl>    mailSender.send(mimeMessage);
-</span></span><span class=line><span class=cl>}</span></span></code></pre></td></tr></table></div></div><h2 id=任务调度>任务调度</h2><ul><li>TaskScheduler：任务调度者</li><li>TaskExecutor：任务执行者</li><li>EnableScheduling：开启定时功能的注解</li><li>Scheduled：什么时候执行</li><li>Cron 表达式</li></ul><div class=highlight id=id-43><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
+</span></span><span class=line><span class=cl><span class=o>/**</span>
+</span></span><span class=line><span class=cl> <span class=o>*</span> <span class=err>复杂邮件发送</span>
+</span></span><span class=line><span class=cl> <span class=o>*</span> <span class=err>@</span><span class=n>throws</span> <span class=n>MessagingException</span>
+</span></span><span class=line><span class=cl> <span class=o>*/</span>
+</span></span><span class=line><span class=cl><span class=err>@</span><span class=n>Test</span>
+</span></span><span class=line><span class=cl><span class=kt>void</span> <span class=nf>mimeMessage</span><span class=p>()</span> <span class=n>throws</span> <span class=n>MessagingException</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=n>final</span> <span class=n>MimeMessage</span> <span class=n>mimeMessage</span> <span class=o>=</span> <span class=n>mailSender</span><span class=o>.</span><span class=nf>createMimeMessage</span><span class=p>();</span>
+</span></span><span class=line><span class=cl>    <span class=n>final</span> <span class=n>MimeMessageHelper</span> <span class=n>helper</span> <span class=o>=</span> <span class=n>new</span> <span class=nf>MimeMessageHelper</span><span class=p>(</span><span class=n>mimeMessage</span><span class=p>,</span><span class=kc>true</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>    <span class=n>helper</span><span class=o>.</span><span class=nf>setSubject</span><span class=p>(</span><span class=s2>&#34;你好呀～plus&#34;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>    <span class=n>helper</span><span class=o>.</span><span class=nf>setText</span><span class=p>(</span><span class=s2>&#34;&lt;p style=&#39;color:red&#39;&gt;测试一下邮箱&lt;/p&gt;&#34;</span><span class=p>,</span><span class=kc>true</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>    <span class=n>helper</span><span class=o>.</span><span class=nf>setTo</span><span class=p>(</span><span class=s2>&#34;2869314652@qq.com&#34;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>    <span class=n>helper</span><span class=o>.</span><span class=nf>setFrom</span><span class=p>(</span><span class=s2>&#34;2869314652@qq.com&#34;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>    <span class=n>mailSender</span><span class=o>.</span><span class=nf>send</span><span class=p>(</span><span class=n>mimeMessage</span><span class=p>);</span>
+</span></span><span class=line><span class=cl><span class=p>}</span></span></span></code></pre></td></tr></table></div></div><h2 id=任务调度>任务调度</h2><ul><li>TaskScheduler：任务调度者</li><li>TaskExecutor：任务执行者</li><li>EnableScheduling：开启定时功能的注解</li><li>Scheduled：什么时候执行</li><li>Cron 表达式</li></ul><div class=highlight id=id-43><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
 </span><span class=lnt>2
 </span><span class=lnt>3
 </span><span class=lnt>4
@@ -1273,14 +1273,14 @@
 </span><span class=lnt>6
 </span><span class=lnt>7
 </span><span class=lnt>8
-</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>@Service
-</span></span><span class=line><span class=cl>public class ScheduledService {
-</span></span><span class=line><span class=cl>    // 秒 分 时 日 月 周 年
-</span></span><span class=line><span class=cl>    @Scheduled(cron = &#34;0/3 * * * * ?&#34;)
-</span></span><span class=line><span class=cl>    public void hello(){
-</span></span><span class=line><span class=cl>        System.out.println(&#34;Scheduled.......&#34;);
-</span></span><span class=line><span class=cl>    }
-</span></span><span class=line><span class=cl>}</span></span></code></pre></td></tr></table></div></div><h2 id=redis-1>Redis</h2><p>底层从 jedis 变为 lettuce
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-gdscript data-lang=gdscript><span class=line><span class=cl><span class=err>@</span><span class=n>Service</span>
+</span></span><span class=line><span class=cl><span class=n>public</span> <span class=kd>class</span> <span class=nc>ScheduledService</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=o>//</span> <span class=err>秒</span> <span class=err>分</span> <span class=err>时</span> <span class=err>日</span> <span class=err>月</span> <span class=err>周</span> <span class=err>年</span>
+</span></span><span class=line><span class=cl>    <span class=err>@</span><span class=nf>Scheduled</span><span class=p>(</span><span class=n>cron</span> <span class=o>=</span> <span class=s2>&#34;0/3 * * * * ?&#34;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=n>public</span> <span class=kt>void</span> <span class=nf>hello</span><span class=p>(){</span>
+</span></span><span class=line><span class=cl>        <span class=n>System</span><span class=o>.</span><span class=n>out</span><span class=o>.</span><span class=nf>println</span><span class=p>(</span><span class=s2>&#34;Scheduled.......&#34;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=p>}</span></span></span></code></pre></td></tr></table></div></div><h2 id=redis-1>Redis</h2><p>底层从 jedis 变为 lettuce
 jedis：采用的直连，不安全，除非使用 jedis pool 线程池，类似 BIO
 lettuce：采用 netty，实例可以在多个线程中共享，安全，可以减少线程数据，类似 NIO
 pom.xml</p><div class=highlight id=id-44><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>1
@@ -1327,33 +1327,33 @@ pom.xml</p><div class=highlight id=id-44><div class=chroma><table class=lntable>
 </span><span class=lnt>25
 </span><span class=lnt>26
 </span><span class=lnt>27
-</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>@Configuration
-</span></span><span class=line><span class=cl>public class RedisConfig {
-</span></span><span class=line><span class=cl>    @Bean
-</span></span><span class=line><span class=cl>    @SuppressWarnings(&#34;all&#34;)
-</span></span><span class=line><span class=cl>    public RedisTemplate&lt;String, Object&gt; redisTemplate(RedisConnectionFactory redisConnectionFactory) {
-</span></span><span class=line><span class=cl>        RedisTemplate&lt;String, Object&gt; template = new RedisTemplate();
-</span></span><span class=line><span class=cl>        template.setConnectionFactory(redisConnectionFactory);
+</span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-gdscript data-lang=gdscript><span class=line><span class=cl><span class=err>@</span><span class=n>Configuration</span>
+</span></span><span class=line><span class=cl><span class=n>public</span> <span class=kd>class</span> <span class=nc>RedisConfig</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=err>@</span><span class=n>Bean</span>
+</span></span><span class=line><span class=cl>    <span class=err>@</span><span class=nf>SuppressWarnings</span><span class=p>(</span><span class=s2>&#34;all&#34;</span><span class=p>)</span>
+</span></span><span class=line><span class=cl>    <span class=n>public</span> <span class=n>RedisTemplate</span><span class=o>&lt;</span><span class=nc>String</span><span class=p>,</span> <span class=nc>Object</span><span class=o>&gt;</span> <span class=nf>redisTemplate</span><span class=p>(</span><span class=n>RedisConnectionFactory</span> <span class=n>redisConnectionFactory</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=n>RedisTemplate</span><span class=o>&lt;</span><span class=nc>String</span><span class=p>,</span> <span class=nc>Object</span><span class=o>&gt;</span> <span class=n>template</span> <span class=o>=</span> <span class=n>new</span> <span class=nf>RedisTemplate</span><span class=p>();</span>
+</span></span><span class=line><span class=cl>        <span class=n>template</span><span class=o>.</span><span class=nf>setConnectionFactory</span><span class=p>(</span><span class=n>redisConnectionFactory</span><span class=p>);</span>
 </span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>        // key、hash 的 key 都采用 String 的序列化方式
-</span></span><span class=line><span class=cl>        StringRedisSerializer stringRedisSerializer = new StringRedisSerializer();
-</span></span><span class=line><span class=cl>        template.setKeySerializer(stringRedisSerializer);
-</span></span><span class=line><span class=cl>        template.setHashKeySerializer(stringRedisSerializer);
+</span></span><span class=line><span class=cl>        <span class=o>//</span> <span class=n>key</span><span class=err>、</span><span class=nb>hash</span> <span class=err>的</span> <span class=n>key</span> <span class=err>都采用</span> <span class=nc>String</span> <span class=err>的序列化方式</span>
+</span></span><span class=line><span class=cl>        <span class=n>StringRedisSerializer</span> <span class=n>stringRedisSerializer</span> <span class=o>=</span> <span class=n>new</span> <span class=nf>StringRedisSerializer</span><span class=p>();</span>
+</span></span><span class=line><span class=cl>        <span class=n>template</span><span class=o>.</span><span class=nf>setKeySerializer</span><span class=p>(</span><span class=n>stringRedisSerializer</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>        <span class=n>template</span><span class=o>.</span><span class=nf>setHashKeySerializer</span><span class=p>(</span><span class=n>stringRedisSerializer</span><span class=p>);</span>
 </span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>        // value、hash 的 value 都采用 json 的序列化方式
-</span></span><span class=line><span class=cl>        Jackson2JsonRedisSerializer&lt;Object&gt; jackson2JsonRedisSerializer = new Jackson2JsonRedisSerializer&lt;&gt;(Object.class);
-</span></span><span class=line><span class=cl>        ObjectMapper objectMapper = new ObjectMapper();
-</span></span><span class=line><span class=cl>        objectMapper.setVisibility(PropertyAccessor.ALL, JsonAutoDetect.Visibility.ANY);
-</span></span><span class=line><span class=cl>        objectMapper.enableDefaultTyping(ObjectMapper.DefaultTyping.NON_FINAL);
-</span></span><span class=line><span class=cl>        jackson2JsonRedisSerializer.setObjectMapper(objectMapper);
-</span></span><span class=line><span class=cl>        template.setValueSerializer(jackson2JsonRedisSerializer);
-</span></span><span class=line><span class=cl>        template.setHashValueSerializer(jackson2JsonRedisSerializer);
+</span></span><span class=line><span class=cl>        <span class=o>//</span> <span class=n>value</span><span class=err>、</span><span class=nb>hash</span> <span class=err>的</span> <span class=n>value</span> <span class=err>都采用</span> <span class=n>json</span> <span class=err>的序列化方式</span>
+</span></span><span class=line><span class=cl>        <span class=n>Jackson2JsonRedisSerializer</span><span class=o>&lt;</span><span class=nc>Object</span><span class=o>&gt;</span> <span class=n>jackson2JsonRedisSerializer</span> <span class=o>=</span> <span class=n>new</span> <span class=n>Jackson2JsonRedisSerializer</span><span class=o>&lt;&gt;</span><span class=p>(</span><span class=nc>Object</span><span class=o>.</span><span class=n>class</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>        <span class=n>ObjectMapper</span> <span class=n>objectMapper</span> <span class=o>=</span> <span class=n>new</span> <span class=nf>ObjectMapper</span><span class=p>();</span>
+</span></span><span class=line><span class=cl>        <span class=n>objectMapper</span><span class=o>.</span><span class=nf>setVisibility</span><span class=p>(</span><span class=n>PropertyAccessor</span><span class=o>.</span><span class=n>ALL</span><span class=p>,</span> <span class=n>JsonAutoDetect</span><span class=o>.</span><span class=n>Visibility</span><span class=o>.</span><span class=n>ANY</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>        <span class=n>objectMapper</span><span class=o>.</span><span class=nf>enableDefaultTyping</span><span class=p>(</span><span class=n>ObjectMapper</span><span class=o>.</span><span class=n>DefaultTyping</span><span class=o>.</span><span class=n>NON_FINAL</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>        <span class=n>jackson2JsonRedisSerializer</span><span class=o>.</span><span class=nf>setObjectMapper</span><span class=p>(</span><span class=n>objectMapper</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>        <span class=n>template</span><span class=o>.</span><span class=nf>setValueSerializer</span><span class=p>(</span><span class=n>jackson2JsonRedisSerializer</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>        <span class=n>template</span><span class=o>.</span><span class=nf>setHashValueSerializer</span><span class=p>(</span><span class=n>jackson2JsonRedisSerializer</span><span class=p>);</span>
 </span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>        template.afterPropertiesSet();
+</span></span><span class=line><span class=cl>        <span class=n>template</span><span class=o>.</span><span class=nf>afterPropertiesSet</span><span class=p>();</span>
 </span></span><span class=line><span class=cl>
-</span></span><span class=line><span class=cl>        return template;
-</span></span><span class=line><span class=cl>    }
-</span></span><span class=line><span class=cl>}</span></span></code></pre></td></tr></table></div></div><p>RedisUtil.java</p><div class=highlight id=id-48><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>  1
+</span></span><span class=line><span class=cl>        <span class=k>return</span> <span class=n>template</span><span class=p>;</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=p>}</span></span></span></code></pre></td></tr></table></div></div><p>RedisUtil.java</p><div class=highlight id=id-48><div class=chroma><table class=lntable><tr><td class=lntd><pre tabindex=0 class=chroma><code><span class=lnt>  1
 </span><span class=lnt>  2
 </span><span class=lnt>  3
 </span><span class=lnt>  4

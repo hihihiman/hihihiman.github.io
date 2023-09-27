@@ -54,7 +54,7 @@
 </span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl>    <span class=kd>public</span> <span class=kt>int</span> <span class=nf>get</span><span class=o>(</span><span class=kt>int</span> <span class=n>key</span><span class=o>)</span> <span class=o>{</span>
 </span></span><span class=line><span class=cl>        <span class=k>if</span> <span class=o>(!</span><span class=n>cache</span><span class=o>.</span><span class=na>containsKey</span><span class=o>(</span><span class=n>key</span><span class=o>))</span> <span class=o>{</span>
-</span></span><span class=line><span class=cl>            <span class=k>return</span> <span class=o>-</span><span class=n>1</span><span class=o>;</span>
+</span></span><span class=line><span class=cl>            <span class=k>return</span> <span class=o>-</span><span class=mi>1</span><span class=o>;</span>
 </span></span><span class=line><span class=cl>        <span class=o>}</span>
 </span></span><span class=line><span class=cl>        <span class=k>return</span> <span class=n>makeRecently</span><span class=o>(</span><span class=n>key</span><span class=o>);</span>
 </span></span><span class=line><span class=cl>    <span class=o>}</span>
@@ -189,19 +189,19 @@
 </span></span><span class=line><span class=cl>        <span class=n>keyToFreq</span> <span class=o>=</span> <span class=k>new</span> <span class=n>HashMap</span><span class=o>&lt;&gt;();</span>
 </span></span><span class=line><span class=cl>        <span class=n>freqToKeys</span> <span class=o>=</span> <span class=k>new</span> <span class=n>HashMap</span><span class=o>&lt;&gt;();</span>
 </span></span><span class=line><span class=cl>        <span class=k>this</span><span class=o>.</span><span class=na>capacity</span> <span class=o>=</span> <span class=n>capacity</span><span class=o>;</span>
-</span></span><span class=line><span class=cl>        <span class=k>this</span><span class=o>.</span><span class=na>minFreq</span> <span class=o>=</span> <span class=n>0</span><span class=o>;</span>
+</span></span><span class=line><span class=cl>        <span class=k>this</span><span class=o>.</span><span class=na>minFreq</span> <span class=o>=</span> <span class=mi>0</span><span class=o>;</span>
 </span></span><span class=line><span class=cl>    <span class=o>}</span>
 </span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl>    <span class=kd>public</span> <span class=kt>int</span> <span class=nf>get</span><span class=o>(</span><span class=kt>int</span> <span class=n>key</span><span class=o>)</span> <span class=o>{</span>
 </span></span><span class=line><span class=cl>        <span class=k>if</span> <span class=o>(!</span><span class=n>keyToVal</span><span class=o>.</span><span class=na>containsKey</span><span class=o>(</span><span class=n>key</span><span class=o>))</span> <span class=o>{</span>
-</span></span><span class=line><span class=cl>            <span class=k>return</span> <span class=o>-</span><span class=n>1</span><span class=o>;</span>
+</span></span><span class=line><span class=cl>            <span class=k>return</span> <span class=o>-</span><span class=mi>1</span><span class=o>;</span>
 </span></span><span class=line><span class=cl>        <span class=o>}</span>
 </span></span><span class=line><span class=cl>        <span class=n>increaseFreq</span><span class=o>(</span><span class=n>key</span><span class=o>);</span>
 </span></span><span class=line><span class=cl>        <span class=k>return</span> <span class=n>keyToVal</span><span class=o>.</span><span class=na>get</span><span class=o>(</span><span class=n>key</span><span class=o>);</span>
 </span></span><span class=line><span class=cl>    <span class=o>}</span>
 </span></span><span class=line><span class=cl>    
 </span></span><span class=line><span class=cl>    <span class=kd>public</span> <span class=kt>void</span> <span class=nf>put</span><span class=o>(</span><span class=kt>int</span> <span class=n>key</span><span class=o>,</span> <span class=kt>int</span> <span class=n>value</span><span class=o>)</span> <span class=o>{</span>
-</span></span><span class=line><span class=cl>        <span class=k>if</span> <span class=o>(</span><span class=k>this</span><span class=o>.</span><span class=na>capacity</span> <span class=o>&lt;=</span> <span class=n>0</span><span class=o>)</span> <span class=o>{</span>
+</span></span><span class=line><span class=cl>        <span class=k>if</span> <span class=o>(</span><span class=k>this</span><span class=o>.</span><span class=na>capacity</span> <span class=o>&lt;=</span> <span class=mi>0</span><span class=o>)</span> <span class=o>{</span>
 </span></span><span class=line><span class=cl>            <span class=k>return</span><span class=o>;</span>
 </span></span><span class=line><span class=cl>        <span class=o>}</span>
 </span></span><span class=line><span class=cl>
@@ -223,24 +223,24 @@
 </span></span><span class=line><span class=cl>        <span class=c1>// 插入 KV 表
 </span></span></span><span class=line><span class=cl><span class=c1></span>        <span class=n>keyToVal</span><span class=o>.</span><span class=na>put</span><span class=o>(</span><span class=n>key</span><span class=o>,</span> <span class=n>value</span><span class=o>);</span>
 </span></span><span class=line><span class=cl>        <span class=c1>// 插入 KF 表
-</span></span></span><span class=line><span class=cl><span class=c1></span>        <span class=n>keyToFreq</span><span class=o>.</span><span class=na>put</span><span class=o>(</span><span class=n>key</span><span class=o>,</span> <span class=n>1</span><span class=o>);</span>
+</span></span></span><span class=line><span class=cl><span class=c1></span>        <span class=n>keyToFreq</span><span class=o>.</span><span class=na>put</span><span class=o>(</span><span class=n>key</span><span class=o>,</span> <span class=mi>1</span><span class=o>);</span>
 </span></span><span class=line><span class=cl>        <span class=c1>// 插入 FK 表
-</span></span></span><span class=line><span class=cl><span class=c1></span>        <span class=n>freqToKeys</span><span class=o>.</span><span class=na>putIfAbsent</span><span class=o>(</span><span class=n>1</span><span class=o>,</span> <span class=k>new</span> <span class=n>LinkedHashSet</span><span class=o>&lt;&gt;());</span>
-</span></span><span class=line><span class=cl>        <span class=n>freqToKeys</span><span class=o>.</span><span class=na>get</span><span class=o>(</span><span class=n>1</span><span class=o>).</span><span class=na>add</span><span class=o>(</span><span class=n>key</span><span class=o>);</span>
+</span></span></span><span class=line><span class=cl><span class=c1></span>        <span class=n>freqToKeys</span><span class=o>.</span><span class=na>putIfAbsent</span><span class=o>(</span><span class=mi>1</span><span class=o>,</span> <span class=k>new</span> <span class=n>LinkedHashSet</span><span class=o>&lt;&gt;());</span>
+</span></span><span class=line><span class=cl>        <span class=n>freqToKeys</span><span class=o>.</span><span class=na>get</span><span class=o>(</span><span class=mi>1</span><span class=o>).</span><span class=na>add</span><span class=o>(</span><span class=n>key</span><span class=o>);</span>
 </span></span><span class=line><span class=cl>        <span class=c1>// 插入新 key 后最小的 freq 肯定是 1
-</span></span></span><span class=line><span class=cl><span class=c1></span>        <span class=k>this</span><span class=o>.</span><span class=na>minFreq</span> <span class=o>=</span> <span class=n>1</span><span class=o>;</span>
+</span></span></span><span class=line><span class=cl><span class=c1></span>        <span class=k>this</span><span class=o>.</span><span class=na>minFreq</span> <span class=o>=</span> <span class=mi>1</span><span class=o>;</span>
 </span></span><span class=line><span class=cl>    <span class=o>}</span>
 </span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl>    <span class=kd>private</span> <span class=kt>void</span> <span class=nf>increaseFreq</span><span class=o>(</span><span class=kt>int</span> <span class=n>key</span><span class=o>)</span> <span class=o>{</span>
 </span></span><span class=line><span class=cl>        <span class=kt>int</span> <span class=n>freq</span> <span class=o>=</span> <span class=n>keyToFreq</span><span class=o>.</span><span class=na>get</span><span class=o>(</span><span class=n>key</span><span class=o>);</span>
 </span></span><span class=line><span class=cl>        <span class=cm>/* 更新 KF 表 */</span>
-</span></span><span class=line><span class=cl>        <span class=n>keyToFreq</span><span class=o>.</span><span class=na>put</span><span class=o>(</span><span class=n>key</span><span class=o>,</span> <span class=n>freq</span> <span class=o>+</span> <span class=n>1</span><span class=o>);</span>
+</span></span><span class=line><span class=cl>        <span class=n>keyToFreq</span><span class=o>.</span><span class=na>put</span><span class=o>(</span><span class=n>key</span><span class=o>,</span> <span class=n>freq</span> <span class=o>+</span> <span class=mi>1</span><span class=o>);</span>
 </span></span><span class=line><span class=cl>        <span class=cm>/* 更新 FK 表 */</span>
 </span></span><span class=line><span class=cl>        <span class=c1>// 将 key 从 freq 对应的列表中删除
 </span></span></span><span class=line><span class=cl><span class=c1></span>        <span class=n>freqToKeys</span><span class=o>.</span><span class=na>get</span><span class=o>(</span><span class=n>freq</span><span class=o>).</span><span class=na>remove</span><span class=o>(</span><span class=n>key</span><span class=o>);</span>
 </span></span><span class=line><span class=cl>        <span class=c1>// 将 key 加入 freq + 1 对应的列表中
-</span></span></span><span class=line><span class=cl><span class=c1></span>        <span class=n>freqToKeys</span><span class=o>.</span><span class=na>putIfAbsent</span><span class=o>(</span><span class=n>freq</span> <span class=o>+</span> <span class=n>1</span><span class=o>,</span> <span class=k>new</span> <span class=n>LinkedHashSet</span><span class=o>&lt;&gt;());</span>
-</span></span><span class=line><span class=cl>        <span class=n>freqToKeys</span><span class=o>.</span><span class=na>get</span><span class=o>(</span><span class=n>freq</span> <span class=o>+</span> <span class=n>1</span><span class=o>).</span><span class=na>add</span><span class=o>(</span><span class=n>key</span><span class=o>);</span>
+</span></span></span><span class=line><span class=cl><span class=c1></span>        <span class=n>freqToKeys</span><span class=o>.</span><span class=na>putIfAbsent</span><span class=o>(</span><span class=n>freq</span> <span class=o>+</span> <span class=mi>1</span><span class=o>,</span> <span class=k>new</span> <span class=n>LinkedHashSet</span><span class=o>&lt;&gt;());</span>
+</span></span><span class=line><span class=cl>        <span class=n>freqToKeys</span><span class=o>.</span><span class=na>get</span><span class=o>(</span><span class=n>freq</span> <span class=o>+</span> <span class=mi>1</span><span class=o>).</span><span class=na>add</span><span class=o>(</span><span class=n>key</span><span class=o>);</span>
 </span></span><span class=line><span class=cl>        <span class=c1>// 如果 freq 对应的列表空了，移除这个 freq
 </span></span></span><span class=line><span class=cl><span class=c1></span>        <span class=k>if</span> <span class=o>(</span><span class=n>freqToKeys</span><span class=o>.</span><span class=na>get</span><span class=o>(</span><span class=n>freq</span><span class=o>).</span><span class=na>isEmpty</span><span class=o>())</span> <span class=o>{</span>
 </span></span><span class=line><span class=cl>            <span class=n>freqToKeys</span><span class=o>.</span><span class=na>remove</span><span class=o>(</span><span class=n>freq</span><span class=o>);</span>
@@ -433,21 +433,21 @@
 </span></span><span class=line><span class=cl><span class=kd>public</span> <span class=kd>class</span> <span class=nc>Demo</span> <span class=o>{</span>
 </span></span><span class=line><span class=cl>    <span class=kd>public</span> <span class=kd>static</span> <span class=kt>void</span> <span class=nf>main</span><span class=o>(</span><span class=n>String</span><span class=o>[]</span> <span class=n>args</span><span class=o>)</span> <span class=kd>throws</span> <span class=n>InterruptedException</span> <span class=o>{</span>
 </span></span><span class=line><span class=cl>        <span class=n>Scanner</span> <span class=n>scanner</span> <span class=o>=</span> <span class=k>new</span> <span class=n>Scanner</span><span class=o>(</span><span class=n>System</span><span class=o>.</span><span class=na>in</span><span class=o>);</span>
-</span></span><span class=line><span class=cl>        <span class=n>LFUCache</span> <span class=n>lfuCache</span> <span class=o>=</span> <span class=k>new</span> <span class=n>LFUCache</span><span class=o>(</span><span class=n>5</span><span class=o>)</span> <span class=o>{{</span>
-</span></span><span class=line><span class=cl>            <span class=n>put</span><span class=o>(</span><span class=n>1</span><span class=o>);</span>
-</span></span><span class=line><span class=cl>            <span class=n>put</span><span class=o>(</span><span class=n>2</span><span class=o>);</span>
-</span></span><span class=line><span class=cl>            <span class=n>put</span><span class=o>(</span><span class=n>3</span><span class=o>);</span>
-</span></span><span class=line><span class=cl>            <span class=n>put</span><span class=o>(</span><span class=n>4</span><span class=o>);</span>
-</span></span><span class=line><span class=cl>            <span class=n>put</span><span class=o>(</span><span class=n>0</span><span class=o>);</span>
+</span></span><span class=line><span class=cl>        <span class=n>LFUCache</span> <span class=n>lfuCache</span> <span class=o>=</span> <span class=k>new</span> <span class=n>LFUCache</span><span class=o>(</span><span class=mi>5</span><span class=o>)</span> <span class=o>{{</span>
+</span></span><span class=line><span class=cl>            <span class=n>put</span><span class=o>(</span><span class=mi>1</span><span class=o>);</span>
+</span></span><span class=line><span class=cl>            <span class=n>put</span><span class=o>(</span><span class=mi>2</span><span class=o>);</span>
+</span></span><span class=line><span class=cl>            <span class=n>put</span><span class=o>(</span><span class=mi>3</span><span class=o>);</span>
+</span></span><span class=line><span class=cl>            <span class=n>put</span><span class=o>(</span><span class=mi>4</span><span class=o>);</span>
+</span></span><span class=line><span class=cl>            <span class=n>put</span><span class=o>(</span><span class=mi>0</span><span class=o>);</span>
 </span></span><span class=line><span class=cl>        <span class=o>}};</span>
-</span></span><span class=line><span class=cl>        <span class=k>for</span> <span class=o>(</span><span class=kt>int</span> <span class=n>i</span> <span class=o>=</span> <span class=n>0</span><span class=o>;</span> <span class=n>i</span> <span class=o>&lt;</span> <span class=n>10</span><span class=o>;</span> <span class=n>i</span><span class=o>++)</span> <span class=o>{</span>
-</span></span><span class=line><span class=cl>            <span class=kt>int</span> <span class=n>nextInt</span> <span class=o>=</span> <span class=k>new</span> <span class=n>Random</span><span class=o>().</span><span class=na>nextInt</span><span class=o>(</span><span class=n>5</span><span class=o>);</span>
+</span></span><span class=line><span class=cl>        <span class=k>for</span> <span class=o>(</span><span class=kt>int</span> <span class=n>i</span> <span class=o>=</span> <span class=mi>0</span><span class=o>;</span> <span class=n>i</span> <span class=o>&lt;</span> <span class=mi>10</span><span class=o>;</span> <span class=n>i</span><span class=o>++)</span> <span class=o>{</span>
+</span></span><span class=line><span class=cl>            <span class=kt>int</span> <span class=n>nextInt</span> <span class=o>=</span> <span class=k>new</span> <span class=n>Random</span><span class=o>().</span><span class=na>nextInt</span><span class=o>(</span><span class=mi>5</span><span class=o>);</span>
 </span></span><span class=line><span class=cl>            <span class=n>System</span><span class=o>.</span><span class=na>out</span><span class=o>.</span><span class=na>println</span><span class=o>(</span><span class=s>&#34;random visit = &#34;</span> <span class=o>+</span> <span class=n>nextInt</span><span class=o>);</span>
-</span></span><span class=line><span class=cl>            <span class=n>TimeUnit</span><span class=o>.</span><span class=na>SECONDS</span><span class=o>.</span><span class=na>sleep</span><span class=o>(</span><span class=n>1</span><span class=o>);</span>
+</span></span><span class=line><span class=cl>            <span class=n>TimeUnit</span><span class=o>.</span><span class=na>SECONDS</span><span class=o>.</span><span class=na>sleep</span><span class=o>(</span><span class=mi>1</span><span class=o>);</span>
 </span></span><span class=line><span class=cl>            <span class=n>lfuCache</span><span class=o>.</span><span class=na>get</span><span class=o>(</span><span class=n>nextInt</span><span class=o>);</span>
 </span></span><span class=line><span class=cl>            <span class=n>lfuCache</span><span class=o>.</span><span class=na>look</span><span class=o>();</span>
 </span></span><span class=line><span class=cl>        <span class=o>}</span>
-</span></span><span class=line><span class=cl>        <span class=k>for</span> <span class=o>(</span><span class=kt>int</span> <span class=n>i</span> <span class=o>=</span> <span class=n>5</span><span class=o>;</span> <span class=n>i</span> <span class=o>&lt;</span> <span class=n>10</span><span class=o>;</span> <span class=n>i</span><span class=o>++)</span> <span class=o>{</span>
+</span></span><span class=line><span class=cl>        <span class=k>for</span> <span class=o>(</span><span class=kt>int</span> <span class=n>i</span> <span class=o>=</span> <span class=mi>5</span><span class=o>;</span> <span class=n>i</span> <span class=o>&lt;</span> <span class=mi>10</span><span class=o>;</span> <span class=n>i</span><span class=o>++)</span> <span class=o>{</span>
 </span></span><span class=line><span class=cl>            <span class=n>System</span><span class=o>.</span><span class=na>out</span><span class=o>.</span><span class=na>println</span><span class=o>(</span><span class=s>&#34;new key = &#34;</span> <span class=o>+</span> <span class=n>i</span><span class=o>);</span>
 </span></span><span class=line><span class=cl>            <span class=n>lfuCache</span><span class=o>.</span><span class=na>put</span><span class=o>(</span><span class=n>i</span><span class=o>);</span>
 </span></span><span class=line><span class=cl>        <span class=o>}</span>
@@ -470,23 +470,23 @@
 </span></span><span class=line><span class=cl>            <span class=n>keyToFreq</span> <span class=o>=</span> <span class=k>new</span> <span class=n>HashMap</span><span class=o>&lt;&gt;();</span>
 </span></span><span class=line><span class=cl>            <span class=n>freqToKeys</span> <span class=o>=</span> <span class=k>new</span> <span class=n>HashMap</span><span class=o>&lt;&gt;();</span>
 </span></span><span class=line><span class=cl>            <span class=k>this</span><span class=o>.</span><span class=na>capacity</span> <span class=o>=</span> <span class=n>capacity</span><span class=o>;</span>
-</span></span><span class=line><span class=cl>            <span class=k>this</span><span class=o>.</span><span class=na>minFreq</span> <span class=o>=</span> <span class=n>0</span><span class=o>;</span>
+</span></span><span class=line><span class=cl>            <span class=k>this</span><span class=o>.</span><span class=na>minFreq</span> <span class=o>=</span> <span class=mi>0</span><span class=o>;</span>
 </span></span><span class=line><span class=cl>        <span class=o>}</span>
 </span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl>        <span class=kd>public</span> <span class=kt>int</span> <span class=nf>get</span><span class=o>(</span><span class=kt>int</span> <span class=n>key</span><span class=o>)</span> <span class=o>{</span>
 </span></span><span class=line><span class=cl>            <span class=k>if</span> <span class=o>(!</span><span class=n>keyToVal</span><span class=o>.</span><span class=na>containsKey</span><span class=o>(</span><span class=n>key</span><span class=o>))</span> <span class=o>{</span>
-</span></span><span class=line><span class=cl>                <span class=k>return</span> <span class=o>-</span><span class=n>1</span><span class=o>;</span>
+</span></span><span class=line><span class=cl>                <span class=k>return</span> <span class=o>-</span><span class=mi>1</span><span class=o>;</span>
 </span></span><span class=line><span class=cl>            <span class=o>}</span>
 </span></span><span class=line><span class=cl>            <span class=n>increaseFreq</span><span class=o>(</span><span class=n>key</span><span class=o>);</span>
 </span></span><span class=line><span class=cl>            <span class=k>return</span> <span class=n>keyToVal</span><span class=o>.</span><span class=na>get</span><span class=o>(</span><span class=n>key</span><span class=o>);</span>
 </span></span><span class=line><span class=cl>        <span class=o>}</span>
 </span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl>        <span class=kd>public</span> <span class=kt>void</span> <span class=nf>put</span><span class=o>(</span><span class=kt>int</span> <span class=n>key</span><span class=o>)</span> <span class=o>{</span>
-</span></span><span class=line><span class=cl>            <span class=n>put</span><span class=o>(</span><span class=n>key</span><span class=o>,</span> <span class=n>key</span> <span class=o>*</span> <span class=n>10</span><span class=o>);</span>
+</span></span><span class=line><span class=cl>            <span class=n>put</span><span class=o>(</span><span class=n>key</span><span class=o>,</span> <span class=n>key</span> <span class=o>*</span> <span class=mi>10</span><span class=o>);</span>
 </span></span><span class=line><span class=cl>        <span class=o>}</span>
 </span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl>        <span class=kd>public</span> <span class=kt>void</span> <span class=nf>put</span><span class=o>(</span><span class=kt>int</span> <span class=n>key</span><span class=o>,</span> <span class=kt>int</span> <span class=n>value</span><span class=o>)</span> <span class=o>{</span>
-</span></span><span class=line><span class=cl>            <span class=k>if</span> <span class=o>(</span><span class=k>this</span><span class=o>.</span><span class=na>capacity</span> <span class=o>&lt;=</span> <span class=n>0</span><span class=o>)</span> <span class=o>{</span>
+</span></span><span class=line><span class=cl>            <span class=k>if</span> <span class=o>(</span><span class=k>this</span><span class=o>.</span><span class=na>capacity</span> <span class=o>&lt;=</span> <span class=mi>0</span><span class=o>)</span> <span class=o>{</span>
 </span></span><span class=line><span class=cl>                <span class=k>return</span><span class=o>;</span>
 </span></span><span class=line><span class=cl>            <span class=o>}</span>
 </span></span><span class=line><span class=cl>
@@ -508,12 +508,12 @@
 </span></span><span class=line><span class=cl>            <span class=c1>// 插入 KV 表
 </span></span></span><span class=line><span class=cl><span class=c1></span>            <span class=n>keyToVal</span><span class=o>.</span><span class=na>put</span><span class=o>(</span><span class=n>key</span><span class=o>,</span> <span class=n>value</span><span class=o>);</span>
 </span></span><span class=line><span class=cl>            <span class=c1>// 插入 KF 表
-</span></span></span><span class=line><span class=cl><span class=c1></span>            <span class=n>keyToFreq</span><span class=o>.</span><span class=na>put</span><span class=o>(</span><span class=n>key</span><span class=o>,</span> <span class=n>1</span><span class=o>);</span>
+</span></span></span><span class=line><span class=cl><span class=c1></span>            <span class=n>keyToFreq</span><span class=o>.</span><span class=na>put</span><span class=o>(</span><span class=n>key</span><span class=o>,</span> <span class=mi>1</span><span class=o>);</span>
 </span></span><span class=line><span class=cl>            <span class=c1>// 插入 FK 表
-</span></span></span><span class=line><span class=cl><span class=c1></span>            <span class=n>freqToKeys</span><span class=o>.</span><span class=na>putIfAbsent</span><span class=o>(</span><span class=n>1</span><span class=o>,</span> <span class=k>new</span> <span class=n>LinkedHashSet</span><span class=o>&lt;&gt;());</span>
-</span></span><span class=line><span class=cl>            <span class=n>freqToKeys</span><span class=o>.</span><span class=na>get</span><span class=o>(</span><span class=n>1</span><span class=o>).</span><span class=na>add</span><span class=o>(</span><span class=n>key</span><span class=o>);</span>
+</span></span></span><span class=line><span class=cl><span class=c1></span>            <span class=n>freqToKeys</span><span class=o>.</span><span class=na>putIfAbsent</span><span class=o>(</span><span class=mi>1</span><span class=o>,</span> <span class=k>new</span> <span class=n>LinkedHashSet</span><span class=o>&lt;&gt;());</span>
+</span></span><span class=line><span class=cl>            <span class=n>freqToKeys</span><span class=o>.</span><span class=na>get</span><span class=o>(</span><span class=mi>1</span><span class=o>).</span><span class=na>add</span><span class=o>(</span><span class=n>key</span><span class=o>);</span>
 </span></span><span class=line><span class=cl>            <span class=c1>// 插入新 key 后最小的 freq 肯定是 1
-</span></span></span><span class=line><span class=cl><span class=c1></span>            <span class=k>this</span><span class=o>.</span><span class=na>minFreq</span> <span class=o>=</span> <span class=n>1</span><span class=o>;</span>
+</span></span></span><span class=line><span class=cl><span class=c1></span>            <span class=k>this</span><span class=o>.</span><span class=na>minFreq</span> <span class=o>=</span> <span class=mi>1</span><span class=o>;</span>
 </span></span><span class=line><span class=cl>            <span class=n>look</span><span class=o>();</span>
 </span></span><span class=line><span class=cl>        <span class=o>}</span>
 </span></span><span class=line><span class=cl>
@@ -521,13 +521,13 @@
 </span></span></span><span class=line><span class=cl><span class=c1></span>        <span class=kd>private</span> <span class=kt>void</span> <span class=nf>increaseFreq</span><span class=o>(</span><span class=kt>int</span> <span class=n>key</span><span class=o>)</span> <span class=o>{</span>
 </span></span><span class=line><span class=cl>            <span class=kt>int</span> <span class=n>freq</span> <span class=o>=</span> <span class=n>keyToFreq</span><span class=o>.</span><span class=na>get</span><span class=o>(</span><span class=n>key</span><span class=o>);</span>
 </span></span><span class=line><span class=cl>            <span class=cm>/* 更新 KF 表 */</span>
-</span></span><span class=line><span class=cl>            <span class=n>keyToFreq</span><span class=o>.</span><span class=na>put</span><span class=o>(</span><span class=n>key</span><span class=o>,</span> <span class=n>freq</span> <span class=o>+</span> <span class=n>1</span><span class=o>);</span>
+</span></span><span class=line><span class=cl>            <span class=n>keyToFreq</span><span class=o>.</span><span class=na>put</span><span class=o>(</span><span class=n>key</span><span class=o>,</span> <span class=n>freq</span> <span class=o>+</span> <span class=mi>1</span><span class=o>);</span>
 </span></span><span class=line><span class=cl>            <span class=cm>/* 更新 FK 表 */</span>
 </span></span><span class=line><span class=cl>            <span class=c1>// 将 key 从 freq 对应的列表中删除
 </span></span></span><span class=line><span class=cl><span class=c1></span>            <span class=n>freqToKeys</span><span class=o>.</span><span class=na>get</span><span class=o>(</span><span class=n>freq</span><span class=o>).</span><span class=na>remove</span><span class=o>(</span><span class=n>key</span><span class=o>);</span>
 </span></span><span class=line><span class=cl>            <span class=c1>// 将 key 加入 freq + 1 对应的列表中
-</span></span></span><span class=line><span class=cl><span class=c1></span>            <span class=n>freqToKeys</span><span class=o>.</span><span class=na>putIfAbsent</span><span class=o>(</span><span class=n>freq</span> <span class=o>+</span> <span class=n>1</span><span class=o>,</span> <span class=k>new</span> <span class=n>LinkedHashSet</span><span class=o>&lt;&gt;());</span>
-</span></span><span class=line><span class=cl>            <span class=n>freqToKeys</span><span class=o>.</span><span class=na>get</span><span class=o>(</span><span class=n>freq</span> <span class=o>+</span> <span class=n>1</span><span class=o>).</span><span class=na>add</span><span class=o>(</span><span class=n>key</span><span class=o>);</span>
+</span></span></span><span class=line><span class=cl><span class=c1></span>            <span class=n>freqToKeys</span><span class=o>.</span><span class=na>putIfAbsent</span><span class=o>(</span><span class=n>freq</span> <span class=o>+</span> <span class=mi>1</span><span class=o>,</span> <span class=k>new</span> <span class=n>LinkedHashSet</span><span class=o>&lt;&gt;());</span>
+</span></span><span class=line><span class=cl>            <span class=n>freqToKeys</span><span class=o>.</span><span class=na>get</span><span class=o>(</span><span class=n>freq</span> <span class=o>+</span> <span class=mi>1</span><span class=o>).</span><span class=na>add</span><span class=o>(</span><span class=n>key</span><span class=o>);</span>
 </span></span><span class=line><span class=cl>            <span class=c1>// 如果 freq 对应的列表空了，移除这个 freq
 </span></span></span><span class=line><span class=cl><span class=c1></span>            <span class=k>if</span> <span class=o>(</span><span class=n>freqToKeys</span><span class=o>.</span><span class=na>get</span><span class=o>(</span><span class=n>freq</span><span class=o>).</span><span class=na>isEmpty</span><span class=o>())</span> <span class=o>{</span>
 </span></span><span class=line><span class=cl>                <span class=n>freqToKeys</span><span class=o>.</span><span class=na>remove</span><span class=o>(</span><span class=n>freq</span><span class=o>);</span>

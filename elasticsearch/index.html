@@ -54,7 +54,7 @@ lucene：分布式搜索</p><h3 id=倒排索引>倒排索引</h3><ul><li>正排�
 </span><span class=lnt>40
 </span></code></pre></td><td class=lntd><pre tabindex=0 class=chroma><code class=language-java data-lang=java><span class=line><span class=cl><span class=c1>// 创建一个 Elasticsearch 客户端对象
 </span></span></span><span class=line><span class=cl><span class=c1></span><span class=n>RestHighLevelClient</span> <span class=n>client</span> <span class=o>=</span> <span class=k>new</span> <span class=n>RestHighLevelClient</span><span class=o>(</span>
-</span></span><span class=line><span class=cl>    <span class=n>RestClient</span><span class=o>.</span><span class=na>builder</span><span class=o>(</span><span class=k>new</span> <span class=n>HttpHost</span><span class=o>(</span><span class=s>&#34;localhost&#34;</span><span class=o>,</span> <span class=n>9200</span><span class=o>,</span> <span class=s>&#34;http&#34;</span><span class=o>))</span>
+</span></span><span class=line><span class=cl>    <span class=n>RestClient</span><span class=o>.</span><span class=na>builder</span><span class=o>(</span><span class=k>new</span> <span class=n>HttpHost</span><span class=o>(</span><span class=s>&#34;localhost&#34;</span><span class=o>,</span> <span class=mi>9200</span><span class=o>,</span> <span class=s>&#34;http&#34;</span><span class=o>))</span>
 </span></span><span class=line><span class=cl><span class=o>);</span>
 </span></span><span class=line><span class=cl>
 </span></span><span class=line><span class=cl><span class=c1>// 执行一个聚合操作
