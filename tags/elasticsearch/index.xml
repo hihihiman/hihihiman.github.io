@@ -1,20 +1,5 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-  <channel>
-    <title>ElasticSearch - 标签 - </title>
-    <link>https://leni.fun/tags/elasticsearch/</link>
-    <description>ElasticSearch - 标签 - </description>
-    <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>dujianghui_work@163.com (都将会)</managingEditor>
-      <webMaster>dujianghui_work@163.com (都将会)</webMaster><lastBuildDate>Wed, 11 Oct 2023 08:08:08 &#43;0800</lastBuildDate><atom:link href="https://leni.fun/tags/elasticsearch/" rel="self" type="application/rss+xml" /><item>
-  <title>🚩ElasticSearch</title>
-  <link>https://leni.fun/elasticsearch/</link>
-  <pubDate>Wed, 11 Oct 2023 08:08:08 &#43;0800</pubDate>
-  <author>都将会</author>
-  <guid>https://leni.fun/elasticsearch/</guid>
-  <description><![CDATA[<div class="featured-image">
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>ElasticSearch - 标签 -</title><link>https://leni.fun/tags/elasticsearch/</link><description>ElasticSearch - 标签 -</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>dujianghui_work@163.com (都将会)</managingEditor><webMaster>dujianghui_work@163.com (都将会)</webMaster><lastBuildDate>Wed, 11 Oct 2023 08:08:08 +0800</lastBuildDate><atom:link href="https://leni.fun/tags/elasticsearch/" rel="self" type="application/rss+xml"/><item><title>🚩ElasticSearch</title><link>https://leni.fun/elasticsearch/</link><pubDate>Wed, 11 Oct 2023 08:08:08 +0800</pubDate><author>都将会</author><guid>https://leni.fun/elasticsearch/</guid><description><![CDATA[<div class="featured-image">
         <img src="/images/pic22.jpg" referrerpolicy="no-referrer">
       </div><blockquote>
 <p>Elasticsearch 是一个基于 JSON 的非关系型数据库。</p>
-</blockquote>]]></description>
-</item>
-</channel>
-</rss>
+</blockquote>]]></description></item></channel></rss>
