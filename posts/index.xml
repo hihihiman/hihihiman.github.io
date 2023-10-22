@@ -1,4 +1,4 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>所有技术文章 -</title><link>https://leni.fun/posts/</link><description>所有技术文章 |</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>dujianghui_work@163.com (都将会)</managingEditor><webMaster>dujianghui_work@163.com (都将会)</webMaster><lastBuildDate>Wed, 18 Oct 2023 18:08:08 +0800</lastBuildDate><atom:link href="https://leni.fun/posts/" rel="self" type="application/rss+xml"/><item><title>软考系统架构师——真题错题整理</title><link>https://leni.fun/%E8%BD%AF%E8%80%83%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%E5%B8%88%E7%9C%9F%E9%A2%98%E9%94%99%E9%A2%98%E6%95%B4%E7%90%86/</link><pubDate>Sat, 14 Oct 2023 22:48:01 +0800</pubDate><author>都将会</author><guid>https://leni.fun/%E8%BD%AF%E8%80%83%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%E5%B8%88%E7%9C%9F%E9%A2%98%E9%94%99%E9%A2%98%E6%95%B4%E7%90%86/</guid><description>&lt;div class="featured-image">
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>所有技术文章 -</title><link>https://leni.fun/posts/</link><description>所有技术文章 |</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>dujianghui_work@163.com (都将会)</managingEditor><webMaster>dujianghui_work@163.com (都将会)</webMaster><lastBuildDate>Sun, 22 Oct 2023 15:42:34 +0800</lastBuildDate><atom:link href="https://leni.fun/posts/" rel="self" type="application/rss+xml"/><item><title>软考系统架构师——真题错题整理</title><link>https://leni.fun/%E8%BD%AF%E8%80%83%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%E5%B8%88%E7%9C%9F%E9%A2%98%E9%94%99%E9%A2%98%E6%95%B4%E7%90%86/</link><pubDate>Sat, 14 Oct 2023 22:48:01 +0800</pubDate><author>都将会</author><guid>https://leni.fun/%E8%BD%AF%E8%80%83%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%E5%B8%88%E7%9C%9F%E9%A2%98%E9%94%99%E9%A2%98%E6%95%B4%E7%90%86/</guid><description>&lt;div class="featured-image">
 &lt;img src="/images/pic26.jpg" referrerpolicy="no-referrer">
 &lt;/div></description></item><item><title>软考系统架构师笔记——综合知识</title><link>https://leni.fun/%E8%BD%AF%E8%80%83%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%E5%B8%88%E7%BB%BC%E5%90%88%E7%9F%A5%E8%AF%86/</link><pubDate>Thu, 21 Sep 2023 20:16:31 +0800</pubDate><author>都将会</author><guid>https://leni.fun/%E8%BD%AF%E8%80%83%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%E5%B8%88%E7%BB%BC%E5%90%88%E7%9F%A5%E8%AF%86/</guid><description>&lt;div class="featured-image">
 &lt;img src="/images/pic16.jpg" referrerpolicy="no-referrer">
@@ -14,6 +14,8 @@
 &lt;img src="/images/pic18.jpg" referrerpolicy="no-referrer">
 &lt;/div>过了才停更！</description></item><item><title>软考系统架构师——真题错题整理</title><link>https://leni.fun/%E8%BD%AF%E8%80%83%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%E5%B8%88%E7%9C%9F%E9%A2%98%E9%94%99%E9%A2%98%E6%95%B4%E7%90%86/</link><pubDate>Sat, 14 Oct 2023 22:48:01 +0800</pubDate><author>都将会</author><guid>https://leni.fun/%E8%BD%AF%E8%80%83%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%E5%B8%88%E7%9C%9F%E9%A2%98%E9%94%99%E9%A2%98%E6%95%B4%E7%90%86/</guid><description>&lt;div class="featured-image">
 &lt;img src="/images/pic26.jpg" referrerpolicy="no-referrer">
+&lt;/div></description></item><item><title>软考系统架构师——背诵版</title><link>https://leni.fun/%E8%BD%AF%E8%80%83%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%E5%B8%88%E8%83%8C%E8%AF%B5%E7%89%88/</link><pubDate>Sun, 22 Oct 2023 15:42:34 +0800</pubDate><author>都将会</author><guid>https://leni.fun/%E8%BD%AF%E8%80%83%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%E5%B8%88%E8%83%8C%E8%AF%B5%E7%89%88/</guid><description>&lt;div class="featured-image">
+&lt;img src="/images/pic27.jpg" referrerpolicy="no-referrer">
 &lt;/div></description></item><item><title>🚩Raft</title><link>https://leni.fun/raft/</link><pubDate>Wed, 18 Oct 2023 18:08:08 +0800</pubDate><author>都将会</author><guid>https://leni.fun/raft/</guid><description><![CDATA[<div class="featured-image">
         <img src="/images/pic25.jpg" referrerpolicy="no-referrer">
       </div><h3 id="raft-协议的基本原理是什么">Raft 协议的基本原理是什么？</h3>
@@ -31,12 +33,4 @@
 &lt;img src="/images/pic20.jpg" referrerpolicy="no-referrer">
 &lt;/div>是用得最多的数据库了</description></item><item><title>🚩Java 基础</title><link>https://leni.fun/java_base/</link><pubDate>Wed, 04 Oct 2023 15:45:19 +0800</pubDate><author>都将会</author><guid>https://leni.fun/java_base/</guid><description>&lt;div class="featured-image">
 &lt;img src="/images/pic19.jpg" referrerpolicy="no-referrer">
-&lt;/div>JavaSE 基础知识整理</description></item><item><title>系统设计经典案例</title><link>https://leni.fun/%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1%E7%BB%8F%E5%85%B8%E6%A1%88%E4%BE%8B/</link><pubDate>Wed, 27 Sep 2023 15:45:19 +0800</pubDate><author>都将会</author><guid>https://leni.fun/%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1%E7%BB%8F%E5%85%B8%E6%A1%88%E4%BE%8B/</guid><description><![CDATA[<div class="featured-image">
-        <img src="/images/pic17.jpg" referrerpolicy="no-referrer">
-      </div><p>基本步骤：</p>
-<ol>
-<li>拆分功能性需求和非功能性需求</li>
-<li>抽象架构设计：web/app、前端、后端、数据库、缓存、部署、http/websocket、ci/cd</li>
-<li>考虑可优化的点：负载均衡、数据库索引、分库分表、安全防范、分布式</li>
-<li>完善系统抽象设计</li>
-</ol>]]></description></item></channel></rss>
+&lt;/div>JavaSE 基础知识整理</description></item></channel></rss>
