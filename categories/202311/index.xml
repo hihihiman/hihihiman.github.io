@@ -1,0 +1,11 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>202311 - 分类 -</title><link>https://leni.fun/categories/202311/</link><description>202311 - 分类 -</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>dujianghui_work@163.com (都将会)</managingEditor><webMaster>dujianghui_work@163.com (都将会)</webMaster><lastBuildDate>Mon, 06 Nov 2023 08:08:08 +0800</lastBuildDate><atom:link href="https://leni.fun/categories/202311/" rel="self" type="application/rss+xml"/><item><title>🚩Distributed - 分布式理论</title><link>https://leni.fun/distributed/</link><pubDate>Mon, 06 Nov 2023 08:08:08 +0800</pubDate><author>都将会</author><guid>https://leni.fun/distributed/</guid><description><![CDATA[<div class="featured-image">
+        <img src="/images/pic28.jpg" referrerpolicy="no-referrer">
+      </div><h3 id="分布式事务与分布式锁的区别">分布式事务与分布式锁的区别？</h3>
+<p>分布式锁解决的是分布式<strong>资源抢占</strong>的问题；分布式事务和本地事务是解决<strong>流程化提交</strong>问题。</p>
+<h3 id="如何解决分布式事务问题的seata-架构">🌟如何解决分布式事务问题的？/Seata 架构？</h3>
+<p>三种角色：</p>
+<ul>
+<li>TC 事务协调者</li>
+<li>TM 事务管理器</li>
+<li>RM 资源管理器</li>
+</ul>]]></description></item></channel></rss>

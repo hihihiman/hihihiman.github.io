@@ -1,4 +1,14 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>interview - 分类 -</title><link>https://leni.fun/categories/interview/</link><description>interview - 分类 -</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>dujianghui_work@163.com (都将会)</managingEditor><webMaster>dujianghui_work@163.com (都将会)</webMaster><lastBuildDate>Wed, 18 Oct 2023 18:08:08 +0800</lastBuildDate><atom:link href="https://leni.fun/categories/interview/" rel="self" type="application/rss+xml"/><item><title>🚩Raft</title><link>https://leni.fun/raft/</link><pubDate>Wed, 18 Oct 2023 18:08:08 +0800</pubDate><author>都将会</author><guid>https://leni.fun/raft/</guid><description><![CDATA[<div class="featured-image">
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>interview - 分类 -</title><link>https://leni.fun/categories/interview/</link><description>interview - 分类 -</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>dujianghui_work@163.com (都将会)</managingEditor><webMaster>dujianghui_work@163.com (都将会)</webMaster><lastBuildDate>Mon, 06 Nov 2023 08:08:08 +0800</lastBuildDate><atom:link href="https://leni.fun/categories/interview/" rel="self" type="application/rss+xml"/><item><title>🚩Distributed - 分布式理论</title><link>https://leni.fun/distributed/</link><pubDate>Mon, 06 Nov 2023 08:08:08 +0800</pubDate><author>都将会</author><guid>https://leni.fun/distributed/</guid><description><![CDATA[<div class="featured-image">
+        <img src="/images/pic28.jpg" referrerpolicy="no-referrer">
+      </div><h3 id="分布式事务与分布式锁的区别">分布式事务与分布式锁的区别？</h3>
+<p>分布式锁解决的是分布式<strong>资源抢占</strong>的问题；分布式事务和本地事务是解决<strong>流程化提交</strong>问题。</p>
+<h3 id="如何解决分布式事务问题的seata-架构">🌟如何解决分布式事务问题的？/Seata 架构？</h3>
+<p>三种角色：</p>
+<ul>
+<li>TC 事务协调者</li>
+<li>TM 事务管理器</li>
+<li>RM 资源管理器</li>
+</ul>]]></description></item><item><title>🚩Raft</title><link>https://leni.fun/raft/</link><pubDate>Wed, 18 Oct 2023 18:08:08 +0800</pubDate><author>都将会</author><guid>https://leni.fun/raft/</guid><description><![CDATA[<div class="featured-image">
         <img src="/images/pic25.jpg" referrerpolicy="no-referrer">
       </div><h3 id="raft-协议的基本原理是什么">Raft 协议的基本原理是什么？</h3>
 <p>Raft 协议的基本原理是通过选举一个 leader 节点来管理整个集群，并通过 leader 节点向其他节点发送心跳信号和日志复制等信息来保持数据的一致性。当 leader 节点失效时，其他节点会重新选举出新的 leader 节点。</p>]]></description></item><item><title>🚩ElasticSearch</title><link>https://leni.fun/elasticsearch/</link><pubDate>Wed, 11 Oct 2023 08:08:08 +0800</pubDate><author>都将会</author><guid>https://leni.fun/elasticsearch/</guid><description><![CDATA[<div class="featured-image">
@@ -20,6 +30,4 @@
 &lt;img src="/images/pic10.jpg" referrerpolicy="no-referrer">
 &lt;/div>基于Java语言的Netty</description></item><item><title>LRU和LFU的实现原理</title><link>https://leni.fun/lrulfu/</link><pubDate>Mon, 21 Aug 2023 08:08:08 +0800</pubDate><author>都将会</author><guid>https://leni.fun/lrulfu/</guid><description>&lt;div class="featured-image">
 &lt;img src="/images/pic9.jpg" referrerpolicy="no-referrer">
-&lt;/div>跟着 debug 调试一下</description></item><item><title>🚩DP - 动态规划</title><link>https://leni.fun/dp/</link><pubDate>Sun, 20 Aug 2023 11:20:24 +0800</pubDate><author>都将会</author><guid>https://leni.fun/dp/</guid><description><![CDATA[<div class="featured-image">
-        <img src="/images/pic8.jpg" referrerpolicy="no-referrer">
-      </div><p>最近发现笔试题的区分度主要在动态规划，本文按照题型归类整理。</p>]]></description></item></channel></rss>
+&lt;/div>跟着 debug 调试一下</description></item></channel></rss>
