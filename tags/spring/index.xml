@@ -7,4 +7,4 @@
         <img src="/images/pic6.jpg" referrerpolicy="no-referrer">
       </div><blockquote>
 <p>AOP = Aspect Oriented Programming 面相切面编程</p>
-</blockquote>]]></description></item><item><title>Spring 杂记</title><link>https://leni.fun/spring_draft/</link><pubDate>Mon, 01 Nov 2021 08:08:08 +0800</pubDate><author>都将会</author><guid>https://leni.fun/spring_draft/</guid><description>草稿太多，有空再整理吧。。</description></item></channel></rss>
+</blockquote>]]></description></item><item><title>Spring 杂记</title><link>https://leni.fun/spring_draft/</link><pubDate>Mon, 01 Nov 2021 08:08:08 +0800</pubDate><author>都将会</author><guid>https://leni.fun/spring_draft/</guid><description>9.1 Spring框架设计 9.2 AOP 详解 9.3 Bean 核心原理 9.4 XML 配置原理 10.1 Spring Boot 核心原理 10.2 ORM-Hibernate/MyBatis 10.3 Spring 集成 ORM/JPA 容器接口与实现 BeanFactory Spring 的核心容器，实际上控制反转、基本的依赖注</description></item></channel></rss>

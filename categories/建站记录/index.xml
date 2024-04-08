@@ -6,6 +6,6 @@
 <p><a href="https://transform.tools/toml-to-yaml"target="_blank" rel="external nofollow noopener noreferrer">https://transform.tools/toml-to-yaml</a></p>
 </blockquote>]]></description></item><item><title>FixIt 主题美化</title><link>https://leni.fun/blog_beautify/</link><pubDate>Wed, 09 Aug 2023 08:08:08 +0800</pubDate><author>都将会</author><guid>https://leni.fun/blog_beautify/</guid><description>&lt;div class="featured-image">
 &lt;img src="/images/pic2.jpg" referrerpolicy="no-referrer">
-&lt;/div>分享几个帮助很大的链接</description></item><item><title>初始化 Hogo 博客</title><link>https://leni.fun/blog_init/</link><pubDate>Mon, 07 Aug 2023 08:08:08 +0800</pubDate><author>都将会</author><guid>https://leni.fun/blog_init/</guid><description>&lt;div class="featured-image">
+&lt;/div>方案 省流版 主题：Hugo + FixIt 部署：Git + GitHub Workflows 图床：Picgo + Aliyun OSS 域名：GitHub Pages + Netlify + Aliyun 评论：Giscus 完整版 使用 Git 进行版本控制，</description></item><item><title>初始化 Hogo 博客</title><link>https://leni.fun/blog_init/</link><pubDate>Mon, 07 Aug 2023 08:08:08 +0800</pubDate><author>都将会</author><guid>https://leni.fun/blog_init/</guid><description>&lt;div class="featured-image">
 &lt;img src="/images/pic4.jpg" referrerpolicy="no-referrer">
-&lt;/div>前端小白出马了</description></item></channel></rss>
+&lt;/div>选型 Jekyll：基于 Ruby，需要前端技能 Hexo：基于 Node.js ，主题好看，渲染慢 Hugo：基于 Go，速度快（一秒渲染 5000 篇文章） ☑️ JPress</description></item></channel></rss>
